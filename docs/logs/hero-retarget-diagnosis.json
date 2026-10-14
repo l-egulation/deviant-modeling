@@ -1,0 +1,98 @@
+[
+  {
+    "bone": "Hips",
+    "old_neutral_rotation_error_degrees": 203.76101735775842,
+    "target_length": 0.06999999284744263,
+    "source_length": 0.042706917971372604
+  },
+  {
+    "bone": "Spine1",
+    "old_neutral_rotation_error_degrees": 2.6933679187615804,
+    "target_length": 0.0700642466545105,
+    "source_length": 0.07125367224216461
+  },
+  {
+    "bone": "Chest",
+    "old_neutral_rotation_error_degrees": 6.381173814636582,
+    "target_length": 0.09002222865819931,
+    "source_length": 0.24460865557193756
+  },
+  {
+    "bone": "Head",
+    "old_neutral_rotation_error_degrees": 31.017432643780324,
+    "target_length": 0.3500000238418579,
+    "source_length": 0.07958795130252838
+  },
+  {
+    "bone": "LeftArm",
+    "old_neutral_rotation_error_degrees": 144.2410687037315,
+    "target_length": 0.14417006075382233,
+    "source_length": 0.28739309310913086
+  },
+  {
+    "bone": "LeftForeArm",
+    "old_neutral_rotation_error_degrees": 147.2737546574872,
+    "target_length": 0.09360020607709885,
+    "source_length": 0.27093982696533203
+  },
+  {
+    "bone": "LeftHand",
+    "old_neutral_rotation_error_degrees": 194.02563454503743,
+    "target_length": 0.04753945395350456,
+    "source_length": 0.03055596724152565
+  },
+  {
+    "bone": "RightArm",
+    "old_neutral_rotation_error_degrees": 144.24105504335316,
+    "target_length": 0.14417006075382233,
+    "source_length": 0.28736644983291626
+  },
+  {
+    "bone": "RightForeArm",
+    "old_neutral_rotation_error_degrees": 147.2737546574872,
+    "target_length": 0.09360020607709885,
+    "source_length": 0.27133628726005554
+  },
+  {
+    "bone": "RightHand",
+    "old_neutral_rotation_error_degrees": 193.95679989858206,
+    "target_length": 0.04753945395350456,
+    "source_length": 0.03057757578790188
+  },
+  {
+    "bone": "LeftUpLeg",
+    "old_neutral_rotation_error_degrees": 18.730294572237153,
+    "target_length": 0.13794565200805664,
+    "source_length": 0.43229207396507263
+  },
+  {
+    "bone": "LeftLeg",
+    "old_neutral_rotation_error_degrees": 13.809114246938993,
+    "target_length": 0.11322987079620361,
+    "source_length": 0.42298614978790283
+  },
+  {
+    "bone": "LeftFoot",
+    "old_neutral_rotation_error_degrees": 0.9429378171629964,
+    "target_length": 0.1404564380645752,
+    "source_length": 0.14165861904621124
+  },
+  {
+    "bone": "RightUpLeg",
+    "old_neutral_rotation_error_degrees": 18.730294572237153,
+    "target_length": 0.13794565200805664,
+    "source_length": 0.4336968660354614
+  },
+  {
+    "bone": "RightLeg",
+    "old_neutral_rotation_error_degrees": 13.809170595999644,
+    "target_length": 0.11322987079620361,
+    "source_length": 0.4226078689098358
+  },
+  {
+    "bone": "RightFoot",
+    "old_neutral_rotation_error_degrees": 0.9429378171629964,
+    "target_length": 0.1404564380645752,
+    "source_length": 0.14222246408462524
+  }
+]

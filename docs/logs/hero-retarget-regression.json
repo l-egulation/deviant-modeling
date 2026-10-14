@@ -1,0 +1,6 @@
+{
+  "legacy_neutral_matrix_error": 1.9152339696884155,
+  "legacy_test_expected_fail": true,
+  "corrected_test_log": "docs/logs/hero-retarget-regression.log",
+  "diagnosis": "Absolute source bone frames were copied without removing their bind rotation. No per-body-part mesh scaling was used."
+}

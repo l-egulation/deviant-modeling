@@ -8,6 +8,6 @@
   "glb_skins": 1,
   "glb_joints": 16,
   "glb_animations": 1,
-  "first_to_mid_pixel_difference": 17.401260375976562,
+  "first_to_mid_pixel_difference": 15.049491882324219,
   "scope": "First-pass body rig, not a final production topology or seamless loop."
 }

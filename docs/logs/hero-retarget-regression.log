@@ -1,0 +1,11 @@
+{
+  "mode": "corrected",
+  "bones_checked": 16,
+  "neutral_matrix_max_error": 1.1920928955078125e-07,
+  "known_motion_matrix_max_error": 1.7881393432617188e-07
+}
+PASS: neutral pose and known motion preserve target bind axes
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-walk.blend"
+
+Blender quit

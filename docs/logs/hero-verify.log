@@ -4,10 +4,12 @@
   "finite_deformed_vertices": true,
   "weight_sum_min": 0.9965112879872322,
   "weight_sum_max": 1.0000000447034836,
-  "lowest_vertex_min_m": -3.725290298461914e-09,
-  "lowest_vertex_max_m": 3.725290298461914e-09,
-  "max_deformed_edge_length_m": 0.10284106668805344,
+  "lowest_vertex_min_m": -9.313225746154785e-10,
+  "lowest_vertex_max_m": 1.862645149230957e-09,
+  "max_deformed_edge_length_m": 0.06623690455340393,
   "max_rest_edge_length_m": 0.05190927328196389,
+  "max_bone_length_error_m": 1.4901161193847656e-07,
+  "pose_bone_scales": "All (1,1,1), every frame",
   "horizontal_root_travel_m": 1.313905277716653,
   "notes": "Grounding is vertical root correction, not full foot-contact IK. Visual review still required."
 }

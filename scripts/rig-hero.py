@@ -11,6 +11,8 @@ import numpy as np
 import hashlib
 from pathlib import Path
 from mathutils import Vector, Matrix
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from retarget import retarget_rotation
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'outputs'
@@ -134,24 +136,47 @@ rest_rel = {n: (rest[p].inverted() @ rest[n] if p else rest[n])
 source_names = {n: n.replace('UpLeg', 'Leg') if 'UpLeg' in n
                 else n.replace('Leg', 'Shin') if n.endswith('Leg') else n
                 for n in spec}
+source_reference = {n: source.data.bones[source_names[n]].matrix_local.to_3x3()
+                    for n in spec}
+# BVH bone roll includes arbitrary import geometry (hips can point down).
+# Strip it before applying motion. Arms use a shared A-pose calibration per
+# chain; this avoids adding a T-to-A offset a second time at elbow and wrist.
+for side in ('Left', 'Right'):
+    src_axis = source_reference[side+'Arm'].col[1].normalized()
+    dst_axis = rest[side+'Arm'].to_3x3().col[1].normalized()
+    a_pose = src_axis.rotation_difference(dst_axis).to_matrix()
+    for suffix in ('Arm', 'ForeArm', 'Hand'):
+        name = side+suffix
+        source_reference[name] = a_pose @ source_reference[name]
+
+def set_target_rotations(source_rotations, frame=None):
+    desired = {}
+    for n, (_, _, parent) in spec.items():
+        world = retarget_rotation(source_rotations[n], source_reference[n], rest[n].to_3x3())
+        desired[n] = world
+        relative = desired[parent].inverted() @ world if parent else world
+        q = (rest_rel[n].to_3x3().inverted() @ relative).to_quaternion()
+        pb = rig.pose.bones[n]
+        pb.rotation_mode = 'QUATERNION'
+        q.make_compatible(pb.rotation_quaternion)
+        pb.rotation_quaternion = q
+        if frame is not None:
+            pb.keyframe_insert('rotation_quaternion', frame=frame)
+
+# A calibrated neutral source must reproduce the unposed mesh, vertex for
+# vertex. The previous absolute-frame copy fails this regression badly.
+set_target_rotations(source_reference)
+bpy.context.view_layer.update()
+eval_hero = hero.evaluated_get(bpy.context.evaluated_depsgraph_get())
+neutral_mesh = eval_hero.to_mesh()
+neutral_error = max((v.co-hero.data.vertices[v.index].co).length for v in neutral_mesh.vertices)
+eval_hero.to_mesh_clear()
+assert neutral_error < 1e-5, f'Bind pose changed the mesh: {neutral_error} m'
 foot_bottoms = []
 for f in range(1, 91):
     scene.frame_set(f)
-    desired = {}
-    for n, (_, _, parent) in spec.items():
-        # Source and target use the same world axes. Copy the posed world
-        # orientation, then solve relative to the fitted A-pose rest bones.
-        world = source.pose.bones[source_names[n]].matrix.to_quaternion().to_matrix().to_4x4()
-        desired[n] = world
-        relative = desired[parent].inverted() @ world if parent else world
-        q = (rest_rel[n].to_quaternion().to_matrix().inverted()
-             @ relative.to_3x3()).to_quaternion()
-        pb = rig.pose.bones[n]
-        pb.rotation_mode = 'QUATERNION'
-        if f > 1:
-            q.make_compatible(pb.rotation_quaternion)
-        pb.rotation_quaternion = q
-        pb.keyframe_insert('rotation_quaternion', frame=f)
+    set_target_rotations({n: source.pose.bones[source_names[n]].matrix.to_quaternion().to_matrix()
+                          for n in spec}, frame=f)
     # Scale root bob/stride to the character. Keep horizontal travel in the
     # source action, and provide a centered preview using the rig translation.
     src_hip = source.pose.bones['Hips'].matrix.translation
@@ -167,7 +192,7 @@ for f in range(1, 91):
     mesh = evaluated.to_mesh()
     foot_bottoms.append(min((evaluated.matrix_world @ v.co).z for v in mesh.vertices))
     evaluated.to_mesh_clear()
-# One constant offset preserves original bob; do not stretch bones to ground.
+# Ground the fitted legs using root translation, never bone or mesh scaling.
 ground_offset = -min(foot_bottoms)
 for f in range(1, 91):
     scene.frame_set(f)
@@ -177,7 +202,7 @@ if rig.animation_data and rig.animation_data.action:
     rig.animation_data.action.name = 'Kimodo_Walk_3s'
 
 # Neutral orthographic studio preview. Camera follows travel, preserving motion.
-bpy.ops.object.camera_add(location=(1.35, -2.7, 1.18))
+bpy.ops.object.camera_add(location=(1.35, -2.7, .70))
 camera = bpy.context.object
 camera.name = 'WalkPreviewCamera'
 camera.data.type = 'ORTHO'
@@ -186,7 +211,7 @@ scene.camera = camera
 for f in range(1, 91):
     scene.frame_set(f)
     center = rig.location + Vector((0, 0, .49))
-    camera.location = center + Vector((1.35, -2.7, .69))
+    camera.location = center + Vector((1.35, -2.7, .18))
     camera.rotation_euler = (center-camera.location).to_track_quat('-Z', 'Y').to_euler()
     camera.keyframe_insert('location', frame=f)
     camera.keyframe_insert('rotation_euler', frame=f)
@@ -238,6 +263,8 @@ report = {'blender': bpy.app.version_string, 'original_vertices': original_verti
           'grounding': 'Per-frame vertical root correction to lowest deformed vertex; no bone stretching',
           'source': 'assets/ink-hero.glb', 'motion': 'outputs/walk.bvh',
           'source_sha256': source_hash,
+          'neutral_pose_max_vertex_error_m': neutral_error,
+          'retarget_method': 'Source bind rotation removed; shared arm A-pose calibration; target rest axes retained',
           'status': 'First-pass rig; requires rendered deformation review.'}
 (ROOT/'docs/logs/hero-rig-check.json').write_text(json.dumps(report, indent=2)+'\n')
 print(json.dumps(report, indent=2), flush=True)

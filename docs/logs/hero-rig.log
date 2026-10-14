@@ -1,6 +1,6 @@
-17:25:55 | INFO: Data are loaded, start creating Blender stuff
-17:25:55 | INFO: Blender create Mesh node meshes[0]
-17:25:55 | INFO: glTF import finished in 0.10s
+17:40:20 | INFO: Data are loaded, start creating Blender stuff
+17:40:20 | INFO: Blender create Mesh node meshes[0]
+17:40:20 | INFO: glTF import finished in 0.10s
 WORKING_MESH 983284 62290
 	parsing bvh '/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/walk.bvh'...	zero length node found: HeadEnd
 	zero length node found: Jaw
@@ -18,438 +18,20 @@ WORKING_MESH 983284 62290
 	zero length node found: RightHandPinkyEnd
 	zero length node found: LeftToeEnd
 	zero length node found: RightToeEnd
-0.0093
+0.0125
 	updating scene FPS (was 24.000000) to BVH FPS (30.000000)
 	importing to blender...	zero length bone found: RightToeEnd
-Done in 0.0467
+Done in 0.0390
 
 RENDER_DEVICES [('NVIDIA GeForce RTX 4050 Laptop GPU', 'CUDA', True), ('13th Gen Intel Core i7-13700H', 'CPU', False)]
 Info: Saved as "hero-walk.blend"
 INFO Draco mesh compression is available, use library at /opt/deviant-blender/blender-4.5.13-linux-x64/4.5/scripts/addons_core/io_scene_gltf2/libextern_draco.so
-17:26:01 | INFO: Starting glTF 2.0 export
-17:26:01 | INFO: Extracting primitive: meshes[0]
-17:26:02 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
-17:26:02 | INFO: Primitives created: 1
-17:26:02 | WARNING: There are more than 4 joint vertex influences.The 4 with highest weight will be used (and normalized).
-17:26:02 | WARNING: Animation target pose.bones["Root"] not found
-17:26:02 | WARNING: Animation target pose.bones["Root"] not found
-17:26:02 | WARNING: Animation target pose.bones["Root"] not found
-17:26:02 | WARNING: Animation target pose.bones["Root"] not found
-17:26:02 | WARNING: Animation target pose.bones["Root"] not found
-17:26:02 | WARNING: Animation target pose.bones["Root"] not found
-17:26:02 | WARNING: Animation target pose.bones["Spine2"] not found
-17:26:02 | WARNING: Animation target pose.bones["Spine2"] not found
-17:26:02 | WARNING: Animation target pose.bones["Spine2"] not found
-17:26:02 | WARNING: Animation target pose.bones["Neck1"] not found
-17:26:02 | WARNING: Animation target pose.bones["Neck1"] not found
-17:26:02 | WARNING: Animation target pose.bones["Neck1"] not found
-17:26:02 | WARNING: Animation target pose.bones["Neck2"] not found
-17:26:02 | WARNING: Animation target pose.bones["Neck2"] not found
-17:26:02 | WARNING: Animation target pose.bones["Neck2"] not found
-17:26:02 | WARNING: Animation target pose.bones["HeadEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["HeadEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["HeadEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["Jaw"] not found
-17:26:02 | WARNING: Animation target pose.bones["Jaw"] not found
-17:26:02 | WARNING: Animation target pose.bones["Jaw"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftEye"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftEye"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftEye"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightEye"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightEye"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightEye"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftShoulder"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftShoulder"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftShoulder"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumbEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumbEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumbEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndexEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndexEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndexEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddleEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddleEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddleEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRingEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRingEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRingEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinkyEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinkyEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinkyEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightShoulder"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightShoulder"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightShoulder"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumbEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumbEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumbEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndexEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndexEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndexEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddleEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddleEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddleEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRingEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRingEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRingEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinkyEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinkyEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinkyEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftShin"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftShin"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftShin"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftToeBase"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftToeBase"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftToeBase"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftToeEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftToeEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftToeEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightShin"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightShin"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightShin"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightToeBase"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightToeBase"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightToeBase"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightToeEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightToeEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightToeEnd"] not found
-17:26:02 | WARNING: Multiple rotation mode detected for Hips
-17:26:02 | WARNING: Multiple rotation mode detected for Spine1
-17:26:02 | WARNING: Multiple rotation mode detected for Chest
-17:26:02 | WARNING: Multiple rotation mode detected for Head
-17:26:02 | WARNING: Multiple rotation mode detected for LeftArm
-17:26:02 | WARNING: Multiple rotation mode detected for LeftForeArm
-17:26:02 | WARNING: Multiple rotation mode detected for LeftHand
-17:26:02 | WARNING: Multiple rotation mode detected for RightArm
-17:26:02 | WARNING: Multiple rotation mode detected for RightForeArm
-17:26:02 | WARNING: Multiple rotation mode detected for RightHand
-17:26:02 | WARNING: Multiple rotation mode detected for LeftLeg
-17:26:02 | WARNING: Multiple rotation mode detected for LeftFoot
-17:26:02 | WARNING: Multiple rotation mode detected for RightLeg
-17:26:02 | WARNING: Multiple rotation mode detected for RightFoot
-17:26:02 | WARNING: Animation target pose.bones["Root"] not found
-17:26:02 | WARNING: Animation target pose.bones["Root"] not found
-17:26:02 | WARNING: Animation target pose.bones["Root"] not found
-17:26:02 | WARNING: Animation target pose.bones["Root"] not found
-17:26:02 | WARNING: Animation target pose.bones["Root"] not found
-17:26:02 | WARNING: Animation target pose.bones["Root"] not found
-17:26:02 | WARNING: Animation target pose.bones["Spine2"] not found
-17:26:02 | WARNING: Animation target pose.bones["Spine2"] not found
-17:26:02 | WARNING: Animation target pose.bones["Spine2"] not found
-17:26:02 | WARNING: Animation target pose.bones["Neck1"] not found
-17:26:02 | WARNING: Animation target pose.bones["Neck1"] not found
-17:26:02 | WARNING: Animation target pose.bones["Neck1"] not found
-17:26:02 | WARNING: Animation target pose.bones["Neck2"] not found
-17:26:02 | WARNING: Animation target pose.bones["Neck2"] not found
-17:26:02 | WARNING: Animation target pose.bones["Neck2"] not found
-17:26:02 | WARNING: Animation target pose.bones["HeadEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["HeadEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["HeadEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["Jaw"] not found
-17:26:02 | WARNING: Animation target pose.bones["Jaw"] not found
-17:26:02 | WARNING: Animation target pose.bones["Jaw"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftEye"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftEye"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftEye"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightEye"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightEye"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightEye"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftShoulder"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftShoulder"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftShoulder"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumb3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumbEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumbEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandThumbEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndex4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndexEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndexEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandIndexEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddle4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddleEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddleEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandMiddleEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRing4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRingEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRingEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandRingEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky1"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky2"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky3"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinky4"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinkyEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinkyEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftHandPinkyEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightShoulder"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightShoulder"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightShoulder"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumb3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumbEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumbEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandThumbEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndex4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndexEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndexEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandIndexEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddle4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddleEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddleEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandMiddleEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRing4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRingEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRingEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandRingEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky1"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky2"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky3"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinky4"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinkyEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinkyEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightHandPinkyEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftShin"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftShin"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftShin"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftToeBase"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftToeBase"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftToeBase"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftToeEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftToeEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["LeftToeEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightShin"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightShin"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightShin"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightToeBase"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightToeBase"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightToeBase"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightToeEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightToeEnd"] not found
-17:26:02 | WARNING: Animation target pose.bones["RightToeEnd"] not found
-17:26:02 | WARNING: Multiple rotation mode detected for Hips
-17:26:02 | WARNING: Multiple rotation mode detected for Spine1
-17:26:02 | WARNING: Multiple rotation mode detected for Chest
-17:26:02 | WARNING: Multiple rotation mode detected for Head
-17:26:02 | WARNING: Multiple rotation mode detected for LeftArm
-17:26:02 | WARNING: Multiple rotation mode detected for LeftForeArm
-17:26:02 | WARNING: Multiple rotation mode detected for LeftHand
-17:26:02 | WARNING: Multiple rotation mode detected for RightArm
-17:26:02 | WARNING: Multiple rotation mode detected for RightForeArm
-17:26:02 | WARNING: Multiple rotation mode detected for RightHand
-17:26:02 | WARNING: Multiple rotation mode detected for LeftLeg
-17:26:02 | WARNING: Multiple rotation mode detected for LeftFoot
-17:26:02 | WARNING: Multiple rotation mode detected for RightLeg
-17:26:02 | WARNING: Multiple rotation mode detected for RightFoot
-17:26:02 | INFO: Finished glTF 2.0 export in 1.397735595703125 s
+17:40:26 | INFO: Starting glTF 2.0 export
+17:40:26 | INFO: Extracting primitive: meshes[0]
+17:40:26 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+17:40:26 | INFO: Primitives created: 1
+17:40:26 | WARNING: There are more than 4 joint vertex influences.The 4 with highest weight will be used (and normalized).
+17:40:27 | INFO: Finished glTF 2.0 export in 0.9306936264038086 s
 
 {
   "blender": "4.5.13 LTS",
@@ -460,73 +42,75 @@ INFO Draco mesh compression is available, use library at /opt/deviant-blender/bl
   "unweighted_vertices": 0,
   "frames": 90,
   "fps": 30,
-  "ground_offset_m": 0.0536515899002552,
+  "ground_offset_m": 0.030311226844787598,
   "root_motion_scale": 0.2936769465034834,
-  "foot_min_before_ground_offset_m": -0.0536515899002552,
+  "foot_min_before_ground_offset_m": -0.030311226844787598,
   "target_leg_length_m": 0.2511754971626969,
   "source_leg_length_m": 0.8552782237529755,
   "weight_method": "Anatomical regions + normalized segment-distance weights; rigid hood/face",
-  "foot_min_range_m": 0.05953325564041734,
+  "foot_min_range_m": 0.0500339325517416,
   "grounding": "Per-frame vertical root correction to lowest deformed vertex; no bone stretching",
   "source": "assets/ink-hero.glb",
   "motion": "outputs/walk.bvh",
   "source_sha256": "300d90b6489e0de4e061d7e134ed5d7eb8084d04061c93ade2d830b762ed85a0",
+  "neutral_pose_max_vertex_error_m": 6.705522537231445e-08,
+  "retarget_method": "Source bind rotation removed; shared arm A-pose calibration; target rest axes retained",
   "status": "First-pass rig; requires rendered deformation review."
 }
 Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
-Fra:1 Mem:237.50M (Peak 238.20M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | InkHero
-Fra:1 Mem:237.50M (Peak 238.20M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Area.001
-Fra:1 Mem:250.62M (Peak 252.58M) | Time:00:00.10 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:237.49M (Peak 238.19M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | InkHero
+Fra:1 Mem:237.49M (Peak 238.19M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Area.001
+Fra:1 Mem:250.62M (Peak 252.58M) | Time:00:00.11 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
 Fra:1 Mem:243.55M (Peak 252.58M) | Time:00:00.11 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_normal
-Fra:1 Mem:243.55M (Peak 252.58M) | Time:00:00.11 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_rm
-Fra:1 Mem:434.74M (Peak 435.55M) | Time:00:00.16 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Waiting for render to start
-Fra:1 Mem:434.74M (Peak 435.55M) | Time:00:00.17 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Scene
-Fra:1 Mem:434.74M (Peak 435.55M) | Time:00:00.17 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Shaders
-Fra:1 Mem:434.74M (Peak 435.55M) | Time:00:00.17 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
-Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.24 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Procedurals
-Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.25 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Background
-Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.25 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Camera
-Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.25 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Meshes Flags
-Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.25 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Objects
-Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.25 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
-Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.25 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Particle Systems
-Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.25 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
-Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.25 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Meshes
-Fra:1 Mem:439.74M (Peak 461.91M) | Time:00:00.28 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
-Fra:1 Mem:439.74M (Peak 461.91M) | Time:00:00.29 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
-Fra:1 Mem:446.35M (Peak 461.91M) | Time:00:00.29 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
-Fra:1 Mem:446.35M (Peak 461.91M) | Time:00:00.29 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building
-Fra:1 Mem:446.35M (Peak 461.91M) | Time:00:00.29 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building BVH
-Fra:1 Mem:451.26M (Peak 461.91M) | Time:00:00.31 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH triangles and strands
-Fra:1 Mem:451.59M (Peak 461.91M) | Time:00:00.31 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH nodes
-Fra:1 Mem:451.53M (Peak 461.91M) | Time:00:00.31 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
-Fra:1 Mem:451.53M (Peak 461.91M) | Time:00:00.31 | Mem:201.21M, Peak:201.21M | Scene, ViewLayer | Updating Mesh | Computing normals
-Fra:1 Mem:454.26M (Peak 461.91M) | Time:00:00.32 | Mem:201.21M, Peak:201.21M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
-Fra:1 Mem:454.26M (Peak 461.91M) | Time:00:00.32 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Objects Flags
-Fra:1 Mem:454.26M (Peak 461.91M) | Time:00:00.32 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Primitive Offsets
-Fra:1 Mem:454.26M (Peak 461.91M) | Time:00:00.32 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Images
-Fra:1 Mem:454.26M (Peak 461.91M) | Time:00:00.32 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Camera Volume
-Fra:1 Mem:454.26M (Peak 461.91M) | Time:00:00.32 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Lookup Tables
-Fra:1 Mem:454.26M (Peak 461.91M) | Time:00:00.33 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Lights
-Fra:1 Mem:454.26M (Peak 461.91M) | Time:00:00.33 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Lights | Computing tree
-Fra:1 Mem:454.26M (Peak 461.91M) | Time:00:00.33 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Integrator
-Fra:1 Mem:454.26M (Peak 461.91M) | Time:00:00.33 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Film
-Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.33 | Mem:203.95M, Peak:204.03M | Scene, ViewLayer | Updating Lookup Tables
-Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.33 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Baking
-Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.33 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Device | Writing constant memory
-Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.33 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
-Fra:1 Mem:458.27M (Peak 461.91M) | Time:00:00.36 | Mem:556.03M, Peak:556.03M | Scene, ViewLayer | Sample 0/16
-Fra:1 Mem:477.27M (Peak 477.27M) | Time:00:00.39 | Remaining:00:00.49 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Sample 1/16
-Fra:1 Mem:485.28M (Peak 497.28M) | Time:00:01.64 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Sample 16/16
-Fra:1 Mem:485.28M (Peak 497.28M) | Time:00:01.64 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Finished
+Fra:1 Mem:243.55M (Peak 252.58M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_rm
+Fra:1 Mem:434.74M (Peak 435.55M) | Time:00:00.18 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:434.74M (Peak 435.55M) | Time:00:00.18 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:434.74M (Peak 435.55M) | Time:00:00.18 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:434.74M (Peak 435.55M) | Time:00:00.18 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.26 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.26 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.26 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.26 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.26 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.27 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.27 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.27 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:434.83M (Peak 461.91M) | Time:00:00.27 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:439.74M (Peak 461.91M) | Time:00:00.31 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:439.74M (Peak 461.91M) | Time:00:00.31 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:446.35M (Peak 461.91M) | Time:00:00.31 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:446.35M (Peak 461.91M) | Time:00:00.32 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:446.35M (Peak 461.91M) | Time:00:00.32 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:451.26M (Peak 461.91M) | Time:00:00.33 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH triangles and strands
+Fra:1 Mem:451.59M (Peak 461.91M) | Time:00:00.34 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH nodes
+Fra:1 Mem:451.53M (Peak 461.91M) | Time:00:00.34 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:451.53M (Peak 461.91M) | Time:00:00.34 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.35 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.35 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.35 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.35 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.36 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.36 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.36 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.36 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.36 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.36 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.36 | Mem:203.95M, Peak:204.03M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.37 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:454.27M (Peak 461.91M) | Time:00:00.37 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:454.28M (Peak 461.91M) | Time:00:00.37 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:458.28M (Peak 461.91M) | Time:00:00.40 | Mem:556.04M, Peak:556.04M | Scene, ViewLayer | Sample 0/16
+Fra:1 Mem:477.28M (Peak 477.28M) | Time:00:00.43 | Remaining:00:00.48 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Sample 1/16
+Fra:1 Mem:485.29M (Peak 497.29M) | Time:00:01.56 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Sample 16/16
+Fra:1 Mem:485.29M (Peak 497.29M) | Time:00:01.56 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Finished
 Saved: '/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/.cache/hero-frames/001.png'
-Time: 00:01.79 (Saving: 00:00.07)
+Time: 00:01.69 (Saving: 00:00.07)
 
-Fra:16 Mem:239.50M (Peak 240.20M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | InkHero
-Fra:16 Mem:239.50M (Peak 240.20M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Area.001
+Fra:16 Mem:239.49M (Peak 240.19M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | InkHero
+Fra:16 Mem:239.49M (Peak 240.19M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Area.002
 Fra:16 Mem:250.62M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
 Fra:16 Mem:243.55M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_normal
-Fra:16 Mem:243.55M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_rm
+Fra:16 Mem:243.55M (Peak 252.58M) | Time:00:00.10 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_rm
 Fra:16 Mem:434.74M (Peak 435.55M) | Time:00:00.14 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Waiting for render to start
 Fra:16 Mem:434.74M (Peak 435.55M) | Time:00:00.14 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Scene
 Fra:16 Mem:434.74M (Peak 435.55M) | Time:00:00.14 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Shaders
@@ -542,40 +126,40 @@ Fra:16 Mem:434.83M (Peak 461.91M) | Time:00:00.21 | Mem:192.02M, Peak:192.02M | 
 Fra:16 Mem:434.83M (Peak 461.91M) | Time:00:00.21 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Meshes
 Fra:16 Mem:439.74M (Peak 461.91M) | Time:00:00.25 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
 Fra:16 Mem:439.74M (Peak 461.91M) | Time:00:00.25 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
-Fra:16 Mem:446.35M (Peak 461.91M) | Time:00:00.26 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:16 Mem:446.35M (Peak 461.91M) | Time:00:00.25 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
 Fra:16 Mem:446.35M (Peak 461.91M) | Time:00:00.26 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building
 Fra:16 Mem:446.35M (Peak 461.91M) | Time:00:00.26 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building BVH
-Fra:16 Mem:451.26M (Peak 461.91M) | Time:00:00.28 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH triangles and strands
-Fra:16 Mem:451.59M (Peak 461.91M) | Time:00:00.28 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH nodes
-Fra:16 Mem:451.54M (Peak 461.91M) | Time:00:00.29 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
-Fra:16 Mem:451.54M (Peak 461.91M) | Time:00:00.29 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Computing normals
-Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.29 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
-Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Objects Flags
-Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Primitive Offsets
-Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Images
-Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Camera Volume
-Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Lookup Tables
-Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights
-Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:16 Mem:451.26M (Peak 461.91M) | Time:00:00.27 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH triangles and strands
+Fra:16 Mem:451.59M (Peak 461.91M) | Time:00:00.27 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH nodes
+Fra:16 Mem:451.54M (Peak 461.91M) | Time:00:00.28 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:16 Mem:451.54M (Peak 461.91M) | Time:00:00.28 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:16 Mem:454.27M (Peak 461.91M) | Time:00:00.28 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:16 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Objects Flags
+Fra:16 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:16 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Images
+Fra:16 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Camera Volume
+Fra:16 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Lookup Tables
+Fra:16 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights
+Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights | Computing tree
 Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Integrator
-Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.31 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Film
-Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.31 | Mem:203.96M, Peak:204.04M | Scene, ViewLayer | Updating Lookup Tables
-Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.31 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Baking
-Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.31 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Device | Writing constant memory
-Fra:16 Mem:454.29M (Peak 461.91M) | Time:00:00.31 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
-Fra:16 Mem:458.29M (Peak 461.91M) | Time:00:00.34 | Mem:556.04M, Peak:556.04M | Scene, ViewLayer | Sample 0/16
-Fra:16 Mem:477.29M (Peak 477.29M) | Time:00:00.37 | Remaining:00:00.52 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Sample 1/16
-Fra:16 Mem:485.30M (Peak 497.30M) | Time:00:01.64 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Sample 16/16
-Fra:16 Mem:485.30M (Peak 497.30M) | Time:00:01.64 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Finished
+Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Film
+Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:203.96M, Peak:204.04M | Scene, ViewLayer | Updating Lookup Tables
+Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Baking
+Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:16 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:16 Mem:458.28M (Peak 461.91M) | Time:00:00.33 | Mem:556.04M, Peak:556.04M | Scene, ViewLayer | Sample 0/16
+Fra:16 Mem:477.29M (Peak 477.29M) | Time:00:00.36 | Remaining:00:00.44 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Sample 1/16
+Fra:16 Mem:485.29M (Peak 497.30M) | Time:00:01.53 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Sample 16/16
+Fra:16 Mem:485.29M (Peak 497.30M) | Time:00:01.53 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Finished
 Saved: '/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/.cache/hero-frames/016.png'
-Time: 00:01.79 (Saving: 00:00.08)
+Time: 00:01.68 (Saving: 00:00.08)
 
-Fra:31 Mem:239.50M (Peak 240.20M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | InkHero
-Fra:31 Mem:239.50M (Peak 240.20M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Area.001
+Fra:31 Mem:239.49M (Peak 240.19M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | InkHero
+Fra:31 Mem:239.49M (Peak 240.19M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Area.002
 Fra:31 Mem:250.62M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
 Fra:31 Mem:243.55M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_normal
-Fra:31 Mem:243.55M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_basecolor
-Fra:31 Mem:434.74M (Peak 435.55M) | Time:00:00.13 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Waiting for render to start
+Fra:31 Mem:243.55M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_rm
+Fra:31 Mem:434.74M (Peak 435.55M) | Time:00:00.14 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Waiting for render to start
 Fra:31 Mem:434.74M (Peak 435.55M) | Time:00:00.14 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Scene
 Fra:31 Mem:434.74M (Peak 435.55M) | Time:00:00.14 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Shaders
 Fra:31 Mem:434.74M (Peak 435.55M) | Time:00:00.14 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
@@ -584,11 +168,11 @@ Fra:31 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.01M, Peak:192.01M | 
 Fra:31 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Camera
 Fra:31 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Meshes Flags
 Fra:31 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Objects
-Fra:31 Mem:434.83M (Peak 461.91M) | Time:00:00.21 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:31 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
 Fra:31 Mem:434.83M (Peak 461.91M) | Time:00:00.21 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Particle Systems
 Fra:31 Mem:434.83M (Peak 461.91M) | Time:00:00.21 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
 Fra:31 Mem:434.83M (Peak 461.91M) | Time:00:00.21 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Meshes
-Fra:31 Mem:439.74M (Peak 461.91M) | Time:00:00.24 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:31 Mem:439.74M (Peak 461.91M) | Time:00:00.25 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
 Fra:31 Mem:439.74M (Peak 461.91M) | Time:00:00.25 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
 Fra:31 Mem:446.35M (Peak 461.91M) | Time:00:00.25 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
 Fra:31 Mem:446.35M (Peak 461.91M) | Time:00:00.25 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building
@@ -597,80 +181,80 @@ Fra:31 Mem:451.26M (Peak 461.91M) | Time:00:00.27 | Mem:198.62M, Peak:198.62M | 
 Fra:31 Mem:451.59M (Peak 461.91M) | Time:00:00.27 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH nodes
 Fra:31 Mem:451.54M (Peak 461.91M) | Time:00:00.27 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
 Fra:31 Mem:451.54M (Peak 461.91M) | Time:00:00.28 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Computing normals
-Fra:31 Mem:454.27M (Peak 461.91M) | Time:00:00.28 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
-Fra:31 Mem:454.27M (Peak 461.91M) | Time:00:00.28 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Objects Flags
-Fra:31 Mem:454.27M (Peak 461.91M) | Time:00:00.28 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Primitive Offsets
-Fra:31 Mem:454.27M (Peak 461.91M) | Time:00:00.28 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Images
-Fra:31 Mem:454.27M (Peak 461.91M) | Time:00:00.28 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Camera Volume
-Fra:31 Mem:454.27M (Peak 461.91M) | Time:00:00.28 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Lookup Tables
-Fra:31 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Lights
-Fra:31 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Lights | Computing tree
-Fra:31 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Integrator
-Fra:31 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Film
-Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.29 | Mem:203.95M, Peak:204.03M | Scene, ViewLayer | Updating Lookup Tables
-Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Baking
-Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Device | Writing constant memory
-Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
-Fra:31 Mem:458.28M (Peak 461.91M) | Time:00:00.32 | Mem:556.04M, Peak:556.04M | Scene, ViewLayer | Sample 0/16
-Fra:31 Mem:477.28M (Peak 477.28M) | Time:00:00.36 | Remaining:00:00.50 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Sample 1/16
-Fra:31 Mem:485.29M (Peak 497.29M) | Time:00:01.62 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Sample 16/16
-Fra:31 Mem:485.29M (Peak 497.29M) | Time:00:01.62 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Finished
+Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.28 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.28 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Objects Flags
+Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.29 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.29 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Images
+Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.29 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Camera Volume
+Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.29 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Lookup Tables
+Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights
+Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Integrator
+Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Film
+Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:203.96M, Peak:204.04M | Scene, ViewLayer | Updating Lookup Tables
+Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Baking
+Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:31 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:31 Mem:458.29M (Peak 461.91M) | Time:00:00.33 | Mem:556.04M, Peak:556.04M | Scene, ViewLayer | Sample 0/16
+Fra:31 Mem:477.29M (Peak 477.29M) | Time:00:00.36 | Remaining:00:00.50 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Sample 1/16
+Fra:31 Mem:485.29M (Peak 497.30M) | Time:00:01.50 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Sample 16/16
+Fra:31 Mem:485.29M (Peak 497.30M) | Time:00:01.50 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Finished
 Saved: '/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/.cache/hero-frames/031.png'
-Time: 00:01.75 (Saving: 00:00.07)
+Time: 00:01.63 (Saving: 00:00.07)
 
-Fra:46 Mem:239.50M (Peak 239.50M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | InkHero
-Fra:46 Mem:239.50M (Peak 239.50M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Area.002
-Fra:46 Mem:250.62M (Peak 252.58M) | Time:00:00.13 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
-Fra:46 Mem:243.55M (Peak 252.58M) | Time:00:00.14 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_normal
-Fra:46 Mem:243.55M (Peak 252.58M) | Time:00:00.14 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_rm
-Fra:46 Mem:434.74M (Peak 435.55M) | Time:00:00.20 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Waiting for render to start
-Fra:46 Mem:434.74M (Peak 435.55M) | Time:00:00.20 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Scene
-Fra:46 Mem:434.74M (Peak 435.55M) | Time:00:00.20 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Shaders
-Fra:46 Mem:434.74M (Peak 435.55M) | Time:00:00.20 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
-Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.27 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Procedurals
-Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.27 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Background
-Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.27 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Camera
-Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.27 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Meshes Flags
-Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.28 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Objects
-Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.28 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
-Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.28 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Particle Systems
-Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.28 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
-Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.28 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Meshes
-Fra:46 Mem:439.74M (Peak 461.91M) | Time:00:00.32 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
-Fra:46 Mem:439.74M (Peak 461.91M) | Time:00:00.32 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
-Fra:46 Mem:446.35M (Peak 461.91M) | Time:00:00.32 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
-Fra:46 Mem:446.35M (Peak 461.91M) | Time:00:00.33 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building
-Fra:46 Mem:446.35M (Peak 461.91M) | Time:00:00.33 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building BVH
-Fra:46 Mem:451.26M (Peak 461.91M) | Time:00:00.35 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH triangles and strands
-Fra:46 Mem:451.59M (Peak 461.91M) | Time:00:00.35 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH nodes
-Fra:46 Mem:451.55M (Peak 461.91M) | Time:00:00.35 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
-Fra:46 Mem:451.55M (Peak 461.91M) | Time:00:00.36 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Computing normals
-Fra:46 Mem:454.29M (Peak 461.91M) | Time:00:00.36 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
-Fra:46 Mem:454.29M (Peak 461.91M) | Time:00:00.36 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Objects Flags
-Fra:46 Mem:454.29M (Peak 461.91M) | Time:00:00.36 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Primitive Offsets
-Fra:46 Mem:454.29M (Peak 461.91M) | Time:00:00.37 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Images
-Fra:46 Mem:454.29M (Peak 461.91M) | Time:00:00.37 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Camera Volume
-Fra:46 Mem:454.29M (Peak 461.91M) | Time:00:00.37 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Lookup Tables
-Fra:46 Mem:454.29M (Peak 461.91M) | Time:00:00.37 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights
-Fra:46 Mem:454.29M (Peak 461.91M) | Time:00:00.37 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights | Computing tree
-Fra:46 Mem:454.29M (Peak 461.91M) | Time:00:00.37 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Integrator
-Fra:46 Mem:454.29M (Peak 461.91M) | Time:00:00.37 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Film
-Fra:46 Mem:454.29M (Peak 461.91M) | Time:00:00.37 | Mem:203.96M, Peak:204.04M | Scene, ViewLayer | Updating Lookup Tables
-Fra:46 Mem:454.29M (Peak 461.91M) | Time:00:00.37 | Mem:204.05M, Peak:204.05M | Scene, ViewLayer | Updating Baking
-Fra:46 Mem:454.29M (Peak 461.91M) | Time:00:00.37 | Mem:204.05M, Peak:204.05M | Scene, ViewLayer | Updating Device | Writing constant memory
-Fra:46 Mem:454.29M (Peak 461.91M) | Time:00:00.38 | Mem:204.05M, Peak:204.05M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
-Fra:46 Mem:458.30M (Peak 461.91M) | Time:00:00.41 | Mem:556.05M, Peak:556.05M | Scene, ViewLayer | Sample 0/16
-Fra:46 Mem:477.30M (Peak 477.30M) | Time:00:00.44 | Remaining:00:00.51 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Sample 1/16
-Fra:46 Mem:485.30M (Peak 497.31M) | Time:00:01.76 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Sample 16/16
-Fra:46 Mem:485.30M (Peak 497.31M) | Time:00:01.76 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Finished
+Fra:46 Mem:239.49M (Peak 240.19M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | InkHero
+Fra:46 Mem:239.49M (Peak 240.19M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Area.001
+Fra:46 Mem:250.62M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:46 Mem:243.55M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_normal
+Fra:46 Mem:243.55M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_rm
+Fra:46 Mem:434.74M (Peak 435.55M) | Time:00:00.14 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Waiting for render to start
+Fra:46 Mem:434.74M (Peak 435.55M) | Time:00:00.15 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Scene
+Fra:46 Mem:434.74M (Peak 435.55M) | Time:00:00.15 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Shaders
+Fra:46 Mem:434.74M (Peak 435.55M) | Time:00:00.15 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.22 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Procedurals
+Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.22 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Background
+Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.22 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Camera
+Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.22 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Meshes Flags
+Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.22 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Objects
+Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.22 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.22 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Particle Systems
+Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.22 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:46 Mem:434.83M (Peak 461.91M) | Time:00:00.23 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Meshes
+Fra:46 Mem:439.74M (Peak 461.91M) | Time:00:00.26 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:46 Mem:439.74M (Peak 461.91M) | Time:00:00.26 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:46 Mem:446.35M (Peak 461.91M) | Time:00:00.26 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:46 Mem:446.35M (Peak 461.91M) | Time:00:00.27 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:46 Mem:446.35M (Peak 461.91M) | Time:00:00.27 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:46 Mem:451.26M (Peak 461.91M) | Time:00:00.28 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH triangles and strands
+Fra:46 Mem:451.59M (Peak 461.91M) | Time:00:00.28 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH nodes
+Fra:46 Mem:451.54M (Peak 461.91M) | Time:00:00.29 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:46 Mem:451.54M (Peak 461.91M) | Time:00:00.29 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:46 Mem:454.28M (Peak 461.91M) | Time:00:00.29 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:46 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Objects Flags
+Fra:46 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:46 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Images
+Fra:46 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Camera Volume
+Fra:46 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Lookup Tables
+Fra:46 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights
+Fra:46 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:46 Mem:454.28M (Peak 461.91M) | Time:00:00.30 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Integrator
+Fra:46 Mem:454.28M (Peak 461.91M) | Time:00:00.31 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Film
+Fra:46 Mem:454.28M (Peak 461.91M) | Time:00:00.31 | Mem:203.96M, Peak:204.04M | Scene, ViewLayer | Updating Lookup Tables
+Fra:46 Mem:454.28M (Peak 461.91M) | Time:00:00.31 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Baking
+Fra:46 Mem:454.28M (Peak 461.91M) | Time:00:00.31 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:46 Mem:454.28M (Peak 461.91M) | Time:00:00.31 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:46 Mem:458.29M (Peak 461.91M) | Time:00:00.34 | Mem:556.04M, Peak:556.04M | Scene, ViewLayer | Sample 0/16
+Fra:46 Mem:477.29M (Peak 477.29M) | Time:00:00.37 | Remaining:00:00.48 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Sample 1/16
+Fra:46 Mem:485.29M (Peak 497.30M) | Time:00:01.60 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Sample 16/16
+Fra:46 Mem:485.29M (Peak 497.30M) | Time:00:01.60 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Finished
 Saved: '/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/.cache/hero-frames/046.png'
-Time: 00:01.90 (Saving: 00:00.08)
+Time: 00:01.74 (Saving: 00:00.08)
 
-Fra:61 Mem:239.50M (Peak 240.20M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | InkHero
-Fra:61 Mem:239.64M (Peak 240.20M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Area.001
+Fra:61 Mem:239.49M (Peak 240.19M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | InkHero
+Fra:61 Mem:239.49M (Peak 240.19M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Area.001
 Fra:61 Mem:250.62M (Peak 252.58M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
-Fra:61 Mem:243.55M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_normal
-Fra:61 Mem:243.55M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_rm
+Fra:61 Mem:243.55M (Peak 252.58M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_normal
+Fra:61 Mem:243.55M (Peak 252.58M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_rm
 Fra:61 Mem:434.74M (Peak 435.55M) | Time:00:00.13 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Waiting for render to start
 Fra:61 Mem:434.74M (Peak 435.55M) | Time:00:00.13 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Scene
 Fra:61 Mem:434.74M (Peak 435.55M) | Time:00:00.13 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Shaders
@@ -683,46 +267,46 @@ Fra:61 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.01M, Peak:192.01M | 
 Fra:61 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
 Fra:61 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Particle Systems
 Fra:61 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
-Fra:61 Mem:434.83M (Peak 461.91M) | Time:00:00.21 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Meshes
+Fra:61 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Meshes
 Fra:61 Mem:439.74M (Peak 461.91M) | Time:00:00.24 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
 Fra:61 Mem:439.74M (Peak 461.91M) | Time:00:00.24 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
-Fra:61 Mem:446.35M (Peak 461.91M) | Time:00:00.25 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:61 Mem:446.35M (Peak 461.91M) | Time:00:00.24 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
 Fra:61 Mem:446.35M (Peak 461.91M) | Time:00:00.25 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building
 Fra:61 Mem:446.35M (Peak 461.91M) | Time:00:00.25 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building BVH
-Fra:61 Mem:451.26M (Peak 461.91M) | Time:00:00.27 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH triangles and strands
-Fra:61 Mem:451.59M (Peak 461.91M) | Time:00:00.27 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH nodes
-Fra:61 Mem:451.55M (Peak 461.91M) | Time:00:00.28 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
-Fra:61 Mem:451.55M (Peak 461.91M) | Time:00:00.28 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Computing normals
-Fra:61 Mem:454.29M (Peak 461.91M) | Time:00:00.28 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
-Fra:61 Mem:454.29M (Peak 461.91M) | Time:00:00.28 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Objects Flags
-Fra:61 Mem:454.29M (Peak 461.91M) | Time:00:00.28 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Primitive Offsets
-Fra:61 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Images
-Fra:61 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Camera Volume
-Fra:61 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Lookup Tables
-Fra:61 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights
-Fra:61 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights | Computing tree
-Fra:61 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Integrator
-Fra:61 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Film
-Fra:61 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:203.96M, Peak:204.04M | Scene, ViewLayer | Updating Lookup Tables
-Fra:61 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:204.05M, Peak:204.05M | Scene, ViewLayer | Updating Baking
-Fra:61 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:204.05M, Peak:204.05M | Scene, ViewLayer | Updating Device | Writing constant memory
-Fra:61 Mem:454.30M (Peak 461.91M) | Time:00:00.29 | Mem:204.05M, Peak:204.05M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
-Fra:61 Mem:458.30M (Peak 461.91M) | Time:00:00.32 | Mem:556.05M, Peak:556.05M | Scene, ViewLayer | Sample 0/16
-Fra:61 Mem:477.30M (Peak 477.30M) | Time:00:00.36 | Remaining:00:00.63 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Sample 1/16
-Fra:61 Mem:485.31M (Peak 497.31M) | Time:00:01.68 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Sample 16/16
-Fra:61 Mem:485.31M (Peak 497.31M) | Time:00:01.68 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Finished
+Fra:61 Mem:451.26M (Peak 461.91M) | Time:00:00.26 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH triangles and strands
+Fra:61 Mem:451.59M (Peak 461.91M) | Time:00:00.26 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH nodes
+Fra:61 Mem:451.53M (Peak 461.91M) | Time:00:00.27 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:61 Mem:451.53M (Peak 461.91M) | Time:00:00.27 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:61 Mem:454.27M (Peak 461.91M) | Time:00:00.27 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:61 Mem:454.27M (Peak 461.91M) | Time:00:00.28 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Objects Flags
+Fra:61 Mem:454.27M (Peak 461.91M) | Time:00:00.28 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:61 Mem:454.27M (Peak 461.91M) | Time:00:00.28 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Images
+Fra:61 Mem:454.27M (Peak 461.91M) | Time:00:00.28 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Camera Volume
+Fra:61 Mem:454.27M (Peak 461.91M) | Time:00:00.28 | Mem:203.95M, Peak:203.95M | Scene, ViewLayer | Updating Lookup Tables
+Fra:61 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Lights
+Fra:61 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:61 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Integrator
+Fra:61 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:204.03M, Peak:204.03M | Scene, ViewLayer | Updating Film
+Fra:61 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:203.95M, Peak:204.03M | Scene, ViewLayer | Updating Lookup Tables
+Fra:61 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Baking
+Fra:61 Mem:454.27M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:61 Mem:454.28M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:61 Mem:458.28M (Peak 461.91M) | Time:00:00.32 | Mem:556.04M, Peak:556.04M | Scene, ViewLayer | Sample 0/16
+Fra:61 Mem:477.28M (Peak 477.28M) | Time:00:00.35 | Remaining:00:00.46 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Sample 1/16
+Fra:61 Mem:485.29M (Peak 497.29M) | Time:00:01.58 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Sample 16/16
+Fra:61 Mem:485.29M (Peak 497.29M) | Time:00:01.58 | Mem:575.04M, Peak:575.04M | Scene, ViewLayer | Finished
 Saved: '/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/.cache/hero-frames/061.png'
-Time: 00:01.80 (Saving: 00:00.07)
+Time: 00:01.71 (Saving: 00:00.07)
 
-Fra:76 Mem:239.50M (Peak 240.20M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | InkHero
-Fra:76 Mem:239.50M (Peak 240.20M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Area.001
-Fra:76 Mem:250.62M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
-Fra:76 Mem:243.55M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_normal
-Fra:76 Mem:243.55M (Peak 252.58M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_rm
+Fra:76 Mem:239.49M (Peak 240.19M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | InkHero
+Fra:76 Mem:239.49M (Peak 240.19M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Area.001
+Fra:76 Mem:250.62M (Peak 252.58M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:76 Mem:243.55M (Peak 252.58M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_normal
+Fra:76 Mem:243.55M (Peak 252.58M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_rm
 Fra:76 Mem:434.74M (Peak 435.55M) | Time:00:00.13 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Waiting for render to start
 Fra:76 Mem:434.74M (Peak 435.55M) | Time:00:00.13 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Scene
 Fra:76 Mem:434.74M (Peak 435.55M) | Time:00:00.13 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Shaders
-Fra:76 Mem:434.74M (Peak 435.55M) | Time:00:00.14 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:76 Mem:434.74M (Peak 435.55M) | Time:00:00.13 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
 Fra:76 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Procedurals
 Fra:76 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Background
 Fra:76 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Camera
@@ -731,36 +315,36 @@ Fra:76 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.01M, Peak:192.01M | 
 Fra:76 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.01M, Peak:192.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
 Fra:76 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Particle Systems
 Fra:76 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
-Fra:76 Mem:434.83M (Peak 461.91M) | Time:00:00.20 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Meshes
+Fra:76 Mem:434.83M (Peak 461.91M) | Time:00:00.21 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Meshes
 Fra:76 Mem:439.74M (Peak 461.91M) | Time:00:00.24 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
 Fra:76 Mem:439.74M (Peak 461.91M) | Time:00:00.24 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
-Fra:76 Mem:446.35M (Peak 461.91M) | Time:00:00.24 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:76 Mem:446.35M (Peak 461.91M) | Time:00:00.25 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
 Fra:76 Mem:446.35M (Peak 461.91M) | Time:00:00.25 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building
 Fra:76 Mem:446.35M (Peak 461.91M) | Time:00:00.25 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Building BVH
-Fra:76 Mem:451.26M (Peak 461.91M) | Time:00:00.26 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH triangles and strands
-Fra:76 Mem:451.59M (Peak 461.91M) | Time:00:00.26 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH nodes
+Fra:76 Mem:451.26M (Peak 461.91M) | Time:00:00.27 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH triangles and strands
+Fra:76 Mem:451.59M (Peak 461.91M) | Time:00:00.27 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Packing BVH nodes
 Fra:76 Mem:451.55M (Peak 461.91M) | Time:00:00.27 | Mem:198.62M, Peak:198.62M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
-Fra:76 Mem:451.55M (Peak 461.91M) | Time:00:00.27 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Computing normals
-Fra:76 Mem:454.28M (Peak 461.91M) | Time:00:00.27 | Mem:201.22M, Peak:201.22M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
-Fra:76 Mem:454.28M (Peak 461.91M) | Time:00:00.27 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Objects Flags
-Fra:76 Mem:454.28M (Peak 461.91M) | Time:00:00.27 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Primitive Offsets
-Fra:76 Mem:454.28M (Peak 461.91M) | Time:00:00.27 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Images
-Fra:76 Mem:454.28M (Peak 461.91M) | Time:00:00.28 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Camera Volume
-Fra:76 Mem:454.28M (Peak 461.91M) | Time:00:00.28 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Lookup Tables
-Fra:76 Mem:454.28M (Peak 461.91M) | Time:00:00.28 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights
-Fra:76 Mem:454.28M (Peak 461.91M) | Time:00:00.28 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights | Computing tree
-Fra:76 Mem:454.28M (Peak 461.91M) | Time:00:00.28 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Integrator
-Fra:76 Mem:454.28M (Peak 461.91M) | Time:00:00.28 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Film
-Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.28 | Mem:203.96M, Peak:204.04M | Scene, ViewLayer | Updating Lookup Tables
-Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.28 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Baking
-Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.28 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Device | Writing constant memory
-Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.28 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
-Fra:76 Mem:458.29M (Peak 461.91M) | Time:00:00.31 | Mem:556.05M, Peak:556.05M | Scene, ViewLayer | Sample 0/16
-Fra:76 Mem:477.30M (Peak 477.30M) | Time:00:00.35 | Remaining:00:00.47 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Sample 1/16
-Fra:76 Mem:485.30M (Peak 497.30M) | Time:00:01.56 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Sample 16/16
-Fra:76 Mem:485.30M (Peak 497.30M) | Time:00:01.56 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Finished
+Fra:76 Mem:451.55M (Peak 461.91M) | Time:00:00.28 | Mem:201.23M, Peak:201.23M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.28 | Mem:201.23M, Peak:201.23M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.28 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Objects Flags
+Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.28 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.28 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Images
+Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.28 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Camera Volume
+Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.28 | Mem:203.96M, Peak:203.96M | Scene, ViewLayer | Updating Lookup Tables
+Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights
+Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Integrator
+Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:204.04M, Peak:204.04M | Scene, ViewLayer | Updating Film
+Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:203.96M, Peak:204.04M | Scene, ViewLayer | Updating Lookup Tables
+Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:204.05M, Peak:204.05M | Scene, ViewLayer | Updating Baking
+Fra:76 Mem:454.29M (Peak 461.91M) | Time:00:00.29 | Mem:204.05M, Peak:204.05M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:76 Mem:454.30M (Peak 461.91M) | Time:00:00.29 | Mem:204.05M, Peak:204.05M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:76 Mem:458.30M (Peak 461.91M) | Time:00:00.32 | Mem:556.05M, Peak:556.05M | Scene, ViewLayer | Sample 0/16
+Fra:76 Mem:477.30M (Peak 477.30M) | Time:00:00.35 | Remaining:00:00.44 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Sample 1/16
+Fra:76 Mem:485.31M (Peak 497.31M) | Time:00:01.56 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Sample 16/16
+Fra:76 Mem:485.31M (Peak 497.31M) | Time:00:01.56 | Mem:575.05M, Peak:575.05M | Scene, ViewLayer | Finished
 Saved: '/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/.cache/hero-frames/076.png'
-Time: 00:01.70 (Saving: 00:00.08)
+Time: 00:01.71 (Saving: 00:00.08)
 
 
 Blender quit
