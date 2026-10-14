@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "frames": 90,
+  "fps": 30.0,
+  "duration_seconds": 3.0,
+  "width": 720,
+  "height": 720,
+  "first_to_mid_mean_pixel_difference": 1.7435474537037037
+}

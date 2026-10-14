@@ -1,4 +1,6 @@
-# 다음 업무: 갤럭시북 Kimodo 첫 실행
+# 갤럭시북 Kimodo 첫 실행 절차
+
+2026-10-14: 아래 첫 실행 업무의 3초 걷기 생성·NPZ/BVH 재생 검증을 완료했습니다. 결과와 재실행 방법은 [SETUP_RESULT.md](docs/SETUP_RESULT.md), 다음 업무는 [STATUS.md](STATUS.md)를 확인합니다. 아래 절차는 재현용으로 유지합니다.
 
 ## 작업 브랜치
 

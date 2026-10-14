@@ -1,0 +1,9 @@
+╭──────────────── viser ────────────────╮
+│             ╷                         │
+│   HTTP      │ http://127.0.0.1:7861   │
+│   Websocket │ ws://127.0.0.1:7861     │
+│             ╵                         │
+╰───────────────────────────────────────╯
+Open http://127.0.0.1:7861
+(viser) Connection opened (0, 1 total), 22 persistent messages
+Browser connected; playing BVH

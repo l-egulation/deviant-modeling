@@ -1,0 +1,11 @@
+{
+  "generation_exit_status": 0,
+  "first_run_wall_seconds_including_download_and_loading": 2773,
+  "diffusion_steps": 100,
+  "denoising_seconds_reported_by_progress_bar": 16,
+  "sampled_whole_device_peak_vram_mib": 2386,
+  "sample_interval_seconds": 2,
+  "gpu_sample_count": 1295,
+  "cpu_peak_memory": "not measured",
+  "note": "The 16-second denoising loop excludes downloading, model loading, text encoding and export. GPU samples measure the whole device, not exact per-process peak allocation."
+}

@@ -1,0 +1,10 @@
+╭──────────────── viser ────────────────╮
+│             ╷                         │
+│   HTTP      │ http://127.0.0.1:7860   │
+│   Websocket │ ws://127.0.0.1:7860     │
+│             ╵                         │
+╰───────────────────────────────────────╯
+Open http://127.0.0.1:7860
+(viser) Connection opened (0, 1 total), 22 persistent messages
+Browser connected; playing NPZ
+Preview exported: /mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/walk-preview.mp4
