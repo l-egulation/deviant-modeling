@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "glb_bones": 16,
+  "imported_action_start_frame": 1.0,
+  "imported_action_end_frame": 90.0,
+  "max_animated_bounds_difference_m": 0.0006698369979858398,
+  "sample_bounds_differences_m": [
+    0.00046175718307495117,
+    0.0006698369979858398,
+    0.0005247592926025391
+  ],
+  "notes": "Checks re-imported skinned animation at start, middle and end; GLB keeps top four weights."
+}

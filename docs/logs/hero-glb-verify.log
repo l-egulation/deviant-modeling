@@ -1,0 +1,20 @@
+17:30:08 | INFO: Data are loaded, start creating Blender stuff
+17:30:08 | INFO: Blender create Mesh node meshes[0]
+17:30:09 | INFO: glTF import finished in 0.29s
+{
+  "status": "PASS",
+  "glb_bones": 16,
+  "imported_action_start_frame": 1.0,
+  "imported_action_end_frame": 90.0,
+  "max_animated_bounds_difference_m": 0.0006698369979858398,
+  "sample_bounds_differences_m": [
+    0.00046175718307495117,
+    0.0006698369979858398,
+    0.0005247592926025391
+  ],
+  "notes": "Checks re-imported skinned animation at start, middle and end; GLB keeps top four weights."
+}
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-walk.blend"
+
+Blender quit

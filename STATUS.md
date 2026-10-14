@@ -18,21 +18,26 @@
 - `outputs/walk.npz`, 표준 T포즈 `outputs/walk.bvh`: 90프레임·30fps. 수치 검사와 두 포맷의 실제 브라우저 재생 확인.
 - `outputs/walk-preview.mp4`(3초), `outputs/walk-contact-sheet.png` 저장. MP4 디코딩 검사 PASS.
 - 첫 실행 전체 2,773초(다운로드·로딩 포함), denoising 진행 표시 약 16초. GPU 장치 전체 샘플 최대 2,386MiB(약 2.33GiB).
+- 갤럭시북 WSL에 공식 Blender 4.5.13 LTS 설치, 공식 SHA256 대조 PASS.
+- 원본 외형을 보존한 작업용 메시와 캐릭터 비율의 16뼈 몸통 리그 작성, Kimodo 90프레임 걷기 이식.
+- 어깨의 가중치 경계를 부드럽게 연결하고, 다리 길이 비율로 전진 거리 축소 및 프레임별 수직 바닥 보정.
+- `outputs/hero-walk.blend`, `outputs/hero-walk.glb`: 편집 가능한 리그와 걷는 캐릭터. 자세한 작업 방식은 `docs/HERO_WALK.md`.
+- 캐릭터 `hero-walk-preview.mp4`(512×512, 3초·30fps)와 주요 프레임 시트 저장. 90프레임 변형·바닥 높이, GLB 재가져오기, MP4 디코딩 검사 PASS.
 
 ## 미완료
 
 - CPU 최대 메모리 및 캐시 재실행 전체 시간: 미측정.
 - 제자리 걷기·게임용 루프 보정: 미완료. 현재 모션은 3초 동안 약 4.474m 앞으로 이동한다.
-- 캐릭터 메시 정리, 리깅, 모션 이식, 검 모델, 도트 렌더링: 미완료.
+- 캐릭터 첫 몸통 리깅·걷기 이식은 완료. 게임용 토폴로지, 발 접촉 IK, 옷 변형 최종 보정, 손가락·무기 리그, 검 모델, 도트 렌더링은 미완료.
 
 ## 다음 작업
 
-담당 환경: 맥 Blender 작업.
+담당 환경: 갤럭시북 또는 맥 Blender 4.5 LTS.
 브랜치: work/kimodo-setup.
 지시: START-HERE.md.
-목표: `assets/ink-hero.glb` 메시 정리·리깅 후 검증된 `outputs/walk.bvh` 모션 이식과 비율 보정.
+목표: `outputs/hero-walk.blend`의 걷기와 의상 변형을 다듬고, 카메라 방향을 비교하여 2D 프레임·스프라이트화.
 재실행 방법·측정 결과·출력 형식: `docs/SETUP_RESULT.md`.
 
 ## 다음 인계
 
-맥 작업자는 동일 브랜치를 pull하여 NPZ·BVH·MP4 미리보기와 실행 기록을 받습니다. BVH는 cm 단위·표준 T포즈 기준입니다. 골격 모션 검증은 완료됐지만 주인공 GLB는 여전히 뼈대와 애니메이션이 없습니다. 주인공 적용 후 카메라 방향을 비교하여 2D 렌더링과 에테르 AI 도트 변환을 검토합니다.
+맥 작업자는 동일 브랜치를 pull하여 원본, 골격 모션, 캐릭터 걷기 Blend·GLB와 미리보기·실행 기록을 받습니다. `assets/ink-hero.glb` 원본은 계속 뼈대가 없으며, `outputs/hero-walk.glb`가 스킨·걷기를 포함한 적용본입니다. 카메라 방향을 비교하여 2D 렌더링과 에테르 AI 도트 변환을 검토합니다.

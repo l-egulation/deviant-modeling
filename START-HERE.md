@@ -2,6 +2,8 @@
 
 2026-10-14: 아래 첫 실행 업무의 3초 걷기 생성·NPZ/BVH 재생 검증을 완료했습니다. 결과와 재실행 방법은 [SETUP_RESULT.md](docs/SETUP_RESULT.md), 다음 업무는 [STATUS.md](STATUS.md)를 확인합니다. 아래 절차는 재현용으로 유지합니다.
 
+같은 날 사용자 후속 요청으로 캐릭터 첫 몸통 리깅·걷기 이식도 진행했습니다. 적용본과 재실행은 [HERO_WALK.md](docs/HERO_WALK.md)를 확인합니다. 현재 편집 파일은 `outputs/hero-walk.blend`입니다.
+
 ## 작업 브랜치
 
 `work/kimodo-setup`을 사용합니다. 저장소를 복제한 뒤 이 브랜치로 전환하고 해당 폴더를 로컬 Codex에서 엽니다. main에는 최초 인계 자료가 있습니다.

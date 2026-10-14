@@ -34,7 +34,7 @@ GLB는 약 60MB의 고밀도 메시이며 뼈대와 애니메이션은 없습니
 
 `work/kimodo-setup`에서 갤럭시북의 CPU 텍스트 인코더·RTX 4050으로 3초 걷기 골격 생성과 NPZ/BVH 실제 재생 검증을 완료했습니다. [실행 결과와 재실행 방법](docs/SETUP_RESULT.md), [3초 미리보기](outputs/walk-preview.mp4)를 확인할 수 있습니다.
 
-다음은 Blender에서 주인공 메시 정리·리깅 후 `outputs/walk.bvh`를 이식하는 작업입니다. 주인공 적용 후 카메라 방향별 2D 렌더링을 비교하고 에테르 AI의 도트 변환을 검토합니다. 현재 주인공 GLB에 모션이 적용된 상태는 아닙니다.
+갤럭시북 Blender에서 캐릭터 비율의 몸통 리그와 걷기 첫 적용본도 만들었습니다. [캐릭터 걷기 영상](outputs/hero-walk-preview.mp4), [작업 기록](docs/HERO_WALK.md), [편집용 Blend](outputs/hero-walk.blend), [애니메이션 GLB](outputs/hero-walk.glb)를 확인할 수 있습니다. 원본 `assets/ink-hero.glb`는 보존했습니다. 다음은 의상·발 접촉과 반복 동작 보정 후 카메라 방향별 2D 렌더링을 비교하고 에테르 AI의 도트 변환을 검토하는 작업입니다.
 
 ## 파일 관리
 

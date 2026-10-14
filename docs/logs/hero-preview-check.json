@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "frames": 90,
+  "fps": 30.0,
+  "seconds": 3,
+  "width": 512,
+  "height": 512,
+  "glb_skins": 1,
+  "glb_joints": 16,
+  "glb_animations": 1,
+  "first_to_mid_pixel_difference": 17.401260375976562,
+  "scope": "First-pass body rig, not a final production topology or seamless loop."
+}
