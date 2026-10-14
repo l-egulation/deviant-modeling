@@ -1,0 +1,65 @@
+Using device: cuda:0
+usage: kimodo_gen [-h] [--model MODEL] [--duration DURATION]
+                  [--num_samples NUM_SAMPLES]
+                  [--diffusion_steps DIFFUSION_STEPS]
+                  [--num_transition_frames NUM_TRANSITION_FRAMES]
+                  [--constraints CONSTRAINTS] [--output OUTPUT]
+                  [--save_example_dir] [--bvh] [--bvh_standard_tpose]
+                  [--no-postprocess] [--seed SEED]
+                  [--input_folder INPUT_FOLDER]
+                  [--cfg_type {nocfg,regular,separated}]
+                  [--cfg_weight [CFG_WEIGHT ...]]
+                  [prompt]
+
+Cmd line API for generation motions with kimodo
+
+positional arguments:
+  prompt                Text prompt describing the motion to generate, or
+                        several prompts separated by periods.
+
+options:
+  -h, --help            show this help message and exit
+  --model MODEL         Name of the model (e.g. Kimodo-SOMA-RP-v1, etc).
+  --duration DURATION   Duration in seconds (default: 5.0). Separate by spaces
+                        in a string for different durations per prompts
+  --num_samples NUM_SAMPLES
+                        Number of samples to generate (default: 1)
+  --diffusion_steps DIFFUSION_STEPS
+                        Number of diffusion steps (default: 100)
+  --num_transition_frames NUM_TRANSITION_FRAMES
+                        Number of frames to help transitioning (default: 5)
+  --constraints CONSTRAINTS
+                        Saved constraint list
+  --output OUTPUT       Output stem name: with one sample writes a single file
+                        per format (e.g. test.npz, test.csv); with multiple
+                        samples creates a folder and writes test_00.npz,
+                        test_01.npz, ... inside it. Used for NPZ, AMASS NPZ,
+                        CSV, and BVH.
+  --save_example_dir    Save demo-compatible example directories (each
+                        contains motion.npz, constraints.json, meta.json).
+                        With one sample, writes <output>_example/. With
+                        multiple samples, writes
+                        <output>_examples/<output>_example_00/,
+                        <output>_example_01/, ...
+  --bvh                 Also export BVH (SOMA models only); uses the same stem
+                        as --output.
+  --bvh_standard_tpose  If exporting BVH, export with the rest pose being the
+                        standard T-pose rather than the rest pose consistent
+                        with the BONES-SEED dataset.
+  --no-postprocess      Don't apply motion post-processing to reduce foot
+                        skating (ignored for G1)
+  --seed SEED           Seed for reproducible results
+  --input_folder INPUT_FOLDER
+                        Folder containing meta.json and optional
+                        constraints.json. If set, generation settings are
+                        loaded from meta.json.
+  --cfg_type {nocfg,regular,separated}
+                        Classifier-free guidance mode: nocfg (no CFG), regular
+                        (single scale on cond vs uncond), or separated
+                        (custom: separate text and constraint scales). Use
+                        with --cfg_weight as required by the mode.
+  --cfg_weight [CFG_WEIGHT ...]
+                        CFG scale(s): one float for regular, or two floats
+                        [text_weight, constraint_weight] for separated. Omit
+                        with --cfg_type nocfg. If omitted, two floats alone
+                        imply separated; one float alone implies regular.

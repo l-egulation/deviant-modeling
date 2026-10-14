@@ -1,0 +1,3 @@
+Llama text encoder access: FAILED (HTTP 403)
+Request access: https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct
+After approval, log in locally with hf auth login. Do not share your token.

@@ -1,0 +1,8 @@
+usage: kimodo_demo [-h] [--model MODEL]
+
+Run the kimodo demo UI.
+
+options:
+  -h, --help     show this help message and exit
+  --model MODEL  Default model to load (e.g. Kimodo-SOMA-RP-v1, kimodo-soma-
+                 rp, or SOMA).

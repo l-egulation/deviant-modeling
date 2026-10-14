@@ -1,0 +1,411 @@
+Processing ./.cache/kimodo
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting hydra-core>=1.3 (from kimodo==1.0.0)
+  Downloading hydra_core-1.3.7-py3-none-any.whl.metadata (5.7 kB)
+Collecting omegaconf>=2.3 (from kimodo==1.0.0)
+  Downloading omegaconf-2.4.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting numpy>=1.23 (from kimodo==1.0.0)
+  Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+Collecting scipy>=1.10 (from kimodo==1.0.0)
+  Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting transformers==5.1.0 (from kimodo==1.0.0)
+  Downloading transformers-5.1.0-py3-none-any.whl.metadata (31 kB)
+Collecting urllib3>=2.6.3 (from kimodo==1.0.0)
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting boto3 (from kimodo==1.0.0)
+  Downloading boto3-1.43.113-py3-none-any.whl.metadata (6.6 kB)
+Collecting peft>=0.18 (from kimodo==1.0.0)
+  Downloading peft-0.21.2-py3-none-any.whl.metadata (15 kB)
+Collecting einops>=0.7 (from kimodo==1.0.0)
+  Downloading einops-0.8.2-py3-none-any.whl.metadata (13 kB)
+Collecting tqdm>=4.0 (from kimodo==1.0.0)
+  Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+Collecting packaging>=21.0 (from kimodo==1.0.0)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pydantic>=2.0 (from kimodo==1.0.0)
+  Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+Requirement already satisfied: filelock>=3.20.3 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from kimodo==1.0.0) (3.32.3)
+Collecting gradio>=6.8.0 (from kimodo==1.0.0)
+  Downloading gradio-6.30.0-py3-none-any.whl.metadata (16 kB)
+Collecting gradio_client>=1.0 (from kimodo==1.0.0)
+  Downloading gradio_client-2.7.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting trimesh>=3.21.7 (from kimodo==1.0.0)
+  Downloading trimesh-5.1.1-py3-none-any.whl.metadata (13 kB)
+Collecting scenepic>=1.1.0 (from kimodo==1.0.0)
+  Downloading scenepic-1.1.2-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+Collecting pillow>=9.0 (from kimodo==1.0.0)
+  Downloading pillow-12.3.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting av>=16.1.0 (from kimodo==1.0.0)
+  Downloading av-17.1.0-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (4.6 kB)
+Collecting bvhio (from kimodo==1.0.0)
+  Downloading bvhio-1.5.4-py3-none-any.whl.metadata (20 kB)
+Collecting viser @ git+https://github.com/nv-tlabs/kimodo-viser.git (from kimodo==1.0.0)
+  Cloning https://github.com/nv-tlabs/kimodo-viser.git to /tmp/pip-install-o0f2uffo/viser_d273208873ad4f2c83423e48b22ab0ec
+  Running command git clone --filter=blob:none --quiet https://github.com/nv-tlabs/kimodo-viser.git /tmp/pip-install-o0f2uffo/viser_d273208873ad4f2c83423e48b22ab0ec
+  Resolved https://github.com/nv-tlabs/kimodo-viser.git to commit 7c82ad8f8640bad9dff8ded5c5eee908eeb08f11
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git (from kimodo==1.0.0)
+  Cloning https://github.com/NVlabs/SOMA-X.git to /tmp/pip-install-o0f2uffo/py-soma-x_cc4d36f2c4a84302a4ddc56518be6538
+  Running command git clone --filter=blob:none --quiet https://github.com/NVlabs/SOMA-X.git /tmp/pip-install-o0f2uffo/py-soma-x_cc4d36f2c4a84302a4ddc56518be6538
+  Resolved https://github.com/NVlabs/SOMA-X.git to commit 56a3d957a549c66425b500fddf7f3183bc6fbdff
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: torch in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (2.11.0+cu128)
+Collecting warp-lang (from py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading warp_lang-1.18.0-py3-none-manylinux_2_28_x86_64.whl.metadata (26 kB)
+Collecting rtree (from py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading rtree-1.4.1-py3-none-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (2.1 kB)
+Collecting cholespy (from py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading cholespy-2.2.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.2 kB)
+Collecting huggingface_hub (from py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading huggingface_hub-2.2.0-py3-none-any.whl.metadata (16 kB)
+Collecting usd-core (from py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading usd_core-26.8-cp310-none-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.8 kB)
+Collecting imageio<3.0.0,>=2.0.0 (from viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading imageio-2.38.0-py3-none-any.whl.metadata (9.7 kB)
+Collecting msgspec<1.0.0,>=0.18.6 (from viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading msgspec-0.22.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.0 kB)
+Collecting nodeenv<2.0.0,>=1.9.1 (from viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading nodeenv-1.11.0-py2.py3-none-any.whl.metadata (40 kB)
+Collecting requests<3.0.0,>=2.0.0 (from viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting rich<15.0.0,>=13.3.3 (from viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading rich-14.3.4-py3-none-any.whl.metadata (18 kB)
+Collecting trimesh>=3.21.7 (from kimodo==1.0.0)
+  Downloading trimesh-4.12.2-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: typing-extensions>=4.0.0 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0) (4.16.0)
+Collecting websockets<16.0.0,>=13.1 (from viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting yourdfpy<1.0.0,>=0.0.53 (from viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading yourdfpy-0.0.60-py3-none-any.whl.metadata (9.0 kB)
+Collecting huggingface_hub (from py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading huggingface_hub-1.33.0-py3-none-any.whl.metadata (16 kB)
+Collecting pyyaml>=5.1 (from transformers==5.1.0->kimodo==1.0.0)
+  Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting regex!=2019.12.17 (from transformers==5.1.0->kimodo==1.0.0)
+  Downloading regex-2026.9.29-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting tokenizers<=0.23.0,>=0.22.0 (from transformers==5.1.0->kimodo==1.0.0)
+  Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+Collecting typer-slim (from transformers==5.1.0->kimodo==1.0.0)
+  Downloading typer_slim-0.24.0-py3-none-any.whl.metadata (4.2 kB)
+Collecting safetensors>=0.4.3 (from transformers==5.1.0->kimodo==1.0.0)
+  Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting click<9.0.0,>=8.4.2 (from huggingface_hub->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: fsspec>=2023.5.0 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from huggingface_hub->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (2026.7.0)
+Collecting hf-xet<2.0.0,>=1.6.0 (from huggingface_hub->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Collecting httpx<1,>=0.23.0 (from huggingface_hub->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting tomli>=1.1.0 (from huggingface_hub->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Using cached tomli-2.5.0-py3-none-any.whl.metadata (10 kB)
+Collecting anyio (from httpx<1,>=0.23.0->huggingface_hub->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting certifi (from httpx<1,>=0.23.0->huggingface_hub->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx<1,>=0.23.0->huggingface_hub->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx<1,>=0.23.0->huggingface_hub->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.23.0->huggingface_hub->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3.0.0,>=2.0.0->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading charset_normalizer-3.5.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+Collecting markdown-it-py>=2.2.0 (from rich<15.0.0,>=13.3.3->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich<15.0.0,>=13.3.3->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting lxml (from yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading lxml-6.1.3-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+Collecting six (from yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting brotli>=1.1.0 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading brotli-1.2.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.1 kB)
+Collecting fastapi<1.0,>=0.115.2 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading fastapi-0.143.0-py3-none-any.whl.metadata (26 kB)
+Collecting groovy~=0.1 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading groovy-0.1.2-py3-none-any.whl.metadata (6.1 kB)
+Collecting hf-gradio<1.0,>=0.4.1 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading hf_gradio-0.4.1-py3-none-any.whl.metadata (428 bytes)
+Requirement already satisfied: jinja2<4.0 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from gradio>=6.8.0->kimodo==1.0.0) (3.1.6)
+Requirement already satisfied: markupsafe<4.0,>=2.0 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from gradio>=6.8.0->kimodo==1.0.0) (3.0.3)
+Collecting orjson~=3.0 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading orjson-3.13.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (42 kB)
+Collecting pandas<4.0,>=1.0 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+Collecting pydub<1.0 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading pydub-0.25.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting python-multipart<1.0,>=0.0.18 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+Collecting pytz>=2017.2 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+Collecting safehttpx<0.2.0,>=0.1.7 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading safehttpx-0.1.7-py3-none-any.whl.metadata (4.2 kB)
+Collecting semantic-version~=2.0 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading semantic_version-2.10.0-py2.py3-none-any.whl.metadata (9.7 kB)
+Collecting starlette<2.0,>=1.0.1 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading starlette-1.7.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting tomlkit<0.15.0,>=0.12.0 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading tomlkit-0.14.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting typer<1.0,>=0.12 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading typer-0.27.3-py3-none-any.whl.metadata (16 kB)
+Collecting uvicorn>=0.14.0 (from gradio>=6.8.0->kimodo==1.0.0)
+  Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting exceptiongroup>=1.0.2 (from anyio->httpx<1,>=0.23.0->huggingface_hub->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0)
+  Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+Collecting typing-inspection>=0.4.2 (from fastapi<1.0,>=0.115.2->gradio>=6.8.0->kimodo==1.0.0)
+  Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting annotated-doc>=0.0.2 (from fastapi<1.0,>=0.115.2->gradio>=6.8.0->kimodo==1.0.0)
+  Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+Collecting opentelemetry-api>=1.44.0 (from fastapi<1.0,>=0.115.2->gradio>=6.8.0->kimodo==1.0.0)
+  Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting python-dateutil>=2.8.2 (from pandas<4.0,>=1.0->gradio>=6.8.0->kimodo==1.0.0)
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting tzdata>=2022.7 (from pandas<4.0,>=1.0->gradio>=6.8.0->kimodo==1.0.0)
+  Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting annotated-types>=0.6.0 (from pydantic>=2.0->kimodo==1.0.0)
+  Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.50.1 (from pydantic>=2.0->kimodo==1.0.0)
+  Downloading pydantic_core-2.50.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+Collecting shellingham>=1.3.0 (from typer<1.0,>=0.12->gradio>=6.8.0->kimodo==1.0.0)
+  Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting omegaconf>=2.3 (from kimodo==1.0.0)
+  Downloading omegaconf-2.3.1-py3-none-any.whl.metadata (4.5 kB)
+Collecting antlr4-python3-runtime==4.9.* (from hydra-core>=1.3->kimodo==1.0.0)
+  Downloading antlr4-python3-runtime-4.9.3.tar.gz (117 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<15.0.0,>=13.3.3->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting psutil (from peft>=0.18->kimodo==1.0.0)
+  Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+Collecting accelerate>=0.21.0 (from peft>=0.18->kimodo==1.0.0)
+  Downloading accelerate-1.15.0-py3-none-any.whl.metadata (19 kB)
+Requirement already satisfied: setuptools<82 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (59.6.0)
+Requirement already satisfied: sympy>=1.13.3 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (3.4.2)
+Requirement already satisfied: cuda-toolkit==12.8.1 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (12.8.1)
+Requirement already satisfied: cuda-bindings<13,>=12.9.4 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (12.9.7)
+Requirement already satisfied: nvidia-cudnn-cu12==9.19.0.56 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (9.19.0.56)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (0.7.1)
+Requirement already satisfied: nvidia-nccl-cu12==2.28.9 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (2.28.9)
+Requirement already satisfied: nvidia-nvshmem-cu12==3.4.5 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (3.4.5)
+Requirement already satisfied: triton==3.6.0 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (3.6.0)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.8.90.* in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (12.8.90)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.8.90.* in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (12.8.90)
+Requirement already satisfied: nvidia-nvtx-cu12==12.8.90.* in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (12.8.90)
+Requirement already satisfied: nvidia-cufft-cu12==11.3.3.83.* in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (11.3.3.83)
+Requirement already satisfied: nvidia-cusolver-cu12==11.7.3.90.* in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (11.7.3.90)
+Requirement already satisfied: nvidia-cusparse-cu12==12.5.8.93.* in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (12.5.8.93)
+Requirement already satisfied: nvidia-cufile-cu12==1.13.1.3.* in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (1.13.1.3)
+Requirement already satisfied: nvidia-curand-cu12==10.3.9.90.* in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (10.3.9.90)
+Requirement already satisfied: nvidia-cublas-cu12==12.8.4.1.* in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (12.8.4.1)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.8.93.* in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (12.8.93)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.8.93.* in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (12.8.93)
+Requirement already satisfied: cuda-pathfinder~=1.1 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from cuda-bindings<13,>=12.9.4->torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (1.6.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /opt/deviant-kimodo/.venv/lib/python3.10/site-packages (from sympy>=1.13.3->torch->py-soma-x @ git+https://github.com/NVlabs/SOMA-X.git->kimodo==1.0.0) (1.3.0)
+Collecting colorlog (from trimesh[easy]>=3.11.2->yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading colorlog-6.12.0-py3-none-any.whl.metadata (11 kB)
+Collecting manifold3d>=2.3.0 (from trimesh[easy]>=3.11.2->yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading manifold3d-3.5.4-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (20 kB)
+Collecting jsonschema (from trimesh[easy]>=3.11.2->yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting svg.path (from trimesh[easy]>=3.11.2->yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading svg_path-7.1-py2.py3-none-any.whl.metadata (14 kB)
+Collecting pycollada (from trimesh[easy]>=3.11.2->yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading pycollada-0.9.3-py3-none-any.whl.metadata (1.7 kB)
+Collecting shapely (from trimesh[easy]>=3.11.2->yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading shapely-2.1.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.8 kB)
+Collecting xxhash (from trimesh[easy]>=3.11.2->yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading xxhash-4.0.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (17 kB)
+Collecting embreex (from trimesh[easy]>=3.11.2->yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading embreex-4.4.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting vhacdx (from trimesh[easy]>=3.11.2->yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading vhacdx-0.1.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.1 kB)
+Collecting mapbox_earcut>=1.0.2 (from trimesh[easy]>=3.11.2->yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading mapbox_earcut-2.1.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (2.5 kB)
+Collecting botocore<1.44.0,>=1.43.113 (from boto3->kimodo==1.0.0)
+  Downloading botocore-1.43.113-py3-none-any.whl.metadata (5.6 kB)
+Collecting jmespath<2.0.0,>=0.7.1 (from boto3->kimodo==1.0.0)
+  Downloading jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting s3transfer<0.20.0,>=0.19.0 (from boto3->kimodo==1.0.0)
+  Downloading s3transfer-0.19.2-py3-none-any.whl.metadata (1.7 kB)
+Collecting pyglm==2.8.2 (from bvhio->kimodo==1.0.0)
+  Downloading pyglm-2.8.2-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+Collecting spatial-transform==1.3.3 (from bvhio->kimodo==1.0.0)
+  Downloading spatial_transform-1.3.3-py3-none-any.whl.metadata (8.7 kB)
+Collecting attrs>=22.2.0 (from jsonschema->trimesh[easy]>=3.11.2->yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema->trimesh[easy]>=3.11.2->yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema->trimesh[easy]>=3.11.2->yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema->trimesh[easy]>=3.11.2->yourdfpy<1.0.0,>=0.0.53->viser @ git+https://github.com/nv-tlabs/kimodo-viser.git->kimodo==1.0.0)
+  Downloading rpds_py-0.30.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Downloading transformers-5.1.0-py3-none-any.whl (10.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.3/10.3 MB 15.0 MB/s  0:00:00
+Downloading huggingface_hub-1.33.0-py3-none-any.whl (846 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 kB 2.0 MB/s  0:00:00
+Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Downloading hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 10.8 MB/s  0:00:00
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading imageio-2.38.0-py3-none-any.whl (328 kB)
+Downloading msgspec-0.22.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (227 kB)
+Downloading nodeenv-1.11.0-py2.py3-none-any.whl (34 kB)
+Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 6.5 MB/s  0:00:02
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading charset_normalizer-3.5.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (271 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading rich-14.3.4-py3-none-any.whl (310 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 5.6 MB/s  0:00:00
+Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 7.5 MB/s  0:00:00
+Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+Downloading trimesh-4.12.2-py3-none-any.whl (741 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 741.0/741.0 kB 5.3 MB/s  0:00:00
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (181 kB)
+Downloading yourdfpy-0.0.60-py3-none-any.whl (22 kB)
+Downloading av-17.1.0-cp310-cp310-manylinux_2_28_x86_64.whl (36.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.6/36.6 MB 6.5 MB/s  0:00:05
+Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+Downloading einops-0.8.2-py3-none-any.whl (65 kB)
+Downloading gradio-6.30.0-py3-none-any.whl (31.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 31.4/31.4 MB 6.2 MB/s  0:00:05
+Downloading gradio_client-2.7.2-py3-none-any.whl (64 kB)
+Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+Downloading fastapi-0.143.0-py3-none-any.whl (144 kB)
+Downloading groovy-0.1.2-py3-none-any.whl (14 kB)
+Downloading hf_gradio-0.4.1-py3-none-any.whl (4.5 kB)
+Downloading orjson-3.13.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (130 kB)
+Downloading pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 6.8 MB/s  0:00:01
+Downloading pillow-12.3.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 6.4 MB/s  0:00:01
+Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+Downloading pydantic_core-2.50.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 6.0 MB/s  0:00:00
+Downloading pydub-0.25.1-py2.py3-none-any.whl (32 kB)
+Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 7.0 MB/s  0:00:00
+Downloading safehttpx-0.1.7-py3-none-any.whl (9.0 kB)
+Downloading semantic_version-2.10.0-py2.py3-none-any.whl (15 kB)
+Downloading starlette-1.7.0-py3-none-any.whl (78 kB)
+Downloading tomlkit-0.14.0-py3-none-any.whl (39 kB)
+Downloading typer-0.27.3-py3-none-any.whl (123 kB)
+Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Downloading brotli-1.2.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 6.7 MB/s  0:00:00
+Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading hydra_core-1.3.7-py3-none-any.whl (168 kB)
+Downloading omegaconf-2.3.1-py3-none-any.whl (79 kB)
+Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Downloading peft-0.21.2-py3-none-any.whl (835 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 835.4/835.4 kB 6.9 MB/s  0:00:00
+Downloading accelerate-1.15.0-py3-none-any.whl (394 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+Downloading regex-2026.9.29-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (797 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.6/797.6 kB 3.9 MB/s  0:00:00
+Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+Downloading scenepic-1.1.2-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (660 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 660.4/660.4 kB 6.7 MB/s  0:00:00
+Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.7/37.7 MB 7.0 MB/s  0:00:05
+Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached tomli-2.5.0-py3-none-any.whl (14 kB)
+Downloading manifold3d-3.5.4-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 6.5 MB/s  0:00:00
+Downloading mapbox_earcut-2.1.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (77 kB)
+Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+Downloading boto3-1.43.113-py3-none-any.whl (140 kB)
+Downloading botocore-1.43.113-py3-none-any.whl (16.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.1/16.1 MB 6.4 MB/s  0:00:02
+Downloading jmespath-1.1.0-py3-none-any.whl (20 kB)
+Downloading s3transfer-0.19.2-py3-none-any.whl (90 kB)
+Downloading bvhio-1.5.4-py3-none-any.whl (24 kB)
+Downloading pyglm-2.8.2-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (11.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.7/11.7 MB 7.2 MB/s  0:00:01
+Downloading spatial_transform-1.3.3-py3-none-any.whl (20 kB)
+Downloading cholespy-2.2.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (5.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 5.8 MB/s  0:00:00
+Downloading colorlog-6.12.0-py3-none-any.whl (12 kB)
+Downloading embreex-4.4.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (14.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.4/14.4 MB 6.7 MB/s  0:00:02
+Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading rpds_py-0.30.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (390 kB)
+Downloading lxml-6.1.3-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 8.1 MB/s  0:00:00
+Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Downloading pycollada-0.9.3-py3-none-any.whl (129 kB)
+Downloading rtree-1.4.1-py3-none-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (507 kB)
+Downloading shapely-2.1.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 6.4 MB/s  0:00:00
+Downloading svg_path-7.1-py2.py3-none-any.whl (18 kB)
+Downloading typer_slim-0.24.0-py3-none-any.whl (3.4 kB)
+Downloading usd_core-26.8-cp310-none-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (29.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.6/29.6 MB 6.5 MB/s  0:00:04
+Downloading vhacdx-0.1.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (258 kB)
+Downloading warp_lang-1.18.0-py3-none-manylinux_2_28_x86_64.whl (148.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 148.8/148.8 MB 6.2 MB/s  0:00:23
+Downloading xxhash-4.0.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (249 kB)
+Building wheels for collected packages: kimodo, py-soma-x, viser, antlr4-python3-runtime
+  Building wheel for kimodo (pyproject.toml): started
+  Building wheel for kimodo (pyproject.toml): still running...
+  Building wheel for kimodo (pyproject.toml): still running...
+  Building wheel for kimodo (pyproject.toml): still running...
+  Building wheel for kimodo (pyproject.toml): still running...
+  Building wheel for kimodo (pyproject.toml): still running...
+  Building wheel for kimodo (pyproject.toml): finished with status 'done'
+  Created wheel for kimodo: filename=kimodo-1.0.0-cp310-cp310-linux_x86_64.whl size=28404027 sha256=b391b98fb13c4b03d2091150269db70c59bb349c87cac3978d953b42adb06099
+  Stored in directory: /tmp/pip-ephem-wheel-cache-isuwryzh/wheels/42/2f/6f/dcdc57e3cd8638d031fa066bec32c5f62685e1d24349058950
+  Building wheel for py-soma-x (pyproject.toml): started
+  Building wheel for py-soma-x (pyproject.toml): finished with status 'done'
+  Created wheel for py-soma-x: filename=py_soma_x-0.3.4-py3-none-any.whl size=206319 sha256=c3707130f3c151c66208746ef161a8752ee44a61994147c810a7d906506d0d0a
+  Stored in directory: /tmp/pip-ephem-wheel-cache-isuwryzh/wheels/ba/f8/23/ef98ceef7a9336c4a53b6061821fc4c25b4aa4b6ebf5c0fe0e
+  Building wheel for viser (pyproject.toml): started
+  Building wheel for viser (pyproject.toml): finished with status 'done'
+  Created wheel for viser: filename=viser-1.0.16-py3-none-any.whl size=15116334 sha256=c29010edffbbd975f93e8b56b8959781a2f523b4f15ffdf7b14d858a904eeb0c
+  Stored in directory: /tmp/pip-ephem-wheel-cache-isuwryzh/wheels/25/11/01/54540f87b8cc056395e19cffa8a8add3911cbb8b88be8059ea
+  Building wheel for antlr4-python3-runtime (pyproject.toml): started
+  Building wheel for antlr4-python3-runtime (pyproject.toml): finished with status 'done'
+  Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.9.3-py3-none-any.whl size=144590 sha256=91b9823d3b5d6ea9ad3f7ccf5a2d27843aa3e5948db7f4f961ff9f6421eea544
+  Stored in directory: /root/.cache/pip/wheels/12/93/dd/1f6a127edc45659556564c5730f6d4e300888f4bca2d4c5a88
+Successfully built kimodo py-soma-x viser antlr4-python3-runtime
+Installing collected packages: pytz, pyglm, pydub, brotli, antlr4-python3-runtime, xxhash, websockets, usd-core, urllib3, tzdata, typing-inspection, tqdm, tomlkit, tomli, svg.path, spatial-transform, six, shellingham, semantic-version, safetensors, rtree, rpds-py, regex, pyyaml, python-multipart, pygments, pydantic-core, psutil, pillow, packaging, orjson, opentelemetry-api, numpy, nodeenv, msgspec, mdurl, lxml, jmespath, idna, hf-xet, h11, groovy, exceptiongroup, einops, colorlog, click, cholespy, charset_normalizer, certifi, av, attrs, annotated-types, annotated-doc, warp-lang, vhacdx, uvicorn, trimesh, shapely, scipy, requests, referencing, python-dateutil, pydantic, omegaconf, markdown-it-py, mapbox_earcut, manifold3d, imageio, httpcore, embreex, bvhio, anyio, starlette, scenepic, rich, pycollada, pandas, jsonschema-specifications, hydra-core, httpx, botocore, typer, safehttpx, s3transfer, jsonschema, huggingface_hub, fastapi, typer-slim, tokenizers, py-soma-x, gradio_client, boto3, accelerate, yourdfpy, transformers, hf-gradio, viser, peft, gradio, kimodo
+
+Successfully installed accelerate-1.15.0 annotated-doc-0.0.5 annotated-types-0.8.0 antlr4-python3-runtime-4.9.3 anyio-4.15.1 attrs-26.1.0 av-17.1.0 boto3-1.43.113 botocore-1.43.113 brotli-1.2.0 bvhio-1.5.4 certifi-2026.7.22 charset_normalizer-3.5.2 cholespy-2.2.0 click-8.5.0 colorlog-6.12.0 einops-0.8.2 embreex-4.4.0 exceptiongroup-1.3.1 fastapi-0.143.0 gradio-6.30.0 gradio_client-2.7.2 groovy-0.1.2 h11-0.16.0 hf-gradio-0.4.1 hf-xet-1.7.0 httpcore-1.0.9 httpx-0.28.1 huggingface_hub-1.33.0 hydra-core-1.3.7 idna-3.20 imageio-2.38.0 jmespath-1.1.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 kimodo-1.0.0 lxml-6.1.3 manifold3d-3.5.4 mapbox_earcut-2.1.0 markdown-it-py-4.2.0 mdurl-0.1.2 msgspec-0.22.0 nodeenv-1.11.0 numpy-2.2.6 omegaconf-2.3.1 opentelemetry-api-1.45.1 orjson-3.13.0 packaging-26.3 pandas-2.3.3 peft-0.21.2 pillow-12.3.0 psutil-7.2.2 py-soma-x-0.3.4 pycollada-0.9.3 pydantic-2.14.1 pydantic-core-2.50.1 pydub-0.25.1 pyglm-2.8.2 pygments-2.21.0 python-dateutil-2.9.0.post0 python-multipart-0.0.32 pytz-2026.5 pyyaml-6.0.3 referencing-0.37.0 regex-2026.9.29 requests-2.34.2 rich-14.3.4 rpds-py-0.30.0 rtree-1.4.1 s3transfer-0.19.2 safehttpx-0.1.7 safetensors-0.8.0 scenepic-1.1.2 scipy-1.15.3 semantic-version-2.10.0 shapely-2.1.2 shellingham-1.5.4 six-1.17.0 spatial-transform-1.3.3 starlette-1.7.0 svg.path-7.1 tokenizers-0.22.2 tomli-2.5.0 tomlkit-0.14.0 tqdm-4.70.1 transformers-5.1.0 trimesh-4.12.2 typer-0.27.3 typer-slim-0.24.0 typing-inspection-0.4.4 tzdata-2026.5 urllib3-2.8.0 usd-core-26.8 uvicorn-0.54.0 vhacdx-0.1.0 viser-1.0.16 warp-lang-1.18.0 websockets-15.0.1 xxhash-4.0.1 yourdfpy-0.0.60
