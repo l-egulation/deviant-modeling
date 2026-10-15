@@ -1,0 +1,10 @@
+{
+  "frames": 90,
+  "fps": 30.0,
+  "bvh_roundtrip_joint_max_error_m": 6.079483611465264E-05,
+  "elbow_inside_angle_mean_degrees": 115.22037506103516,
+  "elbow_nearly_straight_over_150_degrees_fraction": 0.0,
+  "hips_to_neck_forward_lean_mean_degrees": 15.668171882629395,
+  "scope": "Raw generated joints; no pose edits, retargeting or foot IK; horizontal camera centering only",
+  "head_forward_downward_angle_mean_degrees": 24.792967
+}

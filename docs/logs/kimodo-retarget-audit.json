@@ -1,0 +1,12 @@
+{
+  "source_hips_to_neck_lean_mean": 15.668212205676445,
+  "target_hips_to_head_base_lean_mean": 14.172420094266027,
+  "target_head_forward_downward_angle_mean": 24.792987134340596,
+  "sample_frame16": [
+    19.522614697618728,
+    18.105222380730087,
+    17.65802054720916
+  ],
+  "source_leg_length": 0.8552782237529755,
+  "target_leg_length": 0.26831619441509247
+}
