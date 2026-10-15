@@ -2,12 +2,16 @@
 import bpy
 import json
 import math
+import os
 from pathlib import Path
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[1]
 bpy.ops.wm.read_factory_settings(use_empty=True)
-bpy.ops.import_scene.gltf(filepath=str(ROOT / 'assets/ink-hero-tpose.glb'))
+MODEL=os.environ.get('TRIPO_REVIEW_MODEL','assets/ink-hero-tpose.glb')
+STEM=os.environ.get('TRIPO_REVIEW_STEM','tripo-rebuild')
+ASSET_ID=os.environ.get('TRIPO_REVIEW_ID','38c66e6c-230a-439e-81bc-7ebee9b2221f')
+bpy.ops.import_scene.gltf(filepath=str(ROOT / MODEL))
 meshes = [o for o in bpy.context.scene.objects if o.type == 'MESH']
 points = [o.matrix_world @ Vector(c) for o in meshes for c in o.bound_box]
 lo = Vector([min(p[i] for p in points) for i in range(3)])
@@ -15,7 +19,7 @@ hi = Vector([max(p[i] for p in points) for i in range(3)])
 center = (lo + hi) / 2
 size = max(hi - lo)
 report = {'source': 'Tripo P2.0 export, no geometry edits',
-          'asset_id': '38c66e6c-230a-439e-81bc-7ebee9b2221f',
+          'asset_id': ASSET_ID, 'input': MODEL,
           'meshes': len(meshes), 'vertices': sum(len(o.data.vertices) for o in meshes),
           'faces': sum(len(o.data.polygons) for o in meshes),
           'quads': sum(len(p.vertices) == 4 for o in meshes for p in o.data.polygons),
@@ -42,8 +46,8 @@ for angle, label in [(0,'front'),(90,'side'),(180,'back'),(270,'other-side')]:
     a = math.radians(angle)
     camera.location = center + Vector((math.sin(a)*size*3, -math.cos(a)*size*3, 0))
     camera.rotation_euler = (center-camera.location).to_track_quat('-Z','Y').to_euler()
-    scene.render.filepath = str(ROOT / f'outputs/tripo-rebuild-{label}.png')
+    scene.render.filepath = str(ROOT / f'outputs/{STEM}-{label}.png')
     bpy.ops.render.render(write_still=True)
-bpy.ops.wm.save_as_mainfile(filepath=str(ROOT / 'outputs/tripo-rebuild.blend'))
-(ROOT/'docs/logs/tripo-rebuild-structure.json').write_text(json.dumps(report,indent=2)+'\n')
+bpy.ops.wm.save_as_mainfile(filepath=str(ROOT / f'outputs/{STEM}.blend'))
+(ROOT/f'docs/logs/{STEM}-structure.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report))

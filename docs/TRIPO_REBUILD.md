@@ -28,3 +28,31 @@ Repose the exact same character from the reference into a symmetrical rigging re
 - 정면 T자 팔, 양다리 분리와 후면 얼굴 중복 없음을 육안 확인했습니다. 스카프가 원본보다 단순하고 밑창에 작은 홈이 생겼습니다. 디자인 동일성의 최종 승인과 관절 변형 품질 통과를 뜻하지 않습니다.
 - 재현: scripts/review-tripo-model.py. 검사 기록 docs/logs/tripo-rebuild-structure.json, 실행 로그 tripo-rebuild-render.log.
 - 후속 사용자 승인으로 달리기를 적용했습니다. 현재 결과와 검증·한계는 TRIPO_RUN.md를 확인합니다.
+
+## 2026-10-16 — 사용자가 선택한 A 비율 재모델링
+
+- 사용자가 A안을 선택하고 진행을 요청했습니다. B/C의 길고 가는 비율은 채택하지 않습니다.
+- 입력: assets/hero-proportion-front.png. outputs/hero-proportion-reference.png의 정면 T자 한 캐릭터를 내장 image_gen으로 정리한 이미지입니다. 이미지 생성은 3D 모델링과 구분합니다.
+- 실제 모델링: Chrome Tripo Studio, 스마트 메시 P2.0, 이미지 1장, 모델 1개, 무료 체험 1회. 화면은 생성 비용 100→0을 표시했고 생성 후 잔액은 3,015로 유지됐습니다.
+- 새 에셋: https://studio.tripo3d.ai/ko/workspace/generate/550caa06-b152-4076-b70e-1b70fe5a4ff6
+- Tripo 화면: Quad 5,649면·5,416정점. 텍스처 생성 전 원본 GLB: outputs/hero-proportion-model.glb, 259,468바이트. GLB에는 1메시·5,415정점·10,664삼각면·1재질·리그 0개가 있습니다. 사각면 유지 파일이라고 표기하지 않습니다.
+- 내보내기 대기 도구는 타임아웃을 반환했으나 Downloads/hero-proportion-model.glb의 실제 저장을 확인하고 복사했습니다. 불필요한 재생성은 하지 않았습니다.
+- 로컬 검토: 원본 형상을 수정하지 않고 Blender에서 정면·측면·후면·반대 측면 렌더와 편집용 blend를 저장했습니다. 수평 팔·벌린 다리·후면 얼굴 중복 없음 확인. 리깅 적합성이나 달리기 자연스러움은 아직 검증하지 않았습니다.
+- 텍스처: 화면상 1회 20크레딧. 이번 새 모델에 대한 크레딧 사용 승인을 질문했고 아직 실행하지 않았습니다. 기존 다른 모델의 20크레딧 승인을 이번 모델에 재사용하지 않습니다.
+- 이전 assets/ink-hero-tpose.glb와 달리기 결과는 보존합니다. 새 모델은 현재 outputs/hero-proportion-model.* 후보이며 아직 기존 실행 입력을 대체하지 않습니다.
+- 실행 기록: docs/logs/hero-proportion-model-structure.json, hero-proportion-model-render.log.
+- 생성 화면 증거: outputs/hero-proportion-tripo-studio.jpg (로컬 보관).
+
+재현:
+
+```sh
+TRIPO_REVIEW_MODEL=outputs/hero-proportion-model.glb TRIPO_REVIEW_STEM=hero-proportion-model TRIPO_REVIEW_ID=550caa06-b152-4076-b70e-1b70fe5a4ff6 /opt/deviant-blender/blender-4.5.13-linux-x64/blender -b --python-exit-code 1 --python scripts/review-tripo-model.py
+```
+
+### 정면 입력 이미지에 사용한 최종 프롬프트
+
+```text
+Precise-object-edit: isolate ONLY the FRONT character at the LEFT of the provided modeling sheet into one square image for Tripo 3D reconstruction. Preserve that exact front character's body proportions, large ivory hood, black face, two vertical gold eyes, teal scarf and gold clasp, short ivory jacket, moderate leg length, black gloves and black boots, materials and details. Do NOT use the center side character or the right back view. Do not redesign or lengthen limbs. Full body, exact front orthographic T-pose, straight arms horizontal, symmetrically spread legs as in reference, both hands and both feet fully visible, centered with generous blank margins around fingertips, hood and soles. Remove all text, labels, horizontal diagram guides, other views, and floor shadow. Plain white opaque background. One character only. Same selected A body proportions as left original, no B/C slenderness. Neutral diffuse lighting, no perspective, no animation.
+```
+
+원본 GLB SHA256: `19d32cb20efc0fdbd702ceec3b12c38f8bc30982d496907dd4d3219df909a324`.

@@ -1,0 +1,22 @@
+{
+  "source": "Tripo P2.0 export, no geometry edits",
+  "asset_id": "550caa06-b152-4076-b70e-1b70fe5a4ff6",
+  "input": "outputs/hero-proportion-model.glb",
+  "meshes": 1,
+  "vertices": 5415,
+  "faces": 10664,
+  "quads": 0,
+  "armatures": 0,
+  "materials": 1,
+  "bounds_min": [
+    -0.432373046875,
+    -0.208740234375,
+    0.0
+  ],
+  "bounds_max": [
+    0.432373046875,
+    0.208740234375,
+    0.99951171875
+  ],
+  "rigging_validated": false
+}
