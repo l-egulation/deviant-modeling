@@ -34,6 +34,18 @@ BVH의 cm 단위를 m로 변환하고, SOMA의 허벅지 `LeftLeg/RightLeg`와 �
 
 ## 결과와 재실행
 
+### 2026-10-15 카메라 흔들림 수정
+
+골반에 적용된 접지 높이를 카메라가 함께 따라가면서, 고정된 바닥이 상하로 움직이는 것처럼 보였습니다. 카메라의 높이와 각도를 고정하고 수평 이동만 따라가도록 수정했습니다. 캐릭터 리그·메시·걷기·접지 보정과 바닥 자체는 바꾸지 않았습니다. 같은 수정은 `rig-hero.py`의 새 씬 생성에도 적용했습니다.
+
+`hero-camera-check.json`: 90프레임의 캐릭터 월드·포즈 행렬과 바닥 변환이 수정 전후 정확히 일치합니다. 카메라의 수직 이동 범위는 0.052973m에서 0m로, 캐릭터의 수평 위치를 따라 측정한 바닥 기준점의 화면 수직 변동은 512px 영상에서 20.5106px에서 약 0.000046px로 줄었습니다. 이 지표는 카메라의 상하 흔들림을 확인하며 그림자나 걷기 자체의 움직임을 제거하는 검사는 아닙니다.
+
+기존 씬의 카메라만 수정하려면 아래를 실행한 뒤 `render-hero.py`, `encode-hero-preview.py`로 영상을 다시 만듭니다.
+
+```sh
+/opt/deviant-blender/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 1 --python scripts/stabilize-hero-camera.py
+```
+
 - `outputs/hero-walk.blend`: 캐릭터 리그, 굽힌 걷기, 원본 Kimodo 참고 골격, 카메라와 조명.
 - `outputs/hero-walk.glb`: 캐릭터 메시·재질·16뼈 스킨과 걷기 애니메이션. 카메라·바닥·조명은 제외.
 - `outputs/hero-walk-preview.mp4`: 512×512, 30fps, 90프레임, 3초. 카메라가 캐릭터를 따라가지만 실제 애니메이션은 전진합니다.

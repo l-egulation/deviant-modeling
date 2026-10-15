@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "frames_checked": 90,
+  "camera_vertical_travel_before_m": 0.05297273397445679,
+  "camera_vertical_travel_after_m": 0.0,
+  "ground_screen_vertical_travel_before_pixels": 20.51058578491211,
+  "ground_screen_vertical_travel_after_pixels": 4.57763671875e-05,
+  "character_pose_and_root_motion_unchanged": true,
+  "floor_transform_unchanged": true,
+  "fix": "Fixed camera height and angle; horizontal tracking only. No grounding or rig changes."
+}

@@ -210,7 +210,8 @@ camera.data.ortho_scale = 1.32
 scene.camera = camera
 for f in range(1, 91):
     scene.frame_set(f)
-    center = rig.location + Vector((0, 0, .49))
+    # Follow horizontal travel only; pelvis bob must not shake the floor.
+    center = Vector((rig.location.x, rig.location.y, .49))
     camera.location = center + Vector((1.35, -2.7, .18))
     camera.rotation_euler = (center-camera.location).to_track_quat('-Z', 'Y').to_euler()
     camera.keyframe_insert('location', frame=f)
