@@ -1,6 +1,6 @@
 # 작업 지침
 
-> 2026-10-15 최신: 사용자 요청으로 Mixamo의 기존 Running With Intention을 실제 Tripo 캐릭터에 적용했습니다. 검토본은 outputs/hero-mixamo-run.blend / .glb / -preview.mp4입니다. 원본 30fps 박자는 유지하고 캐릭터 비율 매핑과 접지를 보정했습니다. Kimodo 생성본과 수작업 반복본은 이번 모션에 사용하지 않습니다. docs/MIXAMO_RUN.md 참조.
+> 2026-10-15 최신: 사용자가 비율 시안 A를 선택했습니다. B/C는 과도한 체형으로 채택하지 않습니다. 큰 후드와 귀여운 인상을 유지하고 팔다리를 완만하게 늘리는 방향입니다. 기존 3D·달리기 결과는 새 체형으로 교체되기 전의 검토본입니다. docs/HERO_PROPORTIONS.md 참조.
 
 - 2026-10-15 사용자 명시 수정: 달리기 피드백은 Kimodo 프롬프트에 반영해 새 생성 후보를 뽑는다. animate-run-keyposes.py의 수작업 반복본(0e20e99)은 거절됐으며 다시 적용하지 않는다. Blender는 비율 매핑·필요한 접지 및 의상 보정만 한다. 생성 원본과 적용본의 차이를 구분해 보고한다.
 - 먼저 README.md, STATUS.md, START-HERE.md를 읽는다.

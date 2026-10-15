@@ -1,6 +1,6 @@
 # Deviant Modeling
 
-> 2026-10-15 최신: 사용자 요청으로 Mixamo의 기존 Running With Intention을 실제 Tripo 캐릭터에 적용했습니다. 검토본은 outputs/hero-mixamo-run.blend / .glb / -preview.mp4입니다. 원본 30fps 박자는 유지하고 캐릭터 비율 매핑과 접지를 보정했습니다. Kimodo 생성본과 수작업 반복본은 이번 모션에 사용하지 않습니다. docs/MIXAMO_RUN.md 참조.
+> 2026-10-15 최신: 사용자가 비율 시안 A를 선택했습니다. B/C는 과도한 체형으로 채택하지 않습니다. 큰 후드와 귀여운 인상을 유지하고 팔다리를 완만하게 늘리는 방향입니다. 기존 3D·달리기 결과는 새 체형으로 교체되기 전의 검토본입니다. docs/HERO_PROPORTIONS.md 참조.
 
 Tripo로 만든 주인공에 Kimodo 모션을 적용하고, Blender에서 게임용 도트 스프라이트로 렌더링하는 프로젝트입니다.
 
