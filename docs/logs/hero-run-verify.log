@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "frames_checked": 90,
+  "finite_deformed_vertices": true,
+  "weight_sum_min": 0.9965112879872322,
+  "weight_sum_max": 1.0000000447034836,
+  "lowest_vertex_min_m": -5.587935447692871e-08,
+  "lowest_vertex_max_m": 0.02282312884926796,
+  "max_deformed_edge_length_m": 0.11592207483186977,
+  "max_rest_edge_length_m": 0.05190927328196389,
+  "max_bone_length_error_m": 2.1606683731079102e-07,
+  "pose_bone_scales": "All (1,1,1), every frame",
+  "horizontal_root_travel_m": 3.1761047104093425,
+  "notes": "Contact-anchored fixed-length leg IK and smooth pelvis height; visual review still required."
+}
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-run.blend"
+
+Blender quit

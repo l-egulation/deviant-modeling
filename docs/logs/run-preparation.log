@@ -1,0 +1,39 @@
+{
+  "selected": "run_00.npz",
+  "candidates": [
+    {
+      "file": "run_00.npz",
+      "best_cycle_score": 0.0797813044260338,
+      "start_frame": 16,
+      "period_frames": 24,
+      "endpoint_mean_angle_degrees": 3.039370112174389,
+      "inferred_air_frames": 32,
+      "raw_classifier_air_frames": 69
+    },
+    {
+      "file": "run_01.npz",
+      "best_cycle_score": 0.11402290793642722,
+      "start_frame": 42,
+      "period_frames": 21,
+      "endpoint_mean_angle_degrees": 4.6814516321665405,
+      "inferred_air_frames": 23,
+      "raw_classifier_air_frames": 64
+    }
+  ],
+  "cycle_start_frame": 16,
+  "cycle_source_frames": 24,
+  "output_cycles": 4,
+  "output_period_frames": 22.5,
+  "cadence_time_scale": 1.0666666666666667,
+  "duration_seconds": 3,
+  "frames": 90,
+  "loop_displacement_m": [
+    0.1191539317369461,
+    0.0,
+    10.936295509338379
+  ],
+  "source_endpoint_mean_angle_degrees": 3.039370112174389,
+  "output_air_frames": 34,
+  "contact_method": "Classifier OR near-ground slow toe; close one-frame holes. Source exports are preserved separately.",
+  "loop_method": "Select full stride with matching pose and velocity; close small local-rotation drift; periodic cubic unit-quaternion sampling; preserve linear travel."
+}

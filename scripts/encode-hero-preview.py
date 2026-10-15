@@ -1,4 +1,5 @@
 """Encode Blender renders and check the animated GLB and preview duration."""
+import os
 import av
 import json
 import struct
@@ -8,8 +9,11 @@ from PIL import Image, ImageDraw
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-frames = ROOT/'.cache/hero-frames'
-dest = ROOT/'outputs/hero-walk-preview.mp4'
+MOTION = os.environ.get('HERO_MOTION', 'walk')
+assert MOTION in ('walk', 'run')
+LOG_STEM = 'hero' if MOTION == 'walk' else 'hero-run'
+frames = ROOT/('.cache/hero-frames' if MOTION == 'walk' else '.cache/hero-run-frames')
+dest = ROOT/f'outputs/hero-{MOTION}-preview.mp4'
 with av.open(str(dest), 'w') as container:
     stream = container.add_stream('libx264', rate=30)
     stream.width = stream.height = 512
@@ -24,27 +28,38 @@ with av.open(str(dest), 'w') as container:
     for packet in stream.encode():
         container.mux(packet)
 sheet = Image.new('RGB', (1536, 1024))
-for i,f in enumerate([1,16,31,46,61,76]):
+for i,f in enumerate([1,5,9,13,17,21] if MOTION == 'run' else [1,16,31,46,61,76]):
     tile = Image.open(frames/f'{f:03d}.png').convert('RGB')
     ImageDraw.Draw(tile).text((12,12), f'{(f-1)/30:.1f}s', fill='white')
     sheet.paste(tile, ((i%3)*512, (i//3)*512))
-sheet.save(ROOT/'outputs/hero-walk-contact-sheet.png')
-blob = (ROOT/'outputs/hero-walk.glb').read_bytes()
+sheet.save(ROOT/f'outputs/hero-{MOTION}-contact-sheet.png')
+blob = (ROOT/f'outputs/hero-{MOTION}.glb').read_bytes()
 n = struct.unpack_from('<I', blob, 12)[0]
 gltf = json.loads(blob[20:20+n])
 assert len(gltf.get('skins', [])) == 1
 assert len(gltf.get('animations', [])) == 1
 assert len(gltf['skins'][0]['joints']) == 16
+loop_image_error=None
+if MOTION == 'run':
+    first=np.array(Image.open(frames/'001.png').convert('RGB'),dtype=float)
+    end=np.array(Image.open(frames/'091.png').convert('RGB'),dtype=float)
+    loop_image_error=float(np.abs(first-end).mean())
+    assert loop_image_error<1,loop_image_error
+    duration=max(gltf['accessors'][s['input']]['max'][0] for s in gltf['animations'][0]['samplers'])
+    assert abs(duration-3)<1e-5,duration
 with av.open(str(dest)) as c:
     s = c.streams.video[0]
     rate = float(s.average_rate)
     decoded = [f.to_ndarray(format='rgb24') for f in c.decode(video=0)]
 assert len(decoded) == 90 and rate == 30
-diff = float(np.abs(decoded[0].astype(float)-decoded[45].astype(float)).mean())
+comparison=15 if MOTION == 'run' else 45
+diff = float(np.abs(decoded[0].astype(float)-decoded[comparison].astype(float)).mean())
 assert diff > 1
 report = {'status': 'PASS', 'frames': 90, 'fps': rate, 'seconds': 3,
           'width':512, 'height':512, 'glb_skins':1, 'glb_joints':16,
-          'glb_animations':len(gltf['animations']), 'first_to_mid_pixel_difference':diff,
-          'scope':'First-pass body rig, not a final production topology or seamless loop.'}
-(ROOT/'docs/logs/hero-preview-check.json').write_text(json.dumps(report,indent=2)+'\n')
+          'glb_animations':len(gltf['animations']), 'first_to_comparison_pixel_difference':diff,
+          'comparison_frame_index':comparison,
+          'loop_endpoint_mean_pixel_error':loop_image_error,
+          'scope':'Body animation preview; loop continuity and deformation quality checked separately.'}
+(ROOT/f'docs/logs/{LOG_STEM}-preview-check.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report, indent=2))

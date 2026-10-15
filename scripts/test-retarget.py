@@ -1,4 +1,5 @@
 """Blender regression: neutral input preserves target bind axes and mesh."""
+import os
 import bpy
 import json
 import sys
@@ -6,10 +7,13 @@ from pathlib import Path
 from mathutils import Euler
 
 ROOT = Path(__file__).resolve().parents[1]
+MOTION = os.environ.get('HERO_MOTION', 'walk')
+assert MOTION in ('walk', 'run')
+LOG_STEM = 'hero' if MOTION == 'walk' else 'hero-run'
 sys.path.insert(0, str(ROOT/'scripts'))
 from retarget import retarget_rotation
 
-bpy.ops.wm.open_mainfile(filepath=str(ROOT/'outputs/hero-walk.blend'))
+bpy.ops.wm.open_mainfile(filepath=str(ROOT/f'outputs/hero-{MOTION}.blend'))
 rig, source = bpy.data.objects['HeroRig'], bpy.data.objects['KimodoSource']
 references = {}
 targets = {}

@@ -4,6 +4,8 @@
 
 같은 날 사용자 후속 요청으로 캐릭터 첫 몸통 리깅·걷기 이식도 진행했습니다. 적용본과 재실행은 [HERO_WALK.md](docs/HERO_WALK.md)를 확인합니다. 현재 편집 파일은 `outputs/hero-walk.blend`입니다.
 
+2026-10-15: 게임 기본 이동용 달리기를 별도로 생성·적용했습니다. 현재 달리기 편집본은 `outputs/hero-run.blend`이며, 생성·반복 보정·검증·재실행은 [RUN_RESULT.md](docs/RUN_RESULT.md)를 확인합니다. 기존 걷기 파일도 유지합니다.
+
 ## 작업 브랜치
 
 `work/kimodo-setup`을 사용합니다. 저장소를 복제한 뒤 이 브랜치로 전환하고 해당 폴더를 로컬 Codex에서 엽니다. main에는 최초 인계 자료가 있습니다.

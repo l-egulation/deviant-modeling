@@ -1,6 +1,7 @@
 """Check the generated NPZ and standard-T-pose BVH; report, do not repair."""
 import json
 import re
+import os
 from pathlib import Path
 
 import numpy as np
@@ -8,7 +9,9 @@ from kimodo.skeleton import SOMASkeleton77
 from kimodo.exports.bvh import bvh_to_kimodo_motion
 
 root = Path(__file__).resolve().parents[1]
-motion = np.load(root / 'outputs/walk.npz', allow_pickle=False)
+name=os.environ.get('HERO_MOTION','walk')
+assert name in ('walk','run')
+motion = np.load(root / f'outputs/{name}.npz', allow_pickle=False)
 sk = SOMASkeleton77()
 positions = motion['posed_joints']
 rotations = motion['local_rot_mats']
@@ -25,7 +28,7 @@ determinant_error = float(np.abs(np.linalg.det(rotations) - 1).max())
 assert length_drift < 0.001, length_drift
 assert orthogonality < 0.001, orthogonality
 assert determinant_error < 0.001, determinant_error
-bvh_path = root / 'outputs/walk.bvh'
+bvh_path = root / f'outputs/{name}.bvh'
 bvh_text = bvh_path.read_text()
 assert int(re.search(r'Frames:\s*(\d+)', bvh_text).group(1)) == 90
 frame_time = float(re.search(r'Frame Time:\s*([\d.eE+-]+)', bvh_text).group(1))
@@ -53,10 +56,10 @@ report = {
     'foot_contact_shape': list(foot_contacts.shape),
     'foot_contact_joint_names': sk.foot_joint_names,
     'mean_horizontal_speed_during_consecutive_contacts_m_s': float(contact_speed.mean()) if contact_speed.size else None,
-    'npz_bytes': (root / 'outputs/walk.npz').stat().st_size,
+    'npz_bytes': (root / f'outputs/{name}.npz').stat().st_size,
     'bvh_bytes': bvh_path.stat().st_size,
     'visual_quality': 'Requires actual playback; numeric checks alone do not certify walking quality.',
 }
-path = root / 'docs/logs/motion-check.json'
+path = root / ('docs/logs/motion-check.json' if name=='walk' else 'docs/logs/run-motion-check.json')
 path.write_text(json.dumps(report, indent=2) + '\n')
 print(json.dumps(report, indent=2))

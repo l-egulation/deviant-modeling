@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "mesh_rest_position_difference_from_walk_m": 0.0,
+  "bone_rest_matrix_difference_from_walk": 0.0,
+  "bones": 16,
+  "flight_frames": 34,
+  "loop_rotation_endpoint_error": 0.0,
+  "loop_root_endpoint_error_m": 0.0,
+  "camera_constant_velocity_error_m": 6.490283546156661e-07,
+  "glove_rigid_skin_error_m": 2.59982453787444e-07,
+  "hood_scarf_deformation_transform_error": 7.776543498039246e-08,
+  "clip_displacement_m": [
+    0.034992765635252,
+    -3.211738109588623,
+    0.0
+  ],
+  "mean_speed_m_s": 1.0706429106035467,
+  "scope": "Same character proportions; running air phase retained; loop endpoint matches after travel normalization. Cloth collision and subjective style remain visual checks."
+}
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-walk.blend"
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-run.blend"
+
+Blender quit

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "frames_checked": 90,
+  "fixed_sole_contact_mean_speed_m_s": 3.576466618806463e-05,
+  "fixed_sole_contact_speed_p95_m_s": 4.5588787021572454e-06,
+  "sole_contact_vertex_pairs": 16098,
+  "min_ground_height_m": -5.587935447692871e-08,
+  "max_ground_height_m": 0.02282312884926796,
+  "frame_bounds_min_uv": [
+    0.31327940047258873,
+    0.11910474578108393
+  ],
+  "frame_bounds_max_uv": [
+    0.7109759742382561,
+    0.8402749638468484
+  ],
+  "max_bone_length_error_m": 2.1606683731079102e-07,
+  "root_vertical_second_difference_max_m_per_frame2": 0.00820215418934822,
+  "start_end_mean_pose_difference_degrees": 4.174294332902111,
+  "seamless_loop": true,
+  "known_limitation": "Loop and contact tests pass; final cloth collision and artistic style remain visual checks.",
+  "loop_endpoint_rotation_error": 0.0,
+  "wrap_step_mean_angle_degrees": 4.174294332902111,
+  "normal_step_angle_p95_degrees": 8.08922844101794
+}

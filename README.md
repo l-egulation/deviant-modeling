@@ -32,6 +32,8 @@ GLB는 약 60MB의 고밀도 메시이며 뼈대와 애니메이션은 없습니
 
 ## 당장 할 일
 
+게임 기본 이동용으로 [달리기 생성·적용](docs/RUN_RESULT.md)도 진행했습니다. [달리기 미리보기](outputs/hero-run-preview.mp4), [편집용 Blend](outputs/hero-run.blend), [달리기 GLB](outputs/hero-run.glb)를 사용합니다. 캐릭터 크기는 기존 걷기와 같고, 달리기의 공중 구간과 반복 경계를 별도로 처리했습니다.
+
 `work/kimodo-setup`에서 갤럭시북의 CPU 텍스트 인코더·RTX 4050으로 3초 걷기 골격 생성과 NPZ/BVH 실제 재생 검증을 완료했습니다. [실행 결과와 재실행 방법](docs/SETUP_RESULT.md), [3초 미리보기](outputs/walk-preview.mp4)를 확인할 수 있습니다.
 
 갤럭시북 Blender에서 캐릭터 비율의 몸통 리그와 걷기 첫 적용본도 만들었습니다. [캐릭터 걷기 영상](outputs/hero-walk-preview.mp4), [작업 기록](docs/HERO_WALK.md), [편집용 Blend](outputs/hero-walk.blend), [애니메이션 GLB](outputs/hero-walk.glb)를 확인할 수 있습니다. 원본 `assets/ink-hero.glb`는 보존했습니다. 다음은 의상·발 접촉과 반복 동작 보정 후 카메라 방향별 2D 렌더링을 비교하고 에테르 AI의 도트 변환을 검토하는 작업입니다.

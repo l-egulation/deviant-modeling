@@ -3,6 +3,7 @@
 Run with Blender --background --factory-startup --python scripts/rig-hero.py.
 The source GLB is never overwritten. This is an editable first-pass body rig.
 """
+import os
 import bpy
 import json
 import math
@@ -10,13 +11,17 @@ import sys
 import numpy as np
 import hashlib
 from pathlib import Path
-from mathutils import Vector, Matrix
+from mathutils import Vector, Matrix, Quaternion
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from retarget import retarget_rotation
 from hero_preview import boot_rotation, configure_preview
 from hero_feet import plant_feet
+from hero_accessories import refine_accessories
 
 ROOT = Path(__file__).resolve().parents[1]
+MOTION = os.environ.get('HERO_MOTION', 'walk')
+assert MOTION in ('walk', 'run')
+LOG_STEM = 'hero' if MOTION == 'walk' else 'hero-run'
 OUT = ROOT / 'outputs'
 OUT.mkdir(exist_ok=True)
 bpy.ops.object.select_all(action='SELECT')
@@ -115,8 +120,9 @@ for v, co, ds in zip(hero.data.vertices, coords, distances):
             hero.vertex_groups[names[idx]].add([v.index], float(weight), 'REPLACE')
 unweighted = sum(not v.groups for v in hero.data.vertices)
 assert unweighted == 0, f'Unweighted vertices: {unweighted}'
+accessory_report=refine_accessories(hero) if MOTION == 'run' else {}
 
-bpy.ops.import_anim.bvh(filepath=str(OUT / 'walk.bvh'), global_scale=.01,
+bpy.ops.import_anim.bvh(filepath=str(OUT / f'{MOTION}.bvh'), global_scale=.01,
                         axis_forward='-Z', axis_up='Y', frame_start=1,
                         use_fps_scale=False, update_scene_fps=True,
                         update_scene_duration=True)
@@ -149,12 +155,23 @@ for side in ('Left', 'Right'):
     a_pose = src_axis.rotation_difference(dst_axis).to_matrix()
     for suffix in ('Arm', 'ForeArm', 'Hand'):
         name = side+suffix
-        source_reference[name] = a_pose @ source_reference[name]
+        correction=a_pose
+        if MOTION == 'run':
+            correction=source_reference[name].col[1].normalized().rotation_difference(rest[name].to_3x3().col[1].normalized()).to_matrix()
+        source_reference[name] = correction @ source_reference[name]
 
 def set_target_rotations(source_rotations, frame=None):
     desired = {}
     for n, (_, _, parent) in spec.items():
         world = retarget_rotation(source_rotations[n], source_reference[n], rest[n].to_3x3())
+        if MOTION == 'run' and frame is not None and n == 'Head':
+            # The hood and scarf form a connected shell. Keep their deformation
+            # coherent rather than stretching the neck under an adult head nod.
+            world=desired['Chest']@rest_rel[n].to_3x3()
+        if MOTION == 'run' and frame is not None and n.endswith(('Arm','ForeArm','Hand')):
+            # Give the hero's thick coat and large gloves a little clearance.
+            angle=math.radians(-7 if n.startswith('Left') else 7)
+            world=Quaternion(Vector((0,1,0)),angle).to_matrix()@world
         if n.endswith('Foot'):
             world = boot_rotation(world, rest[n].to_3x3())
         desired[n] = world
@@ -203,8 +220,8 @@ for f in range(1, 91):
     rig.location.z -= foot_bottoms[f-1]
     rig.keyframe_insert('location', frame=f)
 if rig.animation_data and rig.animation_data.action:
-    rig.animation_data.action.name = 'Kimodo_Walk_3s'
-contact_report = plant_feet(scene, rig, hero, source, OUT/'walk.npz')
+    rig.animation_data.action.name = f'Kimodo_{MOTION.title()}_3s'
+contact_report = plant_feet(scene, rig, hero, source, OUT/f'{MOTION}.npz', allow_flight=MOTION == 'run')
 
 # Neutral orthographic studio preview. Camera follows travel, preserving motion.
 bpy.ops.object.camera_add(location=(1.35, -2.7, .70))
@@ -251,14 +268,17 @@ scene.view_settings.view_transform = 'Standard'
 scene.view_settings.exposure = -.7
 scene.render.image_settings.file_format = 'PNG'
 scene.frame_set(1)
-bpy.ops.wm.save_as_mainfile(filepath=str(OUT / 'hero-walk.blend'), compress=True)
+bpy.ops.wm.save_as_mainfile(filepath=str(OUT / f'hero-{MOTION}.blend'), compress=True)
 bpy.ops.object.select_all(action='DESELECT')
 hero.select_set(True)
 rig.select_set(True)
 bpy.context.view_layer.objects.active = rig
-bpy.ops.export_scene.gltf(filepath=str(OUT / 'hero-walk.glb'), use_selection=True,
+scene.frame_end=91 if 'loop_displacement' in rig else 90
+bpy.ops.export_scene.gltf(filepath=str(OUT / f'hero-{MOTION}.glb'), use_selection=True,
                           export_animations=True, export_frame_range=True,
-                          export_force_sampling=True, export_animation_mode='SCENE')
+                          export_force_sampling=True, export_animation_mode='SCENE',
+                          export_anim_slide_to_zero=MOTION == 'run')
+scene.frame_end=90
 report = {'blender': bpy.app.version_string, 'original_vertices': original_vertices,
           'working_vertices': len(hero.data.vertices), 'working_triangles': len(hero.data.polygons),
           'deform_bones': len(spec), 'unweighted_vertices': unweighted,
@@ -268,16 +288,18 @@ report = {'blender': bpy.app.version_string, 'original_vertices': original_verti
           'weight_method': 'Anatomical segment weights with rigid hood/face and rigid boot soles',
           'foot_min_range_m': max(foot_bottoms)-min(foot_bottoms),
           'grounding': 'Source contact anchors, fixed-length leg IK, smooth reachable pelvis height',
-          'source': 'assets/ink-hero.glb', 'motion': 'outputs/walk.bvh',
+          'source': 'assets/ink-hero.glb', 'motion': f'outputs/{MOTION}.bvh',
           'source_sha256': source_hash,
           'neutral_pose_max_vertex_error_m': neutral_error,
           'contact_polish': contact_report,
+          'run_accessory_rigid_groups': accessory_report,
+          'run_head_follows_chest': MOTION == 'run',
           'retarget_method': 'Source bind rotation removed; shared arm A-pose calibration; target rest axes retained',
           'status': 'First-pass rig; requires rendered deformation review.'}
-(ROOT/'docs/logs/hero-rig-check.json').write_text(json.dumps(report, indent=2)+'\n')
+(ROOT/f'docs/logs/{LOG_STEM}-rig-check.json').write_text(json.dumps(report, indent=2)+'\n')
 print(json.dumps(report, indent=2), flush=True)
 render_frames = range(1, 91) if '--render-all' in sys.argv else (1, 16, 31, 46, 61, 76)
-frame_dir = ROOT / '.cache/hero-frames'
+frame_dir = ROOT / ('.cache/hero-frames' if MOTION == 'walk' else '.cache/hero-run-frames')
 frame_dir.mkdir(parents=True, exist_ok=True)
 for f in render_frames:
     scene.frame_set(f)

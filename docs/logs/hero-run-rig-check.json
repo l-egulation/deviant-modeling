@@ -1,0 +1,46 @@
+{
+  "blender": "4.5.13 LTS",
+  "original_vertices": 983284,
+  "working_vertices": 62290,
+  "working_triangles": 85857,
+  "deform_bones": 16,
+  "unweighted_vertices": 0,
+  "frames": 90,
+  "fps": 30,
+  "ground_offset_m": 0.03793317452073097,
+  "root_motion_scale": 0.2936769465034834,
+  "foot_min_before_ground_offset_m": -0.03793317452073097,
+  "target_leg_length_m": 0.2511754971626969,
+  "source_leg_length_m": 0.8552782237529755,
+  "weight_method": "Anatomical segment weights with rigid hood/face and rigid boot soles",
+  "foot_min_range_m": 0.031773739494383335,
+  "grounding": "Source contact anchors, fixed-length leg IK, smooth reachable pelvis height",
+  "source": "assets/ink-hero.glb",
+  "motion": "outputs/run.bvh",
+  "source_sha256": "300d90b6489e0de4e061d7e134ed5d7eb8084d04061c93ade2d830b762ed85a0",
+  "neutral_pose_max_vertex_error_m": 9.453726962543667e-08,
+  "contact_polish": {
+    "max_ankle_target_error_m": 2.852706569295622e-07,
+    "upper_body_rotation_error": 0,
+    "root_vertical_frame_acceleration_max_m": 0.008202159811056847,
+    "smoothing_downward_adjustment_m": 0.027183638728280075,
+    "rigid_sole_vertices": [
+      1999,
+      1857
+    ],
+    "stance_frames": [
+      30,
+      26
+    ],
+    "source_flight_frames_preserved": 34,
+    "method": "Fixed-length two-bone leg solve, source contact anchors, rigid soles and swing boot clearance"
+  },
+  "run_accessory_rigid_groups": {
+    "Chest": 4860,
+    "LeftHand": 877,
+    "RightHand": 934
+  },
+  "run_head_follows_chest": true,
+  "retarget_method": "Source bind rotation removed; shared arm A-pose calibration; target rest axes retained",
+  "status": "First-pass rig; requires rendered deformation review."
+}

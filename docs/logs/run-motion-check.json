@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "frames": 90,
+  "joints": 77,
+  "fps": 30.0,
+  "duration_seconds": 3.0,
+  "npz_keys": [
+    "local_rot_mats",
+    "global_rot_mats",
+    "posed_joints",
+    "root_positions",
+    "smooth_root_pos",
+    "foot_contacts",
+    "global_root_heading",
+    "loop_displacement",
+    "foot_clearance"
+  ],
+  "max_bone_length_drift_m": 1.5944242477416992e-06,
+  "max_rotation_orthogonality_error": 1.1920928955078125e-07,
+  "max_rotation_determinant_error": 1.1920928955078125e-07,
+  "root_displacement_m": 10.814998626708984,
+  "bvh_import_max_position_difference_m": 1.5348270334669678e-06,
+  "foot_contact_shape": [
+    90,
+    6
+  ],
+  "foot_contact_joint_names": [
+    "LeftFoot",
+    "LeftToeBase",
+    "LeftToeEnd",
+    "RightFoot",
+    "RightToeBase",
+    "RightToeEnd"
+  ],
+  "mean_horizontal_speed_during_consecutive_contacts_m_s": 0.15870942175388336,
+  "npz_bytes": 590268,
+  "bvh_bytes": 204206,
+  "visual_quality": "Requires actual playback; numeric checks alone do not certify walking quality."
+}
