@@ -38,7 +38,7 @@ Repose the exact same character from the reference into a symmetrical rigging re
 - Tripo 화면: Quad 5,649면·5,416정점. 텍스처 생성 전 원본 GLB: outputs/hero-proportion-model.glb, 259,468바이트. GLB에는 1메시·5,415정점·10,664삼각면·1재질·리그 0개가 있습니다. 사각면 유지 파일이라고 표기하지 않습니다.
 - 내보내기 대기 도구는 타임아웃을 반환했으나 Downloads/hero-proportion-model.glb의 실제 저장을 확인하고 복사했습니다. 불필요한 재생성은 하지 않았습니다.
 - 로컬 검토: 원본 형상을 수정하지 않고 Blender에서 정면·측면·후면·반대 측면 렌더와 편집용 blend를 저장했습니다. 수평 팔·벌린 다리·후면 얼굴 중복 없음 확인. 리깅 적합성이나 달리기 자연스러움은 아직 검증하지 않았습니다.
-- 텍스처: 화면상 1회 20크레딧. 이번 새 모델에 대한 크레딧 사용 승인을 질문했고 아직 실행하지 않았습니다. 기존 다른 모델의 20크레딧 승인을 이번 모델에 재사용하지 않습니다.
+- 텍스처: 이번 새 A 모델에 대해 사용자에게 20크레딧 사용 승인을 받고 1회 실행 완료. 잔액 3,015→2,995, 추가 결제 없음. 4K GLB 내보내기를 완료했습니다.
 - 이전 assets/ink-hero-tpose.glb와 달리기 결과는 보존합니다. 새 모델은 현재 outputs/hero-proportion-model.* 후보이며 아직 기존 실행 입력을 대체하지 않습니다.
 - 실행 기록: docs/logs/hero-proportion-model-structure.json, hero-proportion-model-render.log.
 - 생성 화면 증거: outputs/hero-proportion-tripo-studio.jpg (로컬 보관).
@@ -56,3 +56,12 @@ Precise-object-edit: isolate ONLY the FRONT character at the LEFT of the provide
 ```
 
 원본 GLB SHA256: `19d32cb20efc0fdbd702ceec3b12c38f8bc30982d496907dd4d3219df909a324`.
+
+### A 모델 텍스처 완료 검증
+
+- 현재 outputs/hero-proportion-model.glb는 텍스처 포함 파일(4,934,768바이트)입니다. SHA256: e18e47a3dc575fd38e7c04b1962c5a4061d4e1e6c016ab7f1afe8be4bec8f019.
+- Blender: 1메시, UV 경계 분할 포함 9,697정점, 10,664삼각면, 1재질, 4096×4096 basecolor 이미지 1개, 리그 0개.
+- 텍스처 전 GLB와 양방향 최근접 정점 위치 비교 최대 거리 0m. UV 분할로 정점 수는 달라졌지만 위치 집합과 경계 크기는 보존됐습니다. 토폴로지 동일성 검사와 구분합니다.
+- 정면·양측면·후면 렌더 확인: 아이보리 옷, 검은 얼굴과 금색 눈, 청록 스카프 유지. 후면에 얼굴/눈 중복 없음. 질감은 약간 거칠고 후드가 큰 실루엣이며, 작은 도트 출력에서의 가독성과 관절 변형은 아직 검증하지 않았습니다.
+- outputs/hero-proportion-model.blend 및 네 방향 PNG도 텍스처 버전으로 갱신했습니다. 기존 캐릭터 입력과 달리기 결과는 그대로 보존했습니다. 다음 단계는 이 모델의 관절 위치 설정과 리깅·달리기 변형 검토입니다.
+- 형상 비교 재현: 위 명령에 TRIPO_REVIEW_BASELINE=.cache/hero-proportion-untextured.glb 추가. 로컬 기준 파일은 c2dcb56 커밋의 outputs/hero-proportion-model.glb와 동일합니다.

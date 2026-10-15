@@ -3,7 +3,7 @@
   "asset_id": "550caa06-b152-4076-b70e-1b70fe5a4ff6",
   "input": "outputs/hero-proportion-model.glb",
   "meshes": 1,
-  "vertices": 5415,
+  "vertices": 9697,
   "faces": 10664,
   "quads": 0,
   "armatures": 0,
@@ -18,5 +18,16 @@
     0.208740234375,
     0.99951171875
   ],
-  "rigging_validated": false
+  "rigging_validated": false,
+  "texture_images": [
+    {
+      "name": "hero-proportion-textured_basecolor.jpg",
+      "size": [
+        4096,
+        4096
+      ]
+    }
+  ],
+  "baseline_model": ".cache/hero-proportion-untextured.glb",
+  "geometry_surface_vertex_distance_max_m": 0.0
 }
