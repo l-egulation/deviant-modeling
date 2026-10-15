@@ -34,6 +34,6 @@
   ],
   "mean_horizontal_speed_during_consecutive_contacts_m_s": 0.15870942175388336,
   "npz_bytes": 590268,
-  "bvh_bytes": 204206,
+  "bvh_bytes": 204116,
   "visual_quality": "Requires actual playback; numeric checks alone do not certify walking quality."
 }

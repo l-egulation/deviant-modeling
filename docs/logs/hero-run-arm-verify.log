@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "frames": 90,
+  "arm_edges_per_frame": 18788,
+  "max_arm_edge_stretch": 4.977402525400631,
+  "p99_arm_edge_stretch": 2.8750083041639436,
+  "max_coincident_arm_seam_gap_m": 2.791076420806198e-05,
+  "worst": {
+    "frame": 8,
+    "vertices": [
+      1925,
+      3273
+    ],
+    "rest_edge_m": 0.0035905010039156407
+  },
+  "threshold": 5,
+  "scope": "Local sleeve deformation; excludes tiny edges below 2mm. Not a cloth-collision or artistic-quality certificate."
+}
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-run.blend"
+
+Blender quit
