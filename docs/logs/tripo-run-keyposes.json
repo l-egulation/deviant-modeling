@@ -1,0 +1,37 @@
+{
+  "scope": "Four pose study, not a timed animation",
+  "poses": [
+    {
+      "pose": "Contact",
+      "lean_degrees": 18,
+      "ik_error": 8.195638656616211e-08,
+      "target_adjustment_max_m": 0.009870277337733047,
+      "edge_stretch_max": 2.484579945100455,
+      "edge_stretch_p99": 1.6082644702606432
+    },
+    {
+      "pose": "Support",
+      "lean_degrees": 20,
+      "ik_error": 8.815645848363066e-08,
+      "target_adjustment_max_m": 0.009870277337733047,
+      "edge_stretch_max": 2.4460787006916904,
+      "edge_stretch_p99": 1.6039188793663006
+    },
+    {
+      "pose": "Push",
+      "lean_degrees": 23,
+      "ik_error": 7.028863677424642e-08,
+      "target_adjustment_max_m": 0.009870277337733047,
+      "edge_stretch_max": 3.5662855603280086,
+      "edge_stretch_p99": 1.8056524465813952
+    },
+    {
+      "pose": "Flight",
+      "lean_degrees": 18,
+      "ik_error": 7.185079724336382e-08,
+      "target_adjustment_max_m": 0.009870277337733047,
+      "edge_stretch_max": 2.6486499989417074,
+      "edge_stretch_p99": 1.68139902455817
+    }
+  ]
+}
