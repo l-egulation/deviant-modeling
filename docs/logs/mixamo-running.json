@@ -1,0 +1,19 @@
+{
+  "source": "Mixamo Running / Running With Intention, default character",
+  "original_file": "assets/mixamo-running.fbx",
+  "frame_start": 1,
+  "frame_end": 22,
+  "frames": 22,
+  "fps": 30,
+  "bones": 65,
+  "mesh_objects": 2,
+  "height_m": 1.678345091524534,
+  "motion_pose_edits": false,
+  "timing_edits": false,
+  "download_options": "FBX Binary, With Skin, 30fps, keyframe reduction none; default Overdrive 50 and Arm-Space 50; In Place off",
+  "preview_decoded_frames": 66,
+  "preview_fps": 30,
+  "preview_seconds": 2.2,
+  "cycle_seconds": 0.7333333333333333,
+  "note": "Preview repeats the downloaded cycle three times; no pose, speed or character retarget edits"
+}

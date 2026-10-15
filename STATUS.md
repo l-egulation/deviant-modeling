@@ -1,12 +1,12 @@
 # 현재 상태
 
-> 2026-10-15 최신: 실제 Tripo 모델 assets/ink-hero-tpose.glb에 새 Kimodo 생성 달리기를 적용했습니다. 현재 tripo-run-source.npz / .bvh는 seed 107·3초·90프레임 생성 원본이고 tripo-run.blend / .glb / preview는 비율 매핑·발 접촉 보정 적용본입니다. 수작업 반복 모션 0e20e99는 사용자가 거절했으며 재사용하지 않습니다. 현재 결과는 루프 편집 없이 생성된 3초입니다. docs/TRIPO_RUN.md를 확인합니다.
+> 2026-10-15 최신: 사용자 요청으로 Mixamo의 기존 Running With Intention을 실제 Tripo 캐릭터에 적용했습니다. 검토본은 outputs/hero-mixamo-run.blend / .glb / -preview.mp4입니다. 원본 30fps 박자는 유지하고 캐릭터 비율 매핑과 접지를 보정했습니다. Kimodo 생성본과 수작업 반복본은 이번 모션에 사용하지 않습니다. docs/MIXAMO_RUN.md 참조.
 
 갱신: 2026-10-15
 
 ## 최신 검토
 
-새 Kimodo 프롬프트로 두 후보를 실제 생성하고 첫 후보를 선택했습니다. 원본 3초와 속도는 보존하고 Tripo 비율 매핑·필요한 발 접촉 보정만 적용했습니다. 생성 원본, 비교 그림, 적용본과 실행 로그를 구분합니다. 이전 수작업 포즈 반복은 거절된 이력입니다.
+사용자가 기존 사람 달리기를 요청하여 Mixamo Running With Intention 원본을 확인한 뒤 실제 Tripo 캐릭터에 적용했습니다. 현재 검토본은 `outputs/hero-mixamo-run.blend` / `.glb` / `-preview.mp4`입니다. 22프레임 원본의 30fps 박자를 유지하여 3초로 반복했고, 메시·뼈 크기는 유지하며 비율과 접지만 보정했습니다. Kimodo 및 수작업 포즈 반복본은 이번 입력이 아닙니다. 관절 주변 옷 변형과 짧은 팔다리의 실루엣 차이는 남습니다. 상세 실행과 한계는 `docs/MIXAMO_RUN.md`에 기록합니다.
 
 ## 완료
 

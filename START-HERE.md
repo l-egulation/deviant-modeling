@@ -1,6 +1,6 @@
 # 갤럭시북 Kimodo 첫 실행 절차
 
-> 2026-10-15 최신: 실제 Tripo 모델 assets/ink-hero-tpose.glb에 새 Kimodo 생성 달리기를 적용했습니다. 현재 tripo-run-source.npz / .bvh는 seed 107·3초·90프레임 생성 원본이고 tripo-run.blend / .glb / preview는 비율 매핑·발 접촉 보정 적용본입니다. 수작업 반복 모션 0e20e99는 사용자가 거절했으며 재사용하지 않습니다. 현재 결과는 루프 편집 없이 생성된 3초입니다. docs/TRIPO_RUN.md를 확인합니다.
+> 2026-10-15 최신: 사용자 요청으로 Mixamo의 기존 Running With Intention을 실제 Tripo 캐릭터에 적용했습니다. 검토본은 outputs/hero-mixamo-run.blend / .glb / -preview.mp4입니다. 원본 30fps 박자는 유지하고 캐릭터 비율 매핑과 접지를 보정했습니다. Kimodo 생성본과 수작업 반복본은 이번 모션에 사용하지 않습니다. docs/MIXAMO_RUN.md 참조.
 
 2026-10-14: 아래 첫 실행 업무의 3초 걷기 생성·NPZ/BVH 재생 검증을 완료했습니다. 결과와 재실행 방법은 [SETUP_RESULT.md](docs/SETUP_RESULT.md), 다음 업무는 [STATUS.md](STATUS.md)를 확인합니다. 아래 절차는 재현용으로 유지합니다.
 

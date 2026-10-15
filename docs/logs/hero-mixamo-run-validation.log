@@ -1,0 +1,8 @@
+22:20:17 | INFO: Data are loaded, start creating Blender stuff
+22:20:17 | INFO: Blender create Mesh node tripo_3b77b36d_13fc_427b_a532_8c7b9ab6e788
+22:20:17 | INFO: glTF import finished in 0.07s
+{"weight_sum_max_error": 4.470348358154297e-08, "bone_scale_error": 0, "floor_min_m": -1.3597309589385986e-07, "glb_pose_bound_max_error_m": 4.76837158203125e-07, "frames_checked": 90, "bones": 18, "scope": "Structural validation PASS; does not certify visual clothing quality", "ankle_rotation_from_bind_max_degrees": 42.104253319812464}
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-mixamo-run.blend"
+
+Blender quit

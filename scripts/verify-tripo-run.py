@@ -1,8 +1,9 @@
 """Check normalized skin weights, fitted dimensions, floor and GLB poses."""
-import bpy,json,numpy as np
+import bpy,json,os,numpy as np
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-bpy.ops.wm.open_mainfile(filepath=str(ROOT/'outputs/tripo-run.blend'))
+STEM=os.environ.get('RUN_STEM','tripo-run')
+bpy.ops.wm.open_mainfile(filepath=str(ROOT/f'outputs/{STEM}.blend'))
 scene=bpy.context.scene;rig=bpy.data.objects['TripoRunRig'];hero=bpy.data.objects['TripoHero']
 weights=[sum(g.weight for g in v.groups) for v in hero.data.vertices]
 error=max(abs(w-1) for w in weights);assert error<1e-5
@@ -44,7 +45,7 @@ if roots:
     assert cycle_error<1e-5, authored
 bpy.ops.wm.read_factory_settings(use_empty=True)
 bpy.context.scene.render.fps=30
-bpy.ops.import_scene.gltf(filepath=str(ROOT/'outputs/tripo-run.glb'))
+bpy.ops.import_scene.gltf(filepath=str(ROOT/f'outputs/{STEM}.glb'))
 rig=next(o for o in bpy.context.scene.objects if o.type=='ARMATURE')
 meshes=[o for o in bpy.context.scene.objects if o.type=='MESH' and o.parent==rig]
 assert len(rig.data.bones)==18 and meshes
@@ -63,5 +64,5 @@ report={'weight_sum_max_error':error,'bone_scale_error':scale_error,'floor_min_m
         'scope':'Structural validation PASS; does not certify visual clothing quality'}
 report.update(authored)
 report['ankle_rotation_from_bind_max_degrees']=max(ankle_angles)
-(ROOT/'docs/logs/tripo-run-validation.json').write_text(json.dumps(report,indent=2)+'\n')
+(ROOT/f'docs/logs/{STEM}-validation.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report))

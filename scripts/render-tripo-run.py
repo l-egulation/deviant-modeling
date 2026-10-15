@@ -7,14 +7,15 @@ import numpy as np
 from pathlib import Path
 from mathutils import Vector
 ROOT=Path(__file__).resolve().parents[1]
-bpy.ops.wm.open_mainfile(filepath=str(ROOT/'outputs/tripo-run.blend'))
+STEM=os.environ.get('RUN_STEM','tripo-run')
+bpy.ops.wm.open_mainfile(filepath=str(ROOT/f'outputs/{STEM}.blend'))
 scene=bpy.context.scene;hero=bpy.data.objects['TripoHero'];rig=bpy.data.objects['TripoRunRig']
 vertices=np.array([v.co[:] for v in hero.data.vertices])
 edges=np.array([e.vertices[:] for e in hero.data.edges])
 length=np.linalg.norm(vertices[edges[:,0]]-vertices[edges[:,1]],axis=1)
 valid=length>.002
 valid_ids=np.flatnonzero(valid)
-dest=ROOT/'.cache/tripo-run-frames';dest.mkdir(parents=True,exist_ok=True)
+dest=ROOT/f'.cache/{STEM}-frames';dest.mkdir(parents=True,exist_ok=True)
 samples=[];stretch=[];bottom=[]
 frames=range(1,91) if os.environ.get('FULL_RENDER')=='1' else [1,8,16,24,32,40]
 for f in frames:
@@ -29,7 +30,7 @@ for f in frames:
         for e in valid_ids[np.argsort(ratio)[-12:]]:
             details.append({'rest':vertices[edges[e]].tolist(),'ratio':float(np.linalg.norm(points[edges[e,0]]-points[edges[e,1]])/length[e]),
                 'weights':[{hero.vertex_groups[g.group].name:g.weight for g in hero.data.vertices[int(i)].groups} for i in edges[e]]})
-        (ROOT/'docs/logs/tripo-run-edge-audit.json').write_text(json.dumps(details,indent=2))
+        (ROOT/f'docs/logs/{STEM}-edge-audit.json').write_text(json.dumps(details,indent=2))
     evaluated.to_mesh_clear()
     scene.render.filepath=str(dest/f'{f:03d}.png')
     # The authored cycle repeats under a linear tracking camera and constant
@@ -40,10 +41,10 @@ for f in frames:
         shutil.copyfile(dest/f'{(f-1)%period+1:03d}.png',dest/f'{f:03d}.png')
     else:bpy.ops.render.render(write_still=True)
 report={'scope':'Measured deformation; visual art review is separate','frames':samples,'maximum_edge_stretch':max(stretch),'lowest_point':min(bottom)}
-(ROOT/'docs/logs/tripo-run-deformation.json').write_text(json.dumps(report,indent=2)+'\n')
+(ROOT/f'docs/logs/{STEM}-deformation.json').write_text(json.dumps(report,indent=2)+'\n')
 for label,offset in [('side',Vector((2.7,0,.10))),('front',Vector((0,-2.7,.10)))]:
     for f in [1,8,16,24,32,40]:
         scene.frame_set(f);center=Vector((rig.location.x,rig.location.y,.49))
         scene.camera.animation_data_clear();scene.camera.location=center+offset
         scene.camera.rotation_euler=(-offset).to_track_quat('-Z','Y').to_euler()
-        scene.render.filepath=str(ROOT/f'.cache/tripo-run-{label}-{f:03d}.png');bpy.ops.render.render(write_still=True)
+        scene.render.filepath=str(ROOT/f'.cache/{STEM}-{label}-{f:03d}.png');bpy.ops.render.render(write_still=True)

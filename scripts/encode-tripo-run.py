@@ -1,13 +1,15 @@
 """Encode the rendered 3-second Tripo/Kimodo run and verify decoding."""
 import av
+import os
 import json
 import numpy as np
 from pathlib import Path
 from fractions import Fraction
 from PIL import Image,ImageDraw
 ROOT=Path(__file__).resolve().parents[1]
-frames=[Image.open(ROOT/f'.cache/tripo-run-frames/{f:03d}.png').convert('RGB') for f in range(1,91)]
-path=ROOT/'outputs/tripo-run-preview.mp4'
+STEM=os.environ.get('RUN_STEM','tripo-run')
+frames=[Image.open(ROOT/f'.cache/{STEM}-frames/{f:03d}.png').convert('RGB') for f in range(1,91)]
+path=ROOT/f'outputs/{STEM}-preview.mp4'
 with av.open(str(path),'w') as container:
     stream=container.add_stream('libx264',rate=30);stream.width=stream.height=512;stream.pix_fmt='yuv420p';stream.options={'crf':'18'}
     for i,im in enumerate(frames):
@@ -22,14 +24,14 @@ palette=Image.new('RGB',(384*3,384*3))
 for i,im in enumerate(small[::10]):palette.paste(im,((i%3)*384,(i//3)*384))
 palette=palette.quantize(colors=256,method=Image.Quantize.MEDIANCUT)
 gif=[im.quantize(palette=palette,dither=Image.Dither.NONE) for im in small]
-gif[0].save(ROOT/'outputs/tripo-run-preview.gif',save_all=True,append_images=gif[1:],duration=[30,30,40]*30,loop=0,optimize=False,disposal=2)
+gif[0].save(ROOT/f'outputs/{STEM}-preview.gif',save_all=True,append_images=gif[1:],duration=[30,30,40]*30,loop=0,optimize=False,disposal=2)
 sheet=Image.new('RGB',(1536,1024));draw=ImageDraw.Draw(sheet)
 for row,label in enumerate(('front','side')):
     for col,f in enumerate((8,16,32)):
-        im=Image.open(ROOT/f'.cache/tripo-run-{label}-{f:03d}.png').convert('RGB')
+        im=Image.open(ROOT/f'.cache/{STEM}-{label}-{f:03d}.png').convert('RGB')
         sheet.paste(im,(col*512,row*512));draw.text((col*512+12,row*512+12),f'{label} / {f}',fill='black')
-sheet.save(ROOT/'outputs/tripo-run-contact-sheet.png')
-report={'decoded_frames':len(decoded),'fps':fps,'seconds':3,'motion_source':'Fresh Kimodo seed 107 generated 3-second sample, unchanged timing; proportion retarget and foot contact correction only',
+sheet.save(ROOT/f'outputs/{STEM}-contact-sheet.png')
+report={'decoded_frames':len(decoded),'fps':fps,'seconds':3,'motion_source':('Mixamo Running With Intention, 22-frame original cycle at 30fps; proportion retarget and foot contact correction' if STEM=='hero-mixamo-run' else 'Fresh Kimodo seed 107 generated 3-second sample, unchanged timing; proportion retarget and foot contact correction only'),
         'scope':'Video encoding PASS, artistic acceptance and clothing polish are separate'}
-(ROOT/'docs/logs/tripo-run-preview.json').write_text(json.dumps(report,indent=2)+'\n')
+(ROOT/f'docs/logs/{STEM}-preview.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report))
