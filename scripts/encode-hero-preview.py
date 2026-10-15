@@ -38,7 +38,8 @@ n = struct.unpack_from('<I', blob, 12)[0]
 gltf = json.loads(blob[20:20+n])
 assert len(gltf.get('skins', [])) == 1
 assert len(gltf.get('animations', [])) == 1
-assert len(gltf['skins'][0]['joints']) == 16
+joint_count=len(gltf['skins'][0]['joints'])
+assert joint_count == (18 if MOTION == 'run' else 16)
 loop_image_error=None
 if MOTION == 'run':
     first=np.array(Image.open(frames/'001.png').convert('RGB'),dtype=float)
@@ -58,7 +59,7 @@ differences=[float(np.abs(decoded[0].astype(float)-frame.astype(float)).mean()) 
 comparison=int(np.argmax(differences));diff=differences[comparison]
 assert diff > 1
 report = {'status': 'PASS', 'frames': 90, 'fps': rate, 'seconds': 3,
-          'width':512, 'height':512, 'glb_skins':1, 'glb_joints':16,
+          'width':512, 'height':512, 'glb_skins':1, 'glb_joints':joint_count,
           'glb_animations':len(gltf['animations']), 'first_to_comparison_pixel_difference':diff,
           'comparison_frame_index':comparison,
           'loop_endpoint_mean_pixel_error':loop_image_error,

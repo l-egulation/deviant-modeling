@@ -6,13 +6,19 @@
 
 이전 상체 보정(6840495)은 759acc8의 하체·루트를 그대로 유지하고 큰 조깅식 팔치기를 낮고 작은 뒤쪽 중심 경로와 추가 전경 자세로 바꾼 결과입니다. `hero-run-upper-*` 기록은 이 단계의 검사입니다.
 
-최신 속도 보정은 이 승인 자세를 1.5배로 재생합니다. 한 주기 0.75초→0.5초, 3초에 4→6주기, 전진 약 3.212m→4.818m(평균 1.606m/s)입니다. 생성 원본 NPZ/BVH는 그대로 두고, 캐릭터 적용 단계 `hero_timing.py`에서 주기적 쿼터니언 보간과 루트 전진량을 함께 조정합니다. 보간 중 접지 보정은 최대 약 0.47mm, 발을 떼는 지면 여유 보정은 최대 약 5.05mm입니다. 기존 리그 실행에 포함되어 있으며, 이전 미보정 Blend에만 `retime-hero-run.py`를 한 번 적용할 수도 있습니다. 이미 적용한 Blend는 중복 적용을 차단합니다. 위상별 자세·기본 메시·기본 뼈 검증은 `verify-run-timing.py`, 결과는 `hero-run-timing*.json`을 봅니다.
+이전 속도 보정(6d694eb)은 당시 승인 자세를 1.5배로 재생했습니다. 한 주기 0.75초→0.5초, 3초에 4→6주기, 전진 약 3.212m→4.818m(평균 1.606m/s)입니다. 생성 원본 NPZ/BVH는 그대로 두고, 캐릭터 적용 단계 `hero_timing.py`에서 주기적 쿼터니언 보간과 루트 전진량을 함께 조정합니다. 보간 중 접지 보정은 최대 약 0.47mm, 발을 떼는 지면 여유 보정은 최대 약 5.05mm입니다. 기존 리그 실행에 포함되어 있으며, 이전 미보정 Blend에만 `retime-hero-run.py`를 한 번 적용할 수도 있습니다. 이미 적용한 Blend는 중복 적용을 차단합니다. 위상별 자세·기본 메시·기본 뼈 검증은 `verify-run-timing.py`, 결과는 `hero-run-timing*.json`을 봅니다.
+
+최신 어깨 보정은 `6d694eb`의 고정된 어깨 문제를 대상으로 합니다. `hero_body.py`에서 기존 16뼈의 크기를 유지하고 쇄골 2뼈를 추가하며, 어깨 옷 정점 8,397개에 연속적인 쇄골 영향을 나눕니다. 가슴은 골반과 반대로 회전하고, 머리·가슴 셸은 같은 변형을 유지하여 목 틈을 방지합니다. 상체 숙임은 약 11~16도, 좌우 어깨의 앞뒤 차이는 약 -3.6~+4.0cm로 양쪽이 교대합니다.
+
+이 단계에서 동등한 두 원본 주기를 평균한 뒤 18프레임·0.6초 주기로 보간하여 3초 다섯 주기를 구성했습니다. 앞뒤 이동·발바닥 궤적·공중 여유를 함께 조정하고 공중 발목은 다시 40도로 제한합니다. 최종 달리기는 총 18뼈, 평균 1.338m/s이며, NPZ/BVH 생성 원본은 보존합니다. `hero-run-body-check.json`의 골반·가슴 방향 상관계수는 약 -0.987, 메시 기본 정점 차이는 0입니다. 기존 뼈 행렬 차이 약 4.2e-7은 Blender 편집 모드 왕복의 부동소수 오차이며 1e-6 허용 범위 안입니다. 검사 실패를 재현한 이전 파일 결과는 `hero-run-body-before.log`에 남겼습니다. `hero-run-upper-*`, `hero-run-timing-*`은 각각 과거 단계 기록입니다.
+
+재현은 전체 `rig-hero.py`에 포함되어 있습니다. 6d694eb의 기존 파일에서 어깨 단계만 적용하려면 `polish-run-body.py`를 한 번 실행합니다. 이미 쇄골이 있는 파일에는 중복 적용을 차단합니다. 현재 결과 검사는 `verify-run-body.py`를 사용합니다.
 
 ## 크기를 맞추는 방법
 
 Kimodo SOMA는 한 가지 고정 사람 비율로 학습·생성합니다. 캐릭터의 임의 비율을 생성 옵션으로 지정하는 기능은 설치된 CLI에 없습니다. 공식 설명: https://research.nvidia.com/labs/sil/projects/kimodo/docs/key_concepts/skeleton.html . 생성용 SOMA와 실제 캐릭터 리그를 구분합니다.
 
-최종 적용본의 16뼈 기본 자세와 작업용 메시 정점은 기존 걷기 캐릭터와 동일합니다. 모델의 몸 부위를 줄이지 않았고 애니메이션 중 뼈 길이나 크기를 바꾸지 않습니다. 사람 동작의 기준 축을 제거하고 캐릭터 기준 축으로 옮긴 뒤, 실제 다리 길이 비율 약 0.294로 이동·발목 경로를 맞춥니다. 크기 검사는 `hero-run-validation.json`의 걷기 대비 기본 뼈 행렬·정점 차이 0으로 확인합니다.
+최종 적용본은 기존 걷기 캐릭터의 16뼈 비율과 작업용 메시 정점을 유지하고, 어깨 뼈 두 개를 추가한 18뼈 리그입니다. 모델의 몸 부위를 줄이지 않았고 애니메이션 중 뼈 길이나 크기를 바꾸지 않습니다. 사람 동작의 기준 축을 제거하고 캐릭터 기준 축으로 옮긴 뒤, 실제 다리 길이 비율 약 0.294로 이동·발목 경로를 맞춥니다. 크기 검사와 미세한 행렬 오차는 `hero-run-validation.json`을 참조합니다.
 
 ## 생성과 주기 선택
 
@@ -45,14 +51,14 @@ Kimodo SOMA는 한 가지 고정 사람 비율로 학습·생성합니다. 캐�
 `scripts/verify-hero-arms.py`는 90프레임의 팔 모서리와 중복 표면 틈을 검사합니다. 수정 전에는 실패했고, 수정 후 최대 늘어짐 약 4.98배·99백분위 약 2.88배, 같은 위치 표면의 최대 틈 약 0.028mm로 통과했습니다. 5배 기준은 심한 국소 늘어짐을 잡는 회귀 기준이며, 옷감이 완벽히 보존된다는 뜻은 아닙니다. 실제로 국소적인 늘어짐은 남아 있어 최종 게임용 토폴로지·의상 변형 작업은 별도입니다. 같은 프레임·카메라의 확대 비교는 `outputs/hero-run-arm-comparison.png`, 재현 실패와 최종 검사 기록은 `docs/logs/hero-run-arm-*`입니다.
 
 - `outputs/hero-run.blend`: 캐릭터 크기의 리그, 반복 달리기, 참고 SOMA, 스튜디오 씬.
-- `outputs/hero-run.glb`: 16뼈 캐릭터, 3초 반복 달리기 한 애니메이션.
-- `outputs/hero-run-preview.mp4`: 512×512, 30fps, 3초·네 주기.
+- `outputs/hero-run.glb`: 18뼈 캐릭터, 3초 반복 달리기 한 애니메이션.
+- `outputs/hero-run-preview.mp4`: 512×512, 30fps, 3초·다섯 주기.
 - `outputs/hero-run-contact-sheet.png`: 현재 달리기 주요 여섯 자세.
 - `docs/logs/run-*.json`, `hero-run-*.json`와 실행 로그: 후보 선택·골격 왕복·동일 크기·변형·접지·공중 구간·반복 경계·GLB 왕복·영상 검사.
 
 검증은 GLB 재가져오기 0~90프레임(30fps, 3초), 영상 90프레임 실제 디코딩, 반복 끝 이미지, 전체 90자세의 지면 관통·화면 잘림·뼈 길이 검사로 구성됩니다. 최신 PASS 결과와 오차는 각 `hero-run-*.json`을 참조합니다. 이 검사는 모든 의상 충돌이나 미적 자연스러움을 보증하지 않습니다.
 
-최신 캐릭터의 전진량은 약 4.818m/3초, 약 1.606m/s입니다. 이전 1.071m/s에서 재생 박자와 함께 1.5배로 조정했습니다. 실제 게임의 이동속도는 화면·월드 단위에 따라 정하고, 발 미끄러짐을 막으려면 재생 박자나 보폭도 함께 맞춰야 합니다.
+최신 캐릭터의 전진량은 약 4.015m/3초, 약 1.338m/s입니다. 이전 속도만 높인 1.606m/s에서 어깨·몸통 연결과 박자를 함께 정리했습니다. 실제 게임의 이동속도는 화면·월드 단위에 따라 정하고, 발 미끄러짐을 막으려면 재생 박자나 보폭도 함께 맞춰야 합니다.
 
 현재 방식은 Kimodo로 동작 후보를 만들고, 좋은 한 주기를 골라 캐릭터에 맞게 보정하는 조합입니다. 대안으로 검증된 모캡 달리기 클립을 같은 리그에 옮기거나 핵심 자세를 직접 키프레임으로 만들 수도 있습니다. 어느 방법이든 이 캐릭터의 짧은 다리·큰 신발·장갑·이어진 후드에 대한 보정과 실제 재생 검토가 필요합니다. 이번 결과는 게임 기본 달리기의 시작점이며, 무기 소지·공격 전환·옷 충돌까지 검증한 결과는 아닙니다.
 
@@ -68,7 +74,7 @@ BLENDER=/opt/deviant-blender/blender-4.5.13-linux-x64/blender
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/rig-hero.py
 /opt/deviant-kimodo/.venv/bin/python scripts/verify-walk.py
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/verify-run.py
-"$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/verify-run-timing.py
+"$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/verify-run-body.py
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/review-hero.py
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/render-hero.py
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/verify-hero-glb.py

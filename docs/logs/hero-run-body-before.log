@@ -1,0 +1,33 @@
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/.cache/hero-run-body-before.blend"
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/.cache/hero-run-body-before.blend"
+Traceback (most recent call last):
+  File "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/scripts/verify-run-body.py", line 47, in <module>
+    assert passed,'Shoulder coordination, cadence or fitted proportion regression'
+{
+  "status": "FAIL",
+  "baseline_commit": "6d694eb50314b145ff2e3069ad00e0e67d06167e",
+  "bones": 16,
+  "rest_mesh_error_m": 0.0,
+  "original_bone_rest_matrix_error": 0.0,
+  "lower_pose_error_from_phase_matched_cycle": 0.6570387035608292,
+  "shoulder_front_back_difference_range_m": [
+    -0.03880440257489681,
+    -0.017898496240377426
+  ],
+  "pelvis_chest_yaw_correlation": 0.11962114893235055,
+  "chest_forward_lean_range_degrees": [
+    17.6828575444672,
+    23.172480103309557
+  ],
+  "cycle_seconds": 0.5,
+  "scope": "Verifies torso coordination and fitted proportions. Contact, sleeve deformation, loop and visual style checked separately.",
+  "foot_quaternion_correction_error": 0.604221522808075,
+  "neutral_skin_vertex_error_m": 2.9802322387695312e-08
+}
+           ^^^^^^
+AssertionError: Shoulder coordination, cadence or fitted proportion regression
+
+Error: script failed, file: 'scripts/verify-run-body.py', exiting.
+
+Blender quit

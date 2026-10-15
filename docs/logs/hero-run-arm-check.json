@@ -2,11 +2,11 @@
   "status": "PASS",
   "frames": 90,
   "arm_edges_per_frame": 18788,
-  "max_arm_edge_stretch": 3.8980289859442436,
-  "p99_arm_edge_stretch": 2.322324185854014,
-  "max_coincident_arm_seam_gap_m": 1.9944045376521806e-05,
+  "max_arm_edge_stretch": 3.803814033296356,
+  "p99_arm_edge_stretch": 2.298525627344242,
+  "max_coincident_arm_seam_gap_m": 1.978379318179427e-05,
   "worst": {
-    "frame": 27,
+    "frame": 49,
     "vertices": [
       2553,
       2580

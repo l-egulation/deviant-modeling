@@ -1,19 +1,19 @@
 {
   "status": "PASS",
   "frames": 90,
-  "max_ankle_rotation_from_bind_degrees": 44.04934492584857,
-  "stance_max_ankle_degrees": 44.04934492584857,
+  "max_ankle_rotation_from_bind_degrees": 42.6969550043131,
+  "stance_max_ankle_degrees": 42.6969550043131,
   "air_max_ankle_degrees": 40.00000144845948,
-  "rigid_boot_skin_error_m": 6.213297010226881e-08,
+  "rigid_boot_skin_error_m": 6.181654033099448e-08,
   "max_wrist_rotation_degrees": 0,
-  "head_yaw_min_degrees": -11.836192401900012,
-  "head_yaw_max_degrees": -4.033193711127358,
-  "head_yaw_excursion_degrees": 7.802998690772655,
+  "head_yaw_min_degrees": -5.930321319245868,
+  "head_yaw_max_degrees": 7.861420752964657,
+  "head_yaw_excursion_degrees": 13.791742072210525,
   "wrist_fore_aft_span_m": {
-    "Left": 0.0999365858733654,
-    "Right": 0.12456546723842621
+    "Left": 0.10574532765895128,
+    "Right": 0.13453305140137672
   },
-  "minimum_wrist_lateral_distance_from_chest_m": 0.1774258017539978,
+  "minimum_wrist_lateral_distance_from_chest_m": 0.1638077050447464,
   "scope": "Character-specific artistic limits, not anatomical standards. Ground contact, silhouette and cloth reviewed separately.",
-  "max_arm_joint_rotation_step_degrees": 13.244395680535057
+  "max_arm_joint_rotation_step_degrees": 9.412769367858528
 }

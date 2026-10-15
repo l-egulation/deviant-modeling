@@ -1,10 +1,10 @@
 {
   "status": "PASS",
-  "before_commit": "6840495926913b804608ec6f184b89587a9368cc",
-  "frames": 45,
-  "duration_ms": 1500,
+  "before_commit": "6d694eb50314b145ff2e3069ad00e0e67d06167e",
+  "frames": 90,
+  "duration_ms": 3000,
   "native_canvas": 384,
   "display_scale": 1,
-  "camera_and_frame_indices_identical": true,
-  "scope": "Same elapsed time, original 384px side renders, no pixel downsampling; before two cycles / after three cycles in 1.5 seconds. GIF palette quantization only."
+  "camera_and_elapsed_time_identical": true,
+  "scope": "Same elapsed time, original 384px side renders, no pixel downsampling; before six cycles / after five cycles in three seconds. Before 45-frame loop repeats twice. GIF palette quantization only."
 }

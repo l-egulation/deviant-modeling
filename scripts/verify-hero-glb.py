@@ -19,6 +19,7 @@ def bounds(obj):
     return np.array([coords.min(0), coords.max(0)])
 
 bpy.ops.wm.open_mainfile(filepath=str(ROOT/f'outputs/hero-{MOTION}.blend'))
+expected_bones=set(bpy.data.objects['HeroRig'].data.bones.keys())
 expected = []
 end_frame=91 if 'loop_displacement' in bpy.data.objects['HeroRig'] else 90
 for f in (1,46,end_frame):
@@ -32,7 +33,7 @@ bpy.context.scene.render.fps = 30
 bpy.ops.import_scene.gltf(filepath=str(ROOT/f'outputs/hero-{MOTION}.glb'))
 hero = next(o for o in bpy.context.scene.objects if o.type=='MESH')
 rig = next(o for o in bpy.context.scene.objects if o.type=='ARMATURE')
-assert len(rig.data.bones)==16
+assert set(rig.data.bones.keys())==expected_bones
 assert rig.animation_data and rig.animation_data.action
 start, end = rig.animation_data.action.frame_range
 actual = []

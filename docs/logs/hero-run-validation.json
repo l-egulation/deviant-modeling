@@ -1,19 +1,20 @@
 {
   "status": "PASS",
   "mesh_rest_position_difference_from_walk_m": 0.0,
-  "bone_rest_matrix_difference_from_walk": 0.0,
-  "bones": 16,
-  "flight_frames": 33,
+  "bone_rest_matrix_difference_from_walk": 4.172325134277344e-07,
+  "bones": 18,
+  "flight_frames": 40,
   "loop_rotation_endpoint_error": 0.0,
-  "loop_root_endpoint_error_m": 0.0,
-  "camera_constant_velocity_error_m": 7.099575460856045e-07,
-  "glove_rigid_skin_error_m": 4.500555199626888e-07,
-  "hood_scarf_deformation_transform_error": 8.381903171539307e-08,
+  "loop_root_endpoint_error_m": 1.4901161193847656e-07,
+  "camera_constant_velocity_error_m": 7.364485004046628e-07,
+  "glove_rigid_skin_error_m": 3.1676018164006337e-07,
+  "hood_scarf_deformation_transform_error": 5.774199962615967e-08,
   "clip_displacement_m": [
-    0.05248914659023285,
-    -4.8176069259643555,
+    0.043740954250097275,
+    -4.01467227935791,
     0.0
   ],
-  "mean_speed_m_s": 1.6059642864304127,
-  "scope": "Same character proportions; running air phase retained; loop endpoint matches after travel normalization. Cloth collision and subjective style remain visual checks."
+  "mean_speed_m_s": 1.3383035190420722,
+  "scope": "Same character proportions; running air phase retained; loop endpoint matches after travel normalization. Cloth collision and subjective style remain visual checks.",
+  "original_bones_compared": 16
 }

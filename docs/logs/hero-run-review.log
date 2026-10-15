@@ -1,32 +1,32 @@
 {
   "status": "PASS",
   "frames_checked": 90,
-  "fixed_sole_contact_mean_speed_m_s": 9.552111782834152e-05,
-  "fixed_sole_contact_speed_p95_m_s": 0.0004138406927402193,
-  "sole_contact_vertex_pairs": 171,
-  "min_ground_height_m": -9.313225746154785e-09,
-  "max_ground_height_m": 0.022795453667640686,
+  "fixed_sole_contact_mean_speed_m_s": 0.0019442453442726172,
+  "fixed_sole_contact_speed_p95_m_s": 0.00022164533908141485,
+  "sole_contact_vertex_pairs": 110,
+  "min_ground_height_m": 5.029141902923584e-08,
+  "max_ground_height_m": 0.020905823446810246,
   "frame_bounds_min_uv": [
-    0.2853500215739747,
-    0.11704524570219954
+    0.307568636188684,
+    0.11901968574289012
   ],
   "frame_bounds_max_uv": [
-    0.7044406660650749,
-    0.8489306346203633
+    0.7036487444301587,
+    0.8570072083781841
   ],
-  "max_bone_length_error_m": 1.7136335372924805e-07,
-  "root_vertical_second_difference_max_m_per_frame2": 0.015216212719678879,
-  "start_end_mean_pose_difference_degrees": 4.3765731415628055,
+  "max_bone_length_error_m": 1.564621925354004e-07,
+  "root_vertical_second_difference_max_m_per_frame2": 0.006911023054271936,
+  "start_end_mean_pose_difference_degrees": 3.465589219727287,
   "seamless_loop": true,
   "known_limitation": "Loop and contact tests pass; final cloth collision and artistic style remain visual checks.",
   "contact_plane_tolerance_m": 0.0002,
-  "near_ground_3mm_mean_speed_m_s": 0.021489365576648874,
-  "stance_near_ground_3mm_mean_speed_m_s": 0.001898818870011417,
-  "stance_near_ground_vertex_pairs": 1836,
+  "near_ground_3mm_mean_speed_m_s": 0.04101977059594882,
+  "stance_near_ground_3mm_mean_speed_m_s": 0.0015313029020796436,
+  "stance_near_ground_vertex_pairs": 1090,
   "near_ground_diagnostic_scope": "Inclusive 3mm includes airborne toe-off; pass threshold 0.005m/s applies to source-classified stance and actual 0.2mm contact separately.",
   "loop_endpoint_rotation_error": 0.0,
-  "wrap_step_mean_angle_degrees": 4.3765731415628055,
-  "normal_step_angle_p95_degrees": 8.129412756354663
+  "wrap_step_mean_angle_degrees": 3.465589219727287,
+  "normal_step_angle_p95_degrees": 6.1627121509163985
 }
 Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
 Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-run.blend"

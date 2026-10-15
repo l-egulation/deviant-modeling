@@ -19,6 +19,9 @@ references = {}
 targets = {}
 for bone in rig.data.bones:
     n = bone.name
+    if n.endswith('Clavicle'):
+        assert rig.get('coordinated_shoulders') and n in ('LeftClavicle','RightClavicle')
+        continue  # Procedural shoulder bones are covered by verify-run-body.py.
     src_name = n.replace('UpLeg','Leg') if 'UpLeg' in n else n.replace('Leg','Shin') if n.endswith('Leg') else n
     references[n] = source.data.bones[src_name].matrix_local.to_3x3()
     targets[n] = bone.matrix_local.to_3x3()

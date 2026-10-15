@@ -1,8 +1,10 @@
 """Inspect all rendered poses for foot sliding, framing and residual motion issues."""
-import os
+import os,sys
 import bpy,json,numpy as np
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'scripts'))
+from hero_contacts import frame_contact
 MOTION = os.environ.get('HERO_MOTION', 'walk')
 assert MOTION in ('walk', 'run')
 LOG_STEM = 'hero' if MOTION == 'walk' else 'hero-run'
@@ -22,9 +24,7 @@ for f in range(1,91):
     assert np.isfinite(world).all()
     points=world[sole]
     if source_contact is not None:
-        phase=((f-1)*float(rig.get('run_timing_rate',1)))%(45 if 'run_timing_rate' in rig else 90)
-        period=45 if 'run_timing_rate' in rig else 90
-        planted=source_contact[int(np.floor(phase))] & source_contact[int(np.ceil(phase))%period]
+        planted=frame_contact(source_contact,f-1,rig,all_samples=True)
         current_stance=np.where(rest[sole,0]>0,planted[0],planted[1])
     if last is not None:
         velocity=np.linalg.norm((points-last)[:,:2],axis=1)*30

@@ -1,0 +1,23 @@
+{
+  "bones": 18,
+  "clavicle_weighted_vertices": 8397,
+  "timing": {
+    "cycle_seconds": 0.6,
+    "cycles_in_3_seconds": 5,
+    "steps_per_minute": 200,
+    "mean_speed_m_s": 1.3383035934012544,
+    "max_ground_clearance_lift_m": 0.0030483133159577847,
+    "max_contact_translation_correction_m": 0.0006235131601138256,
+    "max_air_ankle_limit_correction_degrees": 0.45955985066868266,
+    "method": "Average the two equivalent 15-frame source cycles; periodic quaternion slerp to 18 frames; preserve contact trajectory and swing clearance."
+  },
+  "shoulder_front_back_difference_range_m": [
+    -0.03654538933187723,
+    0.040971843525767326
+  ],
+  "chest_forward_lean_range_degrees": [
+    10.746862645944576,
+    15.96391551534792
+  ],
+  "method": "Chest counter-rotates against pelvis; independent clavicle rotation; continuous shoulder coat weights; original rest geometry retained; lower poses phase-averaged for cadence."
+}

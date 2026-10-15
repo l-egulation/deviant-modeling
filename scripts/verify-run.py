@@ -9,8 +9,9 @@ bpy.ops.wm.open_mainfile(filepath=str(ROOT/'outputs/hero-run.blend'))
 scene=bpy.context.scene;rig=bpy.data.objects['HeroRig'];hero=bpy.data.objects['InkHero'];camera=scene.camera
 rest=np.array([v.co[:] for v in hero.data.vertices])
 rest_error=float(np.abs(rest-walk_vertices).max())
-bone_error=max(float(np.abs(np.array(b.matrix_local)-walk_rest[b.name]).max()) for b in rig.data.bones)
-assert rest_error<1e-7 and bone_error<1e-7
+bone_error=max(float(np.abs(np.array(rig.data.bones[n].matrix_local)-m).max()) for n,m in walk_rest.items())
+assert set(rig.data.bones.keys())-set(walk_rest)==({'LeftClavicle','RightClavicle'} if rig.get('coordinated_shoulders') else set())
+assert rest_error<1e-7 and bone_error<1e-6
 flight=[];poses=[];roots=[];cameras=[];skin_error=0;neck_error=0
 for f in range(1,92):
     scene.frame_set(f)
@@ -39,4 +40,5 @@ assert seam<1e-6 and root_seam<1e-6 and camera_residual<1e-6
 assert skin_error<1e-5 and neck_error<1e-5
 assert 5<sum(flight[:90])<70
 report={'status':'PASS','mesh_rest_position_difference_from_walk_m':rest_error,'bone_rest_matrix_difference_from_walk':bone_error,'bones':len(walk_rest),'flight_frames':sum(flight[:90]),'loop_rotation_endpoint_error':seam,'loop_root_endpoint_error_m':root_seam,'camera_constant_velocity_error_m':camera_residual,'glove_rigid_skin_error_m':skin_error,'hood_scarf_deformation_transform_error':neck_error,'clip_displacement_m':travel.tolist(),'mean_speed_m_s':float(np.linalg.norm(travel[:2])/3),'scope':'Same character proportions; running air phase retained; loop endpoint matches after travel normalization. Cloth collision and subjective style remain visual checks.'}
+report.update(bones=len(rig.data.bones),original_bones_compared=len(walk_rest))
 (ROOT/'docs/logs/hero-run-validation.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

@@ -19,6 +19,7 @@ from hero_feet import plant_feet
 from hero_accessories import refine_accessories
 from hero_motion import pose_run_arms
 from hero_timing import accelerate_run
+from hero_body import coordinate_run
 
 ROOT = Path(__file__).resolve().parents[1]
 MOTION = os.environ.get('HERO_MOTION', 'walk')
@@ -233,6 +234,8 @@ contact_report = plant_feet(scene, rig, hero, source, OUT/f'{MOTION}.npz', allow
 if MOTION == 'run':
     timing_report=accelerate_run(scene,rig,hero)
     (ROOT/'docs/logs/hero-run-timing.json').write_text(json.dumps(timing_report,indent=2)+'\n')
+    body_report=coordinate_run(scene,rig,hero)
+    (ROOT/'docs/logs/hero-run-body.json').write_text(json.dumps(body_report,indent=2)+'\n')
 
 # Neutral orthographic studio preview. Camera follows travel, preserving motion.
 bpy.ops.object.camera_add(location=(1.35, -2.7, .70))
@@ -292,7 +295,7 @@ bpy.ops.export_scene.gltf(filepath=str(OUT / f'hero-{MOTION}.glb'), use_selectio
 scene.frame_end=90
 report = {'blender': bpy.app.version_string, 'original_vertices': original_vertices,
           'working_vertices': len(hero.data.vertices), 'working_triangles': len(hero.data.polygons),
-          'deform_bones': len(spec), 'unweighted_vertices': unweighted,
+          'deform_bones': len(rig.data.bones), 'unweighted_vertices': unweighted,
           'frames': 90, 'fps': 30, 'ground_offset_m': ground_offset,
           'root_motion_scale': scale, 'foot_min_before_ground_offset_m': min(foot_bottoms),
           'target_leg_length_m': target_leg_length, 'source_leg_length_m': source_leg_length,
