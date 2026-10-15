@@ -1,6 +1,6 @@
-10:50:27 | INFO: Data are loaded, start creating Blender stuff
-10:50:27 | INFO: Blender create Mesh node meshes[0]
-10:50:27 | INFO: glTF import finished in 0.31s
+11:08:09 | INFO: Data are loaded, start creating Blender stuff
+11:08:09 | INFO: Blender create Mesh node meshes[0]
+11:08:09 | INFO: glTF import finished in 0.34s
 {
   "status": "PASS",
   "glb_bones": 16,

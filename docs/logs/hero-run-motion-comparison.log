@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "before_commit": "5c1ac86722dcdd06c5860394b8aa5dff4867adc4",
+  "before_commit": "759acc8f24b4e7f49d7e7b074c5bd9f1d4ab3d4d",
   "frames": 45,
   "duration_ms": 1500,
   "native_canvas": 96,

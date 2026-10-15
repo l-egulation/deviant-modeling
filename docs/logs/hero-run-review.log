@@ -7,23 +7,23 @@
   "min_ground_height_m": -1.043081283569336e-07,
   "max_ground_height_m": 0.0228230943903327,
   "frame_bounds_min_uv": [
-    0.2826835657934194,
+    0.2853500215739747,
     0.11704518312482898
   ],
   "frame_bounds_max_uv": [
     0.7044415144551612,
-    0.8546794683549122
+    0.847961840035577
   ],
   "max_bone_length_error_m": 1.7881393432617188e-07,
   "root_vertical_second_difference_max_m_per_frame2": 0.004023308865725994,
-  "start_end_mean_pose_difference_degrees": 4.231256217120178,
+  "start_end_mean_pose_difference_degrees": 3.983476937629514,
   "seamless_loop": true,
   "known_limitation": "Loop and contact tests pass; final cloth collision and artistic style remain visual checks.",
   "contact_plane_tolerance_m": 0.0002,
   "near_ground_3mm_mean_speed_m_s": 0.0016933646984895322,
   "loop_endpoint_rotation_error": 0.0,
-  "wrap_step_mean_angle_degrees": 4.231256217120178,
-  "normal_step_angle_p95_degrees": 6.596600759963514
+  "wrap_step_mean_angle_degrees": 3.983476937629514,
+  "normal_step_angle_p95_degrees": 5.805484742913696
 }
 Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
 Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-run.blend"

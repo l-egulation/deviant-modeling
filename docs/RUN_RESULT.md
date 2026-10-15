@@ -4,6 +4,8 @@
 
 후속 사용자 승인으로 발목·하체, 팔 경로·손목, 후드 방향과 신발·옷 연결을 보정했습니다. 최신 전후 비교와 수치·재실행·남은 범위는 [SIDE_REVIEW.md](SIDE_REVIEW.md)를 참조합니다. 아래 생성·첫 보정 기록은 경과를 포함하며 현재 적용본의 동작 키프레임은 후속 보정을 반영합니다.
 
+최신 상체 보정은 759acc8의 하체·루트를 그대로 유지하고, 큰 조깅식 팔치기를 낮고 작은 뒤쪽 중심 경로와 추가 전경 자세로 바꾼 결과입니다. `verify-run-upper.py`에서 하체 키의 동일성과 상체 미술 기준을 확인합니다.
+
 ## 크기를 맞추는 방법
 
 Kimodo SOMA는 한 가지 고정 사람 비율로 학습·생성합니다. 캐릭터의 임의 비율을 생성 옵션으로 지정하는 기능은 설치된 CLI에 없습니다. 공식 설명: https://research.nvidia.com/labs/sil/projects/kimodo/docs/key_concepts/skeleton.html . 생성용 SOMA와 실제 캐릭터 리그를 구분합니다.
@@ -64,6 +66,7 @@ BLENDER=/opt/deviant-blender/blender-4.5.13-linux-x64/blender
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/rig-hero.py
 /opt/deviant-kimodo/.venv/bin/python scripts/verify-walk.py
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/verify-run.py
+"$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/verify-run-upper.py
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/review-hero.py
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/render-hero.py
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/verify-hero-glb.py

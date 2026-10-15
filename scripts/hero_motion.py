@@ -12,7 +12,7 @@ def joint_frame(vector,normal):
 
 
 def pose_run_arms(scene,rig):
-    """Keep the generated timing, expand wrist paths, and solve fixed-length arms."""
+    """Keep generated timing with compact, low, rear-biased game-run arms."""
     samples=[]
     for f in range(1,91):
         scene.frame_set(f)
@@ -29,7 +29,11 @@ def pose_run_arms(scene,rig):
         for side,sign in (('Left',1),('Right',-1)):
             arm,fore,hand=[rig.pose.bones[side+n] for n in ('Arm','ForeArm','Hand')]
             p=samples[f-1][side];mean=means[side]
-            target=chest.head+Vector((sign*.205+(p.x-mean[0])*.2,-.025+(p.y-mean[1])*1.65,p.z+.018))
+            gain=1.0 if side=='Right' else .88
+            height=-.063 if side=='Right' else -.070
+            target=chest.head+Vector((sign*.18+(p.x-mean[0])*.12,
+                                    .025+(p.y-mean[1])*gain,
+                                    height+(p.z-mean[2])*.45))
             shoulder=arm.head.copy();direction=target-shoulder
             l1,l2=arm.bone.length,fore.bone.length
             distance=min(direction.length,(l1+l2)*.94)
@@ -58,4 +62,4 @@ def pose_run_arms(scene,rig):
             wrist_max=max(wrist_max,math.degrees(2*math.acos(min(1,abs(hand.rotation_quaternion.normalized().w)))))
     assert error<1e-5,error
     return {'max_wrist_target_error_m':error,'max_wrist_rotation_degrees':wrist_max,
-            'method':'Generated arm timing; wider and longer wrist path; fixed-length arm IK; stable roll; neutral wrist'}
+            'method':'Generated timing; compact low rear-biased paths with small side asymmetry; fixed-length arm IK; neutral wrist'}

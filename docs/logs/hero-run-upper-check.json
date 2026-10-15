@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "baseline_commit": "759acc8f24b4e7f49d7e7b074c5bd9f1d4ab3d4d",
+  "frames": 91,
+  "root_location_difference_m": 0.0,
+  "lower_body_quaternion_difference": 0.0,
+  "lower_body_joint_position_difference_m": 0.0,
+  "added_forward_lean_mean_degrees": 6.000007152591249,
+  "highest_wrist_relative_to_chest_m": -0.05311816930770874,
+  "mean_wrist_rearward_offset_m": 0.02500001908176475,
+  "wrist_fore_aft_spans_m": [
+    0.10075917467474937,
+    0.12456553429365158
+  ],
+  "maximum_wrist_lateral_offset_m": 0.18264444172382355,
+  "scope": "Art-direction and unchanged lower-body regression; visual style and cloth remain separate review."
+}

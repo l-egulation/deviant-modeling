@@ -43,9 +43,9 @@
   },
   "run_head_follows_chest": true,
   "run_arm_motion": {
-    "max_wrist_target_error_m": 1.1057274102908246e-07,
+    "max_wrist_target_error_m": 1.1151007970493857e-07,
     "max_wrist_rotation_degrees": 0,
-    "method": "Generated arm timing; wider and longer wrist path; fixed-length arm IK; stable roll; neutral wrist"
+    "method": "Generated timing; compact low rear-biased paths with small side asymmetry; fixed-length arm IK; neutral wrist"
   },
   "retarget_method": "Source bind rotation removed; shared arm A-pose calibration; target rest axes retained",
   "status": "First-pass rig; requires rendered deformation review."

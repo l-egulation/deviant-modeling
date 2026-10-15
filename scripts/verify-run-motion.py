@@ -34,7 +34,7 @@ yaw_span=max(yaws)-min(yaws)
 s.frame_set(91)
 arm_quats.append([b.rotation_quaternion.normalized()[:] for b in r.pose.bones if b.name.endswith(('Arm','ForeArm','Hand'))])
 q=np.array(arm_quats);arm_step=float((2*np.arccos(np.clip(np.abs(np.sum(q[:-1]*q[1:],2)),-1,1))*180/np.pi).max())
-passed=ankle<45.05 and air<40.1 and wrist<.1 and boot_error<1e-5 and yaw_span<10 and min(span.values())>.18 and lateral>.16 and arm_step<30
+passed=ankle<45.05 and air<40.1 and wrist<.1 and boot_error<1e-5 and yaw_span<10 and min(span.values())>.06 and max(span.values())<.16 and lateral>.145 and arm_step<30
 report={'status':'PASS' if passed else 'FAIL','frames':90,'max_ankle_rotation_from_bind_degrees':ankle,'stance_max_ankle_degrees':stance,'air_max_ankle_degrees':air,'rigid_boot_skin_error_m':boot_error,'max_wrist_rotation_degrees':wrist,'head_yaw_min_degrees':min(yaws),'head_yaw_max_degrees':max(yaws),'head_yaw_excursion_degrees':yaw_span,'wrist_fore_aft_span_m':span,'minimum_wrist_lateral_distance_from_chest_m':lateral,'scope':'Character-specific artistic limits, not anatomical standards. Ground contact, silhouette and cloth reviewed separately.'}
 report['max_arm_joint_rotation_step_degrees']=arm_step
 print(json.dumps(report,indent=2))

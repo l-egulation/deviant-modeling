@@ -1,8 +1,8 @@
 """Compare cached side renders from before and after the motion corrections."""
 from pathlib import Path
-import json
+import json,os
 from PIL import Image,ImageDraw
-ROOT=Path(__file__).resolve().parents[1];before=ROOT/'.cache/hero-run-motion-side-before';after=ROOT/'.cache/hero-run-side-frames'
+ROOT=Path(__file__).resolve().parents[1];before=ROOT/os.environ.get('HERO_COMPARE_FRAMES','.cache/hero-run-upper-side-before');after=ROOT/'.cache/hero-run-side-frames'
 bg=(47,53,63)
 def tile(path):
     im=Image.open(path).convert('RGBA').resize((96,96),Image.Resampling.NEAREST)
@@ -26,5 +26,5 @@ assert decoded_frames==45 and duration==1500,(decoded_frames,duration)
 sheet=Image.new('RGB',(576,960),bg)
 for j,f in enumerate((4,9,17)):sheet.paste(boards[f-1],(0,j*320))
 sheet.save(ROOT/'outputs/hero-run-motion-contact-sheet.png')
-report={'status':'PASS','before_commit':'5c1ac86722dcdd06c5860394b8aa5dff4867adc4','frames':45,'duration_ms':1500,'native_canvas':96,'display_scale':3,'camera_and_frame_indices_identical':True,'scope':'Visual before/after comparison; baseline PNGs were retained locally before changing the rig.'}
+report={'status':'PASS','before_commit':os.environ.get('HERO_COMPARE_COMMIT','759acc8f24b4e7f49d7e7b074c5bd9f1d4ab3d4d'),'frames':45,'duration_ms':1500,'native_canvas':96,'display_scale':3,'camera_and_frame_indices_identical':True,'scope':'Visual before/after comparison; baseline PNGs were retained locally before changing the rig.'}
 (ROOT/'docs/logs/hero-run-motion-comparison.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

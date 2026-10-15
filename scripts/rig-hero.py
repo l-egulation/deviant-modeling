@@ -169,7 +169,7 @@ def set_target_rotations(source_rotations, frame=None):
         if MOTION == 'run' and frame is not None and n == 'Chest':
             yaw=(world@rest[n].to_3x3().inverted()).to_euler('XYZ').z
             heading_correction=Quaternion(Vector((0,0,1)),-.8*yaw-math.radians(8)).to_matrix()
-            world=heading_correction@world
+            world=Quaternion(Vector((1,0,0)),math.radians(6)).to_matrix()@heading_correction@world
         if MOTION == 'run' and frame is not None and n == 'Head':
             # The hood and scarf form a connected shell. Keep their deformation
             # coherent rather than stretching the neck under an adult head nod.

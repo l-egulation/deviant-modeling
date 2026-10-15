@@ -1,0 +1,29 @@
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/.cache/hero-run-upper-before.blend"
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/.cache/hero-run-upper-before.blend"
+Traceback (most recent call last):
+  File "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/scripts/verify-run-upper.py", line 30, in <module>
+    assert passed,'Upper-body style or accepted lower-body regression'
+           ^^^^^^
+AssertionError: Upper-body style or accepted lower-body regression
+{
+  "status": "FAIL",
+  "baseline_commit": "759acc8f24b4e7f49d7e7b074c5bd9f1d4ab3d4d",
+  "frames": 91,
+  "root_location_difference_m": 0.0,
+  "lower_body_quaternion_difference": 0.0,
+  "lower_body_joint_position_difference_m": 0.0,
+  "added_forward_lean_mean_degrees": 0.0,
+  "highest_wrist_relative_to_chest_m": -0.015315920114517212,
+  "mean_wrist_rearward_offset_m": -0.02499999388948911,
+  "wrist_fore_aft_spans_m": [
+    0.19169200956821442,
+    0.20807375013828278
+  ],
+  "maximum_wrist_lateral_offset_m": 0.20940740406513214,
+  "scope": "Art-direction and unchanged lower-body regression; visual style and cloth remain separate review."
+}
+
+Error: script failed, file: 'scripts/verify-run-upper.py', exiting.
+
+Blender quit

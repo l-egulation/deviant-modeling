@@ -7,8 +7,8 @@
   "loop_rotation_endpoint_error": 0.0,
   "loop_root_endpoint_error_m": 0.0,
   "camera_constant_velocity_error_m": 6.490283546156661e-07,
-  "glove_rigid_skin_error_m": 2.439192821057645e-07,
-  "hood_scarf_deformation_transform_error": 7.264316082000732e-08,
+  "glove_rigid_skin_error_m": 2.968111414425323e-07,
+  "hood_scarf_deformation_transform_error": 8.381903171539307e-08,
   "clip_displacement_m": [
     0.034992765635252,
     -3.211738109588623,
