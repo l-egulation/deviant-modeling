@@ -1,0 +1,82 @@
+{
+  "status": "BUILT_REQUIRES_DEFORMATION_REVIEW",
+  "source": "assets/ink-hero.glb via existing raw working mesh",
+  "rig_bones": 18,
+  "parts": {
+    "Hero_HoodFaceScarf": {
+      "vertices": 22539,
+      "quads": 0,
+      "faces": 31175
+    },
+    "Hero_LeftGlove": {
+      "vertices": 1392,
+      "quads": 0,
+      "faces": 1820
+    },
+    "Hero_LeftBoot": {
+      "vertices": 3850,
+      "quads": 0,
+      "faces": 5008
+    },
+    "Hero_RightGlove": {
+      "vertices": 1329,
+      "quads": 0,
+      "faces": 1703
+    },
+    "Hero_RightBoot": {
+      "vertices": 3791,
+      "quads": 0,
+      "faces": 4983
+    },
+    "Hero_Coat": {
+      "vertices": 730,
+      "quads": 680,
+      "faces": 680
+    },
+    "Hero_LeftTrouser": {
+      "vertices": 240,
+      "quads": 220,
+      "faces": 220
+    },
+    "Hero_LeftCuff": {
+      "vertices": 80,
+      "quads": 60,
+      "faces": 60
+    },
+    "Hero_RightTrouser": {
+      "vertices": 240,
+      "quads": 220,
+      "faces": 220
+    },
+    "Hero_RightCuff": {
+      "vertices": 80,
+      "quads": 60,
+      "faces": 60
+    },
+    "Hero_Zipper": {
+      "vertices": 96,
+      "quads": 90,
+      "faces": 98
+    },
+    "Hero_Pocket_-1": {
+      "vertices": 96,
+      "quads": 90,
+      "faces": 98
+    },
+    "Hero_Pocket_1": {
+      "vertices": 96,
+      "quads": 90,
+      "faces": 98
+    }
+  },
+  "new_deform_geometry": [
+    "Hero_Coat",
+    "Hero_LeftTrouser",
+    "Hero_RightTrouser"
+  ],
+  "coat_connected_sleeve_boundary_vertices_per_side": 20,
+  "bind_pose": "Horizontal T arms; spread legs about 23 degrees; front -Y, up Z",
+  "clip": "Independent joint test, not Kimodo run",
+  "clip_frames": 120,
+  "fps": 30
+}

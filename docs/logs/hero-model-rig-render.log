@@ -1,0 +1,83 @@
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-model.blend"
+Fra:1 Mem:28.92M (Peak 29.33M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Hero_HoodFaceScarf
+Fra:1 Mem:30.97M (Peak 30.97M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Hero_LeftGlove
+Fra:1 Mem:30.98M (Peak 30.98M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Hero_LeftBoot
+Fra:1 Mem:30.99M (Peak 30.99M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Hero_RightGlove
+Fra:1 Mem:31.00M (Peak 31.00M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Hero_LeftTrouser
+Fra:1 Mem:31.00M (Peak 31.00M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Hero_RightCuff
+Fra:1 Mem:31.02M (Peak 31.02M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Hero_Zipper
+Fra:1 Mem:35.55M (Peak 35.55M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Hero_Pocket_-1
+Fra:1 Mem:35.56M (Peak 35.56M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Hero_Pocket_1
+Fra:1 Mem:35.58M (Peak 35.58M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Area
+Fra:1 Mem:35.58M (Peak 35.58M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Area.001
+Fra:1 Mem:35.58M (Peak 35.58M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cylinder
+Fra:1 Mem:35.67M (Peak 35.67M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Sphere
+Fra:1 Mem:35.67M (Peak 35.67M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cylinder.001
+Fra:1 Mem:36.71M (Peak 36.71M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Sphere.001
+Fra:1 Mem:36.84M (Peak 36.84M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Sphere.002
+Fra:1 Mem:36.83M (Peak 36.84M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Sphere.004
+Fra:1 Mem:36.90M (Peak 36.90M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cylinder.009
+Fra:1 Mem:36.97M (Peak 36.97M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Sphere.009
+Fra:1 Mem:36.86M (Peak 36.97M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Sphere.010
+Fra:1 Mem:36.87M (Peak 36.97M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Sphere.011
+Fra:1 Mem:36.90M (Peak 36.97M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cylinder.012
+Fra:1 Mem:36.90M (Peak 36.97M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Sphere.012
+Fra:1 Mem:36.90M (Peak 36.97M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Sphere.013
+Fra:1 Mem:36.92M (Peak 36.97M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cylinder.014
+Fra:1 Mem:36.93M (Peak 36.97M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Sphere.014
+Fra:1 Mem:36.94M (Peak 36.97M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cylinder.015
+Fra:1 Mem:36.94M (Peak 36.97M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Sphere.015
+Fra:1 Mem:36.96M (Peak 36.97M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cylinder.016
+Fra:1 Mem:36.97M (Peak 36.97M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Sphere.016
+Fra:1 Mem:36.98M (Peak 36.98M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cylinder.017
+Fra:1 Mem:39.43M (Peak 39.44M) | Time:00:00.13 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:33.48M (Peak 39.44M) | Time:00:00.13 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_basecolor
+Fra:1 Mem:33.48M (Peak 39.44M) | Time:00:00.13 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_normal
+Fra:1 Mem:33.49M (Peak 39.44M) | Time:00:00.13 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading ink-hero_rm
+Fra:1 Mem:223.10M (Peak 353.51M) | Time:00:00.42 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:223.10M (Peak 353.51M) | Time:00:00.42 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:223.10M (Peak 353.51M) | Time:00:00.42 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:223.10M (Peak 353.51M) | Time:00:00.42 | Mem:192.00M, Peak:192.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:223.19M (Peak 353.51M) | Time:00:00.51 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:223.19M (Peak 353.51M) | Time:00:00.51 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:223.19M (Peak 353.51M) | Time:00:00.51 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:223.19M (Peak 353.51M) | Time:00:00.51 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:223.19M (Peak 353.51M) | Time:00:00.51 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:223.19M (Peak 353.51M) | Time:00:00.51 | Mem:192.02M, Peak:192.02M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:223.20M (Peak 353.51M) | Time:00:00.52 | Mem:192.03M, Peak:192.03M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:223.20M (Peak 353.51M) | Time:00:00.52 | Mem:192.03M, Peak:192.03M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:223.20M (Peak 353.51M) | Time:00:00.52 | Mem:192.03M, Peak:192.03M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:225.75M (Peak 353.51M) | Time:00:00.54 | Mem:192.03M, Peak:192.03M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:225.75M (Peak 353.51M) | Time:00:00.54 | Mem:192.03M, Peak:192.03M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:229.33M (Peak 353.51M) | Time:00:00.54 | Mem:192.03M, Peak:192.03M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:229.33M (Peak 353.51M) | Time:00:00.55 | Mem:195.60M, Peak:195.60M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:229.33M (Peak 353.51M) | Time:00:00.55 | Mem:195.60M, Peak:195.60M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:233.33M (Peak 353.51M) | Time:00:00.56 | Mem:195.60M, Peak:195.60M | Scene, ViewLayer | Updating Scene BVH | Packing BVH triangles and strands
+Fra:1 Mem:233.60M (Peak 353.51M) | Time:00:00.56 | Mem:195.60M, Peak:195.60M | Scene, ViewLayer | Updating Scene BVH | Packing BVH nodes
+Fra:1 Mem:233.47M (Peak 353.51M) | Time:00:00.56 | Mem:195.60M, Peak:195.60M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:233.47M (Peak 353.51M) | Time:00:00.57 | Mem:197.67M, Peak:197.67M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:235.58M (Peak 353.51M) | Time:00:00.57 | Mem:197.67M, Peak:197.67M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:235.58M (Peak 353.51M) | Time:00:00.57 | Mem:199.78M, Peak:199.78M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:235.58M (Peak 353.51M) | Time:00:00.57 | Mem:199.78M, Peak:199.78M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:235.58M (Peak 353.51M) | Time:00:00.58 | Mem:199.78M, Peak:199.78M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:235.58M (Peak 353.51M) | Time:00:00.58 | Mem:199.78M, Peak:199.78M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:235.58M (Peak 353.51M) | Time:00:00.58 | Mem:199.78M, Peak:199.78M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:235.58M (Peak 353.51M) | Time:00:00.58 | Mem:199.86M, Peak:199.86M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:235.58M (Peak 353.51M) | Time:00:00.58 | Mem:199.86M, Peak:199.86M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:236.27M (Peak 353.51M) | Time:00:00.59 | Mem:200.55M, Peak:200.55M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:236.27M (Peak 353.51M) | Time:00:00.59 | Mem:200.55M, Peak:200.55M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:236.27M (Peak 353.51M) | Time:00:00.59 | Mem:200.47M, Peak:200.55M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:236.27M (Peak 353.51M) | Time:00:00.59 | Mem:200.55M, Peak:200.55M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:236.27M (Peak 353.51M) | Time:00:00.59 | Mem:200.55M, Peak:200.55M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:236.27M (Peak 353.51M) | Time:00:00.59 | Mem:200.55M, Peak:200.55M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:240.28M (Peak 353.51M) | Time:00:00.71 | Mem:552.55M, Peak:552.55M | Scene, ViewLayer | Sample 0/16
+Fra:1 Mem:269.97M (Peak 353.51M) | Time:00:00.75 | Remaining:00:00.53 | Mem:582.24M, Peak:582.24M | Scene, ViewLayer | Sample 1/16
+Fra:1 Mem:282.47M (Peak 353.51M) | Time:00:03.58 | Mem:582.24M, Peak:582.24M | Scene, ViewLayer | Sample 16/16
+Fra:1 Mem:282.47M (Peak 353.51M) | Time:00:03.58 | Mem:582.24M, Peak:582.24M | Scene, ViewLayer | Finished
+Saved: '/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-model-rig.png'
+Time: 00:03.84 (Saving: 00:00.15)
+
+RIG_OVERLAY_RENDERED: projected bind joints; diagnostic guides not saved into model
+
+Blender quit

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "frames": 120,
+  "fps": 30.0,
+  "seconds": 4,
+  "pixel_motion_difference": 11.832972208658854,
+  "scope": "Independent joint-test playback, not generated running motion.",
+  "gif_frames": 120,
+  "gif_duration_ms": 4000
+}

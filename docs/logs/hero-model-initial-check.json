@@ -1,0 +1,33 @@
+{
+  "status": "FAIL",
+  "rig_bones": 18,
+  "coat_connected_components": 1,
+  "coat_quads": 680,
+  "coat_nonmanifold_branch_edges": 0,
+  "intentional_open_boundary_edges": 104,
+  "normalized_weight_error": 3.387685865163803e-08,
+  "joint_test_frames": 120,
+  "max_coat_edge_stretch": 2.2869240345704456,
+  "worst_frame_p99_coat_edge_stretch": 1.856161739049205,
+  "isolated_clavicle_30deg_surface_median_displacement_m": 0.040264688367184796,
+  "pose_bone_scales": [
+    1,
+    1
+  ],
+  "scope": "New deform cage and isolated shoulder coupling. Not final cloth collision or animation art approval.",
+  "worst": {
+    "frame": 60,
+    "rest_edge_positions": [
+      [
+        0.26499998569488525,
+        -0.04899999871850014,
+        0.5
+      ],
+      [
+        0.2750000059604645,
+        -0.04899999871850014,
+        0.5
+      ]
+    ]
+  }
+}

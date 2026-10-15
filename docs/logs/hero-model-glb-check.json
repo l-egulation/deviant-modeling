@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "bones": 18,
+  "skinned_mesh_parts": 13,
+  "max_animated_bounds_difference_m": 1.1920928955078125e-07,
+  "sample_errors_m": [
+    1.1920928955078125e-07,
+    1.1920928955078125e-07,
+    1.1920928955078125e-07
+  ],
+  "imported_frame_range": [
+    1.0,
+    120.0
+  ],
+  "scope": "Re-imported rebuilt rig and joint-test animation; pose bounds, not final running motion. Importer bone-display helper excluded."
+}

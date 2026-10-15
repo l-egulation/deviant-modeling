@@ -1,0 +1,117 @@
+14:04:39 | INFO: Data are loaded, start creating Blender stuff
+14:04:39 | INFO: Blender create Mesh node Hero_Coat
+14:04:39 | INFO: Blender create Mesh node meshes[0].002
+14:04:39 | INFO: Blender create Mesh node meshes[0].004
+14:04:39 | INFO: Blender create Mesh node Hero_LeftCuff
+14:04:39 | INFO: Blender create Mesh node meshes[0].003
+14:04:39 | INFO: Blender create Mesh node Hero_LeftTrouser
+14:04:39 | INFO: Blender create Mesh node Cube.001
+14:04:39 | INFO: Blender create Mesh node Cube.002
+14:04:39 | INFO: Blender create Mesh node meshes[0].006
+14:04:39 | INFO: Blender create Mesh node Hero_RightCuff
+14:04:39 | INFO: Blender create Mesh node meshes[0].005
+14:04:39 | INFO: Blender create Mesh node Hero_RightTrouser
+14:04:39 | INFO: Blender create Mesh node Cube
+14:04:39 | INFO: glTF import finished in 0.30s
+{
+  "expected_bounds": [
+    [
+      [
+        -0.4311554431915283,
+        -0.2045317143201828,
+        -5.587935447692871e-09
+      ],
+      [
+        0.43113476037979126,
+        0.20465748012065887,
+        0.9793810248374939
+      ]
+    ],
+    [
+      [
+        -0.2625524401664734,
+        -0.2045317143201828,
+        -0.018148690462112427
+      ],
+      [
+        0.26255249977111816,
+        0.24011537432670593,
+        0.9793810248374939
+      ]
+    ],
+    [
+      [
+        -0.4311554431915283,
+        -0.2045317143201828,
+        -5.587935447692871e-09
+      ],
+      [
+        0.43113476037979126,
+        0.20465748012065887,
+        0.9793810248374939
+      ]
+    ]
+  ],
+  "imported_bounds": [
+    [
+      [
+        -0.43115535378456116,
+        -0.2045316845178604,
+        -6.730022761303189e-08
+      ],
+      [
+        0.4311346709728241,
+        0.20465746521949768,
+        0.9793809056282043
+      ]
+    ],
+    [
+      [
+        -0.2625523507595062,
+        -0.2045316845178604,
+        -0.018148750066757202
+      ],
+      [
+        0.2625524401664734,
+        0.2401154339313507,
+        0.9793809056282043
+      ]
+    ],
+    [
+      [
+        -0.43115535378456116,
+        -0.2045316845178604,
+        -6.730022761303189e-08
+      ],
+      [
+        0.4311346709728241,
+        0.20465746521949768,
+        0.9793809056282043
+      ]
+    ]
+  ],
+  "action_range": [
+    1.0,
+    120.0
+  ]
+}
+{
+  "status": "PASS",
+  "bones": 18,
+  "skinned_mesh_parts": 13,
+  "max_animated_bounds_difference_m": 1.1920928955078125e-07,
+  "sample_errors_m": [
+    1.1920928955078125e-07,
+    1.1920928955078125e-07,
+    1.1920928955078125e-07
+  ],
+  "imported_frame_range": [
+    1.0,
+    120.0
+  ],
+  "scope": "Re-imported rebuilt rig and joint-test animation; pose bounds, not final running motion. Importer bone-display helper excluded."
+}
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-model.blend"
+
+Blender quit

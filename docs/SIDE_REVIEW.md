@@ -1,5 +1,33 @@
 # 달리기 측면·소형 해상도 검토
 
+## 최신: 벌린 기준 자세의 모델 재작업
+
+사용자가 어깨가 고정된 인상을 다시 지적하여 모션 보정에서 변형용 모델 재제작으로 전환했습니다. 후드·얼굴·색감은 유지하고 몸통·소매·하체를 새로 제작하는 방향을 사용자가 선택했습니다. 디자인 원본 `assets/ink-hero.glb`와 기존 달리기 결과는 보존하며, 새 기준 파일은 `outputs/hero-model.blend` / `hero-model.glb`입니다.
+
+- 팔은 수평 T자, 다리는 수직에서 약 23도 벌린 기본 자세입니다. 새 어깨·팔꿈치·손목 및 골반·무릎·발목에 18뼈 리그를 직접 맞췄습니다.
+- 후드·얼굴·스카프·장갑·신발은 기존 디자인의 강체 부분을 분리해 사용했습니다. 이전 바지 조각은 신발에서 제거했습니다. 몸통과 소매는 680사각면의 한 연결 메시이며, 각 어깨 구멍의 20개 경계 정점을 소매가 공유합니다. 목·밑단·손목의 의도된 열린 가장자리에 의상 두께를 추가했습니다. 소매 뿌리가 별도 물체처럼 떠 있지 않습니다.
+- 팔꿈치·무릎 주변에는 촘촘한 지지 면 고리를 배치했습니다. 처음에는 좁은 가중치 전환 때문에 소매 최대 2.29배, 무릎 최대 3.39배 늘어짐이 나왔습니다. 소매 전환을 넓히고, 바지는 고리 번호 대신 실제 공간 거리로 변형을 분배하여 각각 최대 1.69배 / 1.34배로 줄였습니다. 새 허용 기준은 코트 최대 2배·프레임별 99백분위 1.6배, 바지 최대 2배·99백분위 1.8배입니다. 이전 5배 붕괴 방지 기준과 구분합니다.
+- 120프레임 독립 관절 시험에는 어깨 앞뒤 회전, 상완 약 65도 내리기, 팔꿈치 약 65도, 무릎 약 55도 굽힘을 포함했습니다. 고관절 ±25도 시험도 별도로 수행했고 바지 모서리 최대 늘어짐 약 1.47배로 통과했습니다. 모든 뼈 크기는 1을 유지합니다. 쇄골만 ±15도로 회전한 별도 시험에서 어깨 표면의 변위 중앙값 약 40mm를 확인했습니다. 이전 달리기의 2.7mm 측정과는 동작 조건이 달라 직접 배율로 비교하지 않습니다.
+- GLB에는 곡면·의상 두께를 적용하여 내보내고, 다시 불러온 세 자세의 범위 오차 약 1.2e-7m를 확인했습니다. Blender가 가져올 때 만드는 뼈 표시용 Icosphere는 모델 검사에서 제외합니다.
+
+새 모델의 독립 관절 시험은 달리기·접지·옷 충돌 검증이 아닙니다. 앞으로 기존 손 경로 고정 보정을 옮기지 않고, 새 기준 자세와 실제 Kimodo 어깨 채널에 맞춰 다시 매핑합니다. 아래 절들은 이전 모델의 보정 경과입니다.
+
+재실행(WSL 저장소 루트):
+
+```sh
+BLENDER=/opt/deviant-blender/blender-4.5.13-linux-x64/blender
+"$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/rebuild-hero-model.py
+"$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/verify-hero-model.py
+"$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/verify-hero-model-glb.py
+"$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/render-hero-model.py
+/opt/deviant-kimodo/.venv/bin/python scripts/encode-hero-model.py
+"$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/render-hero-model-rig.py
+```
+
+출력: `hero-model-front.png`, `hero-model-rig.png`(기준 자세 관절 배치), `hero-model-contact-sheet.png`, `hero-model-deformation-preview.mp4` / `.gif`. 관절 배치 그림의 안내 선은 별도 렌더용이며 편집 모델이나 GLB에 들어가지 않습니다. 검사·실행 기록은 `docs/logs/hero-model-*`입니다.
+
+## 이전 모델의 달리기 보정 경과
+
 2026-10-15, `work/kimodo-setup`. 최초 측면 검토 후 사용자가 발목·하체→팔·후드→옷 연결 순서의 수정을 승인하여 적용했습니다. Kimodo 생성 원본과 캐릭터의 기본 정점·뼈 크기는 유지하고, 적용본의 애니메이션과 가중치를 수정했습니다. 최초 검토 상태는 커밋 `5c1ac86722dcdd06c5860394b8aa5dff4867adc4`에서 확인할 수 있습니다.
 
 이후 사용자가 하체는 괜찮지만 상체가 조깅처럼 보인다고 지적하여 **상체만 작고 낮은 게임 달리기 자세로 재보정**했습니다. 당시 기준 `759acc8f24b4e7f49d7e7b074c5bd9f1d4ab3d4d` 대비 91프레임의 루트 위치·하체 회전·하체 관절 위치 차이는 모두 0이었습니다.

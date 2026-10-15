@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "rig_bones": 18,
+  "coat_connected_components": 1,
+  "coat_quads": 680,
+  "coat_nonmanifold_branch_edges": 0,
+  "intentional_open_boundary_edges": 104,
+  "normalized_weight_error": 3.387685865163803e-08,
+  "joint_test_frames": 120,
+  "max_coat_edge_stretch": 1.6922705876441282,
+  "worst_frame_p99_coat_edge_stretch": 1.5619389881301495,
+  "isolated_clavicle_30deg_surface_median_displacement_m": 0.040264688367184796,
+  "pose_bone_scales": [
+    1,
+    1
+  ],
+  "scope": "New deform cage and isolated shoulder coupling. Not final cloth collision or animation art approval.",
+  "worst": {
+    "frame": 55,
+    "rest_edge_positions": [
+      [
+        -0.1205630972981453,
+        0.05444561690092087,
+        0.550000011920929
+      ],
+      [
+        -0.09561900794506073,
+        0.0461120642721653,
+        0.5649999976158142
+      ]
+    ]
+  },
+  "max_trouser_edge_stretch": 1.3410538573794986,
+  "worst_frame_p99_trouser_edge_stretch": 1.3188149711595822,
+  "hip_swing_test_degrees": 25,
+  "max_hip_swing_trouser_edge_stretch": 1.4745044925355393
+}
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-model.blend"
+
+Blender quit

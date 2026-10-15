@@ -3,6 +3,8 @@
 - 먼저 README.md, STATUS.md, START-HERE.md를 읽는다.
 - 목적은 Tripo 외형 → Kimodo 골격 모션 → Blender 리깅·모션 이식 → 도트 스프라이트 제작이다.
 - 현재 원본은 assets/ink-hero.glb. 기존 맥의 build_hero.py나 옛 blend를 현재 원본으로 쓰지 않는다.
+- 2026-10-15 사용자 승인 재작업: 후드·얼굴·색감은 유지하고 몸통·소매·하체를 새로 제작한다. 새 변형 기준 모델은 outputs/hero-model.blend이며 수평 T자 팔·약 23도 벌린 다리와 18뼈 리그를 사용한다. assets/ink-hero.glb는 디자인 원본으로 보존한다. hero-run.blend는 이전 모델의 달리기 검토본이다.
+- 새 모델에는 기존 A포즈 보정·손 경로 고정·쇄골 회전을 상쇄하는 팔 보정을 그대로 적용하지 않는다. Kimodo 재매핑 시 LeftClavicle/RightClavicle은 원본 BVH의 LeftShoulder/RightShoulder 채널을 확인한다. 관절 시험 통과와 달리기 미술 검증을 구분한다.
 - 이번 갤럭시북 작업은 Kimodo 설치와 3초 걷기 생성·재생 검증이다. 캐릭터 리깅 완료와 혼동하지 않는다.
 - 실행 호스트를 확인한다. Mac 원격 세션에서 Windows GPU를 사용할 수 있다고 가정하지 않는다.
 - RTX 4050 6GB 환경에서는 TEXT_ENCODER_DEVICE=cpu로 시작한다. 문서 예시는 설치된 버전과 공식 안내로 검증한다.
