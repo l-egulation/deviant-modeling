@@ -4,18 +4,18 @@
   "max_ankle_rotation_from_bind_degrees": 44.04934492584857,
   "stance_max_ankle_degrees": 44.04934492584857,
   "air_max_ankle_degrees": 40.00000144845948,
-  "rigid_boot_skin_error_m": 6.001307095715447e-08,
+  "rigid_boot_skin_error_m": 6.213297010226881e-08,
   "max_wrist_rotation_degrees": 0,
-  "head_yaw_min_degrees": -11.890275657326091,
-  "head_yaw_max_degrees": -4.003752403190289,
-  "head_yaw_excursion_degrees": 7.886523254135803,
+  "head_yaw_min_degrees": -11.836192401900012,
+  "head_yaw_max_degrees": -4.033193711127358,
+  "head_yaw_excursion_degrees": 7.802998690772655,
   "wrist_fore_aft_span_m": {
-    "Left": 0.10075917467474937,
-    "Right": 0.12456553429365158
+    "Left": 0.0999365858733654,
+    "Right": 0.12456546723842621
   },
-  "minimum_wrist_lateral_distance_from_chest_m": 0.17733162641525269,
+  "minimum_wrist_lateral_distance_from_chest_m": 0.1774258017539978,
   "scope": "Character-specific artistic limits, not anatomical standards. Ground contact, silhouette and cloth reviewed separately.",
-  "max_arm_joint_rotation_step_degrees": 9.161459966088396
+  "max_arm_joint_rotation_step_degrees": 13.244395680535057
 }
 Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
 Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-run.blend"

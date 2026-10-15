@@ -1,0 +1,14 @@
+Info: Saved as "hero-run.blend"
+{
+  "rate": 1.5,
+  "cycle_seconds": 0.5,
+  "cycles_in_3_seconds": 6,
+  "mean_speed_m_s": 1.605964378062928,
+  "maximum_interpolated_ground_lift_m": 0.005051400512456894,
+  "maximum_contact_translation_correction_m": 0.00046661405459291825,
+  "method": "Periodic quaternion slerp, root travel retimed together; unchanged rest geometry and joint poses at original samples."
+}
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-run.blend"
+
+Blender quit

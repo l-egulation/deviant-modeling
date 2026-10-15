@@ -7,6 +7,10 @@ path=Path(os.environ.get('HERO_MOTION_BLEND',str(ROOT/'outputs/hero-run.blend'))
 bpy.ops.wm.open_mainfile(filepath=str(path));r=bpy.data.objects['HeroRig'];h=bpy.data.objects['InkHero'];s=bpy.context.scene
 rest=np.array([v.co[:] for v in h.data.vertices]);motion=np.load(ROOT/'outputs/run.npz')
 contact=np.stack((motion['foot_contacts'][:,:3].max(1)>.5,motion['foot_contacts'][:,3:].max(1)>.5),axis=1)
+if 'run_timing_rate' in r:
+    phase=np.arange(90)*float(r['run_timing_rate'])%45
+    # A sample crossing a contact boundary is included with stance limits.
+    contact=contact[np.floor(phase).astype(int)] | contact[(np.ceil(phase).astype(int)%45)]
 ankle=0;air=0;stance=0;wrist=0;boot_error=0;yaws=[];arm_quats=[];hands={side:[] for side in ('Left','Right')}
 for f in range(1,91):
     s.frame_set(f)

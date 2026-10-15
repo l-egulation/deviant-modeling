@@ -8,8 +8,8 @@
   "glb_skins": 1,
   "glb_joints": 16,
   "glb_animations": 1,
-  "first_to_comparison_pixel_difference": 11.830581665039062,
-  "comparison_frame_index": 15,
-  "loop_endpoint_mean_pixel_error": 0.002227783203125,
+  "first_to_comparison_pixel_difference": 11.907338460286459,
+  "comparison_frame_index": 81,
+  "loop_endpoint_mean_pixel_error": 0.0025927225748697915,
   "scope": "Body animation preview; loop continuity and deformation quality checked separately."
 }

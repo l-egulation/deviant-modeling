@@ -52,8 +52,10 @@ with av.open(str(dest)) as c:
     rate = float(s.average_rate)
     decoded = [f.to_ndarray(format='rgb24') for f in c.decode(video=0)]
 assert len(decoded) == 90 and rate == 30
-comparison=15 if MOTION == 'run' else 45
-diff = float(np.abs(decoded[0].astype(float)-decoded[comparison].astype(float)).mean())
+# A fixed comparison frame can coincide with a complete cycle in a fast run.
+# Inspect the decoded clip rather than assuming a particular cycle duration.
+differences=[float(np.abs(decoded[0].astype(float)-frame.astype(float)).mean()) for frame in decoded]
+comparison=int(np.argmax(differences));diff=differences[comparison]
 assert diff > 1
 report = {'status': 'PASS', 'frames': 90, 'fps': rate, 'seconds': 3,
           'width':512, 'height':512, 'glb_skins':1, 'glb_joints':16,

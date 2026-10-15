@@ -16,11 +16,11 @@
   "mp4_seconds": 3,
   "gif_frames": 45,
   "gif_duration_ms": 1500,
-  "loop_endpoint_rgba_mean_difference": 0.009668986002604166,
+  "loop_endpoint_rgba_mean_difference": 0.9229278564453125,
   "alpha_bounds_min": [
-    114,
+    115,
     42,
-    300,
+    301,
     343
   ],
   "alpha_bounds_max": [

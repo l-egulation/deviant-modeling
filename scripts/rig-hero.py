@@ -18,6 +18,7 @@ from hero_preview import boot_rotation, configure_preview
 from hero_feet import plant_feet
 from hero_accessories import refine_accessories
 from hero_motion import pose_run_arms
+from hero_timing import accelerate_run
 
 ROOT = Path(__file__).resolve().parents[1]
 MOTION = os.environ.get('HERO_MOTION', 'walk')
@@ -229,6 +230,9 @@ if rig.animation_data and rig.animation_data.action:
     rig.animation_data.action.name = f'Kimodo_{MOTION.title()}_3s'
 arm_motion_report=pose_run_arms(scene,rig) if MOTION == 'run' else {}
 contact_report = plant_feet(scene, rig, hero, source, OUT/f'{MOTION}.npz', allow_flight=MOTION == 'run')
+if MOTION == 'run':
+    timing_report=accelerate_run(scene,rig,hero)
+    (ROOT/'docs/logs/hero-run-timing.json').write_text(json.dumps(timing_report,indent=2)+'\n')
 
 # Neutral orthographic studio preview. Camera follows travel, preserving motion.
 bpy.ops.object.camera_add(location=(1.35, -2.7, .70))

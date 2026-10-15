@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "baseline_commit": "6840495926913b804608ec6f184b89587a9368cc",
+  "frames": 91,
+  "rate": 1.5,
+  "cycle_seconds": 0.5,
+  "cycles_in_3_seconds": 6,
+  "max_quaternion_difference_from_phase_matched_source": 2.9802322387695312e-08,
+  "rest_vertex_difference_m": 0.0,
+  "bind_matrix_difference": 0.0,
+  "travel_scaling_error_m": 2.384185791015625e-07,
+  "scope": "Preserved approved poses under periodic slerp; ground lift, contact and loop verified separately."
+}

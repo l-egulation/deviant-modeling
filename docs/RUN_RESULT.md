@@ -4,7 +4,9 @@
 
 후속 사용자 승인으로 발목·하체, 팔 경로·손목, 후드 방향과 신발·옷 연결을 보정했습니다. 최신 전후 비교와 수치·재실행·남은 범위는 [SIDE_REVIEW.md](SIDE_REVIEW.md)를 참조합니다. 아래 생성·첫 보정 기록은 경과를 포함하며 현재 적용본의 동작 키프레임은 후속 보정을 반영합니다.
 
-최신 상체 보정은 759acc8의 하체·루트를 그대로 유지하고, 큰 조깅식 팔치기를 낮고 작은 뒤쪽 중심 경로와 추가 전경 자세로 바꾼 결과입니다. `verify-run-upper.py`에서 하체 키의 동일성과 상체 미술 기준을 확인합니다.
+이전 상체 보정(6840495)은 759acc8의 하체·루트를 그대로 유지하고 큰 조깅식 팔치기를 낮고 작은 뒤쪽 중심 경로와 추가 전경 자세로 바꾼 결과입니다. `hero-run-upper-*` 기록은 이 단계의 검사입니다.
+
+최신 속도 보정은 이 승인 자세를 1.5배로 재생합니다. 한 주기 0.75초→0.5초, 3초에 4→6주기, 전진 약 3.212m→4.818m(평균 1.606m/s)입니다. 생성 원본 NPZ/BVH는 그대로 두고, 캐릭터 적용 단계 `hero_timing.py`에서 주기적 쿼터니언 보간과 루트 전진량을 함께 조정합니다. 보간 중 접지 보정은 최대 약 0.47mm, 발을 떼는 지면 여유 보정은 최대 약 5.05mm입니다. 기존 리그 실행에 포함되어 있으며, 이전 미보정 Blend에만 `retime-hero-run.py`를 한 번 적용할 수도 있습니다. 이미 적용한 Blend는 중복 적용을 차단합니다. 위상별 자세·기본 메시·기본 뼈 검증은 `verify-run-timing.py`, 결과는 `hero-run-timing*.json`을 봅니다.
 
 ## 크기를 맞추는 방법
 
@@ -45,12 +47,12 @@ Kimodo SOMA는 한 가지 고정 사람 비율로 학습·생성합니다. 캐�
 - `outputs/hero-run.blend`: 캐릭터 크기의 리그, 반복 달리기, 참고 SOMA, 스튜디오 씬.
 - `outputs/hero-run.glb`: 16뼈 캐릭터, 3초 반복 달리기 한 애니메이션.
 - `outputs/hero-run-preview.mp4`: 512×512, 30fps, 3초·네 주기.
-- `outputs/hero-run-contact-sheet.png`: 한 주기 약 0.75초 안의 여섯 자세.
+- `outputs/hero-run-contact-sheet.png`: 현재 달리기 주요 여섯 자세.
 - `docs/logs/run-*.json`, `hero-run-*.json`와 실행 로그: 후보 선택·골격 왕복·동일 크기·변형·접지·공중 구간·반복 경계·GLB 왕복·영상 검사.
 
 검증은 GLB 재가져오기 0~90프레임(30fps, 3초), 영상 90프레임 실제 디코딩, 반복 끝 이미지, 전체 90자세의 지면 관통·화면 잘림·뼈 길이 검사로 구성됩니다. 최신 PASS 결과와 오차는 각 `hero-run-*.json`을 참조합니다. 이 검사는 모든 의상 충돌이나 미적 자연스러움을 보증하지 않습니다.
 
-캐릭터의 주기 전진량은 약 3.212m/3초, 약 1.071m/s입니다. 기존 걷기의 약 0.438m/s 대비 약 2.45배입니다. 실제 게임의 이동속도는 화면·월드 단위에 따라 정하고, 발 미끄러짐을 막으려면 재생 박자나 보폭도 함께 맞춰야 합니다.
+최신 캐릭터의 전진량은 약 4.818m/3초, 약 1.606m/s입니다. 이전 1.071m/s에서 재생 박자와 함께 1.5배로 조정했습니다. 실제 게임의 이동속도는 화면·월드 단위에 따라 정하고, 발 미끄러짐을 막으려면 재생 박자나 보폭도 함께 맞춰야 합니다.
 
 현재 방식은 Kimodo로 동작 후보를 만들고, 좋은 한 주기를 골라 캐릭터에 맞게 보정하는 조합입니다. 대안으로 검증된 모캡 달리기 클립을 같은 리그에 옮기거나 핵심 자세를 직접 키프레임으로 만들 수도 있습니다. 어느 방법이든 이 캐릭터의 짧은 다리·큰 신발·장갑·이어진 후드에 대한 보정과 실제 재생 검토가 필요합니다. 이번 결과는 게임 기본 달리기의 시작점이며, 무기 소지·공격 전환·옷 충돌까지 검증한 결과는 아닙니다.
 
@@ -66,7 +68,7 @@ BLENDER=/opt/deviant-blender/blender-4.5.13-linux-x64/blender
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/rig-hero.py
 /opt/deviant-kimodo/.venv/bin/python scripts/verify-walk.py
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/verify-run.py
-"$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/verify-run-upper.py
+"$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/verify-run-timing.py
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/review-hero.py
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/render-hero.py
 "$BLENDER" -b --factory-startup --python-exit-code 1 --python scripts/verify-hero-glb.py

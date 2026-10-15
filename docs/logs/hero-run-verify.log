@@ -4,13 +4,13 @@
   "finite_deformed_vertices": true,
   "weight_sum_min": 0.9979322180151939,
   "weight_sum_max": 1.0000000447034836,
-  "lowest_vertex_min_m": -1.043081283569336e-07,
-  "lowest_vertex_max_m": 0.022823095321655273,
-  "max_deformed_edge_length_m": 0.08203555284958429,
+  "lowest_vertex_min_m": -9.313225746154785e-09,
+  "lowest_vertex_max_m": 0.022795453667640686,
+  "max_deformed_edge_length_m": 0.078687777942768,
   "max_rest_edge_length_m": 0.05190927328196389,
-  "max_bone_length_error_m": 1.7881393432617188e-07,
+  "max_bone_length_error_m": 1.7136335372924805e-07,
   "pose_bone_scales": "All (1,1,1), every frame",
-  "horizontal_root_travel_m": 3.1761047104093425,
+  "horizontal_root_travel_m": 4.763906201295236,
   "notes": "Contact-anchored fixed-length leg IK and smooth pelvis height; visual review still required."
 }
 Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
