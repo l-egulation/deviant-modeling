@@ -31,7 +31,30 @@ for row,label in enumerate(('front','side')):
         im=Image.open(ROOT/f'.cache/{STEM}-{label}-{f:03d}.png').convert('RGB')
         sheet.paste(im,(col*512,row*512));draw.text((col*512+12,row*512+12),f'{label} / {f}',fill='black')
 sheet.save(ROOT/f'outputs/{STEM}-contact-sheet.png')
-report={'decoded_frames':len(decoded),'fps':fps,'seconds':3,'motion_source':('Mixamo Running With Intention, 22-frame original cycle at 30fps; proportion retarget and foot contact correction' if STEM=='hero-mixamo-run' else 'Fresh Kimodo seed 107 generated 3-second sample, unchanged timing; proportion retarget and foot contact correction only'),
+report={'decoded_frames':len(decoded),'fps':fps,'seconds':3,'motion_source':('Mixamo Running With Intention, 22-frame original cycle at 30fps; source limb directions preserved on character lengths; whole-body floor-clearance translation, no leg IK' if STEM=='hero-mixamo-run' else 'Fresh Kimodo seed 107 generated 3-second sample, unchanged timing; proportion retarget and foot contact correction only'),
         'scope':'Video encoding PASS, artistic acceptance and clothing polish are separate'}
 (ROOT/f'docs/logs/{STEM}-preview.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report))
+
+# Synchronized reference / applied-character playback, when source renders exist.
+source_dir=ROOT/'.cache/mixamo-run'
+if STEM=='hero-mixamo-run' and all((source_dir/f'side-{i:03d}.png').exists() for i in range(22)):
+    comparison=[]
+    for i,im in enumerate(frames):
+        row=Image.new('RGB',(1024,512));row.paste(Image.open(source_dir/f'side-{i%22:03d}.png').convert('RGB'),(0,0));row.paste(im,(512,0))
+        label=ImageDraw.Draw(row);label.text((12,12),'Mixamo original / same phase',fill='black');label.text((524,12),'Character proportions / source angles',fill='black')
+        comparison.append(row)
+    with av.open(str(ROOT/f'outputs/{STEM}-comparison.mp4'),'w') as container:
+        stream=container.add_stream('libx264',rate=30);stream.width=1024;stream.height=512;stream.pix_fmt='yuv420p';stream.options={'crf':'18'}
+        for i,im in enumerate(comparison):
+            frame=av.VideoFrame.from_ndarray(np.array(im),format='rgb24');frame.pts=i;frame.time_base=Fraction(1,30)
+            for packet in stream.encode(frame):container.mux(packet)
+        for packet in stream.encode():container.mux(packet)
+    with av.open(str(ROOT/f'outputs/{STEM}-comparison.mp4')) as container:
+        assert sum(1 for _ in container.decode(video=0))==90
+    comparison=[im.resize((768,384),Image.Resampling.LANCZOS) for im in comparison]
+    board=Image.new('RGB',(768*3,384*3))
+    for i,im in enumerate(comparison[::10]):board.paste(im,((i%3)*768,(i//3)*384))
+    comparison_palette=board.quantize(colors=256,method=Image.Quantize.MEDIANCUT)
+    comparison=[im.quantize(palette=comparison_palette,dither=Image.Dither.NONE) for im in comparison]
+    comparison[0].save(ROOT/f'outputs/{STEM}-comparison.gif',save_all=True,append_images=comparison[1:],duration=[30,30,40]*30,loop=0,disposal=2)

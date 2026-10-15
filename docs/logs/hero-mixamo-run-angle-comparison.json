@@ -1,0 +1,18 @@
+{
+  "LeftArm": {
+    "previous_bend_error_max_degrees": 0.0001826826304380802,
+    "median": 3.0520784754628494e-05
+  },
+  "LeftUpLeg": {
+    "previous_bend_error_max_degrees": 95.81737234481929,
+    "median": 46.326310582577115
+  },
+  "RightArm": {
+    "previous_bend_error_max_degrees": 0.0001936913836146914,
+    "median": 2.5467860886863036e-05
+  },
+  "RightUpLeg": {
+    "previous_bend_error_max_degrees": 99.36576693304424,
+    "median": 36.24384620352146
+  }
+}

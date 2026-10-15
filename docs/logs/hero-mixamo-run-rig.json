@@ -8,32 +8,22 @@
   "leg_scale": 0.3018205214679091,
   "bone_length_changes": false,
   "mesh_rest_position_error": 0.0,
-  "body_rotation_edits": "No authored poses; source world-rotation deltas transferred; legs fitted to bind stance",
+  "body_rotation_edits": "Source limb world directions and elbow/knee bend preserved; target bind axes calibrated",
   "coordinate_forward_before": [
     -2.6712160661190865e-07,
     -1.0,
     0.0
   ],
-  "source_contacts_per_cycle": [
-    5,
-    6
-  ],
   "contact_correction": {
-    "max_ankle_target_error_m": 2.443972150513042e-07,
-    "upper_body_rotation_error": 0,
-    "root_vertical_frame_acceleration_max_m": 0.003565596577827311,
-    "smoothing_downward_adjustment_m": 0.0037825170789393993,
-    "rigid_sole_vertices": [
-      720,
-      720
+    "method": "Whole-body vertical translation matching scaled source mesh clearance; no leg IK or angle clamps",
+    "limb_direction_error_max_degrees": 0.0,
+    "elbow_knee_bend_error_max_degrees": 0.00010757547942574774,
+    "previous_elbow_knee_bend_error_max_degrees": 99.36576621516933,
+    "root_vertical_correction_range_m": [
+      -0.021387955492829885,
+      0.10365311102118743
     ],
-    "stance_frames": [
-      20,
-      26
-    ],
-    "source_flight_frames_preserved": 44,
-    "max_ankle_rotation_from_bind_degrees": 42.104253319812464,
-    "method": "Fixed-length two-bone leg solve, source contact anchors, rigid soles and swing boot clearance"
+    "foot_sliding": "Not corrected; retained for inspection instead of replacing source limb poses"
   },
-  "scope": "Candidate retarget; visual and export verification pending; raw source preserved"
+  "scope": "Direction/bend regression checks passed; visual and export checks separate"
 }

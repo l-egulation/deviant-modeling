@@ -3,545 +3,545 @@
   "frames": [
     {
       "frame": 1,
-      "edge_stretch_max": 2.681844768763861,
-      "edge_stretch_p99": 1.795934544323413,
-      "bottom": -1.0151416063308716e-07
+      "edge_stretch_max": 2.6646782138469427,
+      "edge_stretch_p99": 1.7817003995279488,
+      "bottom": 0.0006796605885028839
     },
     {
       "frame": 2,
-      "edge_stretch_max": 2.7734059255810726,
-      "edge_stretch_p99": 1.894777046743166,
-      "bottom": -3.3527612686157227e-08
+      "edge_stretch_max": 2.5542484950619206,
+      "edge_stretch_p99": 1.7293502937897045,
+      "bottom": 0.0013602599501609802
     },
     {
       "frame": 3,
-      "edge_stretch_max": 2.768749215364499,
-      "edge_stretch_p99": 1.9347808457969504,
-      "bottom": 0.011087372899055481
+      "edge_stretch_max": 2.6613895534596295,
+      "edge_stretch_p99": 1.756092524142202,
+      "bottom": 0.007926695048809052
     },
     {
       "frame": 4,
-      "edge_stretch_max": 2.786224700639051,
-      "edge_stretch_p99": 1.9729701853405164,
-      "bottom": 0.02973618544638157
+      "edge_stretch_max": 2.706570621731177,
+      "edge_stretch_p99": 1.7433273846709503,
+      "bottom": 0.020031698048114777
     },
     {
       "frame": 5,
-      "edge_stretch_max": 3.2461469155313125,
-      "edge_stretch_p99": 1.9718986891802766,
-      "bottom": 0.04359107092022896
+      "edge_stretch_max": 2.727394181535505,
+      "edge_stretch_p99": 1.7627740972704236,
+      "bottom": 0.02393113076686859
     },
     {
       "frame": 6,
-      "edge_stretch_max": 3.6532943640949473,
-      "edge_stretch_p99": 1.9411161652508195,
-      "bottom": 0.04871799424290657
+      "edge_stretch_max": 2.734402858108578,
+      "edge_stretch_p99": 1.778304709839483,
+      "bottom": 0.024673502892255783
     },
     {
       "frame": 7,
-      "edge_stretch_max": 3.7192351828506007,
-      "edge_stretch_p99": 1.9159432486598857,
-      "bottom": 0.03920204937458038
+      "edge_stretch_max": 2.5955205211946466,
+      "edge_stretch_p99": 1.7822766260501581,
+      "bottom": 0.016590846702456474
     },
     {
       "frame": 8,
-      "edge_stretch_max": 3.375216912819673,
-      "edge_stretch_p99": 1.8672600052320663,
-      "bottom": 0.018965089693665504
+      "edge_stretch_max": 2.461494755565492,
+      "edge_stretch_p99": 1.8054780531755004,
+      "bottom": 0.004217881243675947
     },
     {
       "frame": 9,
-      "edge_stretch_max": 2.46790347039739,
-      "edge_stretch_p99": 1.776873264242987,
-      "bottom": -3.91155481338501e-08
+      "edge_stretch_max": 2.5637950777159366,
+      "edge_stretch_p99": 1.7968958313740027,
+      "bottom": 0.00015123561024665833
     },
     {
       "frame": 10,
-      "edge_stretch_max": 2.616984425684388,
-      "edge_stretch_p99": 1.8225136991112159,
-      "bottom": -2.421438694000244e-08
+      "edge_stretch_max": 2.645168270484355,
+      "edge_stretch_p99": 1.820499761207518,
+      "bottom": 0.00015121698379516602
     },
     {
       "frame": 11,
-      "edge_stretch_max": 2.6283663160497475,
-      "edge_stretch_p99": 1.8173663425146682,
-      "bottom": -3.5390257835388184e-08
+      "edge_stretch_max": 2.654644993049945,
+      "edge_stretch_p99": 1.770965122779403,
+      "bottom": 0.00015131384134292603
     },
     {
       "frame": 12,
-      "edge_stretch_max": 2.6475220055381654,
-      "edge_stretch_p99": 1.8406004909267972,
-      "bottom": -9.872019290924072e-08
+      "edge_stretch_max": 2.59731089916763,
+      "edge_stretch_p99": 1.7438659811968173,
+      "bottom": 0.0001195669174194336
     },
     {
       "frame": 13,
-      "edge_stretch_max": 2.7143270556536776,
-      "edge_stretch_p99": 1.8393988208956236,
-      "bottom": -2.421438694000244e-08
+      "edge_stretch_max": 2.4447100009625844,
+      "edge_stretch_p99": 1.7357407089854466,
+      "bottom": 0.0
     },
     {
       "frame": 14,
-      "edge_stretch_max": 2.711158903781452,
-      "edge_stretch_p99": 1.8620183108685004,
-      "bottom": 0.02160697989165783
+      "edge_stretch_max": 2.4193026683880494,
+      "edge_stretch_p99": 1.7645622200133293,
+      "bottom": 0.009174168109893799
     },
     {
       "frame": 15,
-      "edge_stretch_max": 2.8768747979030773,
-      "edge_stretch_p99": 1.9173114875998782,
-      "bottom": 0.036153025925159454
+      "edge_stretch_max": 2.3782373801181875,
+      "edge_stretch_p99": 1.7240458832958014,
+      "bottom": 0.02419755607843399
     },
     {
       "frame": 16,
-      "edge_stretch_max": 3.3933609297217915,
-      "edge_stretch_p99": 1.933293711199047,
-      "bottom": 0.04966869205236435
+      "edge_stretch_max": 2.49888037919708,
+      "edge_stretch_p99": 1.745170332121639,
+      "bottom": 0.03227581828832626
     },
     {
       "frame": 17,
-      "edge_stretch_max": 3.7917097687681123,
-      "edge_stretch_p99": 1.9122926063389367,
-      "bottom": 0.04964861646294594
+      "edge_stretch_max": 2.3757341543907287,
+      "edge_stretch_p99": 1.758262074936208,
+      "bottom": 0.028838487342000008
     },
     {
       "frame": 18,
-      "edge_stretch_max": 3.5405135661918026,
-      "edge_stretch_p99": 1.8454177325332064,
-      "bottom": 0.03215049207210541
+      "edge_stretch_max": 2.453580984367305,
+      "edge_stretch_p99": 1.7510957229402557,
+      "bottom": 0.014302627183496952
     },
     {
       "frame": 19,
-      "edge_stretch_max": 2.508213120722776,
-      "edge_stretch_p99": 1.77030107074735,
-      "bottom": -1.5832483768463135e-08
+      "edge_stretch_max": 2.6142641769555843,
+      "edge_stretch_p99": 1.7488354512780673,
+      "bottom": 0.002926897257566452
     },
     {
       "frame": 20,
-      "edge_stretch_max": 2.7933352341767907,
-      "edge_stretch_p99": 1.8087053880437156,
-      "bottom": 7.450580596923828e-09
+      "edge_stretch_max": 2.679050011524533,
+      "edge_stretch_p99": 1.7813140514820658,
+      "bottom": 0.00021275505423545837
     },
     {
       "frame": 21,
-      "edge_stretch_max": 2.800725331555746,
-      "edge_stretch_p99": 1.8308226492373916,
-      "bottom": -3.5390257835388184e-08
+      "edge_stretch_max": 2.706576322808169,
+      "edge_stretch_p99": 1.7834630338570063,
+      "bottom": 0.000193081796169281
     },
     {
       "frame": 22,
-      "edge_stretch_max": 2.670450957900303,
-      "edge_stretch_p99": 1.8482092365935934,
-      "bottom": -8.568167686462402e-08
+      "edge_stretch_max": 2.6646789731570277,
+      "edge_stretch_p99": 1.7817009960833872,
+      "bottom": 0.0006795972585678101
     },
     {
       "frame": 23,
-      "edge_stretch_max": 2.680347303843947,
-      "edge_stretch_p99": 1.8322488149358913,
-      "bottom": -8.288770914077759e-08
+      "edge_stretch_max": 2.664678471583895,
+      "edge_stretch_p99": 1.781699537395842,
+      "bottom": 0.0006796605885028839
     },
     {
       "frame": 24,
-      "edge_stretch_max": 2.773413446628004,
-      "edge_stretch_p99": 1.8759624122998868,
-      "bottom": -4.6566128730773926e-08
+      "edge_stretch_max": 2.554249096010062,
+      "edge_stretch_p99": 1.7293531594307863,
+      "bottom": 0.0013602599501609802
     },
     {
       "frame": 25,
-      "edge_stretch_max": 2.7687485495066517,
-      "edge_stretch_p99": 1.9418585607879129,
-      "bottom": 0.011087246239185333
+      "edge_stretch_max": 2.661390802727221,
+      "edge_stretch_p99": 1.7560934461839686,
+      "bottom": 0.007926695048809052
     },
     {
       "frame": 26,
-      "edge_stretch_max": 2.9129279813910203,
-      "edge_stretch_p99": 1.9665019377974122,
-      "bottom": 0.029736103489995003
+      "edge_stretch_max": 2.7065705575760814,
+      "edge_stretch_p99": 1.7433350572105082,
+      "bottom": 0.020031698048114777
     },
     {
       "frame": 27,
-      "edge_stretch_max": 3.4468144237036773,
-      "edge_stretch_p99": 1.974486995641168,
-      "bottom": 0.04359108582139015
+      "edge_stretch_max": 2.727384347163074,
+      "edge_stretch_p99": 1.7627794246690291,
+      "bottom": 0.02393113076686859
     },
     {
       "frame": 28,
-      "edge_stretch_max": 3.6532970122025894,
-      "edge_stretch_p99": 1.941115925859514,
-      "bottom": 0.04871787503361702
+      "edge_stretch_max": 2.7343949397616787,
+      "edge_stretch_p99": 1.7783052117240248,
+      "bottom": 0.024673502892255783
     },
     {
       "frame": 29,
-      "edge_stretch_max": 3.719232608706745,
-      "edge_stretch_p99": 1.9159388583779773,
-      "bottom": 0.039201974868774414
+      "edge_stretch_max": 2.5955287006113315,
+      "edge_stretch_p99": 1.7822772873021253,
+      "bottom": 0.016590846702456474
     },
     {
       "frame": 30,
-      "edge_stretch_max": 3.375214767142824,
-      "edge_stretch_p99": 1.8672587733537398,
-      "bottom": 0.01896500773727894
+      "edge_stretch_max": 2.4614918121976506,
+      "edge_stretch_p99": 1.8054830672041982,
+      "bottom": 0.004217882174998522
     },
     {
       "frame": 31,
-      "edge_stretch_max": 2.467902738828642,
-      "edge_stretch_p99": 1.7768730297033233,
-      "bottom": -9.313225746154785e-08
+      "edge_stretch_max": 2.5637989489078596,
+      "edge_stretch_p99": 1.7968963851233255,
+      "bottom": 0.00015123561024665833
     },
     {
       "frame": 32,
-      "edge_stretch_max": 2.6169848276262093,
-      "edge_stretch_p99": 1.8225138308124988,
-      "bottom": -7.078051567077637e-08
+      "edge_stretch_max": 2.645168356491231,
+      "edge_stretch_p99": 1.820496889892515,
+      "bottom": 0.00015121698379516602
     },
     {
       "frame": 33,
-      "edge_stretch_max": 2.628371890652405,
-      "edge_stretch_p99": 1.8173628683921206,
-      "bottom": -5.029141902923584e-08
+      "edge_stretch_max": 2.6546455420499777,
+      "edge_stretch_p99": 1.770965122779403,
+      "bottom": 0.00015131384134292603
     },
     {
       "frame": 34,
-      "edge_stretch_max": 2.6475219297248516,
-      "edge_stretch_p99": 1.8405993842341821,
-      "bottom": -1.0989606380462646e-07
+      "edge_stretch_max": 2.5973121686855505,
+      "edge_stretch_p99": 1.7438637179255811,
+      "bottom": 0.0001195669174194336
     },
     {
       "frame": 35,
-      "edge_stretch_max": 2.714325871364985,
-      "edge_stretch_p99": 1.8393996497542036,
-      "bottom": -1.1734664440155029e-07
+      "edge_stretch_max": 2.4447091986982032,
+      "edge_stretch_p99": 1.7357386985331138,
+      "bottom": 0.0
     },
     {
       "frame": 36,
-      "edge_stretch_max": 2.7111558809407916,
-      "edge_stretch_p99": 1.8620183527967056,
-      "bottom": 0.021606964990496635
+      "edge_stretch_max": 2.4193026683880494,
+      "edge_stretch_p99": 1.7645585929531291,
+      "bottom": 0.009174168109893799
     },
     {
       "frame": 37,
-      "edge_stretch_max": 2.8768832581940473,
-      "edge_stretch_p99": 1.9173114875998782,
-      "bottom": 0.0361529141664505
+      "edge_stretch_max": 2.378239953945741,
+      "edge_stretch_p99": 1.7240469485389194,
+      "bottom": 0.02419755607843399
     },
     {
       "frame": 38,
-      "edge_stretch_max": 3.3933606428736995,
-      "edge_stretch_p99": 1.9332941562344583,
-      "bottom": 0.04966869205236435
+      "edge_stretch_max": 2.49888037919708,
+      "edge_stretch_p99": 1.7451700132370636,
+      "bottom": 0.03227581828832626
     },
     {
       "frame": 39,
-      "edge_stretch_max": 3.7917062757226647,
-      "edge_stretch_p99": 1.9122900326247787,
-      "bottom": 0.04964856058359146
+      "edge_stretch_max": 2.3757346161277058,
+      "edge_stretch_p99": 1.7582578231794612,
+      "bottom": 0.028838487342000008
     },
     {
       "frame": 40,
-      "edge_stretch_max": 3.5405133378692626,
-      "edge_stretch_p99": 1.8454175535585413,
-      "bottom": 0.03215065225958824
+      "edge_stretch_max": 2.4535797189273176,
+      "edge_stretch_p99": 1.751095193404937,
+      "bottom": 0.014302629046142101
     },
     {
       "frame": 41,
-      "edge_stretch_max": 2.5082143482042345,
-      "edge_stretch_p99": 1.7703003385018499,
-      "bottom": 2.7939677238464355e-09
+      "edge_stretch_max": 2.6142634981212316,
+      "edge_stretch_p99": 1.7488346211715216,
+      "bottom": 0.002926897257566452
     },
     {
       "frame": 42,
-      "edge_stretch_max": 2.7933302363206294,
-      "edge_stretch_p99": 1.808707912687701,
-      "bottom": -3.5390257835388184e-08
+      "edge_stretch_max": 2.6790515517416926,
+      "edge_stretch_p99": 1.7813147537717844,
+      "bottom": 0.00021275505423545837
     },
     {
       "frame": 43,
-      "edge_stretch_max": 2.800725331555746,
-      "edge_stretch_p99": 1.830822648471445,
-      "bottom": -4.6566128730773926e-08
+      "edge_stretch_max": 2.706576322808169,
+      "edge_stretch_p99": 1.78346018325368,
+      "bottom": 0.000193081796169281
     },
     {
       "frame": 44,
-      "edge_stretch_max": 2.670453295621931,
-      "edge_stretch_p99": 1.8482092578690776,
-      "bottom": -2.7939677238464355e-08
+      "edge_stretch_max": 2.6646794886538685,
+      "edge_stretch_p99": 1.7817006062154963,
+      "bottom": 0.0006795972585678101
     },
     {
       "frame": 45,
-      "edge_stretch_max": 2.680347672275702,
-      "edge_stretch_p99": 1.8322663001941368,
-      "bottom": -9.872019290924072e-08
+      "edge_stretch_max": 2.664678457673292,
+      "edge_stretch_p99": 1.7817012876922151,
+      "bottom": 0.0006796605885028839
     },
     {
       "frame": 46,
-      "edge_stretch_max": 2.7734132728719447,
-      "edge_stretch_p99": 1.8759630949580426,
-      "bottom": -1.1175870895385742e-08
+      "edge_stretch_max": 2.554249096010062,
+      "edge_stretch_p99": 1.7293503317483105,
+      "bottom": 0.0013602674007415771
     },
     {
       "frame": 47,
-      "edge_stretch_max": 2.7687525739384706,
-      "edge_stretch_p99": 1.941856300428424,
-      "bottom": 0.011087227612733841
+      "edge_stretch_max": 2.6613856868469843,
+      "edge_stretch_p99": 1.7560934461839686,
+      "bottom": 0.007926695048809052
     },
     {
       "frame": 48,
-      "edge_stretch_max": 2.912930896908652,
-      "edge_stretch_p99": 1.9665058460240572,
-      "bottom": 0.02973620779812336
+      "edge_stretch_max": 2.706581423400234,
+      "edge_stretch_p99": 1.74332963224808,
+      "bottom": 0.020031698048114777
     },
     {
       "frame": 49,
-      "edge_stretch_max": 3.4468114032842285,
-      "edge_stretch_p99": 1.9744890990175203,
-      "bottom": 0.04359101131558418
+      "edge_stretch_max": 2.7273844193552255,
+      "edge_stretch_p99": 1.7627749215669426,
+      "bottom": 0.02393113076686859
     },
     {
       "frame": 50,
-      "edge_stretch_max": 3.653297569299328,
-      "edge_stretch_p99": 1.941115120596877,
-      "bottom": 0.048717815428972244
+      "edge_stretch_max": 2.7344242832621304,
+      "edge_stretch_p99": 1.778302901618656,
+      "bottom": 0.024673502892255783
     },
     {
       "frame": 51,
-      "edge_stretch_max": 3.719231610655789,
-      "edge_stretch_p99": 1.9159441133602302,
-      "bottom": 0.03920198976993561
+      "edge_stretch_max": 2.595497320685228,
+      "edge_stretch_p99": 1.7822782333571623,
+      "bottom": 0.016590850427746773
     },
     {
       "frame": 52,
-      "edge_stretch_max": 3.375213960000894,
-      "edge_stretch_p99": 1.867265979647329,
-      "bottom": 0.018964992836117744
+      "edge_stretch_max": 2.461492104721065,
+      "edge_stretch_p99": 1.805480858911702,
+      "bottom": 0.004217882640659809
     },
     {
       "frame": 53,
-      "edge_stretch_max": 2.4679026791542698,
-      "edge_stretch_p99": 1.776873785816499,
-      "bottom": -1.3597309589385986e-07
+      "edge_stretch_max": 2.5637984651722543,
+      "edge_stretch_p99": 1.7968947751946802,
+      "bottom": 0.0001512393355369568
     },
     {
       "frame": 54,
-      "edge_stretch_max": 2.6169746045329703,
-      "edge_stretch_p99": 1.8225107968788958,
-      "bottom": -7.82310962677002e-08
+      "edge_stretch_max": 2.6451662225584243,
+      "edge_stretch_p99": 1.8205021256242324,
+      "bottom": 0.00015121698379516602
     },
     {
       "frame": 55,
-      "edge_stretch_max": 2.6283829245089567,
-      "edge_stretch_p99": 1.8173675872812654,
-      "bottom": -1.0058283805847168e-07
+      "edge_stretch_max": 2.6546458813708784,
+      "edge_stretch_p99": 1.7709672290509857,
+      "bottom": 0.00015131384134292603
     },
     {
       "frame": 56,
-      "edge_stretch_max": 2.6475219297248516,
-      "edge_stretch_p99": 1.8406003556752146,
-      "bottom": -1.0617077350616455e-07
+      "edge_stretch_max": 2.5973112098722253,
+      "edge_stretch_p99": 1.7438645060098223,
+      "bottom": 0.0001195669174194336
     },
     {
       "frame": 57,
-      "edge_stretch_max": 2.7143240820999646,
-      "edge_stretch_p99": 1.8393996274249265,
-      "bottom": -5.029141902923584e-08
+      "edge_stretch_max": 2.444710866694112,
+      "edge_stretch_p99": 1.7357426714441848,
+      "bottom": 0.0
     },
     {
       "frame": 58,
-      "edge_stretch_max": 2.711158023644408,
-      "edge_stretch_p99": 1.8620185891067944,
-      "bottom": 0.021607009693980217
+      "edge_stretch_max": 2.4192931292983366,
+      "edge_stretch_p99": 1.7645597596328917,
+      "bottom": 0.009174168109893799
     },
     {
       "frame": 59,
-      "edge_stretch_max": 2.8768663755586026,
-      "edge_stretch_p99": 1.9173174671409114,
-      "bottom": 0.03615303337574005
+      "edge_stretch_max": 2.3782401727347238,
+      "edge_stretch_p99": 1.7240576609718952,
+      "bottom": 0.02419755607843399
     },
     {
       "frame": 60,
-      "edge_stretch_max": 3.3933607592004855,
-      "edge_stretch_p99": 1.9332935857222948,
-      "bottom": 0.04966875910758972
+      "edge_stretch_max": 2.4988799301324915,
+      "edge_stretch_p99": 1.7451722339691351,
+      "bottom": 0.03227581828832626
     },
     {
       "frame": 61,
-      "edge_stretch_max": 3.791704805059405,
-      "edge_stretch_p99": 1.9122919370459068,
-      "bottom": 0.04964856803417206
+      "edge_stretch_max": 2.3757343852591895,
+      "edge_stretch_p99": 1.758257626124892,
+      "bottom": 0.028838487342000008
     },
     {
       "frame": 62,
-      "edge_stretch_max": 3.5405112377535732,
-      "edge_stretch_p99": 1.84541653015781,
-      "bottom": 0.032150644809007645
+      "edge_stretch_max": 2.453584746679789,
+      "edge_stretch_p99": 1.751095632339843,
+      "bottom": 0.014302629046142101
     },
     {
       "frame": 63,
-      "edge_stretch_max": 2.5082114681212078,
-      "edge_stretch_p99": 1.7702961432930557,
-      "bottom": -6.239861249923706e-08
+      "edge_stretch_max": 2.6142639551044953,
+      "edge_stretch_p99": 1.7488368106592993,
+      "bottom": 0.002926897257566452
     },
     {
       "frame": 64,
-      "edge_stretch_max": 2.7933355028945,
-      "edge_stretch_p99": 1.8087038961395543,
-      "bottom": 5.587935447692871e-08
+      "edge_stretch_max": 2.6790515521799514,
+      "edge_stretch_p99": 1.7813106700060013,
+      "bottom": 0.00021275505423545837
     },
     {
       "frame": 65,
-      "edge_stretch_max": 2.800707541956339,
-      "edge_stretch_p99": 1.8308248191913223,
-      "bottom": -3.725290298461914e-08
+      "edge_stretch_max": 2.7065777323231814,
+      "edge_stretch_p99": 1.7834597788632471,
+      "bottom": 0.000193081796169281
     },
     {
       "frame": 66,
-      "edge_stretch_max": 2.670451521311193,
-      "edge_stretch_p99": 1.8482090883534232,
-      "bottom": -7.82310962677002e-08
+      "edge_stretch_max": 2.6646794932906825,
+      "edge_stretch_p99": 1.7817002510623752,
+      "bottom": 0.0006795972585678101
     },
     {
       "frame": 67,
-      "edge_stretch_max": 2.6803481509759544,
-      "edge_stretch_p99": 1.8322665661405364,
-      "bottom": -3.166496753692627e-08
+      "edge_stretch_max": 2.6646774267451345,
+      "edge_stretch_p99": 1.781700932539657,
+      "bottom": 0.0006796605885028839
     },
     {
       "frame": 68,
-      "edge_stretch_max": 2.7734133307905826,
-      "edge_stretch_p99": 1.875962668366333,
-      "bottom": 2.9802322387695312e-08
+      "edge_stretch_max": 2.554249096010062,
+      "edge_stretch_p99": 1.7293503982946898,
+      "bottom": 0.0013602674007415771
     },
     {
       "frame": 69,
-      "edge_stretch_max": 2.768748422948318,
-      "edge_stretch_p99": 1.9418550372540273,
-      "bottom": 0.01108730211853981
+      "edge_stretch_max": 2.6613856868469843,
+      "edge_stretch_p99": 1.7560934129759262,
+      "bottom": 0.007926695048809052
     },
     {
       "frame": 70,
-      "edge_stretch_max": 2.912927963081777,
-      "edge_stretch_p99": 1.9665047094866572,
-      "bottom": 0.029736118391156197
+      "edge_stretch_max": 2.7065798342212055,
+      "edge_stretch_p99": 1.7433169105489257,
+      "bottom": 0.020031698048114777
     },
     {
       "frame": 71,
-      "edge_stretch_max": 3.446814108263558,
-      "edge_stretch_p99": 1.9744897034956048,
-      "bottom": 0.043591029942035675
+      "edge_stretch_max": 2.727384274971012,
+      "edge_stretch_p99": 1.7627741600549467,
+      "bottom": 0.02393113076686859
     },
     {
       "frame": 72,
-      "edge_stretch_max": 3.6532931487456413,
-      "edge_stretch_p99": 1.9411134132586652,
-      "bottom": 0.04871786758303642
+      "edge_stretch_max": 2.734424129606268,
+      "edge_stretch_p99": 1.7782960747823977,
+      "bottom": 0.024673502892255783
     },
     {
       "frame": 73,
-      "edge_stretch_max": 3.719236615872275,
-      "edge_stretch_p99": 1.9159436124608837,
-      "bottom": 0.03920204937458038
+      "edge_stretch_max": 2.5954976228604396,
+      "edge_stretch_p99": 1.7822787180166348,
+      "bottom": 0.016590848565101624
     },
     {
       "frame": 74,
-      "edge_stretch_max": 3.375213960000894,
-      "edge_stretch_p99": 1.8672537314165858,
-      "bottom": 0.018965112045407295
+      "edge_stretch_max": 2.461494755565492,
+      "edge_stretch_p99": 1.8054808668434938,
+      "bottom": 0.004217881243675947
     },
     {
       "frame": 75,
-      "edge_stretch_max": 2.4679038974114156,
-      "edge_stretch_p99": 1.7768739637705981,
-      "bottom": -2.0489096641540527e-08
+      "edge_stretch_max": 2.563799012395831,
+      "edge_stretch_p99": 1.7968964149396374,
+      "bottom": 0.00015123561024665833
     },
     {
       "frame": 76,
-      "edge_stretch_max": 2.616974905990409,
-      "edge_stretch_p99": 1.8225166045215013,
-      "bottom": -5.587935447692871e-09
+      "edge_stretch_max": 2.645166242077179,
+      "edge_stretch_p99": 1.820502145431896,
+      "bottom": 0.00015121698379516602
     },
     {
       "frame": 77,
-      "edge_stretch_max": 2.6283601642748957,
-      "edge_stretch_p99": 1.8173592977341593,
-      "bottom": 3.725290298461914e-09
+      "edge_stretch_max": 2.6546430449589256,
+      "edge_stretch_p99": 1.7709672290509857,
+      "bottom": 0.00015131384134292603
     },
     {
       "frame": 78,
-      "edge_stretch_max": 2.6475219297248516,
-      "edge_stretch_p99": 1.840604458706413,
-      "bottom": -9.872019290924072e-08
+      "edge_stretch_max": 2.5973127083909078,
+      "edge_stretch_p99": 1.7438760714640815,
+      "bottom": 0.0001195669174194336
     },
     {
       "frame": 79,
-      "edge_stretch_max": 2.714325355557548,
-      "edge_stretch_p99": 1.8394044781027816,
-      "bottom": -1.30385160446167e-08
+      "edge_stretch_max": 2.444710866694112,
+      "edge_stretch_p99": 1.7357426714441848,
+      "bottom": 0.0
     },
     {
       "frame": 80,
-      "edge_stretch_max": 2.711157100105698,
-      "edge_stretch_p99": 1.8620177995497276,
-      "bottom": 0.021606994792819023
+      "edge_stretch_max": 2.4192931292983366,
+      "edge_stretch_p99": 1.7645616459712523,
+      "bottom": 0.009174168109893799
     },
     {
       "frame": 81,
-      "edge_stretch_max": 2.8768694738650207,
-      "edge_stretch_p99": 1.9173089307931908,
-      "bottom": 0.036153048276901245
+      "edge_stretch_max": 2.3782371613289484,
+      "edge_stretch_p99": 1.7240576609718952,
+      "bottom": 0.02419755607843399
     },
     {
       "frame": 82,
-      "edge_stretch_max": 3.3933624486794898,
-      "edge_stretch_p99": 1.933289704061341,
-      "bottom": 0.04966872185468674
+      "edge_stretch_max": 2.498880154664759,
+      "edge_stretch_p99": 1.7451670532050727,
+      "bottom": 0.03227581828832626
     },
     {
       "frame": 83,
-      "edge_stretch_max": 3.7917060290143376,
-      "edge_stretch_p99": 1.9122893926909061,
-      "bottom": 0.04964858293533325
+      "edge_stretch_max": 2.375743583418427,
+      "edge_stretch_p99": 1.758273640431415,
+      "bottom": 0.028838487342000008
     },
     {
       "frame": 84,
-      "edge_stretch_max": 3.5405139776230277,
-      "edge_stretch_p99": 1.8454160955145753,
-      "bottom": 0.032150622457265854
+      "edge_stretch_max": 2.453580161131345,
+      "edge_stretch_p99": 1.7510964205609032,
+      "bottom": 0.014302629046142101
     },
     {
       "frame": 85,
-      "edge_stretch_max": 2.50821001826905,
-      "edge_stretch_p99": 1.770305714557565,
-      "bottom": -7.35744833946228e-08
+      "edge_stretch_max": 2.61426395594811,
+      "edge_stretch_p99": 1.7488368239084668,
+      "bottom": 0.002926897257566452
     },
     {
       "frame": 86,
-      "edge_stretch_max": 2.7933161008801624,
-      "edge_stretch_p99": 1.8087041250431457,
-      "bottom": 2.7939677238464355e-08
+      "edge_stretch_max": 2.679039226565474,
+      "edge_stretch_p99": 1.7813017015165444,
+      "bottom": 0.00021275505423545837
     },
     {
       "frame": 87,
-      "edge_stretch_max": 2.8007127261983547,
-      "edge_stretch_p99": 1.830825945892604,
-      "bottom": -5.029141902923584e-08
+      "edge_stretch_max": 2.7065777260857815,
+      "edge_stretch_p99": 1.783464522559233,
+      "bottom": 0.000193081796169281
     },
     {
       "frame": 88,
-      "edge_stretch_max": 2.669996968820413,
-      "edge_stretch_p99": 1.8482143705117713,
-      "bottom": -1.2665987014770508e-07
+      "edge_stretch_max": 2.664677422108368,
+      "edge_stretch_p99": 1.7817070022787687,
+      "bottom": 0.0006795972585678101
     },
     {
       "frame": 89,
-      "edge_stretch_max": 2.676838909607538,
-      "edge_stretch_p99": 1.8454818508543023,
-      "bottom": 1.1175870895385742e-08
+      "edge_stretch_max": 2.6646794979275485,
+      "edge_stretch_p99": 1.7817041262597484,
+      "bottom": 0.0006796605885028839
     },
     {
       "frame": 90,
-      "edge_stretch_max": 2.7735480649556314,
-      "edge_stretch_p99": 1.878445978321997,
-      "bottom": -8.568167686462402e-08
+      "edge_stretch_max": 2.5542452364845833,
+      "edge_stretch_p99": 1.7293503317483105,
+      "bottom": 0.0013602674007415771
     }
   ],
-  "maximum_edge_stretch": 3.7917097687681123,
-  "lowest_point": -1.3597309589385986e-07
+  "maximum_edge_stretch": 2.7344242832621304,
+  "lowest_point": 0.0
 }
