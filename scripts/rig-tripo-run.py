@@ -2,11 +2,14 @@
 import bpy
 import json
 import sys
+import os
 import numpy as np
 from pathlib import Path
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[1]
+MOTION_PATH=ROOT/os.environ.get('TRIPO_MOTION','outputs/tripo-run-source.bvh')
+CONTACT_PATH=ROOT/os.environ.get('TRIPO_CONTACTS','outputs/tripo-run-contact.npz')
 sys.path.insert(0, str(ROOT/'scripts'))
 from retarget import retarget_rotation
 from hero_feet import plant_feet
@@ -76,7 +79,7 @@ hero.parent=rig
 mod=hero.modifiers.new('Character skin','ARMATURE');mod.object=rig;mod.use_deform_preserve_volume=False
 for p in hero.data.polygons:p.use_smooth=True
 
-bpy.ops.import_anim.bvh(filepath=str(ROOT/'outputs/run.bvh'),global_scale=.01,
+bpy.ops.import_anim.bvh(filepath=str(MOTION_PATH),global_scale=.01,
                         axis_forward='-Z',axis_up='Y',frame_start=1,
                         update_scene_fps=True,update_scene_duration=True)
 source=bpy.context.object;source.name='KimodoSource';source.hide_render=True;source.hide_set(True)
@@ -98,7 +101,6 @@ for f in range(1,91):
     scene.frame_set(f);desired={}
     for n,(_,_,parent) in spec.items():
         world=retarget_rotation(source.pose.bones[mapping[n]].matrix.to_3x3().normalized(),reference[n],rest[n].to_3x3())
-        if n=='Head':world=desired['Chest']@rel[n].to_3x3()
         if n.endswith('Foot'):world=boot_rotation(world,rest[n].to_3x3(),30)
         desired[n]=world
         local=desired[parent].inverted()@world if parent else world
@@ -108,7 +110,7 @@ for f in range(1,91):
     root=source.pose.bones['Hips'].head.copy()
     if f==1:first=root.copy()
     rig.location=(root-first)*scale;rig.keyframe_insert('location',frame=f)
-contact=plant_feet(scene,rig,hero,source,ROOT/'outputs/run.npz',allow_flight=True)
+contact=plant_feet(scene,rig,hero,source,CONTACT_PATH,allow_flight=True,swing_iterations=128)
 
 # Fixed orientation and constant travel prevent the camera following pelvis bob.
 bpy.ops.object.camera_add();camera=bpy.context.object;scene.camera=camera
@@ -117,6 +119,18 @@ scene.world=bpy.data.worlds.new('StudioWorld');scene.world.use_nodes=True
 scene.world.node_tree.nodes['Background'].inputs[0].default_value=(.6,.6,.6,1)
 scene.world.node_tree.nodes['Background'].inputs[1].default_value=.8
 configure_preview(scene,rig,camera)
+# Present this fresh generation in a strict side view with linear tracking.
+camera.animation_data_clear()
+for f in (1,90):
+    scene.frame_set(f);center=Vector((rig.location.x,rig.location.y,.49))
+    camera.location=center+Vector((2.7,0,.10))
+    camera.rotation_euler=Vector((-2.7,0,-.10)).to_track_quat('-Z','Y').to_euler()
+    camera.keyframe_insert('location',frame=f);camera.keyframe_insert('rotation_euler',frame=f)
+for layer in camera.animation_data.action.layers:
+    for strip in layer.strips:
+        for bag in strip.channelbags:
+            for curve in bag.fcurves:
+                for point in curve.keyframe_points:point.interpolation='LINEAR'
 scene.render.engine='CYCLES';scene.cycles.samples=16;scene.cycles.use_denoising=True
 prefs=bpy.context.preferences.addons['cycles'].preferences;prefs.compute_device_type='CUDA';prefs.get_devices()
 for d in prefs.devices:d.use=d.type=='CUDA'
@@ -128,7 +142,7 @@ bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'outputs/tripo-run.blend'),compres
 bpy.ops.object.select_all(action='DESELECT');hero.select_set(True);rig.select_set(True);bpy.context.view_layer.objects.active=rig
 bpy.ops.export_scene.gltf(filepath=str(ROOT/'outputs/tripo-run.glb'),use_selection=True,
     export_animations=True,export_frame_range=True,export_force_sampling=True,export_animation_mode='SCENE')
-report={'source':'assets/ink-hero-tpose.glb','motion':'outputs/run.bvh (existing Kimodo generated loop)',
+report={'source':'assets/ink-hero-tpose.glb','motion':str(MOTION_PATH.relative_to(ROOT)),
         'bones':len(data.bones),'vertices':len(hero.data.vertices),'weighting':'continuous anatomical regions; no heat solver',
         'rest_vertex_error':float(np.max(np.abs(original-np.array([v.co[:] for v in hero.data.vertices])))),
         'contact':contact,'source_mapping':mapping,'status':'BUILT; visual verification pending'}

@@ -1,7 +1,7 @@
-16:21:45 | INFO: Data are loaded, start creating Blender stuff
-16:21:45 | INFO: Blender create Mesh node tripo_3b77b36d_13fc_427b_a532_8c7b9ab6e788
-16:21:45 | INFO: glTF import finished in 0.11s
-{"weight_sum_max_error": 4.470348358154297e-08, "bone_scale_error": 0, "floor_min_m": -9.313225746154785e-08, "glb_pose_bound_max_error_m": 1.7881393432617188e-07, "frames_checked": 90, "bones": 18, "scope": "Structural validation PASS; does not certify visual clothing quality", "stance_toe_world_drift_m": 0.0004883855581283569, "cycle_quaternion_error": 1.9669532775878906e-06, "root_vertical_second_difference_max_m": 0.0054008979350328445, "ankle_rotation_from_bind_max_degrees": 50.59025335671758}
+16:42:48 | INFO: Data are loaded, start creating Blender stuff
+16:42:48 | INFO: Blender create Mesh node tripo_3b77b36d_13fc_427b_a532_8c7b9ab6e788
+16:42:49 | INFO: glTF import finished in 0.06s
+{"weight_sum_max_error": 4.470348358154297e-08, "bone_scale_error": 0, "floor_min_m": -1.825392246246338e-07, "glb_pose_bound_max_error_m": 2.5331974029541016e-07, "frames_checked": 90, "bones": 18, "scope": "Structural validation PASS; does not certify visual clothing quality", "ankle_rotation_from_bind_max_degrees": 41.57666837242391}
 Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
 Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/tripo-run.blend"
 

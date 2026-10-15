@@ -1,6 +1,6 @@
 # Deviant Modeling
 
-> 2026-10-15 최신: 실제 Tripo T포즈 모델 assets/ink-hero-tpose.glb를 채택해 Kimodo 달리기를 적용했습니다. 현재 적용본은 outputs/tripo-run.blend / tripo-run.glb입니다. Kimodo 기본 적용본에서 승인된 네 자세를 직접 다듬어 0.6초 주기·3초 다섯 반복으로 연결했습니다. 새 Kimodo 골격 생성은 하지 않았습니다. hero-model.*는 외형이 거절된 Blender 절차적 시안이고, hero-run.*는 이전 Tripo 모델의 달리기 이력입니다. 상세 결과는 docs/TRIPO_RUN.md를 확인합니다.
+> 2026-10-15 최신: 실제 Tripo 모델 assets/ink-hero-tpose.glb에 새 Kimodo 생성 달리기를 적용했습니다. 현재 tripo-run-source.npz / .bvh는 seed 107·3초·90프레임 생성 원본이고 tripo-run.blend / .glb / preview는 비율 매핑·발 접촉 보정 적용본입니다. 수작업 반복 모션 0e20e99는 사용자가 거절했으며 재사용하지 않습니다. 현재 결과는 루프 편집 없이 생성된 3초입니다. docs/TRIPO_RUN.md를 확인합니다.
 
 Tripo로 만든 주인공에 Kimodo 모션을 적용하고, Blender에서 게임용 도트 스프라이트로 렌더링하는 프로젝트입니다.
 

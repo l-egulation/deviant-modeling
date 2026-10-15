@@ -1,12 +1,12 @@
 # 현재 상태
 
-> 2026-10-15 최신: 실제 Tripo T포즈 모델 assets/ink-hero-tpose.glb를 채택해 Kimodo 달리기를 적용했습니다. 현재 적용본은 outputs/tripo-run.blend / tripo-run.glb입니다. Kimodo 기본 적용본에서 승인된 네 자세를 직접 다듬어 0.6초 주기·3초 다섯 반복으로 연결했습니다. 새 Kimodo 골격 생성은 하지 않았습니다. hero-model.*는 외형이 거절된 Blender 절차적 시안이고, hero-run.*는 이전 Tripo 모델의 달리기 이력입니다. 상세 결과는 docs/TRIPO_RUN.md를 확인합니다.
+> 2026-10-15 최신: 실제 Tripo 모델 assets/ink-hero-tpose.glb에 새 Kimodo 생성 달리기를 적용했습니다. 현재 tripo-run-source.npz / .bvh는 seed 107·3초·90프레임 생성 원본이고 tripo-run.blend / .glb / preview는 비율 매핑·발 접촉 보정 적용본입니다. 수작업 반복 모션 0e20e99는 사용자가 거절했으며 재사용하지 않습니다. 현재 결과는 루프 편집 없이 생성된 3초입니다. docs/TRIPO_RUN.md를 확인합니다.
 
 갱신: 2026-10-15
 
 ## 최신 검토
 
-사용자가 승인한 네 핵심 자세의 방향으로 접지와 골반 높이를 다듬고 0.6초 한 주기·3초 다섯 반복으로 연결했습니다. 현재 outputs/tripo-run-preview.mp4 / .gif와 docs/TRIPO_RUN.md를 확인합니다. 의상 접힘과 부츠 연결은 추가 검토 대상입니다. 이전 직접 이식본은 38541ac, 정적 네 자세는 bbfc620의 이력으로 보존합니다.
+새 Kimodo 프롬프트로 두 후보를 실제 생성하고 첫 후보를 선택했습니다. 원본 3초와 속도는 보존하고 Tripo 비율 매핑·필요한 발 접촉 보정만 적용했습니다. 생성 원본, 비교 그림, 적용본과 실행 로그를 구분합니다. 이전 수작업 포즈 반복은 거절된 이력입니다.
 
 ## 완료
 

@@ -1,13 +1,10 @@
 {
   "weight_sum_max_error": 4.470348358154297e-08,
   "bone_scale_error": 0,
-  "floor_min_m": -9.313225746154785e-08,
-  "glb_pose_bound_max_error_m": 1.7881393432617188e-07,
+  "floor_min_m": -1.825392246246338e-07,
+  "glb_pose_bound_max_error_m": 2.5331974029541016e-07,
   "frames_checked": 90,
   "bones": 18,
   "scope": "Structural validation PASS; does not certify visual clothing quality",
-  "stance_toe_world_drift_m": 0.0004883855581283569,
-  "cycle_quaternion_error": 1.9669532775878906e-06,
-  "root_vertical_second_difference_max_m": 0.0054008979350328445,
-  "ankle_rotation_from_bind_max_degrees": 50.59025335671758
+  "ankle_rotation_from_bind_max_degrees": 41.57666837242391
 }

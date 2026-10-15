@@ -1,0 +1,10 @@
+{
+  "selected": "single_00.npz",
+  "source_frames": 90,
+  "preserved_raw_source": true,
+  "changed_motion_rotations": false,
+  "changed_timing": false,
+  "loop_created": false,
+  "contact_metadata": "Classifier OR low slow toe; close one-frame holes; raw source retained",
+  "air_frames": 20
+}

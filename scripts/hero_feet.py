@@ -6,7 +6,7 @@ from mathutils import Vector, Euler
 from hero_preview import boot_rotation
 from retarget import retarget_rotation
 
-def plant_feet(scene,rig,hero,source,motion_path,allow_flight=False):
+def plant_feet(scene,rig,hero,source,motion_path,allow_flight=False,swing_iterations=24):
     motion=np.load(motion_path,allow_pickle=False)
     cyclic='loop_displacement' in motion
     contacts=np.stack([motion['foot_contacts'][:,:3].max(1)>.5,
@@ -138,7 +138,7 @@ def plant_feet(scene,rig,hero,source,motion_path,allow_flight=False):
             l1,l2=thigh.bone.length,shin.bone.length
             desired={};foot_world=orientations[j][f-1]
             sole=rest_coords[(rest_coords[:,0]*(1 if j==0 else -1)>0)&(rest_coords[:,2]<.075)]-np.array(foot.bone.head_local)
-            for iteration in range(24 if allow_flight and not contacts[f-1,j] else 1):
+            for iteration in range(swing_iterations if allow_flight and not contacts[f-1,j] else 1):
                 direction=ankle-hip;distance=direction.length
                 if allow_flight and not contacts[f-1,j] and distance>(l1+l2)*.985:
                     ankle=hip+direction.normalized()*(l1+l2)*.985;direction=ankle-hip;distance=direction.length

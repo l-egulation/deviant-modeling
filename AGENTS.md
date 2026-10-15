@@ -1,7 +1,8 @@
 # 작업 지침
 
-> 2026-10-15 최신: 실제 Tripo T포즈 모델 assets/ink-hero-tpose.glb를 채택해 Kimodo 달리기를 적용했습니다. 현재 적용본은 outputs/tripo-run.blend / tripo-run.glb입니다. Kimodo 기본 적용본에서 승인된 네 자세를 직접 다듬어 0.6초 주기·3초 다섯 반복으로 연결했습니다. 새 Kimodo 골격 생성은 하지 않았습니다. hero-model.*는 외형이 거절된 Blender 절차적 시안이고, hero-run.*는 이전 Tripo 모델의 달리기 이력입니다. 상세 결과는 docs/TRIPO_RUN.md를 확인합니다.
+> 2026-10-15 최신: 실제 Tripo 모델 assets/ink-hero-tpose.glb에 새 Kimodo 생성 달리기를 적용했습니다. 현재 tripo-run-source.npz / .bvh는 seed 107·3초·90프레임 생성 원본이고 tripo-run.blend / .glb / preview는 비율 매핑·발 접촉 보정 적용본입니다. 수작업 반복 모션 0e20e99는 사용자가 거절했으며 재사용하지 않습니다. 현재 결과는 루프 편집 없이 생성된 3초입니다. docs/TRIPO_RUN.md를 확인합니다.
 
+- 2026-10-15 사용자 명시 수정: 달리기 피드백은 Kimodo 프롬프트에 반영해 새 생성 후보를 뽑는다. animate-run-keyposes.py의 수작업 반복본(0e20e99)은 거절됐으며 다시 적용하지 않는다. Blender는 비율 매핑·필요한 접지 및 의상 보정만 한다. 생성 원본과 적용본의 차이를 구분해 보고한다.
 - 먼저 README.md, STATUS.md, START-HERE.md를 읽는다.
 - 목적은 Tripo 외형 → Kimodo 골격 모션 → Blender 리깅·모션 이식 → 도트 스프라이트 제작이다.
 - 현재 원본은 assets/ink-hero.glb. 기존 맥의 build_hero.py나 옛 blend를 현재 원본으로 쓰지 않는다.

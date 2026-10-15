@@ -1,6 +1,6 @@
 # 갤럭시북 Kimodo 첫 실행 절차
 
-> 2026-10-15 최신: 실제 Tripo T포즈 모델 assets/ink-hero-tpose.glb를 채택해 Kimodo 달리기를 적용했습니다. 현재 적용본은 outputs/tripo-run.blend / tripo-run.glb입니다. Kimodo 기본 적용본에서 승인된 네 자세를 직접 다듬어 0.6초 주기·3초 다섯 반복으로 연결했습니다. 새 Kimodo 골격 생성은 하지 않았습니다. hero-model.*는 외형이 거절된 Blender 절차적 시안이고, hero-run.*는 이전 Tripo 모델의 달리기 이력입니다. 상세 결과는 docs/TRIPO_RUN.md를 확인합니다.
+> 2026-10-15 최신: 실제 Tripo 모델 assets/ink-hero-tpose.glb에 새 Kimodo 생성 달리기를 적용했습니다. 현재 tripo-run-source.npz / .bvh는 seed 107·3초·90프레임 생성 원본이고 tripo-run.blend / .glb / preview는 비율 매핑·발 접촉 보정 적용본입니다. 수작업 반복 모션 0e20e99는 사용자가 거절했으며 재사용하지 않습니다. 현재 결과는 루프 편집 없이 생성된 3초입니다. docs/TRIPO_RUN.md를 확인합니다.
 
 2026-10-14: 아래 첫 실행 업무의 3초 걷기 생성·NPZ/BVH 재생 검증을 완료했습니다. 결과와 재실행 방법은 [SETUP_RESULT.md](docs/SETUP_RESULT.md), 다음 업무는 [STATUS.md](STATUS.md)를 확인합니다. 아래 절차는 재현용으로 유지합니다.
 
