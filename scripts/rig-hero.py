@@ -13,6 +13,8 @@ from pathlib import Path
 from mathutils import Vector, Matrix
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from retarget import retarget_rotation
+from hero_preview import boot_rotation, configure_preview
+from hero_feet import plant_feet
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'outputs'
@@ -153,6 +155,8 @@ def set_target_rotations(source_rotations, frame=None):
     desired = {}
     for n, (_, _, parent) in spec.items():
         world = retarget_rotation(source_rotations[n], source_reference[n], rest[n].to_3x3())
+        if n.endswith('Foot'):
+            world = boot_rotation(world, rest[n].to_3x3())
         desired[n] = world
         relative = desired[parent].inverted() @ world if parent else world
         q = (rest_rel[n].to_3x3().inverted() @ relative).to_quaternion()
@@ -200,6 +204,7 @@ for f in range(1, 91):
     rig.keyframe_insert('location', frame=f)
 if rig.animation_data and rig.animation_data.action:
     rig.animation_data.action.name = 'Kimodo_Walk_3s'
+contact_report = plant_feet(scene, rig, hero, source, OUT/'walk.npz')
 
 # Neutral orthographic studio preview. Camera follows travel, preserving motion.
 bpy.ops.object.camera_add(location=(1.35, -2.7, .70))
@@ -228,6 +233,7 @@ for pos, power, size in [((1, -2, 3), 350, 3), ((-2, -1, 2), 220, 3), ((0, 2, 2)
     light.data.energy, light.data.shape, light.data.size = power, 'DISK', size
     light.rotation_euler = (Vector((0, 0, .5))-light.location).to_track_quat('-Z','Y').to_euler()
 scene.world.color = (.20, .20, .20)
+configure_preview(scene, rig, camera)
 scene.render.engine = 'CYCLES'
 scene.cycles.samples = 16
 scene.cycles.use_denoising = True
@@ -259,12 +265,13 @@ report = {'blender': bpy.app.version_string, 'original_vertices': original_verti
           'frames': 90, 'fps': 30, 'ground_offset_m': ground_offset,
           'root_motion_scale': scale, 'foot_min_before_ground_offset_m': min(foot_bottoms),
           'target_leg_length_m': target_leg_length, 'source_leg_length_m': source_leg_length,
-          'weight_method': 'Anatomical regions + normalized segment-distance weights; rigid hood/face',
+          'weight_method': 'Anatomical segment weights with rigid hood/face and rigid boot soles',
           'foot_min_range_m': max(foot_bottoms)-min(foot_bottoms),
-          'grounding': 'Per-frame vertical root correction to lowest deformed vertex; no bone stretching',
+          'grounding': 'Source contact anchors, fixed-length leg IK, smooth reachable pelvis height',
           'source': 'assets/ink-hero.glb', 'motion': 'outputs/walk.bvh',
           'source_sha256': source_hash,
           'neutral_pose_max_vertex_error_m': neutral_error,
+          'contact_polish': contact_report,
           'retarget_method': 'Source bind rotation removed; shared arm A-pose calibration; target rest axes retained',
           'status': 'First-pass rig; requires rendered deformation review.'}
 (ROOT/'docs/logs/hero-rig-check.json').write_text(json.dumps(report, indent=2)+'\n')

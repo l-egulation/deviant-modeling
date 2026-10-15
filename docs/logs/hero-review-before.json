@@ -1,0 +1,43 @@
+{
+  "camera_residual_from_linear_m": [
+    0.03458431329620004,
+    0.018116953667629776,
+    0.0
+  ],
+  "root_vertical_frame_acceleration_max_m": 0.027448110282421112,
+  "pose_start_end_mean_angle_degrees": 21.454870260516834,
+  "best_single_cycle_pose_matches": [
+    [
+      0.03999948725135896,
+      35
+    ],
+    [
+      0.06390306969052542,
+      34
+    ],
+    [
+      0.06934078201983207,
+      36
+    ],
+    [
+      0.07719574589472365,
+      33
+    ],
+    [
+      0.08205051237852293,
+      32
+    ]
+  ],
+  "Left": {
+    "contact_pairs": 51,
+    "mean_contact_patch_speed_m_s": 1.31911499397211,
+    "min_height_m": -9.313225746154785e-10,
+    "max_height_m": 0.052806224673986435
+  },
+  "Right": {
+    "contact_pairs": 42,
+    "mean_contact_patch_speed_m_s": 1.2356514743052123,
+    "min_height_m": -4.656612873077393e-10,
+    "max_height_m": 0.04759474005550146
+  }
+}

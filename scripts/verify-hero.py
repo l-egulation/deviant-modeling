@@ -30,7 +30,8 @@ for frame in range(1,91):
     max_edge = max(max_edge, float(deformed_edge.max()))
     obj.to_mesh_clear()
     locations.append(rig.location[:])
-assert max(abs(z) for z in bottoms) < 1e-5
+assert min(bottoms) > -1e-5
+assert max(bottoms) < 1e-4  # 0.1mm numerical tolerance for the fixed-length solve.
 assert max_bone_length_error < 1e-5
 report = {'status':'PASS', 'frames_checked':90, 'finite_deformed_vertices':True,
           'weight_sum_min':min(weights), 'weight_sum_max':max(weights),
@@ -39,6 +40,6 @@ report = {'status':'PASS', 'frames_checked':90, 'finite_deformed_vertices':True,
           'max_rest_edge_length_m':float(rest_edge.max()),
           'max_bone_length_error_m':max_bone_length_error, 'pose_bone_scales':'All (1,1,1), every frame',
           'horizontal_root_travel_m':float(np.linalg.norm(np.array(locations[-1])[:2]-np.array(locations[0])[:2])),
-          'notes':'Grounding is vertical root correction, not full foot-contact IK. Visual review still required.'}
+          'notes':'Contact-anchored fixed-length leg IK and smooth pelvis height; visual review still required.'}
 (ROOT/'docs/logs/hero-deformation-check.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))

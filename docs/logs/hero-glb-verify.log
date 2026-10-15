@@ -1,16 +1,16 @@
-17:43:20 | INFO: Data are loaded, start creating Blender stuff
-17:43:20 | INFO: Blender create Mesh node meshes[0]
-17:43:21 | INFO: glTF import finished in 0.37s
+09:20:07 | INFO: Data are loaded, start creating Blender stuff
+09:20:07 | INFO: Blender create Mesh node meshes[0]
+09:20:07 | INFO: glTF import finished in 0.34s
 {
   "status": "PASS",
   "glb_bones": 16,
   "imported_action_start_frame": 1.0,
   "imported_action_end_frame": 90.0,
-  "max_animated_bounds_difference_m": 1.7881393432617188e-07,
+  "max_animated_bounds_difference_m": 3.4086406230926514e-07,
   "sample_bounds_differences_m": [
     1.7881393432617188e-07,
     1.1920928955078125e-07,
-    1.695007085800171e-07
+    3.4086406230926514e-07
   ],
   "notes": "Checks re-imported skinned animation at start, middle and end; GLB keeps top four weights."
 }

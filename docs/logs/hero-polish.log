@@ -1,0 +1,22 @@
+Info: Saved as "hero-walk.blend"
+{
+  "max_ankle_target_error_m": 2.2745635393967848e-07,
+  "upper_body_rotation_error": 0,
+  "root_vertical_frame_acceleration_max_m": 0.0035003349478048007,
+  "smoothing_downward_adjustment_m": 0.0048272733699275885,
+  "rigid_sole_vertices": [
+    1999,
+    1857
+  ],
+  "stance_frames": [
+    39,
+    51
+  ],
+  "method": "Fixed-length two-bone leg solve, source contact anchors, rigid soles and swing boot clearance",
+  "status": "PASS",
+  "preserved": "Upper-body rotations, bone lengths/scales, horizontal travel, source GLB/NPZ/BVH"
+}
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-walk.blend"
+
+Blender quit

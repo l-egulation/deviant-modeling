@@ -12,13 +12,30 @@
   "foot_min_before_ground_offset_m": -0.030311226844787598,
   "target_leg_length_m": 0.2511754971626969,
   "source_leg_length_m": 0.8552782237529755,
-  "weight_method": "Anatomical regions + normalized segment-distance weights; rigid hood/face",
+  "weight_method": "Anatomical segment weights with rigid hood/face and rigid boot soles",
   "foot_min_range_m": 0.0500339325517416,
-  "grounding": "Per-frame vertical root correction to lowest deformed vertex; no bone stretching",
+  "grounding": "Source contact anchors, fixed-length leg IK, smooth reachable pelvis height",
   "source": "assets/ink-hero.glb",
   "motion": "outputs/walk.bvh",
   "source_sha256": "300d90b6489e0de4e061d7e134ed5d7eb8084d04061c93ade2d830b762ed85a0",
-  "neutral_pose_max_vertex_error_m": 6.705522537231445e-08,
+  "neutral_pose_max_vertex_error_m": 6.705522537231445E-08,
   "retarget_method": "Source bind rotation removed; shared arm A-pose calibration; target rest axes retained",
-  "status": "First-pass rig; requires rendered deformation review."
+  "status": "First-pass rig; requires rendered deformation review.",
+  "contact_polish": {
+    "max_ankle_target_error_m": 2.2745635393967848E-07,
+    "upper_body_rotation_error": 0,
+    "root_vertical_frame_acceleration_max_m": 0.0035003349478048007,
+    "smoothing_downward_adjustment_m": 0.0048272733699275885,
+    "rigid_sole_vertices": [
+      1999,
+      1857
+    ],
+    "stance_frames": [
+      39,
+      51
+    ],
+    "method": "Fixed-length two-bone leg solve, source contact anchors, rigid soles and swing boot clearance",
+    "status": "PASS",
+    "preserved": "Upper-body rotations, bone lengths/scales, horizontal travel, source GLB/NPZ/BVH"
+  }
 }

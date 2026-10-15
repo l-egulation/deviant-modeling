@@ -1,0 +1,37 @@
+"""Inspect all rendered poses for foot sliding, framing and residual motion issues."""
+import bpy,json,numpy as np
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+bpy.ops.wm.open_mainfile(filepath=str(ROOT/'outputs/hero-walk.blend'))
+scene=bpy.context.scene;rig=bpy.data.objects['HeroRig'];hero=bpy.data.objects['InkHero'];camera=scene.camera
+rest=np.array([v.co[:] for v in hero.data.vertices]);sole=np.flatnonzero(rest[:,2]<.045)
+last=None;speeds=[];bottoms=[];roots=[];quats=[];frames_min=[];frames_max=[]
+length_error=0
+for f in range(1,91):
+    scene.frame_set(f);deps=bpy.context.evaluated_depsgraph_get();obj=hero.evaluated_get(deps);mesh=obj.to_mesh()
+    coords=np.empty(len(mesh.vertices)*3);mesh.vertices.foreach_get('co',coords);coords=coords.reshape(-1,3)
+    world=coords @ np.array(obj.matrix_world.to_3x3()).T+np.array(obj.matrix_world.translation)
+    assert np.isfinite(world).all()
+    points=world[sole]
+    if last is not None:
+        contact=(points[:,2]<.003)&(last[:,2]<.003)
+        speeds.extend((np.linalg.norm((points-last)[:,:2],axis=1)*30)[contact])
+    last=points.copy();bottoms.append(float(world[:,2].min()));roots.append(rig.location[:])
+    projection=np.array(camera.calc_matrix_camera(deps,x=512,y=512)@camera.matrix_world.inverted())
+    clip=np.column_stack((world,np.ones(len(world))))@projection.T
+    uv=(clip[:,:2]/clip[:,3:4]+1)/2
+    frames_min.append(uv.min(0));frames_max.append(uv.max(0));obj.to_mesh_clear()
+    quats.append([b.rotation_quaternion.normalized()[:] for b in rig.pose.bones])
+    for b in rig.pose.bones:
+        assert max(abs(s-1) for s in b.scale)<1e-6
+        length_error=max(length_error,abs(b.length-b.bone.length))
+quats=np.array(quats);roots=np.array(roots)
+seam=float(np.mean(2*np.arccos(np.clip(np.abs(np.sum(quats[0]*quats[-1],axis=1)),-1,1)))*180/np.pi)
+lo=np.min(frames_min,axis=0);hi=np.max(frames_max,axis=0)
+assert min(bottoms)>-1e-5
+assert max(bottoms)<.003
+assert np.mean(speeds)<.005
+assert lo.min()>.03 and hi.max()<.97
+assert length_error<1e-5
+report={'status':'PASS_WITH_KNOWN_LIMITATION','frames_checked':90,'fixed_sole_contact_mean_speed_m_s':float(np.mean(speeds)),'fixed_sole_contact_speed_p95_m_s':float(np.percentile(speeds,95)),'sole_contact_vertex_pairs':len(speeds),'min_ground_height_m':min(bottoms),'max_ground_height_m':max(bottoms),'frame_bounds_min_uv':lo.tolist(),'frame_bounds_max_uv':hi.tolist(),'max_bone_length_error_m':length_error,'root_vertical_second_difference_max_m_per_frame2':float(np.abs(np.diff(roots[:,2],n=2)).max()),'start_end_mean_pose_difference_degrees':seam,'seamless_loop':False,'known_limitation':'Original three-second clip is not a seamless game loop; wrap-around changes the pose. No claim of final cloth topology or collision quality.'}
+(ROOT/'docs/logs/hero-review-after.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

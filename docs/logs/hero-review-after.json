@@ -1,0 +1,22 @@
+{
+  "status": "PASS_WITH_KNOWN_LIMITATION",
+  "frames_checked": 90,
+  "fixed_sole_contact_mean_speed_m_s": 7.197792884175967e-05,
+  "fixed_sole_contact_speed_p95_m_s": 3.9118782715511536e-06,
+  "sole_contact_vertex_pairs": 26045,
+  "min_ground_height_m": -7.450580596923828e-09,
+  "max_ground_height_m": 1.4729797840118408e-05,
+  "frame_bounds_min_uv": [
+    0.2546643587116406,
+    0.1166793619061392
+  ],
+  "frame_bounds_max_uv": [
+    0.6913116296028992,
+    0.8657418838118872
+  ],
+  "max_bone_length_error_m": 1.1920928955078125e-07,
+  "root_vertical_second_difference_max_m_per_frame2": 0.003500334918498993,
+  "start_end_mean_pose_difference_degrees": 27.494392224684887,
+  "seamless_loop": false,
+  "known_limitation": "Original three-second clip is not a seamless game loop; wrap-around changes the pose. No claim of final cloth topology or collision quality."
+}

@@ -1,11 +1,15 @@
 {
   "status": "PASS",
   "frames_checked": 90,
-  "camera_vertical_travel_before_m": 0.05297273397445679,
-  "camera_vertical_travel_after_m": 0.0,
-  "ground_screen_vertical_travel_before_pixels": 20.51058578491211,
-  "ground_screen_vertical_travel_after_pixels": 4.57763671875e-05,
+  "camera_constant_velocity_residual_max_m": 2.0359339325537462e-07,
+  "fixed_world_ground_projection_residual_max_pixels": 0.00011658400626401999,
+  "camera_rotation_range_radians": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "studio_light_relative_position_range_max_m": 4.76837158203125e-07,
   "character_pose_and_root_motion_unchanged": true,
   "floor_transform_unchanged": true,
-  "fix": "Fixed camera height and angle; horizontal tracking only. No grounding or rig changes."
+  "method": "Fixed WORLD ground points must project along straight constant-speed paths; not pelvis-attached ground samples."
 }
