@@ -1,10 +1,12 @@
 # 현재 상태
 
-> 2026-10-16 최신: A안 비율의 실제 Tripo 형태 생성과 GLB 다운로드·로컬 네 방향 검토를 완료했습니다. outputs/hero-proportion-model.glb는 승인된 20크레딧으로 텍스처를 적용한 후보입니다. 잔액 2,995이며 형상 위치 보존 검사도 통과했습니다. 리깅·모션 검증은 아직 미완료입니다. docs/TRIPO_REBUILD.md 참조.
+> 2026-10-16 최신: 승인된 A안 Tripo 모델에 18뼈 리그를 연결하고 기존 Mixamo 달리기를 적용했습니다. 최신 검토 영상은 outputs/hero-mixamo-run-preview.mp4이며, 형상은 유지했습니다. 옷의 국소 접힘과 발 미끄러짐은 남아 있습니다. docs/MIXAMO_RUN.md 참조.
 
 갱신: 2026-10-16
 
 ## 최신 검토
+
+2026-10-16 후속: 새 A 모델에 리그를 연결하고 Mixamo 원본 관절 방향을 보존해 달리기를 적용했습니다. 첫 팔 분류 오류는 실제 메시 분포 확인 후 수정했습니다. 새 적용본은 hero-mixamo-run.*, 기준 리그는 hero-proportion-rig.blend입니다. 구조 검사 통과와 의상 최종 품질은 구분하며, 국소 옷 접힘·발 미끄러짐은 남아 있습니다. docs/MIXAMO_RUN.md의 최신 절 참조.
 
 2026-10-16: 사용자 선택 A안으로 실제 Tripo P2.0 스마트 메시를 새로 생성했습니다. 입력은 `assets/hero-proportion-front.png`, 에셋 ID는 `550caa06-b152-4076-b70e-1b70fe5a4ff6`입니다. 무료 체험으로 형태 생성 0크레딧, 잔액 3,015 유지. 텍스처 전 원본은 `outputs/hero-proportion-model.glb`, 편집 확인본은 `.blend`, 정면·측면·후면 렌더는 같은 이름의 PNG입니다. 원본 형상을 수정하지 않고 로컬에서 네 방향 확인을 마쳤습니다.
 

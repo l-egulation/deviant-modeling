@@ -1,0 +1,241 @@
+{
+  "model": "outputs/hero-proportion-model.glb",
+  "rest_vertex_error": 0,
+  "bones": {
+    "Hips": {
+      "head": [
+        0,
+        0.015,
+        0.34
+      ],
+      "tail": [
+        0,
+        0.015,
+        0.4
+      ],
+      "parent": null
+    },
+    "Spine1": {
+      "head": [
+        0,
+        0.015,
+        0.4
+      ],
+      "tail": [
+        0,
+        0.015,
+        0.46
+      ],
+      "parent": "Hips"
+    },
+    "Chest": {
+      "head": [
+        0,
+        0.015,
+        0.46
+      ],
+      "tail": [
+        0,
+        0.015,
+        0.6
+      ],
+      "parent": "Spine1"
+    },
+    "Head": {
+      "head": [
+        0,
+        0.015,
+        0.6
+      ],
+      "tail": [
+        0,
+        0.015,
+        0.94
+      ],
+      "parent": "Chest"
+    },
+    "LeftClavicle": {
+      "head": [
+        0.025,
+        0.0,
+        0.55
+      ],
+      "tail": [
+        0.125,
+        0.0,
+        0.55
+      ],
+      "parent": "Chest"
+    },
+    "LeftArm": {
+      "head": [
+        0.125,
+        0,
+        0.55
+      ],
+      "tail": [
+        0.235,
+        0,
+        0.55
+      ],
+      "parent": "LeftClavicle"
+    },
+    "LeftForeArm": {
+      "head": [
+        0.235,
+        0,
+        0.55
+      ],
+      "tail": [
+        0.355,
+        0,
+        0.55
+      ],
+      "parent": "LeftArm"
+    },
+    "LeftHand": {
+      "head": [
+        0.355,
+        0,
+        0.55
+      ],
+      "tail": [
+        0.42,
+        0,
+        0.55
+      ],
+      "parent": "LeftForeArm"
+    },
+    "LeftUpLeg": {
+      "head": [
+        0.07,
+        0.015,
+        0.34
+      ],
+      "tail": [
+        0.1,
+        0.02,
+        0.215
+      ],
+      "parent": "Hips"
+    },
+    "LeftLeg": {
+      "head": [
+        0.1,
+        0.02,
+        0.215
+      ],
+      "tail": [
+        0.13,
+        0.025,
+        0.075
+      ],
+      "parent": "LeftUpLeg"
+    },
+    "LeftFoot": {
+      "head": [
+        0.13,
+        0.025,
+        0.075
+      ],
+      "tail": [
+        0.13,
+        -0.1,
+        0.038
+      ],
+      "parent": "LeftLeg"
+    },
+    "RightClavicle": {
+      "head": [
+        -0.025,
+        0.0,
+        0.55
+      ],
+      "tail": [
+        -0.125,
+        0.0,
+        0.55
+      ],
+      "parent": "Chest"
+    },
+    "RightArm": {
+      "head": [
+        -0.125,
+        0,
+        0.55
+      ],
+      "tail": [
+        -0.235,
+        0,
+        0.55
+      ],
+      "parent": "RightClavicle"
+    },
+    "RightForeArm": {
+      "head": [
+        -0.235,
+        0,
+        0.55
+      ],
+      "tail": [
+        -0.355,
+        0,
+        0.55
+      ],
+      "parent": "RightArm"
+    },
+    "RightHand": {
+      "head": [
+        -0.355,
+        0,
+        0.55
+      ],
+      "tail": [
+        -0.42,
+        0,
+        0.55
+      ],
+      "parent": "RightForeArm"
+    },
+    "RightUpLeg": {
+      "head": [
+        -0.07,
+        0.015,
+        0.34
+      ],
+      "tail": [
+        -0.1,
+        0.02,
+        0.215
+      ],
+      "parent": "Hips"
+    },
+    "RightLeg": {
+      "head": [
+        -0.1,
+        0.02,
+        0.215
+      ],
+      "tail": [
+        -0.13,
+        0.025,
+        0.075
+      ],
+      "parent": "RightUpLeg"
+    },
+    "RightFoot": {
+      "head": [
+        -0.13,
+        0.025,
+        0.075
+      ],
+      "tail": [
+        -0.13,
+        -0.1,
+        0.038
+      ],
+      "parent": "RightLeg"
+    }
+  },
+  "scope": "Rest rig; motion and deformation checked separately"
+}

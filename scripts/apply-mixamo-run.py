@@ -1,5 +1,5 @@
 """Retarget the downloaded Mixamo run; preserve its upper-body motion and timing."""
-import bpy,json,math,sys,numpy as np
+import bpy,json,math,sys,os,numpy as np
 from pathlib import Path
 from mathutils import Vector,Quaternion
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
@@ -13,7 +13,7 @@ if previous_path.exists():
     for frame in range(1,91):
         bpy.context.scene.frame_set(frame)
         previous.append({b.name:[list(old.matrix_world@b.head),list(old.matrix_world@b.tail)] for b in old.pose.bones})
-bpy.ops.wm.open_mainfile(filepath=str(ROOT/'outputs/tripo-run.blend'))
+bpy.ops.wm.open_mainfile(filepath=str(ROOT/os.environ.get('MIXAMO_TARGET_RIG','outputs/tripo-run.blend')))
 scene=bpy.context.scene;hero=bpy.data.objects['TripoHero'];rig=bpy.data.objects['TripoRunRig']
 original=np.array([v.co[:] for v in hero.data.vertices]);rig.animation_data_clear();rig.location=(0,0,0)
 for b in rig.pose.bones:b.rotation_quaternion=(1,0,0,0)
@@ -140,7 +140,7 @@ for key in ('run_cycle_seconds','loop_displacement'):
 bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'outputs/hero-mixamo-run.blend'),compress=True)
 bpy.ops.object.select_all(action='DESELECT');hero.select_set(True);rig.select_set(True);bpy.context.view_layer.objects.active=rig
 bpy.ops.export_scene.gltf(filepath=str(ROOT/'outputs/hero-mixamo-run.glb'),use_selection=True,export_animations=True,export_frame_range=True,export_force_sampling=True,export_animation_mode='SCENE')
-report={'source':'assets/mixamo-running.fbx / Running With Intention','source_frames':count,'fps':30,'cycle_sample_seconds':count/30,
+report={'target_rig':os.environ.get('MIXAMO_TARGET_RIG','outputs/tripo-run.blend'),'source':'assets/mixamo-running.fbx / Running With Intention','source_frames':count,'fps':30,'cycle_sample_seconds':count/30,
     'output_frames':90,'timing_scale':1,'leg_scale':scale,'bone_length_changes':False,'mesh_rest_position_error':float(np.abs(original-np.array([v.co[:] for v in hero.data.vertices])).max()),
     'body_rotation_edits':'Source limb world directions and elbow/knee bend preserved; target bind axes calibrated' ,
     'coordinate_forward_before':list(forward),'contact_correction':contact_report,

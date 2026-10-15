@@ -5,7 +5,7 @@
   "cycle_sample_seconds": 0.7333333333333333,
   "output_frames": 90,
   "timing_scale": 1,
-  "leg_scale": 0.3018205214679091,
+  "leg_scale": 0.3058656758847911,
   "bone_length_changes": false,
   "mesh_rest_position_error": 0.0,
   "body_rotation_edits": "Source limb world directions and elbow/knee bend preserved; target bind axes calibrated",
@@ -17,13 +17,14 @@
   "contact_correction": {
     "method": "Whole-body vertical translation matching scaled source mesh clearance; no leg IK or angle clamps",
     "limb_direction_error_max_degrees": 0.0,
-    "elbow_knee_bend_error_max_degrees": 0.00010757547942574774,
-    "previous_elbow_knee_bend_error_max_degrees": 99.36576621516933,
+    "elbow_knee_bend_error_max_degrees": 0.00010928302673107737,
+    "previous_elbow_knee_bend_error_max_degrees": 0.0003073585126571743,
     "root_vertical_correction_range_m": [
-      -0.021387955492829885,
-      0.10365311102118743
+      -0.022161556590559864,
+      0.07177594639078286
     ],
     "foot_sliding": "Not corrected; retained for inspection instead of replacing source limb poses"
   },
-  "scope": "Direction/bend regression checks passed; visual and export checks separate"
+  "scope": "Direction/bend regression checks passed; visual and export checks separate",
+  "target_rig": "outputs/hero-proportion-rig.blend"
 }
