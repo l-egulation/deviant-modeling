@@ -1,5 +1,7 @@
 # Deviant Modeling
 
+> 2026-10-15 최신: 실제 Tripo T포즈 모델 assets/ink-hero-tpose.glb를 채택해 Kimodo 달리기를 적용했습니다. 현재 적용본은 outputs/tripo-run.blend / tripo-run.glb입니다. 기존 Kimodo run.bvh를 재사용했으며 새 골격 생성은 하지 않았습니다. hero-model.*는 외형이 거절된 Blender 절차적 시안이고, hero-run.*는 이전 Tripo 모델의 달리기 이력입니다. 상세 결과는 docs/TRIPO_RUN.md를 확인합니다.
+
 Tripo로 만든 주인공에 Kimodo 모션을 적용하고, Blender에서 게임용 도트 스프라이트로 렌더링하는 프로젝트입니다.
 
 ## 시작하기
@@ -32,7 +34,7 @@ GLB는 약 60MB의 고밀도 메시이며 뼈대와 애니메이션은 없습니
 
 ## 당장 할 일
 
-현재는 사용자가 기존 모델의 어깨 변형을 다시 지적하여 **몸통·소매·하체를 새로 제작한 기준 모델**로 전환했습니다. [새 기준 자세](outputs/hero-model-front.png), [편집용 모델](outputs/hero-model.blend), [GLB](outputs/hero-model.glb), [관절 시험 영상](outputs/hero-model-deformation-preview.mp4)을 확인합니다. 후드·얼굴·색감은 유지하며 팔은 T자, 다리는 약 23도 벌려 관절을 배치했습니다. 새 모델에는 아직 Kimodo 달리기를 적용하지 않았습니다. 재실행과 검사 범위는 [아래 모델 재작업 기록](docs/SIDE_REVIEW.md)을 참조합니다. 아래 달리기 기록은 이전 모델의 경과입니다.
+현재는 사용자가 기존 모델의 어깨 변형을 다시 지적하여 실제 Tripo 재생성 모델에 달리기를 적용했습니다. 아래 hero-model 링크는 거절된 절차적 시안의 제작 이력입니다. [새 기준 자세](outputs/hero-model-front.png), [편집용 모델](outputs/hero-model.blend), [GLB](outputs/hero-model.glb), [관절 시험 영상](outputs/hero-model-deformation-preview.mp4)을 확인합니다. 후드·얼굴·색감은 유지하며 팔은 T자, 다리는 약 23도 벌려 관절을 배치했습니다. 새 모델에는 아직 Kimodo 달리기를 적용하지 않았습니다. 재실행과 검사 범위는 [아래 모델 재작업 기록](docs/SIDE_REVIEW.md)을 참조합니다. 아래 달리기 기록은 이전 모델의 경과입니다.
 
 [측면·소형 해상도 검토와 보정](docs/SIDE_REVIEW.md)에서 발목·하체, 팔 경로·손목, 후드 방향과 신발·옷 연결을 다듬었습니다. [같은 측면의 수정 전후 비교](outputs/hero-run-side-motion-comparison.gif)와 [128·96·64 캔버스 비교](outputs/hero-run-side-scale-comparison.gif)를 확인합니다. 최종 도트 미술 정리와 일부 국소 옷 변형은 남아 있습니다.
 

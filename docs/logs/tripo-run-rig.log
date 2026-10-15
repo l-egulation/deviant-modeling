@@ -1,0 +1,35 @@
+15:34:06 | INFO: Data are loaded, start creating Blender stuff
+15:34:06 | INFO: Blender create Mesh node tripo_3b77b36d_13fc_427b_a532_8c7b9ab6e788
+15:34:07 | INFO: glTF import finished in 0.03s
+	parsing bvh '/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/run.bvh'...	zero length node found: HeadEnd
+	zero length node found: Jaw
+	zero length node found: LeftEye
+	zero length node found: RightEye
+	zero length node found: LeftHandThumbEnd
+	zero length node found: LeftHandIndexEnd
+	zero length node found: LeftHandMiddleEnd
+	zero length node found: LeftHandRingEnd
+	zero length node found: LeftHandPinkyEnd
+	zero length node found: RightHandThumbEnd
+	zero length node found: RightHandIndexEnd
+	zero length node found: RightHandMiddleEnd
+	zero length node found: RightHandRingEnd
+	zero length node found: RightHandPinkyEnd
+	zero length node found: LeftToeEnd
+	zero length node found: RightToeEnd
+0.0147
+	updating scene FPS (was 24.000000) to BVH FPS (30.000000)
+	importing to blender...	zero length bone found: RightToeEnd
+Done in 0.0501
+
+Info: Saved as "tripo-run.blend"
+INFO Draco mesh compression is available, use library at /opt/deviant-blender/blender-4.5.13-linux-x64/4.5/scripts/addons_core/io_scene_gltf2/libextern_draco.so
+15:34:10 | INFO: Starting glTF 2.0 export
+15:34:10 | INFO: Extracting primitive: tripo_3b77b36d_13fc_427b_a532_8c7b9ab6e788
+15:34:10 | INFO: Primitives created: 1
+15:34:10 | INFO: Finished glTF 2.0 export in 0.29097914695739746 s
+
+{"source": "assets/ink-hero-tpose.glb", "motion": "outputs/run.bvh (existing Kimodo generated loop)", "bones": 18, "vertices": 9018, "heat_unweighted": 0, "rest_vertex_error": 0.0, "contact": {"max_ankle_target_error_m": 2.1126042125758269e-07, "upper_body_rotation_error": 0, "root_vertical_frame_acceleration_max_m": 0.003996110464315167, "smoothing_downward_adjustment_m": 0.007258336347201504, "rigid_sole_vertices": [720, 720], "stance_frames": [30, 26], "source_flight_frames_preserved": 34, "max_ankle_rotation_from_bind_degrees": 45.705289764308425, "method": "Fixed-length two-bone leg solve, source contact anchors, rigid soles and swing boot clearance"}, "source_mapping": {"Hips": "Hips", "Spine1": "Spine1", "Chest": "Chest", "Head": "Head", "LeftClavicle": "LeftShoulder", "LeftArm": "LeftArm", "LeftForeArm": "LeftForeArm", "LeftHand": "LeftHand", "LeftUpLeg": "LeftLeg", "LeftLeg": "LeftShin", "LeftFoot": "LeftFoot", "RightClavicle": "RightShoulder", "RightArm": "RightArm", "RightForeArm": "RightForeArm", "RightHand": "RightHand", "RightUpLeg": "RightLeg", "RightLeg": "RightShin", "RightFoot": "RightFoot"}, "status": "BUILT; visual verification pending"}
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+
+Blender quit

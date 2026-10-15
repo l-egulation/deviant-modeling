@@ -1,5 +1,7 @@
 # 현재 상태
 
+> 2026-10-15 최신: 실제 Tripo T포즈 모델 assets/ink-hero-tpose.glb를 채택해 Kimodo 달리기를 적용했습니다. 현재 적용본은 outputs/tripo-run.blend / tripo-run.glb입니다. 기존 Kimodo run.bvh를 재사용했으며 새 골격 생성은 하지 않았습니다. hero-model.*는 외형이 거절된 Blender 절차적 시안이고, hero-run.*는 이전 Tripo 모델의 달리기 이력입니다. 상세 결과는 docs/TRIPO_RUN.md를 확인합니다.
+
 갱신: 2026-10-15
 
 ## 완료
@@ -59,7 +61,7 @@
 담당 환경: 갤럭시북 또는 맥 Blender 4.5 LTS.
 브랜치: work/kimodo-setup.
 지시: START-HERE.md.
-목표: 새 `outputs/hero-model.blend`의 외형과 어깨·팔꿈치·무릎 시험을 검토하고 새 기준 자세에 Kimodo 관절을 재매핑합니다. 기존 `hero-run.blend`는 이전 모델의 경과이며 새 모델의 달리기 완료본으로 쓰지 않습니다. 이후 달리기의 접지·추진 자세·옷 충돌을 검증하고 2D 프레임·스프라이트화합니다.
+목표: 새 Tripo 달리기 outputs/tripo-run.blend의 모션과 의상 변형을 검토합니다. 거절된 hero-model에는 계속 작업하지 않습니다. 기존 `hero-run.blend`는 이전 모델의 경과이며 새 모델의 달리기 완료본으로 쓰지 않습니다. 이후 달리기의 접지·추진 자세·옷 충돌을 검증하고 2D 프레임·스프라이트화합니다.
 재실행 방법·측정 결과·출력 형식: `docs/SETUP_RESULT.md`.
 
 ## 다음 인계

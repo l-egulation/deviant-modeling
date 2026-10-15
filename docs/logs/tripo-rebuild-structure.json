@@ -1,0 +1,21 @@
+{
+  "source": "Tripo P2.0 export, no geometry edits",
+  "asset_id": "38c66e6c-230a-439e-81bc-7ebee9b2221f",
+  "meshes": 1,
+  "vertices": 9018,
+  "faces": 10430,
+  "quads": 0,
+  "armatures": 0,
+  "materials": 1,
+  "bounds_min": [
+    -0.469970703125,
+    -0.211669921875,
+    0.0
+  ],
+  "bounds_max": [
+    0.469970703125,
+    0.211669921875,
+    0.99951171875
+  ],
+  "rigging_validated": false
+}
