@@ -20,19 +20,20 @@
   "source_sha256": "300d90b6489e0de4e061d7e134ed5d7eb8084d04061c93ade2d830b762ed85a0",
   "neutral_pose_max_vertex_error_m": 9.453726962543667e-08,
   "contact_polish": {
-    "max_ankle_target_error_m": 2.852706569295622e-07,
+    "max_ankle_target_error_m": 2.2500259981366246e-07,
     "upper_body_rotation_error": 0,
-    "root_vertical_frame_acceleration_max_m": 0.008202159811056847,
-    "smoothing_downward_adjustment_m": 0.027183638728280075,
+    "root_vertical_frame_acceleration_max_m": 0.00402331048717617,
+    "smoothing_downward_adjustment_m": 0.012549392706127462,
     "rigid_sole_vertices": [
-      1999,
-      1857
+      2546,
+      2484
     ],
     "stance_frames": [
       30,
       26
     ],
     "source_flight_frames_preserved": 34,
+    "max_ankle_rotation_from_bind_degrees": 44.04934492584857,
     "method": "Fixed-length two-bone leg solve, source contact anchors, rigid soles and swing boot clearance"
   },
   "run_accessory_rigid_groups": {
@@ -41,6 +42,11 @@
     "RightHand": 934
   },
   "run_head_follows_chest": true,
+  "run_arm_motion": {
+    "max_wrist_target_error_m": 1.1057274102908246e-07,
+    "max_wrist_rotation_degrees": 0,
+    "method": "Generated arm timing; wider and longer wrist path; fixed-length arm IK; stable roll; neutral wrist"
+  },
   "retarget_method": "Source bind rotation removed; shared arm A-pose calibration; target rest axes retained",
   "status": "First-pass rig; requires rendered deformation review."
 }

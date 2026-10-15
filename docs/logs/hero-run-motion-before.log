@@ -1,0 +1,30 @@
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/.cache/hero-run-motion-before.blend"
+Traceback (most recent call last):
+  File "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/scripts/verify-run-motion.py", line 42, in <module>
+    assert passed,'Run motion or rigid boot regression'
+           ^^^^^^
+AssertionError: Run motion or rigid boot regression
+{
+  "status": "FAIL",
+  "frames": 90,
+  "max_ankle_rotation_from_bind_degrees": 85.15929438443891,
+  "stance_max_ankle_degrees": 60.819273434507274,
+  "air_max_ankle_degrees": 85.15929438443891,
+  "rigid_boot_skin_error_m": 0.041925531538602456,
+  "max_wrist_rotation_degrees": 45.13837978834278,
+  "head_yaw_min_degrees": -12.674821961341332,
+  "head_yaw_max_degrees": 18.85076312855902,
+  "head_yaw_excursion_degrees": 31.525585089900353,
+  "wrist_fore_aft_span_m": {
+    "Left": 0.1775982901453972,
+    "Right": 0.16813082993030548
+  },
+  "minimum_wrist_lateral_distance_from_chest_m": 0.08248322457075119,
+  "scope": "Character-specific artistic limits, not anatomical standards. Ground contact, silhouette and cloth reviewed separately.",
+  "max_arm_joint_rotation_step_degrees": 14.659042171667288
+}
+
+Error: script failed, file: 'scripts/verify-run-motion.py', exiting.
+
+Blender quit

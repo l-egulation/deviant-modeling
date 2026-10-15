@@ -2,16 +2,16 @@
   "status": "PASS",
   "frames": 90,
   "arm_edges_per_frame": 18788,
-  "max_arm_edge_stretch": 4.977402525400631,
-  "p99_arm_edge_stretch": 2.8750083041639436,
-  "max_coincident_arm_seam_gap_m": 2.791076420806198e-05,
+  "max_arm_edge_stretch": 4.677136213617924,
+  "p99_arm_edge_stretch": 2.3656029146455655,
+  "max_coincident_arm_seam_gap_m": 2.316527762813649e-05,
   "worst": {
-    "frame": 8,
+    "frame": 77,
     "vertices": [
-      1925,
-      3273
+      2568,
+      2571
     ],
-    "rest_edge_m": 0.0035905010039156407
+    "rest_edge_m": 0.004614873325781591
   },
   "threshold": 5,
   "scope": "Local sleeve deformation; excludes tiny edges below 2mm. Not a cloth-collision or artistic-quality certificate."

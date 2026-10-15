@@ -1,25 +1,27 @@
 {
   "status": "PASS",
   "frames_checked": 90,
-  "fixed_sole_contact_mean_speed_m_s": 3.576466618806463e-05,
-  "fixed_sole_contact_speed_p95_m_s": 4.5588787021572454e-06,
-  "sole_contact_vertex_pairs": 16098,
-  "min_ground_height_m": -5.587935447692871e-08,
-  "max_ground_height_m": 0.02282312884926796,
+  "fixed_sole_contact_mean_speed_m_s": 2.7239534173057547e-05,
+  "fixed_sole_contact_speed_p95_m_s": 0.0001313350462445869,
+  "sole_contact_vertex_pairs": 194,
+  "min_ground_height_m": -1.043081283569336e-07,
+  "max_ground_height_m": 0.0228230943903327,
   "frame_bounds_min_uv": [
-    0.31327940047258873,
-    0.11910474578108393
+    0.2826835657934194,
+    0.11704518312482898
   ],
   "frame_bounds_max_uv": [
-    0.7109759742382561,
-    0.8402749638468484
+    0.7044415144551612,
+    0.8546794683549122
   ],
-  "max_bone_length_error_m": 2.1606683731079102e-07,
-  "root_vertical_second_difference_max_m_per_frame2": 0.00820215418934822,
-  "start_end_mean_pose_difference_degrees": 4.174294332902111,
+  "max_bone_length_error_m": 1.7881393432617188e-07,
+  "root_vertical_second_difference_max_m_per_frame2": 0.004023308865725994,
+  "start_end_mean_pose_difference_degrees": 4.231256217120178,
   "seamless_loop": true,
   "known_limitation": "Loop and contact tests pass; final cloth collision and artistic style remain visual checks.",
+  "contact_plane_tolerance_m": 0.0002,
+  "near_ground_3mm_mean_speed_m_s": 0.0016933646984895322,
   "loop_endpoint_rotation_error": 0.0,
-  "wrap_step_mean_angle_degrees": 4.174294332902111,
-  "normal_step_angle_p95_degrees": 8.08922844101794
+  "wrap_step_mean_angle_degrees": 4.231256217120178,
+  "normal_step_angle_p95_degrees": 6.596600759963514
 }

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "before_commit": "5c1ac86722dcdd06c5860394b8aa5dff4867adc4",
+  "frames": 45,
+  "duration_ms": 1500,
+  "native_canvas": 96,
+  "display_scale": 3,
+  "camera_and_frame_indices_identical": true,
+  "scope": "Visual before/after comparison; baseline PNGs were retained locally before changing the rig."
+}

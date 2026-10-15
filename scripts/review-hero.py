@@ -9,7 +9,7 @@ LOG_STEM = 'hero' if MOTION == 'walk' else 'hero-run'
 bpy.ops.wm.open_mainfile(filepath=str(ROOT/f'outputs/hero-{MOTION}.blend'))
 scene=bpy.context.scene;rig=bpy.data.objects['HeroRig'];hero=bpy.data.objects['InkHero'];camera=scene.camera
 rest=np.array([v.co[:] for v in hero.data.vertices]);sole=np.flatnonzero(rest[:,2]<.045)
-last=None;speeds=[];bottoms=[];roots=[];quats=[];frames_min=[];frames_max=[]
+last=None;speeds=[];near_ground_speeds=[];bottoms=[];roots=[];quats=[];frames_min=[];frames_max=[]
 length_error=0
 for f in range(1,91):
     scene.frame_set(f);deps=bpy.context.evaluated_depsgraph_get();obj=hero.evaluated_get(deps);mesh=obj.to_mesh()
@@ -18,8 +18,14 @@ for f in range(1,91):
     assert np.isfinite(world).all()
     points=world[sole]
     if last is not None:
-        contact=(points[:,2]<.003)&(last[:,2]<.003)
-        speeds.extend((np.linalg.norm((points-last)[:,:2],axis=1)*30)[contact])
+        velocity=np.linalg.norm((points-last)[:,:2],axis=1)*30
+        near=(points[:,2]<.003)&(last[:,2]<.003)
+        near_ground_speeds.extend(velocity[near])
+        # A rolling rigid sole moves points above the contact plane. Measure
+        # sliding at actual ground contact, and retain the old 3mm band as data.
+        tolerance=.0002 if MOTION == 'run' else .003
+        contact=(points[:,2]<tolerance)&(last[:,2]<tolerance)
+        speeds.extend(velocity[contact])
     last=points.copy();bottoms.append(float(world[:,2].min()));roots.append(rig.location[:])
     projection=np.array(camera.calc_matrix_camera(deps,x=512,y=512)@camera.matrix_world.inverted())
     clip=np.column_stack((world,np.ones(len(world))))@projection.T
@@ -35,10 +41,13 @@ lo=np.min(frames_min,axis=0);hi=np.max(frames_max,axis=0)
 assert min(bottoms)>-1e-5
 if MOTION == 'walk':
     assert max(bottoms)<.003
-assert np.mean(speeds)<.005
+assert len(speeds)>20 and np.mean(speeds)<.005,(len(speeds),float(np.mean(speeds)))
+assert np.mean(near_ground_speeds)<.005,float(np.mean(near_ground_speeds))
 assert lo.min()>.03 and hi.max()<.97
 assert length_error<1e-5
 report={'status':'PASS_WITH_KNOWN_LIMITATION','frames_checked':90,'fixed_sole_contact_mean_speed_m_s':float(np.mean(speeds)),'fixed_sole_contact_speed_p95_m_s':float(np.percentile(speeds,95)),'sole_contact_vertex_pairs':len(speeds),'min_ground_height_m':min(bottoms),'max_ground_height_m':max(bottoms),'frame_bounds_min_uv':lo.tolist(),'frame_bounds_max_uv':hi.tolist(),'max_bone_length_error_m':length_error,'root_vertical_second_difference_max_m_per_frame2':float(np.abs(np.diff(roots[:,2],n=2)).max()),'start_end_mean_pose_difference_degrees':seam,'seamless_loop':False,'known_limitation':'Original three-second clip is not a seamless game loop; wrap-around changes the pose. No claim of final cloth topology or collision quality.'}
+report.update(contact_plane_tolerance_m=.0002 if MOTION == 'run' else .003,
+              near_ground_3mm_mean_speed_m_s=float(np.mean(near_ground_speeds)))
 if 'loop_displacement' in rig:
     scene.frame_set(91)
     endpoint=np.array([b.rotation_quaternion.normalized()[:] for b in rig.pose.bones])

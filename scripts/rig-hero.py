@@ -17,6 +17,7 @@ from retarget import retarget_rotation
 from hero_preview import boot_rotation, configure_preview
 from hero_feet import plant_feet
 from hero_accessories import refine_accessories
+from hero_motion import pose_run_arms
 
 ROOT = Path(__file__).resolve().parents[1]
 MOTION = os.environ.get('HERO_MOTION', 'walk')
@@ -162,8 +163,13 @@ for side in ('Left', 'Right'):
 
 def set_target_rotations(source_rotations, frame=None):
     desired = {}
+    heading_correction=Matrix.Identity(3)
     for n, (_, _, parent) in spec.items():
         world = retarget_rotation(source_rotations[n], source_reference[n], rest[n].to_3x3())
+        if MOTION == 'run' and frame is not None and n == 'Chest':
+            yaw=(world@rest[n].to_3x3().inverted()).to_euler('XYZ').z
+            heading_correction=Quaternion(Vector((0,0,1)),-.8*yaw-math.radians(8)).to_matrix()
+            world=heading_correction@world
         if MOTION == 'run' and frame is not None and n == 'Head':
             # The hood and scarf form a connected shell. Keep their deformation
             # coherent rather than stretching the neck under an adult head nod.
@@ -171,7 +177,7 @@ def set_target_rotations(source_rotations, frame=None):
         if MOTION == 'run' and frame is not None and n.endswith(('Arm','ForeArm','Hand')):
             # Give the hero's thick coat and large gloves a little clearance.
             angle=math.radians(-7 if n.startswith('Left') else 7)
-            world=Quaternion(Vector((0,1,0)),angle).to_matrix()@world
+            world=heading_correction@Quaternion(Vector((0,1,0)),angle).to_matrix()@world
         if n.endswith('Foot'):
             world = boot_rotation(world, rest[n].to_3x3())
         desired[n] = world
@@ -221,6 +227,7 @@ for f in range(1, 91):
     rig.keyframe_insert('location', frame=f)
 if rig.animation_data and rig.animation_data.action:
     rig.animation_data.action.name = f'Kimodo_{MOTION.title()}_3s'
+arm_motion_report=pose_run_arms(scene,rig) if MOTION == 'run' else {}
 contact_report = plant_feet(scene, rig, hero, source, OUT/f'{MOTION}.npz', allow_flight=MOTION == 'run')
 
 # Neutral orthographic studio preview. Camera follows travel, preserving motion.
@@ -294,6 +301,7 @@ report = {'blender': bpy.app.version_string, 'original_vertices': original_verti
           'contact_polish': contact_report,
           'run_accessory_rigid_groups': accessory_report,
           'run_head_follows_chest': MOTION == 'run',
+          'run_arm_motion':arm_motion_report,
           'retarget_method': 'Source bind rotation removed; shared arm A-pose calibration; target rest axes retained',
           'status': 'First-pass rig; requires rendered deformation review.'}
 (ROOT/f'docs/logs/{LOG_STEM}-rig-check.json').write_text(json.dumps(report, indent=2)+'\n')
