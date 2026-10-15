@@ -32,6 +32,8 @@ GLB는 약 60MB의 고밀도 메시이며 뼈대와 애니메이션은 없습니
 
 ## 당장 할 일
 
+[측면·소형 해상도 검토](docs/SIDE_REVIEW.md)에서 128·96·64 캔버스를 비교했습니다. 달리기는 읽히지만 순수 측면의 팔 겹침·후드 방향 변화가 남아 있어, AI 도트 변환 전에 측면용 자세와 목·소매 연결을 추가로 다듬어야 합니다. [움직이는 크기 비교](outputs/hero-run-side-scale-comparison.gif)를 확인합니다.
+
 게임 기본 이동용으로 [달리기 생성·적용](docs/RUN_RESULT.md)도 진행했습니다. [달리기 미리보기](outputs/hero-run-preview.mp4), [편집용 Blend](outputs/hero-run.blend), [달리기 GLB](outputs/hero-run.glb)를 사용합니다. 캐릭터 크기는 기존 걷기와 같고, 달리기의 공중 구간과 반복 경계를 별도로 처리했습니다.
 
 `work/kimodo-setup`에서 갤럭시북의 CPU 텍스트 인코더·RTX 4050으로 3초 걷기 골격 생성과 NPZ/BVH 실제 재생 검증을 완료했습니다. [실행 결과와 재실행 방법](docs/SETUP_RESULT.md), [3초 미리보기](outputs/walk-preview.mp4)를 확인할 수 있습니다.

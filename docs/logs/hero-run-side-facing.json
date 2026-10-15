@@ -1,0 +1,6 @@
+{
+  "head_front_yaw_min_degrees": -12.674821961341332,
+  "head_front_yaw_max_degrees": 18.85076312855902,
+  "head_yaw_excursion_degrees": 31.525585089900353,
+  "scope": "Measured head-facing variation; not a numeric pass/fail quality threshold."
+}

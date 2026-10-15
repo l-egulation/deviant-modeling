@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "camera": "Fixed orthographic, pure side, no elevation",
+  "linear_root_travel_removed": true,
+  "source_blend_file_modified": false,
+  "preview_object_translation_rebased": true,
+  "rendered_frames": 45,
+  "endpoint_frame": 46,
+  "render_size": [
+    384,
+    384
+  ],
+  "clip_seconds": 1.5,
+  "mp4_frames": 90,
+  "mp4_fps": 30.0,
+  "mp4_seconds": 3,
+  "gif_frames": 45,
+  "gif_duration_ms": 1500,
+  "loop_endpoint_rgba_mean_difference": 0.009675767686631944,
+  "alpha_bounds_min": [
+    102,
+    46,
+    288,
+    343
+  ],
+  "alpha_bounds_max": [
+    136,
+    56,
+    296,
+    350
+  ],
+  "canvas_sizes": [
+    128,
+    96,
+    64
+  ],
+  "character_pixel_height_ranges": {
+    "128": [
+      97.33333333333333,
+      100.33333333333333
+    ],
+    "96": [
+      73.0,
+      75.25
+    ],
+    "64": [
+      48.666666666666664,
+      50.166666666666664
+    ]
+  },
+  "scope": "Nearest-neighbor reduction and silhouette review. No AI stylization or per-frame repaint. Numeric PASS covers encoding, framing and loop only; artistic quality needs visual review."
+}
