@@ -29,7 +29,7 @@ for row,label in enumerate(('front','side')):
         im=Image.open(ROOT/f'.cache/tripo-run-{label}-{f:03d}.png').convert('RGB')
         sheet.paste(im,(col*512,row*512));draw.text((col*512+12,row*512+12),f'{label} / {f}',fill='black')
 sheet.save(ROOT/'outputs/tripo-run-contact-sheet.png')
-report={'decoded_frames':len(decoded),'fps':fps,'seconds':3,'motion_source':'Existing Kimodo outputs/run.bvh; not a newly generated sample',
+report={'decoded_frames':len(decoded),'fps':fps,'seconds':3,'motion_source':'Authored 0.6-second cycle from approved pose study on the Kimodo-fitted rig; five repeats',
         'scope':'Video encoding PASS, artistic acceptance and clothing polish are separate'}
 (ROOT/'docs/logs/tripo-run-preview.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report))

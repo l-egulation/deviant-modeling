@@ -1,0 +1,9 @@
+{
+  "source": "Approved four-pose study; authored animation, not new Kimodo generation",
+  "cycle_seconds": 0.6,
+  "cycles": 5,
+  "speed_m_s": 0.9,
+  "frames": 90,
+  "stance_toe_world_drift_before_final_grounding_m": 5.960464477539063e-08,
+  "scope": "Baked candidate; rendering and final deformation verification required"
+}

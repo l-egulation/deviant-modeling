@@ -2,6 +2,6 @@
   "decoded_frames": 90,
   "fps": 30.0,
   "seconds": 3,
-  "motion_source": "Existing Kimodo outputs/run.bvh; not a newly generated sample",
+  "motion_source": "Authored 0.6-second cycle from approved pose study on the Kimodo-fitted rig; five repeats",
   "scope": "Video encoding PASS, artistic acceptance and clothing polish are separate"
 }

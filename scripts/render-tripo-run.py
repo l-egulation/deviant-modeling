@@ -2,6 +2,7 @@
 import bpy
 import json
 import os
+import shutil
 import numpy as np
 from pathlib import Path
 from mathutils import Vector
@@ -30,7 +31,14 @@ for f in frames:
                 'weights':[{hero.vertex_groups[g.group].name:g.weight for g in hero.data.vertices[int(i)].groups} for i in edges[e]]})
         (ROOT/'docs/logs/tripo-run-edge-audit.json').write_text(json.dumps(details,indent=2))
     evaluated.to_mesh_clear()
-    scene.render.filepath=str(dest/f'{f:03d}.png');bpy.ops.render.render(write_still=True)
+    scene.render.filepath=str(dest/f'{f:03d}.png')
+    # The authored cycle repeats under a linear tracking camera and constant
+    # world lighting. Reuse its identical rendered images, still measuring
+    # actual deformation at every frame above.
+    period=round(float(rig.get('run_cycle_seconds',0))*scene.render.fps)
+    if os.environ.get('FULL_RENDER')=='1' and period and f>period:
+        shutil.copyfile(dest/f'{(f-1)%period+1:03d}.png',dest/f'{f:03d}.png')
+    else:bpy.ops.render.render(write_still=True)
 report={'scope':'Measured deformation; visual art review is separate','frames':samples,'maximum_edge_stretch':max(stretch),'lowest_point':min(bottom)}
 (ROOT/'docs/logs/tripo-run-deformation.json').write_text(json.dumps(report,indent=2)+'\n')
 for label,offset in [('side',Vector((2.7,0,.10))),('front',Vector((0,-2.7,.10)))]:
