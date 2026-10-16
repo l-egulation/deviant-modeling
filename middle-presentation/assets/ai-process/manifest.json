@@ -1,0 +1,106 @@
+{
+  "dagger-attack.gif": {
+    "bytes": 110438,
+    "sha256": "d9dca80a7c3ae8e60da8c97e329f7ddcfa91af0c882be0218f12831d3041390f",
+    "size": [
+      381,
+      444
+    ],
+    "frames": 34,
+    "duration_ms": 1600,
+    "bbox": [
+      24,
+      24,
+      357,
+      420
+    ]
+  },
+  "hero-mixamo-run-poster.png": {
+    "bytes": 92310,
+    "sha256": "c539d5a0c24c13939f357c7beb5f406bbe36ebae62a002b5729d60f0dd8954c5"
+  },
+  "hero-mixamo-run.mp4": {
+    "bytes": 201566,
+    "sha256": "ade93f9d1784a90deab76e14a0120c0315bd904cd998da88f23010fcc1fa046e"
+  },
+  "kimodo-run-source-poster.png": {
+    "bytes": 71969,
+    "sha256": "da5ccd022ccfe288cf049414f07ce8595c422765830465d8082149a5c57e0b9e"
+  },
+  "kimodo-run-source.mp4": {
+    "bytes": 572292,
+    "sha256": "86579d7c00ae1d501c976f925fb8615856234be22fec6ed9c7bc3c3583e23d53"
+  },
+  "mixamo-comparison.gif": {
+    "bytes": 4990625,
+    "sha256": "b52a9d6c15faf0ce8bd804b074869b1329d0c0e54b2306260fc612ed77ad9406",
+    "size": [
+      768,
+      384
+    ],
+    "frames": 88,
+    "duration_ms": 2930,
+    "bbox": [
+      0,
+      0,
+      768,
+      384
+    ]
+  },
+  "rapier-attack.gif": {
+    "bytes": 81884,
+    "sha256": "aef72bd0fd860c618e246064b0422c65d3409f7547713f7bd08e49f8815d4cf9",
+    "size": [
+      483,
+      246
+    ],
+    "frames": 26,
+    "duration_ms": 1140,
+    "bbox": [
+      24,
+      24,
+      459,
+      222
+    ]
+  },
+  "sword-attack-sheet.png": {
+    "bytes": 4299,
+    "sha256": "02f1c758208f42d715edf18cd680ea941cd562d770e33937d0d765332e48d4dc"
+  },
+  "sword-attack.gif": {
+    "bytes": 64720,
+    "sha256": "d4d3a6d36ae593c89ed91ae66f85f4c6ec6069d36ea4c875e5dabe51994e93f6",
+    "size": [
+      540,
+      438
+    ],
+    "frames": 17,
+    "duration_ms": 1240,
+    "bbox": [
+      24,
+      24,
+      516,
+      414
+    ]
+  },
+  "tripo-character.png": {
+    "bytes": 339350,
+    "sha256": "7c2680640893c0642ea0ecdbbb6a670535c432b0e407c7eeea9045634c36287a"
+  },
+  "whip-attack.gif": {
+    "bytes": 95288,
+    "sha256": "95dfeacd5824718be9c2b0eaa2cd9655823fb7317559bb1598acef5ed941673a",
+    "size": [
+      858,
+      306
+    ],
+    "frames": 26,
+    "duration_ms": 1540,
+    "bbox": [
+      24,
+      24,
+      834,
+      282
+    ]
+  }
+}
