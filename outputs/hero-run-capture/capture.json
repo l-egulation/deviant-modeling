@@ -1,0 +1,364 @@
+{
+  "source_blend": "outputs/hero-mixamo-run.blend",
+  "source_commit": "51d27fe",
+  "motion": "Mixamo with approved elbow/root corrections, not Kimodo",
+  "fps": 30,
+  "frame_count": 22,
+  "cycle_seconds": 0.7333333333333333,
+  "canvas": [
+    512,
+    512
+  ],
+  "background": "transparent RGBA",
+  "view": "orthographic side, left-facing; fixed orientation/height, root XY tracking only",
+  "pixel_art": false,
+  "crop": "shared full canvas, no per-frame auto-crop",
+  "sheet": {
+    "file": "spritesheet.png",
+    "columns": 6,
+    "rows": 4,
+    "cell": [
+      512,
+      512
+    ],
+    "order": "left to right, top to bottom; final two cells empty"
+  },
+  "frames": [
+    {
+      "file": "frames/000.png",
+      "source_frame": 1,
+      "time_seconds": 0.0,
+      "ground_pivot_pixels": [
+        255.9999237060547,
+        435.0771942138672
+      ]
+    },
+    {
+      "file": "frames/001.png",
+      "source_frame": 2,
+      "time_seconds": 0.03333333333333333,
+      "ground_pivot_pixels": [
+        255.9999237060547,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/002.png",
+      "source_frame": 3,
+      "time_seconds": 0.06666666666666667,
+      "ground_pivot_pixels": [
+        255.9999237060547,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/003.png",
+      "source_frame": 4,
+      "time_seconds": 0.1,
+      "ground_pivot_pixels": [
+        255.9999237060547,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/004.png",
+      "source_frame": 5,
+      "time_seconds": 0.13333333333333333,
+      "ground_pivot_pixels": [
+        255.9999237060547,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/005.png",
+      "source_frame": 6,
+      "time_seconds": 0.16666666666666666,
+      "ground_pivot_pixels": [
+        255.9999237060547,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/006.png",
+      "source_frame": 7,
+      "time_seconds": 0.2,
+      "ground_pivot_pixels": [
+        255.9999237060547,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/007.png",
+      "source_frame": 8,
+      "time_seconds": 0.23333333333333334,
+      "ground_pivot_pixels": [
+        255.9999237060547,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/008.png",
+      "source_frame": 9,
+      "time_seconds": 0.26666666666666666,
+      "ground_pivot_pixels": [
+        255.9999237060547,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/009.png",
+      "source_frame": 10,
+      "time_seconds": 0.3,
+      "ground_pivot_pixels": [
+        255.9999237060547,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/010.png",
+      "source_frame": 11,
+      "time_seconds": 0.3333333333333333,
+      "ground_pivot_pixels": [
+        255.9999237060547,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/011.png",
+      "source_frame": 12,
+      "time_seconds": 0.36666666666666664,
+      "ground_pivot_pixels": [
+        255.99993896484375,
+        435.0771942138672
+      ]
+    },
+    {
+      "file": "frames/012.png",
+      "source_frame": 13,
+      "time_seconds": 0.4,
+      "ground_pivot_pixels": [
+        255.99993896484375,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/013.png",
+      "source_frame": 14,
+      "time_seconds": 0.43333333333333335,
+      "ground_pivot_pixels": [
+        255.99993896484375,
+        435.0771942138672
+      ]
+    },
+    {
+      "file": "frames/014.png",
+      "source_frame": 15,
+      "time_seconds": 0.4666666666666667,
+      "ground_pivot_pixels": [
+        255.99993896484375,
+        435.0771942138672
+      ]
+    },
+    {
+      "file": "frames/015.png",
+      "source_frame": 16,
+      "time_seconds": 0.5,
+      "ground_pivot_pixels": [
+        255.99993896484375,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/016.png",
+      "source_frame": 17,
+      "time_seconds": 0.5333333333333333,
+      "ground_pivot_pixels": [
+        255.99993896484375,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/017.png",
+      "source_frame": 18,
+      "time_seconds": 0.5666666666666667,
+      "ground_pivot_pixels": [
+        255.9999542236328,
+        435.0771942138672
+      ]
+    },
+    {
+      "file": "frames/018.png",
+      "source_frame": 19,
+      "time_seconds": 0.6,
+      "ground_pivot_pixels": [
+        255.99993896484375,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/019.png",
+      "source_frame": 20,
+      "time_seconds": 0.6333333333333333,
+      "ground_pivot_pixels": [
+        255.99993896484375,
+        435.0771942138672
+      ]
+    },
+    {
+      "file": "frames/020.png",
+      "source_frame": 21,
+      "time_seconds": 0.6666666666666666,
+      "ground_pivot_pixels": [
+        255.99993896484375,
+        435.07718658447266
+      ]
+    },
+    {
+      "file": "frames/021.png",
+      "source_frame": 22,
+      "time_seconds": 0.7,
+      "ground_pivot_pixels": [
+        255.9999542236328,
+        435.07718658447266
+      ]
+    }
+  ],
+  "validation": {
+    "alpha_present": true,
+    "frames_unclipped": true,
+    "alpha_bounds": [
+      [
+        152,
+        58,
+        318,
+        435
+      ],
+      [
+        154,
+        55,
+        331,
+        434
+      ],
+      [
+        157,
+        55,
+        343,
+        432
+      ],
+      [
+        160,
+        59,
+        349,
+        428
+      ],
+      [
+        162,
+        65,
+        369,
+        426
+      ],
+      [
+        157,
+        71,
+        387,
+        428
+      ],
+      [
+        161,
+        75,
+        391,
+        431
+      ],
+      [
+        159,
+        77,
+        386,
+        436
+      ],
+      [
+        158,
+        75,
+        374,
+        437
+      ],
+      [
+        157,
+        71,
+        356,
+        436
+      ],
+      [
+        155,
+        65,
+        329,
+        437
+      ],
+      [
+        155,
+        59,
+        327,
+        437
+      ],
+      [
+        156,
+        55,
+        342,
+        437
+      ],
+      [
+        154,
+        55,
+        349,
+        433
+      ],
+      [
+        155,
+        60,
+        356,
+        428
+      ],
+      [
+        148,
+        67,
+        362,
+        425
+      ],
+      [
+        146,
+        73,
+        376,
+        424
+      ],
+      [
+        153,
+        78,
+        378,
+        429
+      ],
+      [
+        152,
+        78,
+        371,
+        433
+      ],
+      [
+        152,
+        75,
+        353,
+        435
+      ],
+      [
+        151,
+        70,
+        329,
+        435
+      ],
+      [
+        152,
+        63,
+        318,
+        435
+      ]
+    ]
+  }
+}
