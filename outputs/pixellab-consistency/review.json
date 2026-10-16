@@ -1,0 +1,9 @@
+{
+  "job": "c33d69a2-f79d-4f1f-90cc-ad1d6a0c3eb5",
+  "generations_charged": 9,
+  "test": "single 2x2 grid, three poses and one empty cell",
+  "style": "similar ivory/teal palette and hood/scarf motif across three cells",
+  "pose_preservation": "FAIL: distinct poses converge toward the same reference running pose",
+  "empty_cell": "FAIL: fourth quadrant contains a white silhouette",
+  "scope": "Does not prove all PixelLab animation tools fail; this single-grid reference edit is unsuitable for faithful motion transfer. No full animation generated."
+}

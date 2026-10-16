@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-16",
+  "source": "outputs/hero-run-capture/frames",
+  "indices": [
+    0,
+    5,
+    16
+  ],
+  "source_fps": 30,
+  "input_crop_shared": [
+    110,
+    50,
+    402,
+    450
+  ],
+  "input_resize": [
+    80,
+    110
+  ],
+  "input_cell": [
+    128,
+    128
+  ],
+  "input_offset": [
+    24,
+    9
+  ],
+  "grid": [
+    256,
+    256
+  ],
+  "layout": [
+    "top-left:000",
+    "top-right:005",
+    "bottom-left:016",
+    "bottom-right:empty"
+  ],
+  "model": "PixelLab Pro Flash reference edit",
+  "seed": 42,
+  "reference_job": "cad8ba8b-62d5-40e1-acdd-31d06c03fec0",
+  "job": "c33d69a2-f79d-4f1f-90cc-ad1d6a0c3eb5",
+  "budget_quote": 9,
+  "scope": "Single-grid three-keypose consistency test; not a full sequence or cross-batch guarantee"
+}

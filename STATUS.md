@@ -6,6 +6,8 @@
 
 ## 최신 검토
 
+2026-10-16 PixelLab 일관성: 남은 보너스 9회로 세 주요 자세의 단일 시트 reference 편집을 실행했습니다. 화풍은 유사하지만 자세가 거의 동일하게 수렴하고 빈 칸에 흰 실루엣이 생성되어, 이 방식의 모션 보존 검사는 FAIL입니다. outputs/pixellab-consistency/comparison.png 및 docs/PIXELLAB_STYLE_TEST.md 참조. 22장 전체 변환·3D 재작업은 하지 않았습니다.
+
 2026-10-16 PixelLab: 팀원 대기 GIF 화풍을 참고한 대표 달리기 한 장의 스타일 편집과 단순화 후보를 생성했습니다. 총 보너스 11회, 추가 결제 없음. 3D 질감 제거와 밝은 팔레트는 가능했으나 후드·스카프·팔다리 형태 변화가 있어 정확한 모션 보존은 미검증입니다. outputs/pixellab-style-test/comparison.png 및 docs/PIXELLAB_STYLE_TEST.md 참조. 모델 재제작·카메라 변경·22프레임 전체 변환은 하지 않았습니다.
 
 2026-10-16 캡처: 현재 달리기 한 주기를 30fps·투명 512×512 PNG 22장으로 추출했습니다. outputs/hero-run-capture에 개별 프레임·원본 시트·기준점 메타데이터가 있습니다. 도트 변환은 아직 수행하지 않았습니다. docs/SPRITE_CAPTURE.md 참조.
