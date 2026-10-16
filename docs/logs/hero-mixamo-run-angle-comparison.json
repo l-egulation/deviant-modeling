@@ -1,15 +1,15 @@
 {
   "LeftArm": {
-    "previous_bend_error_max_degrees": 0.0003093438314749619,
-    "median": 2.885736610380718e-05
+    "previous_bend_error_max_degrees": 0.0002010632355791131,
+    "median": 2.5562036441328928e-05
   },
   "LeftUpLeg": {
     "previous_bend_error_max_degrees": 0.0001426678299054629,
     "median": 2.4107501364056816e-05
   },
   "RightArm": {
-    "previous_bend_error_max_degrees": 0.00019597180406094594,
-    "median": 3.3289892954257994e-05
+    "previous_bend_error_max_degrees": 0.00020350845373684479,
+    "median": 3.018706427582174e-05
   },
   "RightUpLeg": {
     "previous_bend_error_max_degrees": 0.00017661726517914644,

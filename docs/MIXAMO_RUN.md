@@ -12,6 +12,22 @@
 
 프레임·재생 검사 결과: docs/logs/mixamo-running.json. 재현은 Blender scripts/preview-mixamo-run.py 실행 후 Kimodo Python의 scripts/encode-mixamo-run.py입니다. 원본 출처와 파일을 Kimodo 생성 결과와 구분합니다.
 
+## 2026-10-16 — 팔꿈치 펴기·높이 떨림 수정
+
+사용자가 팔꿈치를 둔각으로 펴고 지진처럼 보이는 떨림을 줄이도록 승인했습니다. 현재 hero-mixamo-run.*는 이 수정본이며 원본 FBX·A 모델 형상은 그대로입니다. 아래 원본 각도 보존 설명은 수정 이전 이력입니다.
+
+- 실제 팔꿈치 안쪽 각도: 59.07~105.99° → 110.73~122.35°. 앞뒤 스윙에 따라 연속적으로 달라집니다. 어깨·상완·몸통·머리·발의 세계 회전 차이 0도 확인. 팔꿈치 이후 회전은 의도적으로 원본과 달라집니다.
+- 떨림 원인: 매 프레임 변형 메시의 최저점에 맞춰 몸 전체를 올리고 내린 기존 보정. 높이 2차 차분 최대 0.06524m/frame² → 0.01116m/frame², 약 82.9% 감소. 높이 범위 0.09286m → 0.06381m. 카메라는 등속 전진만 추적합니다.
+- 22프레임 주기의 저주파 높이 곡선으로 보정했습니다. 높이만 부드럽게 만들면 발이 뜨므로, 고정 길이 두 뼈 IK로 기존 발목 세계 위치를 유지했습니다. 발목 위치 최대 차이 약 5e-7m, 뼈 크기 변화 0. 무릎 각도는 원본과 달라집니다. 바닥 최소 0m.
+- 팔꿈치 소매 가중치 전환 폭을 넓혔습니다. 전체 90프레임 최대 모서리 늘어짐은 3.05배에서 약 2.50배로 감소했습니다. 기본 메시 정점 이동 0, 텍스처 유지. 소매·어깨/골반 접힘을 모두 해결했다는 뜻은 아닙니다.
+- MP4는 90프레임·30fps·3초이며, GIF는 22프레임 네 주기인 88프레임만 사용해 끝에서 다른 위상으로 돌아가는 문제를 줄입니다. 원본 한 주기 안의 경계 품질과 발 미끄러짐은 최종 검토 대상입니다.
+- 발목 위치를 보존하므로 기존 발 미끄러짐은 남습니다. 새 팔 자세가 몸통/장갑과 겹치는 일부 실루엣도 최종 미술 검토가 필요합니다.
+
+재현: rig-proportion-model.py → MIXAMO_TARGET_RIG=outputs/hero-proportion-rig.blend apply-mixamo-run.py → 수정 전 blend를 .cache/run-before-polish.blend로 복사 → polish-mixamo-run.py → verify-mixamo-polish.py / 기존 verify-tripo-run.py → RUN_STEM=hero-mixamo-run FULL_RENDER=1 render-tripo-run.py → RUN_STEM=hero-mixamo-run RUN_POLISHED=1 encode-tripo-run.py. polish 스크립트는 이미 수정된 파일에 이중 실행하지 못하도록 검사합니다.
+
+측정 기록: docs/logs/hero-mixamo-polish.json, hero-mixamo-polish-validation.json. 이전 단계의 rig 보존 검사는 보정 전 결과이며 최종 자세 검사는 polish-validation과 구분합니다. 골격 비교는 원본 / 수정 전 A 모델 / 현재 수정본으로 갱신했습니다.
+
+
 ## 2026-10-16 — 승인된 A 모델에 연결
 
 현재 hero-mixamo-run.*는 새 A안 모델 적용본입니다. 원본 모델은 outputs/hero-proportion-model.glb, 골격 기준 장면은 outputs/hero-proportion-rig.blend입니다. 이전 짧은 모델의 결과는 d6c1355 이전 이력으로 확인합니다.

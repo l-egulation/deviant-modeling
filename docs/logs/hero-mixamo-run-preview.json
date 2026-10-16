@@ -2,6 +2,7 @@
   "decoded_frames": 90,
   "fps": 30.0,
   "seconds": 3,
-  "motion_source": "Mixamo Running With Intention, 22-frame original cycle at 30fps; source limb directions preserved on character lengths; whole-body floor-clearance translation, no leg IK",
-  "scope": "Video encoding PASS, artistic acceptance and clothing polish are separate"
+  "motion_source": "Mixamo with user-approved 111-122 degree elbows, periodic root height and fixed-length leg IK; source FBX unchanged",
+  "scope": "Video encoding PASS, artistic acceptance and clothing polish are separate",
+  "gif_loop_frames": 88
 }

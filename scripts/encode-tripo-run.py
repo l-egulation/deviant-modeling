@@ -8,6 +8,7 @@ from fractions import Fraction
 from PIL import Image,ImageDraw
 ROOT=Path(__file__).resolve().parents[1]
 STEM=os.environ.get('RUN_STEM','tripo-run')
+POLISHED=os.environ.get('RUN_POLISHED')=='1'
 frames=[Image.open(ROOT/f'.cache/{STEM}-frames/{f:03d}.png').convert('RGB') for f in range(1,91)]
 path=ROOT/f'outputs/{STEM}-preview.mp4'
 with av.open(str(path),'w') as container:
@@ -23,8 +24,8 @@ small=[im.resize((384,384),Image.Resampling.LANCZOS) for im in frames]
 palette=Image.new('RGB',(384*3,384*3))
 for i,im in enumerate(small[::10]):palette.paste(im,((i%3)*384,(i//3)*384))
 palette=palette.quantize(colors=256,method=Image.Quantize.MEDIANCUT)
-gif=[im.quantize(palette=palette,dither=Image.Dither.NONE) for im in small]
-gif[0].save(ROOT/f'outputs/{STEM}-preview.gif',save_all=True,append_images=gif[1:],duration=[30,30,40]*30,loop=0,optimize=False,disposal=2)
+gif=[im.quantize(palette=palette,dither=Image.Dither.NONE) for im in (small[:88] if POLISHED else small)]
+gif[0].save(ROOT/f'outputs/{STEM}-preview.gif',save_all=True,append_images=gif[1:],duration=([30,30,40]*30)[:len(gif)],loop=0,optimize=False,disposal=2)
 sheet=Image.new('RGB',(1536,1024));draw=ImageDraw.Draw(sheet)
 for row,label in enumerate(('front','side')):
     for col,f in enumerate((8,16,32)):
@@ -34,6 +35,10 @@ sheet.save(ROOT/f'outputs/{STEM}-contact-sheet.png')
 report={'decoded_frames':len(decoded),'fps':fps,'seconds':3,'motion_source':('Mixamo Running With Intention, 22-frame original cycle at 30fps; source limb directions preserved on character lengths; whole-body floor-clearance translation, no leg IK' if STEM=='hero-mixamo-run' else 'Fresh Kimodo seed 107 generated 3-second sample, unchanged timing; proportion retarget and foot contact correction only'),
         'scope':'Video encoding PASS, artistic acceptance and clothing polish are separate'}
 (ROOT/f'docs/logs/{STEM}-preview.json').write_text(json.dumps(report,indent=2)+'\n')
+if POLISHED:
+    report['motion_source']='Mixamo with user-approved 111-122 degree elbows, periodic root height and fixed-length leg IK; source FBX unchanged'
+    report['gif_loop_frames']=88
+    (ROOT/f'docs/logs/{STEM}-preview.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report))
 
 # Synchronized reference / applied-character playback, when source renders exist.
@@ -42,7 +47,7 @@ if STEM=='hero-mixamo-run' and all((source_dir/f'side-{i:03d}.png').exists() for
     comparison=[]
     for i,im in enumerate(frames):
         row=Image.new('RGB',(1024,512));row.paste(Image.open(source_dir/f'side-{i%22:03d}.png').convert('RGB'),(0,0));row.paste(im,(512,0))
-        label=ImageDraw.Draw(row);label.text((12,12),'Mixamo original / same phase',fill='black');label.text((524,12),'Character proportions / source angles',fill='black')
+        label=ImageDraw.Draw(row);label.text((12,12),'Mixamo original / same phase',fill='black');label.text((524,12),('Character / opened elbows + stable root' if POLISHED else 'Character proportions / source angles'),fill='black')
         comparison.append(row)
     with av.open(str(ROOT/f'outputs/{STEM}-comparison.mp4'),'w') as container:
         stream=container.add_stream('libx264',rate=30);stream.width=1024;stream.height=512;stream.pix_fmt='yuv420p';stream.options={'crf':'18'}
@@ -52,9 +57,9 @@ if STEM=='hero-mixamo-run' and all((source_dir/f'side-{i:03d}.png').exists() for
         for packet in stream.encode():container.mux(packet)
     with av.open(str(ROOT/f'outputs/{STEM}-comparison.mp4')) as container:
         assert sum(1 for _ in container.decode(video=0))==90
-    comparison=[im.resize((768,384),Image.Resampling.LANCZOS) for im in comparison]
+    comparison=[im.resize((768,384),Image.Resampling.LANCZOS) for im in (comparison[:88] if POLISHED else comparison)]
     board=Image.new('RGB',(768*3,384*3))
     for i,im in enumerate(comparison[::10]):board.paste(im,((i%3)*768,(i//3)*384))
     comparison_palette=board.quantize(colors=256,method=Image.Quantize.MEDIANCUT)
     comparison=[im.quantize(palette=comparison_palette,dither=Image.Dither.NONE) for im in comparison]
-    comparison[0].save(ROOT/f'outputs/{STEM}-comparison.gif',save_all=True,append_images=comparison[1:],duration=[30,30,40]*30,loop=0,disposal=2)
+    comparison[0].save(ROOT/f'outputs/{STEM}-comparison.gif',save_all=True,append_images=comparison[1:],duration=([30,30,40]*30)[:len(comparison)],loop=0,disposal=2)

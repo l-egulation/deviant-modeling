@@ -1,0 +1,12 @@
+Info: Saved as "hero-mixamo-run.blend"
+INFO Draco mesh compression is available, use library at /opt/deviant-blender/blender-4.5.13-linux-x64/4.5/scripts/addons_core/io_scene_gltf2/libextern_draco.so
+10:48:09 | INFO: Starting glTF 2.0 export
+10:48:09 | INFO: Extracting primitive: tripo_2a663c8a_0647_4d18_b8b0_e80b4bea8544
+10:48:09 | INFO: Primitives created: 1
+10:48:09 | INFO: Finished glTF 2.0 export in 0.5311872959136963 s
+
+{"source": "Unchanged Mixamo FBX; intentional user elbow/root correction", "elbow_interior_before_range": [59.06628248039836, 105.98503071956118], "elbow_interior_after_range": [110.72898982934785, 122.34930105430865], "root_vertical_second_difference_before": 0.06524387467652559, "root_vertical_second_difference_after": 0.011158255636289444, "root_height_range_before": 0.09285710006952286, "root_height_range_after": 0.06381436023696438, "constant_floor_lift": -6.332993507385254e-08, "floor_min_after": 0.0, "ground_clearance_max_after": 0.03270847722887993, "scope": "Fixed-length leg IK preserves prior ankle targets before one constant floor lift; foot sliding and clothing remain separate"}
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/hero-mixamo-run.blend"
+
+Blender quit

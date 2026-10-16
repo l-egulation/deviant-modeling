@@ -1,5 +1,5 @@
 """Project actual sampled bones for source / previous / proportional comparison."""
-import json
+import json,os
 from pathlib import Path
 import numpy as np
 from PIL import Image,ImageDraw
@@ -8,7 +8,7 @@ data=json.loads((ROOT/'docs/logs/hero-mixamo-run-skeleton.json').read_text())
 frames=[]
 for i in range(22):
  im=Image.new('RGB',(1140,480),(237,239,242));draw=ImageDraw.Draw(im)
- for col,(key,title,height) in enumerate([('source','Mixamo original',1.7),('previous','Previous transfer',.94),('target','Character proportions / source angles',.94)]):
+ for col,(key,title,height) in enumerate([('source','Mixamo original',1.7),('previous','Previous transfer',.94),('target',('Opened elbows / stable root' if os.environ.get('RUN_POLISHED')=='1' else 'Character proportions / source angles'),.94)]):
   bones=data[key][i];hip=np.array(bones['Hips'][0]);scale=315/height
   draw.text((col*380+16,18),title,fill=(25,30,40))
   for name,ends in bones.items():

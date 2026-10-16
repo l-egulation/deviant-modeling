@@ -2,9 +2,9 @@
   "weight_sum_max_error": 8.940696716308594e-08,
   "bone_scale_error": 0,
   "floor_min_m": 0.0,
-  "glb_pose_bound_max_error_m": 3.5762786865234375e-07,
+  "glb_pose_bound_max_error_m": 2.384185791015625e-07,
   "frames_checked": 90,
   "bones": 18,
   "scope": "Structural validation PASS; does not certify visual clothing quality",
-  "ankle_rotation_from_bind_max_degrees": 45.322322881081455
+  "ankle_rotation_from_bind_max_degrees": 38.31326524250069
 }

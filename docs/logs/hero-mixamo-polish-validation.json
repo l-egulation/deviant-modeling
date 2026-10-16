@@ -1,0 +1,11 @@
+{
+  "actual_elbow_interior_range": [
+    110.72897958872855,
+    122.34931019726548
+  ],
+  "unchanged_body_upperarm_foot_world_rotation_max_degrees": 0.0,
+  "ankle_world_position_error_max_m": 4.996335127740797e-07,
+  "rest_mesh_position_error": 0,
+  "baseline": "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/.cache/run-before-polish.blend",
+  "frames": 90
+}
