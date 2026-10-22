@@ -25,7 +25,7 @@ lo = Vector([min(p[i] for p in points) for i in range(3)])
 hi = Vector([max(p[i] for p in points) for i in range(3)])
 center = (lo + hi) / 2
 size = max(hi - lo)
-report = {'source': 'Tripo P2.0 export, no geometry edits',
+report = {'source': os.environ.get('TRIPO_REVIEW_SOURCE','Tripo P2.0 export, no geometry edits'),
           'asset_id': ASSET_ID, 'input': MODEL,
           'meshes': len(meshes), 'vertices': sum(len(o.data.vertices) for o in meshes),
           'faces': sum(len(o.data.polygons) for o in meshes),
