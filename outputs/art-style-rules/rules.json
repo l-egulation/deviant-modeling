@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-22",
+  "hero_palette": [
+    "#FDEEDA",
+    "#D2B396",
+    "#1B1616",
+    "#025673",
+    "#02648C",
+    "#EBA516"
+  ],
+  "measured_reference_content_pixels": [
+    48,
+    64
+  ],
+  "measured_eye_pixels": [
+    2,
+    5
+  ],
+  "initial_canvas": [
+    96,
+    96
+  ],
+  "initial_ground_pivot": [
+    48,
+    80
+  ],
+  "reference_height_pixels": 64,
+  "scarf": "long, cloth dynamics required; user confirmed",
+  "robe": "upper thigh, front opening; user confirmed",
+  "camera_initial": {
+    "orthographic": true,
+    "degrees_from_side_toward_front": 30,
+    "downward_degrees": 5,
+    "render_validated": false
+  },
+  "physics": "required, not implemented or validated",
+  "source": "team screenshot supplied by user; no AI redraw"
+}

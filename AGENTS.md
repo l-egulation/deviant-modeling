@@ -4,6 +4,7 @@
 
 - 2026-10-15 사용자 명시 수정: 달리기 피드백은 Kimodo 프롬프트에 반영해 새 생성 후보를 뽑는다. animate-run-keyposes.py의 수작업 반복본(0e20e99)은 거절됐으며 다시 적용하지 않는다. Blender는 비율 매핑·필요한 접지 및 의상 보정만 한다. 생성 원본과 적용본의 차이를 구분해 보고한다.
 - 먼저 README.md, STATUS.md, START-HERE.md를 읽는다.
+- 2026-10-22 새 미술 기준은 docs/ART_DIRECTION.md를 읽는다. 원본 측정 6색/높이64px, 사용자 선택 긴 스카프·허벅지 위 로브/앞트임과 천 물리 요구를 따른다. 구현/검증 완료와 계획을 구분한다.
 - 목적은 Tripo 외형 → Kimodo 골격 모션 → Blender 리깅·모션 이식 → 도트 스프라이트 제작이다.
 - 현재 원본은 assets/ink-hero.glb. 기존 맥의 build_hero.py나 옛 blend를 현재 원본으로 쓰지 않는다.
 - 2026-10-15 사용자 승인 재작업: 후드·얼굴·색감은 유지하고 몸통·소매·하체를 새로 제작한다. 거절된 절차적 시안은 outputs/hero-model.blend이며 수평 T자 팔·약 23도 벌린 다리와 18뼈 리그를 사용한다. assets/ink-hero.glb는 디자인 원본으로 보존한다. hero-run.blend는 이전 모델의 달리기 검토본이다.

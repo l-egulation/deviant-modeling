@@ -1,0 +1,82 @@
+{
+  "team_gif_frame": {
+    "size": [
+      858,
+      306
+    ],
+    "opaque_bounds": [
+      120,
+      90,
+      273,
+      282
+    ],
+    "boundary_gcd_pixels": 3,
+    "colors": [
+      {
+        "hex": "#FDEEDA",
+        "pixels": 7461
+      },
+      {
+        "hex": "#1B1616",
+        "pixels": 4167
+      },
+      {
+        "hex": "#025673",
+        "pixels": 2826
+      },
+      {
+        "hex": "#D2B396",
+        "pixels": 936
+      },
+      {
+        "hex": "#02648C",
+        "pixels": 711
+      },
+      {
+        "hex": "#EBA516",
+        "pixels": 612
+      }
+    ],
+    "color_count": 6
+  },
+  "team_screenshot": {
+    "size": [
+      1024,
+      1024
+    ],
+    "opaque_bounds": [
+      296,
+      456,
+      680,
+      968
+    ],
+    "boundary_gcd_pixels": 8,
+    "colors": [
+      {
+        "hex": "#FDEEDA",
+        "pixels": 53056
+      },
+      {
+        "hex": "#1B1616",
+        "pixels": 22464
+      },
+      {
+        "hex": "#025673",
+        "pixels": 20096
+      },
+      {
+        "hex": "#D2B396",
+        "pixels": 7424
+      },
+      {
+        "hex": "#02648C",
+        "pixels": 5056
+      },
+      {
+        "hex": "#EBA516",
+        "pixels": 4352
+      }
+    ],
+    "color_count": 6
+  }
+}
