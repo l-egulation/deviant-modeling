@@ -1,0 +1,41 @@
+{
+  "Flat side": {
+    "opaque_colors": 6,
+    "alpha_values": [
+      0,
+      255
+    ],
+    "bounds": [
+      31,
+      17,
+      71,
+      79
+    ]
+  },
+  "Flat 30 deg": {
+    "opaque_colors": 6,
+    "alpha_values": [
+      0,
+      255
+    ],
+    "bounds": [
+      33,
+      17,
+      67,
+      79
+    ]
+  },
+  "Flat 45 deg": {
+    "opaque_colors": 6,
+    "alpha_values": [
+      0,
+      255
+    ],
+    "bounds": [
+      33,
+      17,
+      67,
+      79
+    ]
+  }
+}

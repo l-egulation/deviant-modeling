@@ -1,0 +1,25 @@
+{
+  "source": "outputs/hero-mixamo-run.blend",
+  "frame": 6,
+  "angles": [
+    0,
+    30,
+    45
+  ],
+  "palette": [
+    "FDEEDA",
+    "D2B396",
+    "1B1616",
+    "025673",
+    "02648C",
+    "EBA516"
+  ],
+  "material_assignment": "UV texture sampled per polygon; provisional semantic classification",
+  "geometry_modified": false,
+  "cloth_implemented": false,
+  "ortho_scale": 1.5,
+  "ground_pivot_at_96": [
+    48,
+    80
+  ]
+}
