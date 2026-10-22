@@ -1,0 +1,20 @@
+{
+  "base": "Actual Tripo A via art-style-prototype/prototype.blend",
+  "original_vertices": 9697,
+  "modified_vertices": 1356,
+  "min_modified_original_z": 0.64208984375,
+  "limb_geometry_unchanged": true,
+  "new_parts": [
+    "ArtRobe",
+    "ArtScarfTail"
+  ],
+  "motion": "neutral static pose only; no new Kimodo generation",
+  "cloth": "designed rest shape only; no simulation or physics validation",
+  "camera_angles": [
+    30,
+    45,
+    60,
+    90,
+    180
+  ]
+}
