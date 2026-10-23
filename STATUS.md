@@ -1,5 +1,7 @@
 # 현재 상태
 
+> 2026-10-23 사용자 수정: screen-study의 후드 눌림을 거절. 해당 형상 보정은 채택하지 않고 이전 원본 캡처로 복귀. `outputs/pixel-simple-run/preview.gif`, `spritesheet.png`가 최신 단순화 시험. 원래 coarse 캡처 윤곽/알파/위치22프레임 전부 보존,128캔버스·64논리격자(2×2픽셀),팀원 팔레트4색으로 작은 명암 제거. 상세 `docs/SIMPLE_PIXEL_RUN.md`. 원본 모션/3D/카메라 변경 없음.
+
 > 2026-10-23 고정 게임 시점 형태 시험: 동일45도 카메라에서 후드 낮춤/뒤끝·얼굴 방향·소매 깊이·스카프 꼬리·금색 직사각형 눈을 보정한 비교본. `outputs/pixel-screen-study/comparison.gif`, `docs/SCREEN_SPRITE_STUDY.md`. 기존 의상 베이크를 보정한 미술 후보이며 새 천 시뮬레이션이 아니다. 원본 승인 모델/모션 유지. 소매/부츠 부피와 후드 윤곽 차이는 남는다.
 
 > 2026-10-23 단순 색면 대표 프레임: 작은 법선 명암을 제거한 단색/고정 큰 그림자와30·45·60도 시점을 비교. `outputs/pixel-flat-study/comparison.png`, 상세 `docs/FLAT_SPRITE_STUDY.md`. 로브 색면·두눈 노출 개선, 후드/소매 실루엣 차이는 남음. 원본 형상/모션과 기존 전체 시트는 유지, 전체 애니메이션 적용 전 한 장 검토 단계.

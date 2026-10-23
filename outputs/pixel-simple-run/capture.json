@@ -1,0 +1,325 @@
+{
+  "source": "outputs/pixel-run-sprites/coarse",
+  "motion": "Mixamo Running With Intention on fitted rig + independent cloth",
+  "source_frames": [
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+  ],
+  "fps": 30,
+  "frame_count": 22,
+  "duration_seconds": 0.7333333333333333,
+  "canvas": [
+    128,
+    128
+  ],
+  "palette": [
+    "FDEEDA",
+    "D2B396",
+    "1B1616",
+    "025673",
+    "02648C",
+    "EBA516"
+  ],
+  "camera": "orthographic 30 degrees from side; fixed height; root XY tracking",
+  "ground_pivot": [
+    64,
+    112
+  ],
+  "per_frame_crop": false,
+  "texture": "UV-sampled region classification only; texture discarded from output shading",
+  "same_phase_cloth_drift_m": {
+    "max": 0.057501997852144306,
+    "p95": 0.031339964360644894
+  },
+  "loop_seam_verified": false,
+  "sheet": {
+    "columns": 6,
+    "rows": 4,
+    "cell": [
+      128,
+      128
+    ],
+    "order": "left-to-right then top-to-bottom",
+    "empty_last_cells": 2
+  },
+  "gif_duration_ms": 730,
+  "note": "GIF uses centisecond timing (730ms); game playback uses exact 30fps (733.333ms). Cloth loop seam is not guaranteed.",
+  "geometry_edit": false,
+  "screen_study_used": false,
+  "logical_grid": [
+    64,
+    64
+  ],
+  "pixel_block_size": 2,
+  "colors_used": [
+    "FDEEDA",
+    "1B1616",
+    "025673",
+    "EBA516"
+  ],
+  "simplification": "merge ivory and teal shadow/highlight shades; preserve alpha and material boundaries",
+  "validation": [
+    {
+      "frame": 0,
+      "bounds": [
+        38,
+        22,
+        94,
+        112
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 1,
+      "bounds": [
+        38,
+        22,
+        94,
+        112
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 2,
+      "bounds": [
+        40,
+        20,
+        94,
+        110
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 3,
+      "bounds": [
+        40,
+        20,
+        92,
+        110
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 4,
+      "bounds": [
+        42,
+        20,
+        92,
+        110
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 5,
+      "bounds": [
+        42,
+        20,
+        92,
+        110
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 6,
+      "bounds": [
+        42,
+        20,
+        92,
+        110
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 7,
+      "bounds": [
+        42,
+        22,
+        90,
+        112
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 8,
+      "bounds": [
+        40,
+        22,
+        90,
+        112
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 9,
+      "bounds": [
+        40,
+        22,
+        90,
+        112
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 10,
+      "bounds": [
+        38,
+        22,
+        90,
+        112
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 11,
+      "bounds": [
+        38,
+        22,
+        92,
+        112
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 12,
+      "bounds": [
+        38,
+        20,
+        92,
+        112
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 13,
+      "bounds": [
+        38,
+        20,
+        92,
+        110
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 14,
+      "bounds": [
+        38,
+        20,
+        94,
+        108
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 15,
+      "bounds": [
+        38,
+        20,
+        94,
+        108
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 16,
+      "bounds": [
+        38,
+        20,
+        96,
+        108
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 17,
+      "bounds": [
+        38,
+        22,
+        96,
+        110
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 18,
+      "bounds": [
+        36,
+        24,
+        98,
+        112
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 19,
+      "bounds": [
+        38,
+        22,
+        98,
+        112
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 20,
+      "bounds": [
+        38,
+        22,
+        96,
+        112
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    },
+    {
+      "frame": 21,
+      "bounds": [
+        38,
+        22,
+        96,
+        112
+      ],
+      "colors": 4,
+      "alpha_matches_previous_capture": true
+    }
+  ]
+}
