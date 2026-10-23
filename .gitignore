@@ -17,3 +17,5 @@ model-cache/
 *.blend1
 *.blend2
 *.zip
+# Reproducible high-density Blender import; source GLB is tracked.
+outputs/tripo-pixel.blend

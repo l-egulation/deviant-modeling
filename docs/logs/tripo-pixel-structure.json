@@ -1,0 +1,45 @@
+{
+  "source": "Tripo-H3.1-unchanged-export",
+  "asset_id": "e17c5a9c-2576-4917-8f27-10712925121c",
+  "input": "assets/hero-pixel-tripo.glb",
+  "meshes": 1,
+  "vertices": 1000279,
+  "faces": 1930974,
+  "quads": 0,
+  "armatures": 0,
+  "materials": 1,
+  "bounds_min": [
+    -0.4573516845703125,
+    -0.1858520656824112,
+    0.0
+  ],
+  "bounds_max": [
+    0.4573516845703125,
+    0.1858520656824112,
+    0.978790283203125
+  ],
+  "rigging_validated": false,
+  "texture_images": [
+    {
+      "name": "hero-pixel-tripo_basecolor.jpg",
+      "size": [
+        4096,
+        4096
+      ]
+    },
+    {
+      "name": "hero-pixel-tripo_normal.png",
+      "size": [
+        4096,
+        4096
+      ]
+    },
+    {
+      "name": "hero-pixel-tripo_rm.jpg",
+      "size": [
+        4096,
+        4096
+      ]
+    }
+  ]
+}
