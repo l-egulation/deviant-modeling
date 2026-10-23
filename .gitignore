@@ -24,3 +24,6 @@ outputs/tripo-pixel-inspection.npz
 outputs/pixel-run-cloth-cache.npz
 # Intermediate high-resolution flat-color captures; final sprites and originals tracked.
 outputs/pixel-run-sprites/render/
+# Reproducible high-resolution camera-shape study renders.
+outputs/pixel-screen-study/before/
+outputs/pixel-screen-study/after/

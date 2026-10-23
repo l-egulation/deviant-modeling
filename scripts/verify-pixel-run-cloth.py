@@ -1,9 +1,9 @@
 """Check actual baked triangles; coarse cage collisions are not sufficient evidence."""
-import bpy,numpy as np,json
+import bpy,numpy as np,json,os
 from pathlib import Path
 from mathutils.bvhtree import BVHTree
 R=Path(__file__).resolve().parents[1]
-bpy.ops.wm.open_mainfile(filepath=str(R/'outputs/pixel-run-cloth.blend'))
+bpy.ops.wm.open_mainfile(filepath=str(R/os.environ.get('VERIFY_INPUT','outputs/pixel-run-cloth.blend')))
 h=bpy.data.objects['TripoPixel_Character'];keys=h.data.shape_keys.key_blocks
 p=np.array([v.co[:] for v in keys[0].data])
 labels=np.array([next(h.vertex_groups[g.group].name[7:] for g in v.groups if h.vertex_groups[g.group].name.startswith('Region_')) for v in h.data.vertices])
@@ -36,4 +36,4 @@ for f in range(1,91):
  ratio[~valid]=0;k=int(ratio.argmax())
  rows.append({'frame':f,'scarf_robe_intersections':int(hits),'max_edge_stretch':float(ratio[k]),'worst_rest_edge':p[edges[k]].tolist(),'worst_regions':labels[edges[k]].tolist(),'min_z':float(q[:,2].min())})
 report={'scope':'90 frames; noncoplanar rendered outer robe/scarf-tail intersections; excludes attachments, self-collision and continuous collision','robe_triangles':len(robe),'scarf_triangles':len(scarf),'frames_with_intersections':sum(r['scarf_robe_intersections']>0 for r in rows),'max_pairs':max(r['scarf_robe_intersections'] for r in rows),'max_edge_stretch':max(r['max_edge_stretch'] for r in rows),'frames':rows}
-(R/'docs/logs/pixel-run-cloth-validation.json').write_text(json.dumps(report,indent=2));print(json.dumps({k:v for k,v in report.items() if k!='frames'}))
+(R/os.environ.get('VERIFY_OUTPUT','docs/logs/pixel-run-cloth-validation.json')).write_text(json.dumps(report,indent=2));print(json.dumps({k:v for k,v in report.items() if k!='frames'}))

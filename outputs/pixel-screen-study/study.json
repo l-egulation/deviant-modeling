@@ -1,0 +1,49 @@
+{
+  "source": "outputs/pixel-run-cloth.blend",
+  "frames": [
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+  ],
+  "palette": [
+    "FDEEDA",
+    "D2B396",
+    "1B1616",
+    "025673",
+    "02648C",
+    "EBA516"
+  ],
+  "camera_degrees_from_side": 45,
+  "canvas": 128,
+  "output_mirrored_to_face_right": true,
+  "shape_changes": [
+    "lower rearward hood tip",
+    "head presentation with neck fade",
+    "rearward broader scarf tail",
+    "reduced sleeve depth"
+  ],
+  "max_corrective_displacement_m": 0.21563889559677626,
+  "bone_motion_changed": false,
+  "cloth_resimulated": false,
+  "collision_verified": false,
+  "loop_verified": false
+}
