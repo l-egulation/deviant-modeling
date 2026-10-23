@@ -1,0 +1,41 @@
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/pixel-run.blend"
+Traceback (most recent call last):
+  File "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/scripts/diagnose-run-posture.py", line 18, in <module>
+    assert summary['source_hips_neck']['min']>=0,'Source torso leans backward'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Source torso leans backward
+{
+  "source_hips_neck": {
+    "mean": 5.002358816432747,
+    "min": -7.817315210412553,
+    "max": 18.058618797250958
+  },
+  "target_hips_neck": {
+    "mean": 4.887014162224908,
+    "min": -7.831330612735313,
+    "max": 17.03785162906567
+  },
+  "source_hips_chest": {
+    "mean": -0.7159388557561438,
+    "min": -13.438250060462858,
+    "max": 10.826820033159354
+  },
+  "target_hips_chest": {
+    "mean": 1.0366999012370086,
+    "min": -12.544395707755221,
+    "max": 11.648420406310324
+  },
+  "source_chest_head": {
+    "mean": 13.11673415315121,
+    "min": 0.33042689718786705,
+    "max": 29.33424511976899
+  },
+  "target_chest_head": {
+    "mean": 8.151650718097724,
+    "min": -4.321836052506442,
+    "max": 24.621140721750177
+  }
+}
+
+Blender quit

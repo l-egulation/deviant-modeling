@@ -1,0 +1,37 @@
+{
+  "source_hips_neck": {
+    "mean": 10.673018628753182,
+    "min": 5.250968960646643,
+    "max": 13.872697377885816
+  },
+  "target_hips_neck": {
+    "mean": 14.135235242615845,
+    "min": 9.508241128409669,
+    "max": 16.944160237465674
+  },
+  "source_hips_chest": {
+    "mean": 5.5299716331247915,
+    "min": 1.7383046134964157,
+    "max": 8.496282597308978
+  },
+  "target_hips_chest": {
+    "mean": 5.6754504134725945,
+    "min": 2.888515209993563,
+    "max": 8.645135923776174
+  },
+  "source_chest_head": {
+    "mean": 23.337245606773322,
+    "min": 16.277188075166787,
+    "max": 28.20593525890985
+  },
+  "target_chest_head": {
+    "mean": 23.86199257297616,
+    "min": 18.062409167788047,
+    "max": 28.59599450051512
+  }
+}
+POSTURE REGRESSION PASS: source and target remain forward for all 90 frames
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/pixel-run.blend"
+
+Blender quit

@@ -1,5 +1,7 @@
 # 갤럭시북 Kimodo 첫 실행 절차
 
+> 최신 원본 변경: 사용자 승인으로 현재 기본 달리기는 `assets/mixamo-running.fbx`입니다. 전용 골격은 그대로이며 `apply-pixel-run.py`가 해부학적 축 변환을 수행합니다. [PIXEL_RUN.md](docs/PIXEL_RUN.md) 최신 절을 읽으세요. 아래 Kimodo 입력 안내는 이전 기록입니다.
+
 > 최신 인계: [PIXEL_RUN.md](docs/PIXEL_RUN.md)를 먼저 읽습니다. `pixel-run-source.bvh`가 선택한 Kimodo 원본, `pixel-run.blend`가 전용 골격 적용본, `pixel-run-cloth.blend`가 의상 베이크입니다. 비교 영상은 `outputs/pixel-run-comparison.mp4`. 아래는 이전 단계 기록입니다.
 
 > 현재 작업(2026-10-23): `outputs/tripo-pixel-rig.blend`와 [전용 골격 문서](docs/CHARACTER_RIG.md)를 먼저 읽습니다. 현재 모델의 골격 길이는 고정했고, 소매/로브 연결 정리와 121프레임 관절 시험을 통과했습니다. 다음은 Kimodo 달리기 이식과 해당 동작에서의 재검증입니다. 아래는 최초 설치/옛 모델의 기록입니다.

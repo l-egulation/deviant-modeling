@@ -1,0 +1,985 @@
+{
+  "forward": "-Y; positive lean is forward",
+  "summary": {
+    "source_hips_neck": {
+      "mean": 12.848440710811568,
+      "min": 3.005853735948068,
+      "max": 23.636899906092477
+    },
+    "target_hips_neck": {
+      "mean": 9.807213437784402,
+      "min": -1.2932563881149368,
+      "max": 20.491979854054808
+    },
+    "source_hips_chest": {
+      "mean": -0.6991380414181608,
+      "min": -12.953027723203187,
+      "max": 11.05835003152731
+    },
+    "target_hips_chest": {
+      "mean": -0.18696940371682524,
+      "min": -13.230668828320356,
+      "max": 11.385457049270137
+    },
+    "source_chest_head": {
+      "mean": 33.34719713561839,
+      "min": 25.18827640479505,
+      "max": 43.16074434072294
+    },
+    "target_chest_head": {
+      "mean": 29.94937323489952,
+      "min": 22.870997934116975,
+      "max": 38.809496531223054
+    }
+  },
+  "rest": {
+    "Kimodo_Raw_Source": {
+      "Hips": {
+        "head": [
+          0.0,
+          7.549790126404332e-08,
+          1.0
+        ],
+        "tail": [
+          -5.9304140449967235e-05,
+          -0.01720741018652916,
+          0.9609131813049316
+        ]
+      },
+      "Spine1": {
+        "head": [
+          -0.00013726999168284237,
+          0.0005373492604121566,
+          1.0500376224517822
+        ],
+        "tail": [
+          -0.00013726999168284237,
+          0.0008356046164408326,
+          1.121290683746338
+        ]
+      },
+      "Spine2": {
+        "head": [
+          -0.00013726999168284237,
+          0.0008356046164408326,
+          1.121290683746338
+        ],
+        "tail": [
+          -0.00013727998884860426,
+          0.00899532064795494,
+          1.1967912912368774
+        ]
+      },
+      "Chest": {
+        "head": [
+          -0.00013727998884860426,
+          0.00899532064795494,
+          1.1967912912368774
+        ],
+        "tail": [
+          6.224339449545369e-05,
+          -0.023585405200719833,
+          1.4392204284667969
+        ]
+      },
+      "Neck1": {
+        "head": [
+          -0.001954050036147237,
+          0.014528820291161537,
+          1.4599041938781738
+        ],
+        "tail": [
+          -0.001954080071300268,
+          -0.008497021161019802,
+          1.5369981527328491
+        ]
+      },
+      "Head": {
+        "head": [
+          -0.0019541301298886538,
+          -0.028034105896949768,
+          1.5982873439788818
+        ],
+        "tail": [
+          -0.001978690270334482,
+          -0.06904579699039459,
+          1.6664950847625732
+        ]
+      }
+    },
+    "TripoPixel_Rig": {
+      "Hips": {
+        "head": [
+          0.08500000089406967,
+          -0.02500000037252903,
+          0.3199999928474426
+        ],
+        "tail": [
+          0.07999999821186066,
+          -0.019999999552965164,
+          0.38999998569488525
+        ]
+      },
+      "Spine": {
+        "head": [
+          0.07999999821186066,
+          -0.019999999552965164,
+          0.38999998569488525
+        ],
+        "tail": [
+          0.07500000298023224,
+          -0.019999999552965164,
+          0.4650000035762787
+        ]
+      },
+      "Chest": {
+        "head": [
+          0.07500000298023224,
+          -0.019999999552965164,
+          0.4650000035762787
+        ],
+        "tail": [
+          0.07000000029802322,
+          -0.019999999552965164,
+          0.5649999976158142
+        ]
+      },
+      "Neck": {
+        "head": [
+          0.07000000029802322,
+          -0.019999999552965164,
+          0.5649999976158142
+        ],
+        "tail": [
+          0.06499999761581421,
+          -0.019999999552965164,
+          0.6349999904632568
+        ]
+      },
+      "Head": {
+        "head": [
+          0.06499999761581421,
+          -0.019999999552965164,
+          0.6349999904632568
+        ],
+        "tail": [
+          0.06499999761581421,
+          -0.019999999552965164,
+          0.9100000262260437
+        ]
+      }
+    }
+  },
+  "frames": [
+    {
+      "frame": 1,
+      "source_hips_neck": 23.636899906092477,
+      "target_hips_neck": 20.491979854054808,
+      "source_hips_chest": 11.05835003152731,
+      "target_hips_chest": 11.385457049270137,
+      "source_chest_head": 43.16074434072294,
+      "target_chest_head": 38.809496531223054
+    },
+    {
+      "frame": 2,
+      "source_hips_neck": 22.605598096629418,
+      "target_hips_neck": 19.38770249928051,
+      "source_hips_chest": 9.970410474704673,
+      "target_hips_chest": 10.168039793397769,
+      "source_chest_head": 42.29528671474177,
+      "target_chest_head": 38.0139053166159
+    },
+    {
+      "frame": 3,
+      "source_hips_neck": 21.55403735740189,
+      "target_hips_neck": 18.194633139365656,
+      "source_hips_chest": 8.72074551611894,
+      "target_hips_chest": 8.711626506596858,
+      "source_chest_head": 41.381463175671264,
+      "target_chest_head": 37.1935922833614
+    },
+    {
+      "frame": 4,
+      "source_hips_neck": 20.709577109328897,
+      "target_hips_neck": 17.14104195309859,
+      "source_hips_chest": 7.2409639026190735,
+      "target_hips_chest": 7.094181037862266,
+      "source_chest_head": 40.762655402780126,
+      "target_chest_head": 36.68357935376103
+    },
+    {
+      "frame": 5,
+      "source_hips_neck": 20.266911515030163,
+      "target_hips_neck": 16.49244982489818,
+      "source_hips_chest": 5.879026204839806,
+      "target_hips_chest": 5.710012151116375,
+      "source_chest_head": 40.666633507034206,
+      "target_chest_head": 36.765688943741836
+    },
+    {
+      "frame": 6,
+      "source_hips_neck": 20.017423052118232,
+      "target_hips_neck": 16.171207867089294,
+      "source_hips_chest": 5.012650431659799,
+      "target_hips_chest": 4.868857020462375,
+      "source_chest_head": 40.69314785736829,
+      "target_chest_head": 37.07420926320522
+    },
+    {
+      "frame": 7,
+      "source_hips_neck": 20.073882816505986,
+      "target_hips_neck": 16.394815996328038,
+      "source_hips_chest": 5.1549535756635265,
+      "target_hips_chest": 5.092364488248565,
+      "source_chest_head": 40.56524593680319,
+      "target_chest_head": 37.26250402714382
+    },
+    {
+      "frame": 8,
+      "source_hips_neck": 20.407937616509624,
+      "target_hips_neck": 17.183142721304435,
+      "source_hips_chest": 6.271406072594184,
+      "target_hips_chest": 6.450088762063079,
+      "source_chest_head": 40.003004096858845,
+      "target_chest_head": 36.97686597710191
+    },
+    {
+      "frame": 9,
+      "source_hips_neck": 20.764085586551303,
+      "target_hips_neck": 18.148164794514543,
+      "source_hips_chest": 7.684765810222804,
+      "target_hips_chest": 8.26718222266833,
+      "source_chest_head": 39.100654409457086,
+      "target_chest_head": 36.24586616159862
+    },
+    {
+      "frame": 10,
+      "source_hips_neck": 20.59432909004555,
+      "target_hips_neck": 18.434753670616423,
+      "source_hips_chest": 8.252108657920415,
+      "target_hips_chest": 9.190496977831254,
+      "source_chest_head": 38.01051318354247,
+      "target_chest_head": 35.27559443769024
+    },
+    {
+      "frame": 11,
+      "source_hips_neck": 20.15742247692861,
+      "target_hips_neck": 18.100338542620126,
+      "source_hips_chest": 7.926265207858392,
+      "target_hips_chest": 8.972956081170327,
+      "source_chest_head": 37.2011661770619,
+      "target_chest_head": 34.50260525022028
+    },
+    {
+      "frame": 12,
+      "source_hips_neck": 19.59078389397521,
+      "target_hips_neck": 17.367296433350244,
+      "source_hips_chest": 6.942912799739705,
+      "target_hips_chest": 7.918296475350966,
+      "source_chest_head": 36.914691400487165,
+      "target_chest_head": 34.16140623005761
+    },
+    {
+      "frame": 13,
+      "source_hips_neck": 18.79774557422903,
+      "target_hips_neck": 16.216518896629935,
+      "source_hips_chest": 5.410013247760811,
+      "target_hips_chest": 6.164645852280674,
+      "source_chest_head": 37.02073585113145,
+      "target_chest_head": 34.159491977222515
+    },
+    {
+      "frame": 14,
+      "source_hips_neck": 18.13137544399065,
+      "target_hips_neck": 15.06053759950558,
+      "source_hips_chest": 3.762759816733272,
+      "target_hips_chest": 4.2149457654560365,
+      "source_chest_head": 37.5939727640502,
+      "target_chest_head": 34.6054634417204
+    },
+    {
+      "frame": 15,
+      "source_hips_neck": 17.718789972634713,
+      "target_hips_neck": 14.11751313248152,
+      "source_hips_chest": 2.3376778356359007,
+      "target_hips_chest": 2.4848806455573325,
+      "source_chest_head": 38.17003520462842,
+      "target_chest_head": 34.90434583687064
+    },
+    {
+      "frame": 16,
+      "source_hips_neck": 17.474593241376702,
+      "target_hips_neck": 13.476133617075133,
+      "source_hips_chest": 1.6140428758677607,
+      "target_hips_chest": 1.4653390735755185,
+      "source_chest_head": 38.34644934545173,
+      "target_chest_head": 34.76012597567703
+    },
+    {
+      "frame": 17,
+      "source_hips_neck": 17.309892655745863,
+      "target_hips_neck": 13.216728983112164,
+      "source_hips_chest": 1.739315132454575,
+      "target_hips_chest": 1.4410899753640591,
+      "source_chest_head": 38.25186175423662,
+      "target_chest_head": 34.43049869745
+    },
+    {
+      "frame": 18,
+      "source_hips_neck": 17.26543342084539,
+      "target_hips_neck": 13.366384606683438,
+      "source_hips_chest": 2.46916866370725,
+      "target_hips_chest": 2.2757626967030022,
+      "source_chest_head": 38.08920557864202,
+      "target_chest_head": 34.15268295609156
+    },
+    {
+      "frame": 19,
+      "source_hips_neck": 17.216829546320138,
+      "target_hips_neck": 13.664001112032942,
+      "source_hips_chest": 3.3401835079953597,
+      "target_hips_chest": 3.4273084368709137,
+      "source_chest_head": 37.97421558355744,
+      "target_chest_head": 33.96496670507526
+    },
+    {
+      "frame": 20,
+      "source_hips_neck": 16.73468904180612,
+      "target_hips_neck": 13.59744423180982,
+      "source_hips_chest": 3.800833985864486,
+      "target_hips_chest": 4.241806967673768,
+      "source_chest_head": 37.52067539051592,
+      "target_chest_head": 33.48104224797786
+    },
+    {
+      "frame": 21,
+      "source_hips_neck": 16.07137504337956,
+      "target_hips_neck": 13.18074260714578,
+      "source_hips_chest": 3.7003073511989224,
+      "target_hips_chest": 4.343333678716364,
+      "source_chest_head": 36.89478539262724,
+      "target_chest_head": 32.856153112310864
+    },
+    {
+      "frame": 22,
+      "source_hips_neck": 15.671713486822965,
+      "target_hips_neck": 12.686551535768213,
+      "source_hips_chest": 3.182888419622866,
+      "target_hips_chest": 3.748545657567977,
+      "source_chest_head": 36.52976004991072,
+      "target_chest_head": 32.4533019642734
+    },
+    {
+      "frame": 23,
+      "source_hips_neck": 15.460823326240183,
+      "target_hips_neck": 12.188306112780596,
+      "source_hips_chest": 2.4104116469700454,
+      "target_hips_chest": 2.769356506585718,
+      "source_chest_head": 36.3133729243668,
+      "target_chest_head": 32.15605504193375
+    },
+    {
+      "frame": 24,
+      "source_hips_neck": 14.944532309964954,
+      "target_hips_neck": 11.175590467595105,
+      "source_hips_chest": 0.9820164455051588,
+      "target_hips_chest": 0.9090633131443803,
+      "source_chest_head": 36.032905350387196,
+      "target_chest_head": 31.85320724864756
+    },
+    {
+      "frame": 25,
+      "source_hips_neck": 14.51801930253398,
+      "target_hips_neck": 10.43001171532306,
+      "source_hips_chest": -0.49344470633879234,
+      "target_hips_chest": -0.683596465893936,
+      "source_chest_head": 35.96028830903033,
+      "target_chest_head": 31.872208153071412
+    },
+    {
+      "frame": 26,
+      "source_hips_neck": 14.077180654326773,
+      "target_hips_neck": 10.066131204526293,
+      "source_hips_chest": -1.321829955178453,
+      "target_hips_chest": -1.361467831274272,
+      "source_chest_head": 35.53068878226081,
+      "target_chest_head": 31.646693450047984
+    },
+    {
+      "frame": 27,
+      "source_hips_neck": 13.805621655090025,
+      "target_hips_neck": 10.148659086174785,
+      "source_hips_chest": -1.2070513416544106,
+      "target_hips_chest": -1.0249133155871297,
+      "source_chest_head": 34.69383318402699,
+      "target_chest_head": 31.098176880008197
+    },
+    {
+      "frame": 28,
+      "source_hips_neck": 13.818774267093318,
+      "target_hips_neck": 10.709823405162433,
+      "source_hips_chest": -0.27138562217861445,
+      "target_hips_chest": 0.21828057147922122,
+      "source_chest_head": 33.52811141268962,
+      "target_chest_head": 30.203292508504315
+    },
+    {
+      "frame": 29,
+      "source_hips_neck": 13.831222617982451,
+      "target_hips_neck": 11.442976134179098,
+      "source_hips_chest": 1.0028375355507637,
+      "target_hips_chest": 1.9477199534283314,
+      "source_chest_head": 32.0355436015205,
+      "target_chest_head": 28.956830062006595
+    },
+    {
+      "frame": 30,
+      "source_hips_neck": 13.440160549131543,
+      "target_hips_neck": 11.797008957281339,
+      "source_hips_chest": 1.8585923188993598,
+      "target_hips_chest": 3.3459534155860458,
+      "source_chest_head": 30.23152801628932,
+      "target_chest_head": 27.412982692670504
+    },
+    {
+      "frame": 31,
+      "source_hips_neck": 12.786755283807764,
+      "target_hips_neck": 11.680808850834753,
+      "source_hips_chest": 2.12352153533329,
+      "target_hips_chest": 4.018735085384413,
+      "source_chest_head": 28.440755509295325,
+      "target_chest_head": 25.86650456012448
+    },
+    {
+      "frame": 32,
+      "source_hips_neck": 12.650904203640934,
+      "target_hips_neck": 11.69281142866526,
+      "source_hips_chest": 2.1969129885484624,
+      "target_hips_chest": 4.214587289393906,
+      "source_chest_head": 27.586883346463534,
+      "target_chest_head": 25.064907128608876
+    },
+    {
+      "frame": 33,
+      "source_hips_neck": 12.60718094885681,
+      "target_hips_neck": 11.527940105430652,
+      "source_hips_chest": 1.8398000061884787,
+      "target_hips_chest": 3.7971318912129917,
+      "source_chest_head": 27.64227811624386,
+      "target_chest_head": 25.08915254884089
+    },
+    {
+      "frame": 34,
+      "source_hips_neck": 12.304402431797921,
+      "target_hips_neck": 10.86944466099033,
+      "source_hips_chest": 0.9375533130198453,
+      "target_hips_chest": 2.5902176659466023,
+      "source_chest_head": 28.363719061935928,
+      "target_chest_head": 25.729032170508205
+    },
+    {
+      "frame": 35,
+      "source_hips_neck": 12.025121304144596,
+      "target_hips_neck": 10.062794973673771,
+      "source_hips_chest": -0.3388258559921436,
+      "target_hips_chest": 0.9522526497676765,
+      "source_chest_head": 29.68285829339492,
+      "target_chest_head": 26.881939926345513
+    },
+    {
+      "frame": 36,
+      "source_hips_neck": 11.973251953078051,
+      "target_hips_neck": 9.41079391031708,
+      "source_hips_chest": -1.491816434298142,
+      "target_hips_chest": -0.5727171679580787,
+      "source_chest_head": 31.200973077002253,
+      "target_chest_head": 28.125396963276295
+    },
+    {
+      "frame": 37,
+      "source_hips_neck": 12.136761624494163,
+      "target_hips_neck": 9.099429083281832,
+      "source_hips_chest": -2.0016044984242405,
+      "target_hips_chest": -1.4014797991687007,
+      "source_chest_head": 32.50014763879269,
+      "target_chest_head": 29.1098523471352
+    },
+    {
+      "frame": 38,
+      "source_hips_neck": 12.589340036282742,
+      "target_hips_neck": 9.311887285432746,
+      "source_hips_chest": -1.6564201835650798,
+      "target_hips_chest": -1.2470439856829738,
+      "source_chest_head": 33.66145570617616,
+      "target_chest_head": 30.062691912499787
+    },
+    {
+      "frame": 39,
+      "source_hips_neck": 13.218227272926896,
+      "target_hips_neck": 10.01624646732881,
+      "source_hips_chest": -0.5648735821863531,
+      "target_hips_chest": -0.09407826815494061,
+      "source_chest_head": 34.46559253846148,
+      "target_chest_head": 30.745395763590366
+    },
+    {
+      "frame": 40,
+      "source_hips_neck": 13.79781185408434,
+      "target_hips_neck": 10.854584716309772,
+      "source_hips_chest": 0.7667429636631413,
+      "target_hips_chest": 1.45848932952113,
+      "source_chest_head": 34.92648736992333,
+      "target_chest_head": 31.09886071791184
+    },
+    {
+      "frame": 41,
+      "source_hips_neck": 13.957201037570428,
+      "target_hips_neck": 11.36694224695626,
+      "source_hips_chest": 1.7862493063671492,
+      "target_hips_chest": 2.7728345799979457,
+      "source_chest_head": 34.837576841019285,
+      "target_chest_head": 30.92113546230071
+    },
+    {
+      "frame": 42,
+      "source_hips_neck": 13.908761004524985,
+      "target_hips_neck": 11.533205704936885,
+      "source_hips_chest": 2.3470763438035003,
+      "target_hips_chest": 3.461517277708094,
+      "source_chest_head": 34.45192872788928,
+      "target_chest_head": 30.465528458435656
+    },
+    {
+      "frame": 43,
+      "source_hips_neck": 14.074554403146532,
+      "target_hips_neck": 11.604360567119146,
+      "source_hips_chest": 2.5649001407329046,
+      "target_hips_chest": 3.5135217104914718,
+      "source_chest_head": 34.29966356243222,
+      "target_chest_head": 30.210681626978932
+    },
+    {
+      "frame": 44,
+      "source_hips_neck": 14.394240347120238,
+      "target_hips_neck": 11.685941787132904,
+      "source_hips_chest": 2.550391037259502,
+      "target_hips_chest": 3.2556790620959806,
+      "source_chest_head": 34.29953806129976,
+      "target_chest_head": 30.086623782284946
+    },
+    {
+      "frame": 45,
+      "source_hips_neck": 14.8463455112511,
+      "target_hips_neck": 11.820214827102891,
+      "source_hips_chest": 2.3551783892176603,
+      "target_hips_chest": 2.8260935262843403,
+      "source_chest_head": 34.418148337345876,
+      "target_chest_head": 30.070803330202683
+    },
+    {
+      "frame": 46,
+      "source_hips_neck": 14.846745631957459,
+      "target_hips_neck": 11.366349184452446,
+      "source_hips_chest": 1.4478086426601309,
+      "target_hips_chest": 1.5501128805706827,
+      "source_chest_head": 34.48752641132636,
+      "target_chest_head": 30.123691538988727
+    },
+    {
+      "frame": 47,
+      "source_hips_neck": 14.439837280290044,
+      "target_hips_neck": 10.800003519219102,
+      "source_hips_chest": 0.35788339918922185,
+      "target_hips_chest": 0.39716549516754457,
+      "source_chest_head": 34.28814007610771,
+      "target_chest_head": 30.033122381706434
+    },
+    {
+      "frame": 48,
+      "source_hips_neck": 14.113908749530134,
+      "target_hips_neck": 10.700873230821887,
+      "source_hips_chest": -0.038354722194631916,
+      "target_hips_chest": 0.23082567706193344,
+      "source_chest_head": 33.88601655849474,
+      "target_chest_head": 29.881310785636185
+    },
+    {
+      "frame": 49,
+      "source_hips_neck": 13.990333020225014,
+      "target_hips_neck": 10.90572576274318,
+      "source_hips_chest": 0.12692160382687678,
+      "target_hips_chest": 0.6369507260120907,
+      "source_chest_head": 33.44556904421087,
+      "target_chest_head": 29.79209589677532
+    },
+    {
+      "frame": 50,
+      "source_hips_neck": 13.988675678685194,
+      "target_hips_neck": 11.296506421262652,
+      "source_hips_chest": 0.6392163979631306,
+      "target_hips_chest": 1.4143338988958647,
+      "source_chest_head": 32.89582895113033,
+      "target_chest_head": 29.584262870799265
+    },
+    {
+      "frame": 51,
+      "source_hips_neck": 13.96752386772587,
+      "target_hips_neck": 11.847990327682973,
+      "source_hips_chest": 1.4954556566791983,
+      "target_hips_chest": 2.6874534114308952,
+      "source_chest_head": 32.069223448668836,
+      "target_chest_head": 29.048064989778034
+    },
+    {
+      "frame": 52,
+      "source_hips_neck": 13.757172420957648,
+      "target_hips_neck": 12.232124269440172,
+      "source_hips_chest": 2.2132946636356188,
+      "target_hips_chest": 3.8772862579990774,
+      "source_chest_head": 31.10123275954492,
+      "target_chest_head": 28.322599506553857
+    },
+    {
+      "frame": 53,
+      "source_hips_neck": 13.317640025349192,
+      "target_hips_neck": 12.130004691007873,
+      "source_hips_chest": 2.376683841638976,
+      "target_hips_chest": 4.29735268036168,
+      "source_chest_head": 30.34017050734795,
+      "target_chest_head": 27.707259299130317
+    },
+    {
+      "frame": 54,
+      "source_hips_neck": 12.863839788726953,
+      "target_hips_neck": 11.665219420272084,
+      "source_hips_chest": 1.90168428686244,
+      "target_hips_chest": 3.8379439341305375,
+      "source_chest_head": 30.22991830599212,
+      "target_chest_head": 27.580423885130596
+    },
+    {
+      "frame": 55,
+      "source_hips_neck": 12.298389636746066,
+      "target_hips_neck": 10.837262294651076,
+      "source_hips_chest": 0.8547370895510747,
+      "target_hips_chest": 2.6361595314149633,
+      "source_chest_head": 30.58967634401512,
+      "target_chest_head": 27.832808986197552
+    },
+    {
+      "frame": 56,
+      "source_hips_neck": 11.751840070949704,
+      "target_hips_neck": 9.73153429075687,
+      "source_hips_chest": -0.5075015800260755,
+      "target_hips_chest": 0.7917218733839794,
+      "source_chest_head": 31.407714934427577,
+      "target_chest_head": 28.495203098604446
+    },
+    {
+      "frame": 57,
+      "source_hips_neck": 11.55520250440623,
+      "target_hips_neck": 8.795940530902323,
+      "source_hips_chest": -1.9928895911528934,
+      "target_hips_chest": -1.2269473321557518,
+      "source_chest_head": 32.66809165128629,
+      "target_chest_head": 29.557971745427725
+    },
+    {
+      "frame": 58,
+      "source_hips_neck": 11.486642898198445,
+      "target_hips_neck": 8.020307960632978,
+      "source_hips_chest": -3.158097947062968,
+      "target_hips_chest": -2.9087552893174093,
+      "source_chest_head": 33.617670672480855,
+      "target_chest_head": 30.217665993990614
+    },
+    {
+      "frame": 59,
+      "source_hips_neck": 11.44577677374467,
+      "target_hips_neck": 7.507493330368288,
+      "source_hips_chest": -3.5926453629912243,
+      "target_hips_chest": -3.7955941335221275,
+      "source_chest_head": 34.09069109482382,
+      "target_chest_head": 30.45626670084775
+    },
+    {
+      "frame": 60,
+      "source_hips_neck": 11.573965072859638,
+      "target_hips_neck": 7.494334344051689,
+      "source_hips_chest": -3.2937241845985286,
+      "target_hips_chest": -3.6921541905316513,
+      "source_chest_head": 34.295637983247865,
+      "target_chest_head": 30.523889927359786
+    },
+    {
+      "frame": 61,
+      "source_hips_neck": 12.00317023332304,
+      "target_hips_neck": 7.986747698635672,
+      "source_hips_chest": -2.5152606592940323,
+      "target_hips_chest": -2.8668302518131212,
+      "source_chest_head": 34.64134657168346,
+      "target_chest_head": 30.78879720458041
+    },
+    {
+      "frame": 62,
+      "source_hips_neck": 12.27787995735299,
+      "target_hips_neck": 8.49661565359602,
+      "source_hips_chest": -1.8059855045824076,
+      "target_hips_chest": -1.8915509941854394,
+      "source_chest_head": 34.877027813451754,
+      "target_chest_head": 30.989909030465093
+    },
+    {
+      "frame": 63,
+      "source_hips_neck": 12.016674018636394,
+      "target_hips_neck": 8.60104565403023,
+      "source_hips_chest": -1.4922175886851532,
+      "target_hips_chest": -1.218516438502785,
+      "source_chest_head": 34.573688951834335,
+      "target_chest_head": 30.736629044982934
+    },
+    {
+      "frame": 64,
+      "source_hips_neck": 11.707599279775765,
+      "target_hips_neck": 8.57469200309198,
+      "source_hips_chest": -1.5156433807930627,
+      "target_hips_chest": -0.9349321805148091,
+      "source_chest_head": 34.15224691672483,
+      "target_chest_head": 30.38457298247998
+    },
+    {
+      "frame": 65,
+      "source_hips_neck": 11.498416156173953,
+      "target_hips_neck": 8.473017707808555,
+      "source_hips_chest": -1.8409911591843688,
+      "target_hips_chest": -1.0869641845416838,
+      "source_chest_head": 33.846755299315824,
+      "target_chest_head": 30.1450800926784
+    },
+    {
+      "frame": 66,
+      "source_hips_neck": 11.130175403872022,
+      "target_hips_neck": 8.05564748193029,
+      "source_hips_chest": -2.5538832567075307,
+      "target_hips_chest": -1.7879367701522402,
+      "source_chest_head": 33.50024293593696,
+      "target_chest_head": 29.868133009426664
+    },
+    {
+      "frame": 67,
+      "source_hips_neck": 10.443118912569624,
+      "target_hips_neck": 6.957911791054807,
+      "source_hips_chest": -4.1734946602018095,
+      "target_hips_chest": -3.7054776965533236,
+      "source_chest_head": 33.14565348904892,
+      "target_chest_head": 29.60405427742435
+    },
+    {
+      "frame": 68,
+      "source_hips_neck": 9.96949343425633,
+      "target_hips_neck": 6.278670146862581,
+      "source_hips_chest": -5.596296903877194,
+      "target_hips_chest": -5.1062574638514135,
+      "source_chest_head": 32.9805389994034,
+      "target_chest_head": 29.575724752446224
+    },
+    {
+      "frame": 69,
+      "source_hips_neck": 9.750576592824906,
+      "target_hips_neck": 6.163706210677026,
+      "source_hips_chest": -6.0969572596726875,
+      "target_hips_chest": -5.442620727941166,
+      "source_chest_head": 32.62562187440616,
+      "target_chest_head": 29.434924448323017
+    },
+    {
+      "frame": 70,
+      "source_hips_neck": 9.72690996605522,
+      "target_hips_neck": 6.376265727576481,
+      "source_hips_chest": -5.85820564267535,
+      "target_hips_chest": -5.0829246890286175,
+      "source_chest_head": 32.10300989367367,
+      "target_chest_head": 29.196522708257923
+    },
+    {
+      "frame": 71,
+      "source_hips_neck": 9.727283943823592,
+      "target_hips_neck": 6.733181287906267,
+      "source_hips_chest": -5.20061469299613,
+      "target_hips_chest": -4.274695402828146,
+      "source_chest_head": 31.289102090893756,
+      "target_chest_head": 28.697048778341177
+    },
+    {
+      "frame": 72,
+      "source_hips_neck": 9.616633835114223,
+      "target_hips_neck": 7.0827974678788115,
+      "source_hips_chest": -4.427911026280743,
+      "target_hips_chest": -3.2588667481071756,
+      "source_chest_head": 30.278383598126506,
+      "target_chest_head": 27.973792476599478
+    },
+    {
+      "frame": 73,
+      "source_hips_neck": 8.969891306087414,
+      "target_hips_neck": 6.854800264797542,
+      "source_hips_chest": -4.251353196857839,
+      "target_hips_chest": -2.8348692491836114,
+      "source_chest_head": 29.006027627348978,
+      "target_chest_head": 26.939948889266454
+    },
+    {
+      "frame": 74,
+      "source_hips_neck": 7.781051259762564,
+      "target_hips_neck": 6.006364326871454,
+      "source_hips_chest": -4.706396705647128,
+      "target_hips_chest": -3.088756863946724,
+      "source_chest_head": 27.466055485105198,
+      "target_chest_head": 25.563155539483354
+    },
+    {
+      "frame": 75,
+      "source_hips_neck": 6.676795164359175,
+      "target_hips_neck": 5.092013671484384,
+      "source_hips_chest": -5.379082428811573,
+      "target_hips_chest": -3.6398140718090755,
+      "source_chest_head": 26.24423225281197,
+      "target_chest_head": 24.339801330009017
+    },
+    {
+      "frame": 76,
+      "source_hips_neck": 5.605072069170688,
+      "target_hips_neck": 3.99359617080523,
+      "source_hips_chest": -6.4939395398411275,
+      "target_hips_chest": -4.732338476530208,
+      "source_chest_head": 25.456166913965664,
+      "target_chest_head": 23.4286392888314
+    },
+    {
+      "frame": 77,
+      "source_hips_neck": 4.740442830997065,
+      "target_hips_neck": 2.8952930271534156,
+      "source_hips_chest": -7.709892078630027,
+      "target_hips_chest": -6.078964868518015,
+      "source_chest_head": 25.18827640479505,
+      "target_chest_head": 22.870997934116975
+    },
+    {
+      "frame": 78,
+      "source_hips_neck": 4.216536819560868,
+      "target_hips_neck": 1.684719097586471,
+      "source_hips_chest": -9.167985894837807,
+      "target_hips_chest": -8.17189560763774,
+      "source_chest_head": 25.81258420303438,
+      "target_chest_head": 23.180551794219685
+    },
+    {
+      "frame": 79,
+      "source_hips_neck": 4.043898389075633,
+      "target_hips_neck": 0.5914864549624924,
+      "source_hips_chest": -10.821673286779069,
+      "target_hips_chest": -10.525870691218309,
+      "source_chest_head": 27.091230974936895,
+      "target_chest_head": 24.119390636180253
+    },
+    {
+      "frame": 80,
+      "source_hips_neck": 4.253421691455358,
+      "target_hips_neck": 0.06212983889478124,
+      "source_hips_chest": -11.455556777156431,
+      "target_hips_chest": -11.8162778568974,
+      "source_chest_head": 28.1344172458452,
+      "target_chest_head": 24.842818559115994
+    },
+    {
+      "frame": 81,
+      "source_hips_neck": 4.724007384113735,
+      "target_hips_neck": 0.1257738225295937,
+      "source_hips_chest": -11.135740770362816,
+      "target_hips_chest": -11.956070810881478,
+      "source_chest_head": 28.876542966255784,
+      "target_chest_head": 25.36396018545169
+    },
+    {
+      "frame": 82,
+      "source_hips_neck": 5.403570633845012,
+      "target_hips_neck": 0.6800988419524377,
+      "source_hips_chest": -10.177924575573835,
+      "target_hips_chest": -11.211131746643611,
+      "source_chest_head": 29.413407102468142,
+      "target_chest_head": 25.74353784274876
+    },
+    {
+      "frame": 83,
+      "source_hips_neck": 6.056616676568579,
+      "target_hips_neck": 1.3788182634065305,
+      "source_hips_chest": -9.037903289000646,
+      "target_hips_chest": -10.111152755928588,
+      "source_chest_head": 29.821506550058277,
+      "target_chest_head": 26.034736104476107
+    },
+    {
+      "frame": 84,
+      "source_hips_neck": 6.266107422868459,
+      "target_hips_neck": 1.773226809947776,
+      "source_hips_chest": -8.18385165106902,
+      "target_hips_chest": -9.173460967145576,
+      "source_chest_head": 29.838985363130647,
+      "target_chest_head": 26.004845963740618
+    },
+    {
+      "frame": 85,
+      "source_hips_neck": 6.0016711344607625,
+      "target_hips_neck": 1.7549622869400325,
+      "source_hips_chest": -7.819826242849102,
+      "target_hips_chest": -8.668871513655708,
+      "source_chest_head": 29.409043768134545,
+      "target_chest_head": 25.58977130634914
+    },
+    {
+      "frame": 86,
+      "source_hips_neck": 5.603376803008488,
+      "target_hips_neck": 1.529240889443187,
+      "source_hips_chest": -8.031345819685278,
+      "target_hips_chest": -8.702689020803668,
+      "source_chest_head": 28.95640897334555,
+      "target_chest_head": 25.165564722802213
+    },
+    {
+      "frame": 87,
+      "source_hips_neck": 5.169246525387673,
+      "target_hips_neck": 1.178167822252497,
+      "source_hips_chest": -8.667071382414193,
+      "target_hips_chest": -9.16314623605633,
+      "source_chest_head": 28.458429418694887,
+      "target_chest_head": 24.69792080814058
+    },
+    {
+      "frame": 88,
+      "source_hips_neck": 4.7245604719970835,
+      "target_hips_neck": 0.7823292258169517,
+      "source_hips_chest": -9.545382552406682,
+      "target_hips_chest": -9.8347544585819,
+      "source_chest_head": 27.967345331126616,
+      "target_chest_head": 24.233113531824245
+    },
+    {
+      "frame": 89,
+      "source_hips_neck": 3.9135986568849312,
+      "target_hips_neck": -0.13852075274906536,
+      "source_hips_chest": -10.984161585091474,
+      "target_hips_chest": -11.26614849375053,
+      "source_chest_head": 27.37350162714872,
+      "target_chest_head": 23.72549222281819
+    },
+    {
+      "frame": 90,
+      "source_hips_neck": 3.005853735948068,
+      "target_hips_neck": -1.2932563881149368,
+      "source_hips_chest": -12.953027723203187,
+      "target_hips_chest": -13.230668828320356,
+      "source_chest_head": 27.055671934314734,
+      "target_chest_head": 23.58617864212454
+    }
+  ]
+}

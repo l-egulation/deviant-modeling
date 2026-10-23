@@ -1,15 +1,16 @@
-"""Retarget fresh Kimodo onto the approved short rig. No joint translation/scale transfer."""
+"""Retarget approved Mixamo onto the short rig. No joint translation/scale transfer."""
 import bpy,math,json,sys
 import numpy as np
 from pathlib import Path
 from mathutils import Vector,Matrix
 R=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(R/'scripts'))
+from pixel_mixamo_source import load_source
 bpy.ops.wm.open_mainfile(filepath=str(R/'outputs/tripo-pixel-rig.blend'))
 s=bpy.context.scene;rig=bpy.data.objects['TripoPixel_Rig'];hero=bpy.data.objects['TripoPixel_Character']
 rig.animation_data_clear();rig.location=(0,0,0)
 for pb in rig.pose.bones:pb.rotation_mode='QUATERNION';pb.rotation_quaternion=(1,0,0,0);pb.location=(0,0,0);pb.scale=(1,1,1)
-bpy.ops.import_anim.bvh(filepath=str(R/'outputs/pixel-run-source.bvh'),global_scale=.01,axis_forward='-Z',axis_up='Y',frame_start=1,update_scene_fps=True,update_scene_duration=True)
-src=bpy.context.object;src.name='Kimodo_Raw_Source';src.hide_render=True;src.hide_set(True)
+src,data=load_source(R)
 s.frame_start=1;s.frame_end=90;s.render.fps=30
 mapping={'Hips':'Hips','Spine':'Spine1','Chest':'Chest','Neck':'Neck1','Head':'Head'}
 for side,word in [('L','Left'),('R','Right')]:
@@ -17,10 +18,10 @@ for side,word in [('L','Left'),('R','Right')]:
 rest={b.name:b.matrix_local.copy() for b in rig.data.bones};desired={};ref={}
 for n,m in mapping.items():
  sr=src.data.bones[m].matrix_local.to_3x3();tr=rest[n].to_3x3();correction=Matrix.Identity(3)
- if n.startswith(('UpperArm.','Forearm.','Thigh.','Shin.')):correction=tr.col[1].rotation_difference(sr.col[1]).to_matrix()
+ if n.startswith(('UpperArm.','Forearm.','Hand.','Thigh.','Shin.','Foot.','Toe.')):correction=tr.col[1].rotation_difference(sr.col[1]).to_matrix()
  ref[n]=sr.inverted()@correction@tr
 scale=np.mean([sum(rig.data.bones[n+'.'+side].length for n in ['Thigh','Shin'])/sum(src.data.bones[word+n].length for n in ['Leg','Shin']) for side,word in [('L','Left'),('R','Right')]])
-data=np.load(R/'outputs/pixel-run-source.npz');contacts=np.stack([data['foot_contacts'][:,:3].max(1)>.5,data['foot_contacts'][:,3:].max(1)>.5],axis=1)
+contacts=np.stack([data['foot_contacts'][:,:3].max(1)>.5,data['foot_contacts'][:,3:].max(1)>.5],axis=1)
 p=np.array([v.co[:] for v in hero.data.vertices]);boot={}
 for side in ['L','R']:
  group=hero.vertex_groups['Region_Leg.'+side].index
@@ -107,7 +108,7 @@ for layer in cam.animation_data.action.layers:
     for k in curve.keyframe_points:k.interpolation='LINEAR'
 s.render.resolution_x=s.render.resolution_y=384;s.cycles.samples=8
 s.frame_set(1);bpy.ops.wm.save_as_mainfile(filepath=str(R/'outputs/pixel-run.blend'),compress=True)
-report={'source':'outputs/pixel-run-source.bvh','frames':90,'scale_for_root_and_stride':float(scale),'bones':len(rig.data.bones),'bone_length_error_m':bone_error,'max_ankle_target_error_m':max(errors),'max_edge_stretch':edge_peak,'lowest_vertex_world_z_m':min(penetration),'source_rotations_changed':'Fixed-length leg contact IK only; arm/torso rotations transferred','mapping':mapping,'cloth_applied':False,'joints':joint_frames}
+report={'source':'assets/mixamo-running.fbx','frames':90,'scale_for_root_and_stride':float(scale),'bones':len(rig.data.bones),'bone_length_error_m':bone_error,'max_ankle_target_error_m':max(errors),'max_edge_stretch':edge_peak,'lowest_vertex_world_z_m':min(penetration),'source_rotations_changed':'Fixed-length leg contact IK only; arm/torso rotations transferred','mapping':mapping,'cloth_applied':False,'joints':joint_frames}
 (R/'docs/logs/pixel-run-retarget.json').write_text(json.dumps(report,indent=2));print(json.dumps({k:v for k,v in report.items() if k!='joints'}),flush=True)
 for f in [10,25,40,55]:
  s.frame_set(f);s.render.filepath=str(R/f'outputs/pixel-run-pose-{f}.png');bpy.ops.render.render(write_still=True)

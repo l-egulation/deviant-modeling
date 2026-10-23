@@ -1,5 +1,7 @@
 # 작업 지침
 
+- 2026-10-23 최신 사용자 선택: Kimodo 재생성8개도 자세 기준 미통과하여 기본 달리기는 기존 `assets/mixamo-running.fbx`로 전환. 현재 `pixel-run.blend`/`pixel-run-cloth.blend`는 Mixamo 적용본이다. `pixel-run-source.bvh/.npz`는 이전 Kimodo 기록. FBX 표시축을 관절 방향으로 가정하지 말고 `pixel_mixamo_source.py`의 실제 관절 방향 변환을 사용한다. 새 Blender 뼈는 length를 먼저 설정한 다음 matrix를 설정한다. 자세/축 회귀 검사를 실행한다. 아래 Kimodo 안내는 이전 단계다.
+
 - 최신 달리기/의상 입력과 한계는 `docs/PIXEL_RUN.md` 참조. `outputs/pixel-run-source.bvh`는 seed231/00의 새 Kimodo 원본이며, `pixel-run.blend`는 회전 이식+고정길이 접지IK, `pixel-run-cloth.blend`는 별도 의상 베이크다. 진단 자세 통과와 실제 달리기 최종 품질을 구분한다. 기존 3초 클립의 루프 연결은 미검증이다.
 
 ## 2026-10-23 우선 적용: 캐릭터 전용 골격

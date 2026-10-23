@@ -1,4 +1,35 @@
-# 새 Tripo 캐릭터의 Kimodo 달리기와 의상 시험
+# 캐릭터 전용 골격 달리기와 의상 시험
+
+## 최신: Mixamo 원본으로 전환, 상체 자세와 FBX 방향 오류 수정
+
+2026-10-23 사용자 피드백: 달리기 중 상체가 뒤로 젖혀진다. 기존 Kimodo 원본에서 골반→목 기울기가 -7.82~18.06도였고 적용본도 -7.83~17.04도였다(양수=전방). 손 높이 위주의 후보 선택에서 상체 자세를 놓쳤다.
+
+Kimodo seed732/983으로 4개씩 총8개를 재생성했다. 뒤로 젖힘 또는 허리를 뒤에 둔 채 윗몸만 숙이는 문제 때문에 모두 제외했다. `pixel-run-posture-rejected-*`와 `pixel-run-candidates.json`에 기록한다. 사용자가 **전에 확인한 Mixamo 달리기를 전용 골격에 적용**하도록 선택했다.
+
+- 현재 원본은 `assets/mixamo-running.fbx`의 Running With Intention. 원본22프레임/30fps를 같은 속도로 반복하여90프레임을 만든다. 원본 FBX와 동작 키는 수정하지 않는다.
+- `pixel-run.blend`가 현재 Mixamo 적용본, `pixel-run-cloth.blend`가 이에 맞춘 독립 의상 베이크다. `pixel-run-source.bvh/.npz`는 이전 seed231 Kimodo 기록으로 남겨두며 현재 입력으로 사용하지 않는다.
+- `pixel-run-posture-comparison.mp4`: 이전 Kimodo/현재 Mixamo 전후 비교. `pixel-run-comparison.mp4`: 현재 Mixamo 원본 골격/캐릭터 비교. `pixel-run-source-preview.gif`: 현재 원본 골격.
+- 골격 길이 최대 오차1.856e-7m, scale1 유지. 루트/보폭 비율0.259178, 고정 길이 접지IK 유지. 소매 국소 늘어짐 최대2.444배는 남는다.
+- 캐릭터 골반→목 기울기9.51~16.94도, 평균14.14도. 90프레임 전부 전방이다. 원본은5.25~13.87도. 기울기 수치는 이 캐릭터의 검증 기준이며 모든 사람의 정상 달리기를 정의하는 기준은 아니다.
+- Mixamo 변환 중 FBX 표시축을 해부학적 관절 방향으로 오해한 오류도 수정했다. 어깨→팔꿈치→손목, 골반→무릎→발목→발끝을 기준으로 원본 회전을 좌표 변환한다. 길이0인 새 Blender 뼈에 matrix부터 설정하면 방향이 소실되므로 길이 설정 후 matrix를 넣는다.
+- 회귀 검사: 수정 전 `Source torso leans backward`와 `Non-anatomical source rest axes`로 실패. 수정 후 `diagnose-run-posture.py`의 POSTURE_ASSERT=1과 `verify-pixel-source-axes.py` 모두 통과. 원본 관절 방향/캐릭터 전달 방향의 벡터 오차는 각각1.216e-5/1.071e-6 이하.
+
+현재 재현: Blender로 `apply-pixel-run.py` → `diagnose-run-posture.py`(POSTURE_ASSERT=1) → `verify-pixel-source-axes.py` → `simulate-pixel-run-cloth.py` → `verify-pixel-run-cloth.py` → `preview-pixel-run.py`, 이어 Kimodo 가상환경 Python으로 `package-pixel-run.py`. 전후 비교를 재현하려면 이전 커밋7fe1548의 비교MP4를 `.cache/posture-before/pixel-run-comparison.mp4`에 둔다. 기본 원본/캐릭터 비교에는 이 이전 파일이 필요 없다.
+
+Blender 호출에 `--python-exit-code 1`을 추가하여 Python assertion 실패가 다음 단계 실행으로 이어지지 않게 한다. 이 환경은 기본 옵션에서 Python 예외가 나도 프로세스 종료코드0을 반환한다. 이번 검증은 각 단계 로그의 실제 PASS/실패 문구와 결과 파일을 확인했다.
+
+최종 Mixamo 의상 검증: 로브 외면/스카프 꼬리90프레임 교차0건. 전체 표면 모서리 최대 늘어짐2.717배로 국소 접힘은 남아 있다. 관통 검사 범위는 이전과 동일하며 자기/연속 충돌을 포함하지 않는다.
+
+DEBUG REPORT
+- Symptom: 달리는 동안 상체가 뒤로 젖혀짐.
+- Root cause: Kimodo 원본의 후경 자세를 후보 선택에서 제외하지 않음. Mixamo 전환 중 FBX 표시축과 실제 관절 방향 혼동 및 새 뼈 초기화 순서 오류 추가 발견.
+- Fix: 사용자 선택에 따라 Mixamo 원본 사용, 해부학적 기준축으로 변환, 길이부터 초기화, 전 구간 상체 및 축 회귀 검사 추가.
+- Evidence: 자세90프레임 통과, 축90프레임 통과, 길이 고정 검증. 세부 JSON/로그는 `docs/logs/pixel-run-*`.
+- Regression test: `scripts/diagnose-run-posture.py`, `scripts/verify-pixel-source-axes.py`, `pixel_mixamo_source.py`의 기준축 보존 assertion.
+- Related: 손 높이나 전체 몸통 평균값 하나로 후보를 고르지 않는다. 허리/윗몸과 프레임별 최소값을 별도로 본다.
+- Status: DONE_WITH_CONCERNS. 소매 접힘, 자기/연속 충돌, 최종 도트 화풍은 별도 품질 과제.
+
+## 이전 단계: Kimodo seed231 기록
 
 2026-10-23. 기존 Tripo 모델과 캐릭터 전용 22뼈를 사용했다. 사람 골격의 긴 관절 위치를 복사하거나 수작업 달리기 키포즈를 만들지 않았다. 최종 게임용 루프와 도트 화풍 승인은 아직 아니다.
 

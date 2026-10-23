@@ -1,0 +1,5 @@
+{'frames': 90, 'rest_axis_vector_error': 3.8544654076606633e-07, 'pose_axis_vector_error': 1.2159495905743448e-05, 'target_direction_vector_error': 1.0706888725790108e-06, 'status': 'PASS'}
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/pixel-run.blend"
+
+Blender quit

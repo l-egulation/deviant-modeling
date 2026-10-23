@@ -1,4 +1,4 @@
-{"scope": "90 frames; noncoplanar rendered outer robe/scarf-tail intersections; excludes attachments, self-collision and continuous collision", "robe_triangles": 8805, "scarf_triangles": 5911, "frames_with_intersections": 0, "max_pairs": 0, "max_edge_stretch": 2.3040157301071553}
+{"scope": "90 frames; noncoplanar rendered outer robe/scarf-tail intersections; excludes attachments, self-collision and continuous collision", "robe_triangles": 8805, "scarf_triangles": 5911, "frames_with_intersections": 0, "max_pairs": 0, "max_edge_stretch": 2.716551468967192}
 Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
 Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/pixel-run-cloth.blend"
 

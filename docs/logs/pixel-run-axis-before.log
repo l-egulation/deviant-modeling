@@ -1,0 +1,9 @@
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/.cache/mixamo-bad-axes.blend"
+Traceback (most recent call last):
+  File "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/scripts/verify-pixel-source-axes.py", line 12, in <module>
+    assert rest_error<1e-4,f'Non-anatomical source rest axes: {rest_error}'
+           ^^^^^^^^^^^^^^^
+AssertionError: Non-anatomical source rest axes: 1.999984768410494
+
+Blender quit
