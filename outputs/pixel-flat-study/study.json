@@ -1,0 +1,23 @@
+{
+  "source": "outputs/pixel-run-cloth.blend",
+  "source_frame": 49,
+  "angles": [
+    30,
+    45,
+    60
+  ],
+  "palette": [
+    "FDEEDA",
+    "D2B396",
+    "1B1616",
+    "025673",
+    "02648C",
+    "EBA516"
+  ],
+  "modes": [
+    "constant flat colors",
+    "fixed broad rest-space patches"
+  ],
+  "geometry_or_animation_changed": false,
+  "full_animation_verified": false
+}
