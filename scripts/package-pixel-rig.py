@@ -26,5 +26,12 @@ with av.open(str(R/'outputs/tripo-pixel-rig-preview.mp4'),'w') as out:
   frame=av.VideoFrame.from_ndarray(np.asarray(im),format='rgb24')
   for packet in stream.encode(frame):out.mux(packet)
  for packet in stream.encode():out.mux(packet)
-frames[0].save(R/'outputs/tripo-pixel-rig-preview.gif',save_all=True,append_images=frames[1:],duration=[30,30,40]*27,loop=0)
+frames[0].save(R/'outputs/tripo-pixel-rig-preview.gif',save_all=True,append_images=frames[1:],duration=[30 if (i+1)%3 else 40 for i in range(len(frames))],loop=0)
 print('Packaged',len(frames),'frames')
+with av.open(str(R/'outputs/tripo-pixel-rig-preview.mp4')) as check:
+ decoded=list(check.decode(video=0));fps=float(check.streams.video[0].average_rate)
+ assert len(decoded)==d['test_frames'] and fps==30
+gif=Image.open(R/'outputs/tripo-pixel-rig-preview.gif');duration=0
+for i in range(gif.n_frames):gif.seek(i);duration+=gif.info.get('duration',0)
+assert gif.n_frames==d['test_frames']
+(R/'docs/logs/pixel-rig-media.json').write_text(json.dumps({'mp4_decoded_frames':len(decoded),'fps':fps,'gif_frames':gif.n_frames,'gif_duration_ms':duration},indent=2))

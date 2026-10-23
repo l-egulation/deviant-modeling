@@ -1,30 +1,47 @@
 {
   "source": "outputs/tripo-pixel-shaped.blend",
   "bones": 22,
-  "vertices": 51426,
+  "vertices": 52175,
+  "original_vertices": 51426,
+  "surface_geometry_error_m": 0.0,
+  "region_face_counts": {
+    "Leg.L": 4163,
+    "Robe": 16786,
+    "Arm.L": 4383,
+    "Hood": 11553,
+    "Leg.R": 4852,
+    "Scarf": 13366,
+    "Arm.R": 4897
+  },
   "neutral_max_error_m": 9.834766387939453e-07,
   "bone_length_max_error_m": 5.417041576416537e-08,
   "scale_max_error": 0,
   "local_translation_max_m": 0,
   "weight_sum_max_error": 3.3306690738754696e-16,
-  "test_frames": 81,
+  "test_frames": 121,
   "poses": [
     {
       "frame": 21,
-      "edge_stretch_p99": 1.671509154613319,
-      "edge_stretch_max": 5.949558376824657,
-      "edges_over_2x": 590
+      "edge_stretch_p99": 1.2488002311127235,
+      "edge_stretch_max": 1.6527843919271137,
+      "edges_over_2x": 0
     },
     {
       "frame": 41,
-      "edge_stretch_p99": 1.4340160280932135,
-      "edge_stretch_max": 78.95582183413838,
-      "edges_over_2x": 532
+      "edge_stretch_p99": 1.042898594101549,
+      "edge_stretch_max": 1.819653335029276,
+      "edges_over_2x": 0
     },
     {
       "frame": 61,
-      "edge_stretch_p99": 1.131130040813471,
-      "edge_stretch_max": 1.6992410484200817,
+      "edge_stretch_p99": 1.0885508691131032,
+      "edge_stretch_max": 1.3838453990054667,
+      "edges_over_2x": 0
+    },
+    {
+      "frame": 101,
+      "edge_stretch_p99": 1.3881580953492336,
+      "edge_stretch_max": 1.826244333779215,
       "edges_over_2x": 0
     }
   ],
