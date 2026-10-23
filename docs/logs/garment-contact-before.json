@@ -1,0 +1,910 @@
+{
+  "scope": "150 baked frames; rendered outer robe and scarf tail excluding neck attachment; noncoplanar edge/triangle intersections",
+  "robe_triangles": 11035,
+  "scarf_triangles": 6112,
+  "frames_with_intersection": 7,
+  "max_intersecting_pairs": 54,
+  "face_displacement_max": 0.0,
+  "frames": [
+    {
+      "frame": 1,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 2,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 3,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 4,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 5,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 6,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 7,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 8,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 9,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 10,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 11,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 12,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 13,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 14,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 15,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 16,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 17,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 18,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 19,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 20,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 21,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 22,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 23,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 24,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 25,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 26,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 27,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 28,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 29,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 30,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 31,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 32,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 33,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 34,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 35,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 36,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 37,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 38,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 39,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 40,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 41,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 42,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 43,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 44,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 45,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 46,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 47,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 48,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 49,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 50,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 51,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 52,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 53,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 54,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 55,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 56,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 57,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 58,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 59,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 60,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 61,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 62,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 63,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 64,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 65,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 66,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 67,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 68,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 69,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 70,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 71,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 72,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 73,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 74,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 75,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 76,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 77,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 78,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 79,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 80,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 81,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 82,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 83,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 84,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 85,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 86,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 87,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 88,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 89,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 90,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 91,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 92,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 93,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 94,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 95,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 96,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 97,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 98,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 99,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 100,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 101,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 102,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 103,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 104,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 105,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 106,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 107,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 108,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 109,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 110,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 111,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 112,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 113,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 114,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 115,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 116,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 117,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 118,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 119,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 120,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 121,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 122,
+      "candidate_pairs": 14,
+      "intersecting_triangle_pairs": 14,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 123,
+      "candidate_pairs": 42,
+      "intersecting_triangle_pairs": 42,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 124,
+      "candidate_pairs": 49,
+      "intersecting_triangle_pairs": 49,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 125,
+      "candidate_pairs": 54,
+      "intersecting_triangle_pairs": 54,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 126,
+      "candidate_pairs": 46,
+      "intersecting_triangle_pairs": 46,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 127,
+      "candidate_pairs": 39,
+      "intersecting_triangle_pairs": 39,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 128,
+      "candidate_pairs": 26,
+      "intersecting_triangle_pairs": 26,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 129,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 130,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 131,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 132,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 133,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 134,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 135,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 136,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 137,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 138,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 139,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 140,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 141,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 142,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 143,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 144,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 145,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 146,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 147,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 148,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 149,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    },
+    {
+      "frame": 150,
+      "candidate_pairs": 0,
+      "intersecting_triangle_pairs": 0,
+      "face_displacement_max": 0.0
+    }
+  ]
+}

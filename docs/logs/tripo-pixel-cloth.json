@@ -1,6 +1,14 @@
 {
   "test": "T-pose world translation, start/stop/reverse; NOT running animation",
-  "physics": "Blender cloth, independent surfaces with pinned roots, body ellipsoid collisions",
+  "physics": "Blender cloth, independent surfaces with pinned roots, body ellipsoid collisions; deformed robe garment collider",
+  "hood_physics": "Acceleration-driven torsional spring, 12 substeps/frame, front aperture fixed; not full cloth simulation",
+  "hood_spring": {
+    "acceleration_coupling": 5,
+    "stiffness": 150,
+    "damping": 18,
+    "cubic_stiffness": 2000
+  },
+  "scarf_skin_contact": "6mm unilateral projection against rendered outer robe, supplements coarse cloth collisions",
   "frames": 150,
   "fps": 30,
   "settle_frames": 30,
@@ -8,7 +16,7 @@
   "self_collision": true,
   "render_skin": "Parametric bilinear binding, separate front slit banks; dark robe lining follows shell",
   "removed_front_slit_bridge_triangles": 87,
-  "simulation_cache_reused": true,
+  "simulation_cache_reused": false,
   "scarf_attachment": "4 pinned rows, 0.03m posterior offset, broader root bend",
   "production_ready": false,
   "metrics": [
@@ -24,7 +32,11 @@
         0.0021120609363188617,
         0.2549999952316284
       ],
-      "max_skin_displacement": 0.0848973214720969
+      "max_skin_displacement": 0.08489732147209693,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 2,
@@ -38,7 +50,11 @@
         0.0023155148468307547,
         0.2549369907056963
       ],
-      "max_skin_displacement": 0.08557359922380696
+      "max_skin_displacement": 0.08557359922380697,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 3,
@@ -52,7 +68,11 @@
         0.0026708063543648334,
         0.25487740055934804
       ],
-      "max_skin_displacement": 0.0893461054210874
+      "max_skin_displacement": 0.08934610542108742,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 4,
@@ -66,7 +86,11 @@
         0.0031279411821349247,
         0.25480912263328964
       ],
-      "max_skin_displacement": 0.09604132894625743
+      "max_skin_displacement": 0.09604132894625743,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 5,
@@ -80,7 +104,11 @@
         0.003558171636148079,
         0.25474970485713033
       ],
-      "max_skin_displacement": 0.10510164966096615
+      "max_skin_displacement": 0.10510164966096612,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 6,
@@ -94,7 +122,11 @@
         0.0038732395985641996,
         0.2547072349367915
       ],
-      "max_skin_displacement": 0.1304691749093407
+      "max_skin_displacement": 0.1304691749093407,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 7,
@@ -108,7 +140,11 @@
         0.004067424735104716,
         0.25467969759090525
       ],
-      "max_skin_displacement": 0.16460581945346792
+      "max_skin_displacement": 0.16460581945346792,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 8,
@@ -122,7 +158,11 @@
         0.004128331343668538,
         0.25467129011411926
       ],
-      "max_skin_displacement": 0.20003181958247743
+      "max_skin_displacement": 0.20003181958247743,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 9,
@@ -136,7 +176,11 @@
         0.004078243934624904,
         0.2546788760133692
       ],
-      "max_skin_displacement": 0.23390106370229133
+      "max_skin_displacement": 0.23390106370229133,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 10,
@@ -150,7 +194,11 @@
         0.0039487854653113596,
         0.25469558947795146
       ],
-      "max_skin_displacement": 0.2639870515073173
+      "max_skin_displacement": 0.2639870515073173,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 11,
@@ -164,7 +212,11 @@
         0.0037676454144152435,
         0.254718579150535
       ],
-      "max_skin_displacement": 0.2908694001087357
+      "max_skin_displacement": 0.2908694001087357,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 12,
@@ -178,7 +230,11 @@
         0.003578967590992515,
         0.25474348905924205
       ],
-      "max_skin_displacement": 0.3148228403715703
+      "max_skin_displacement": 0.3148228403715703,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 13,
@@ -192,7 +248,11 @@
         0.0034122810371824213,
         0.2547667413144498
       ],
-      "max_skin_displacement": 0.33666026905456264
+      "max_skin_displacement": 0.33666026905456264,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 14,
@@ -206,7 +266,11 @@
         0.0032877095194684494,
         0.2547848788467613
       ],
-      "max_skin_displacement": 0.3566899004011297
+      "max_skin_displacement": 0.3566899004011297,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 15,
@@ -220,7 +284,11 @@
         0.0032174007564380364,
         0.2547951662862623
       ],
-      "max_skin_displacement": 0.37415636761950327
+      "max_skin_displacement": 0.37415636761950327,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 16,
@@ -234,7 +302,11 @@
         0.0031981137707024006,
         0.25479787265932236
       ],
-      "max_skin_displacement": 0.3885817822062918
+      "max_skin_displacement": 0.3885817822062918,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 17,
@@ -248,7 +320,11 @@
         0.003222409837149285,
         0.25479431007359477
       ],
-      "max_skin_displacement": 0.39969884169671016
+      "max_skin_displacement": 0.39969884169671016,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 18,
@@ -262,7 +338,11 @@
         0.003278563075975792,
         0.25478632063479034
       ],
-      "max_skin_displacement": 0.40755434624817244
+      "max_skin_displacement": 0.40755434624817244,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 19,
@@ -276,7 +356,11 @@
         0.0033495234879287513,
         0.2547762812794866
       ],
-      "max_skin_displacement": 0.4125942774292032
+      "max_skin_displacement": 0.4125942774292032,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 20,
@@ -290,7 +374,11 @@
         0.003419699298368918,
         0.2547663248874046
       ],
-      "max_skin_displacement": 0.41542168277642344
+      "max_skin_displacement": 0.41542168277642344,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 21,
@@ -304,7 +392,11 @@
         0.003478093072772026,
         0.25475806239488963
       ],
-      "max_skin_displacement": 0.4165500215496642
+      "max_skin_displacement": 0.4165500215496642,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 22,
@@ -318,7 +410,11 @@
         0.003518383647944476,
         0.2547524257286175
       ],
-      "max_skin_displacement": 0.41629096793087633
+      "max_skin_displacement": 0.41629096793087633,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 23,
@@ -332,7 +428,11 @@
         0.0035380264240744952,
         0.2547497000243213
       ],
-      "max_skin_displacement": 0.4148065204025518
+      "max_skin_displacement": 0.4148065204025518,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 24,
@@ -346,7 +446,11 @@
         0.003538165694555721,
         0.25474965411263545
       ],
-      "max_skin_displacement": 0.41222225678682756
+      "max_skin_displacement": 0.41222225678682756,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 25,
@@ -360,7 +464,11 @@
         0.003523053223820957,
         0.25475170402913483
       ],
-      "max_skin_displacement": 0.4087678446842812
+      "max_skin_displacement": 0.4087678446842812,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 26,
@@ -374,7 +482,11 @@
         0.003498387019577864,
         0.2547550982720143
       ],
-      "max_skin_displacement": 0.40475769539538725
+      "max_skin_displacement": 0.40475769539538725,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 27,
@@ -388,7 +500,11 @@
         0.0034701294089491304,
         0.2547590329840377
       ],
-      "max_skin_displacement": 0.4004876520861516
+      "max_skin_displacement": 0.4004876520861516,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 28,
@@ -402,7 +518,11 @@
         0.003443322018594355,
         0.25476279854774475
       ],
-      "max_skin_displacement": 0.3961833216078278
+      "max_skin_displacement": 0.3961833216078278,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 29,
@@ -416,7 +536,11 @@
         0.003421834921716033,
         0.2547658263026057
       ],
-      "max_skin_displacement": 0.39201050983639
+      "max_skin_displacement": 0.39201050983639,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 30,
@@ -430,7 +554,11 @@
         0.003407878297809008,
         0.25476780211603317
       ],
-      "max_skin_displacement": 0.3880941293968155
+      "max_skin_displacement": 0.3880941293968155,
+      "hood_pitch_degrees": 0.0,
+      "hood_tip_displacement": 0.0,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 31,
@@ -444,7 +572,11 @@
         0.004905367295282918,
         0.2543861825723906
       ],
-      "max_skin_displacement": 0.3859644049525744
+      "max_skin_displacement": 0.3859644049525744,
+      "hood_pitch_degrees": -1.2809949991472784,
+      "hood_tip_displacement": 0.0058755735839758055,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 32,
@@ -458,7 +590,11 @@
         0.0074674643676828694,
         0.25447958305075363
       ],
-      "max_skin_displacement": 0.3846292091632583
+      "max_skin_displacement": 0.3846292091632583,
+      "hood_pitch_degrees": -2.6925988593805936,
+      "hood_tip_displacement": 0.012349335037048976,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 33,
@@ -472,7 +608,11 @@
         0.009114857209292618,
         0.25440336481944936
       ],
-      "max_skin_displacement": 0.3849109248178698
+      "max_skin_displacement": 0.3849109248178698,
+      "hood_pitch_degrees": -3.1063617894225852,
+      "hood_tip_displacement": 0.014246583390727933,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 34,
@@ -482,11 +622,15 @@
         0.20624740421772003
       ],
       "robe_hem": [
-        -8.386047894062456e-07,
-        0.008504621332158914,
-        0.25439240159215154
+        1.260000518672117e-06,
+        0.008700216843469723,
+        0.2544001397248861
       ],
-      "max_skin_displacement": 0.38657815957099223
+      "max_skin_displacement": 0.38657815957099223,
+      "hood_pitch_degrees": -2.9241943081585156,
+      "hood_tip_displacement": 0.013411302932456457,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 35,
@@ -496,11 +640,15 @@
         0.20732441378964317
       ],
       "robe_hem": [
-        -5.82891226946919e-06,
-        0.00798692982140425,
-        0.25436546915286296
+        -4.424633344397817e-07,
+        0.00824484828154783,
+        0.254361699561815
       ],
-      "max_skin_displacement": 0.38883845248646315
+      "max_skin_displacement": 0.38883845248646315,
+      "hood_pitch_degrees": -2.4452894231580404,
+      "hood_tip_displacement": 0.011215255952290447,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 36,
@@ -510,11 +658,15 @@
         0.20859941840171814
       ],
       "robe_hem": [
-        2.490377441419598e-06,
-        0.007105146308203001,
-        0.25440721817918727
+        -7.764765234389563e-08,
+        0.0075309628973136075,
+        0.2543915486013567
       ],
-      "max_skin_displacement": 0.3913468115623795
+      "max_skin_displacement": 0.3913468115623795,
+      "hood_pitch_degrees": -1.8713260942394738,
+      "hood_tip_displacement": 0.008583058071945225,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 37,
@@ -524,11 +676,15 @@
         0.2097856899102529
       ],
       "robe_hem": [
-        2.8348581885303567e-06,
-        0.006422647954644384,
-        0.25446452321232976
+        -1.1333994979782507e-07,
+        0.00692774194317895,
+        0.25444137727892074
       ],
-      "max_skin_displacement": 0.394012898901917
+      "max_skin_displacement": 0.394012898901917,
+      "hood_pitch_degrees": -1.3222327594308974,
+      "hood_tip_displacement": 0.006064711644329082,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 38,
@@ -538,11 +694,15 @@
         0.2107468843460083
       ],
       "robe_hem": [
-        3.91882078192056e-06,
-        0.005906229687703622,
-        0.25450405317383845
+        -2.0354060567926254e-07,
+        0.0063859844529950945,
+        0.2544713318347931
       ],
-      "max_skin_displacement": 0.39630197778526793
+      "max_skin_displacement": 0.39630197778526793,
+      "hood_pitch_degrees": -0.8578462462159383,
+      "hood_tip_displacement": 0.003934751226132102,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 39,
@@ -552,11 +712,15 @@
         0.21127338210741678
       ],
       "robe_hem": [
-        4.858333168895852e-06,
-        0.005405532850607022,
-        0.2545336219104561
+        1.3715594790839432e-07,
+        0.005839499468738968,
+        0.25449971250585607
       ],
-      "max_skin_displacement": 0.3979082079039733
+      "max_skin_displacement": 0.3979082079039733,
+      "hood_pitch_degrees": -0.4985672944116043,
+      "hood_tip_displacement": 0.0022868321868183064,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 40,
@@ -566,11 +730,15 @@
         0.2114217910501692
       ],
       "robe_hem": [
-        3.0869130068207893e-06,
-        0.005178632768424782,
-        0.25454336404800415
+        1.7281729776948702e-08,
+        0.00553057372972772,
+        0.2545148609457789
       ],
-      "max_skin_displacement": 0.39882546853486794
+      "max_skin_displacement": 0.39882546853486794,
+      "hood_pitch_degrees": -0.24158878112183074,
+      "hood_tip_displacement": 0.001108123899400597,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 41,
@@ -580,11 +748,15 @@
         0.2112913214498096
       ],
       "robe_hem": [
-        1.1461144278679992e-06,
-        0.0050419882141255045,
-        0.25455346461888906
+        -1.054729617758435e-08,
+        0.005288420094026101,
+        0.2545326134643039
       ],
-      "max_skin_displacement": 0.39925388785637567
+      "max_skin_displacement": 0.39925388785637567,
+      "hood_pitch_degrees": -0.0723048984150678,
+      "hood_tip_displacement": 0.00033164967198910715,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 42,
@@ -594,11 +766,15 @@
         0.21099687781598833
       ],
       "robe_hem": [
-        1.610052370201506e-06,
-        0.005062644646779911,
-        0.2545548886866183
+        -5.726938654235612e-07,
+        0.005206674136020042,
+        0.2545423733221518
       ],
-      "max_skin_displacement": 0.39942452145498636
+      "max_skin_displacement": 0.39942452145498636,
+      "hood_pitch_degrees": 0.02827283467718382,
+      "hood_tip_displacement": 0.0001296824569218938,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 43,
@@ -608,11 +784,15 @@
         0.21062042812506357
       ],
       "robe_hem": [
-        2.3897496471301957e-06,
-        0.0051864204374519555,
-        0.25454990283862966
+        -3.2745094045281265e-07,
+        0.005236207230671032,
+        0.2545453849676493
       ],
-      "max_skin_displacement": 0.39948511431093364
+      "max_skin_displacement": 0.39948511431093364,
+      "hood_pitch_degrees": 0.07906135310930516,
+      "hood_tip_displacement": 0.0003626403198139906,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 44,
@@ -622,11 +802,15 @@
         0.21021044751008353
       ],
       "robe_hem": [
-        5.75865841882832e-07,
-        0.005385258109182925,
-        0.25453456833555893
+        -5.936567504249979e-08,
+        0.005341561058083096,
+        0.2545365497872636
       ],
-      "max_skin_displacement": 0.39949143525656117
+      "max_skin_displacement": 0.39949143525656117,
+      "hood_pitch_degrees": 0.09655129100113158,
+      "hood_tip_displacement": 0.0004428635269337172,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 45,
@@ -636,11 +820,15 @@
         0.20979201131396824
       ],
       "robe_hem": [
-        -6.655581872054599e-07,
-        0.005624888515150225,
-        0.2545131855719798
+        -1.2906709675794322e-07,
+        0.005518898569248818,
+        0.2545210678835173
       ],
-      "max_skin_displacement": 0.3994537469377635
+      "max_skin_displacement": 0.39945374693776353,
+      "hood_pitch_degrees": 0.09384853938646691,
+      "hood_tip_displacement": 0.0004304664908234655,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 46,
@@ -650,11 +838,15 @@
         0.21485179662704468
       ],
       "robe_hem": [
-        -1.6350325201860745e-06,
-        0.008598109153476922,
-        0.2541422207613249
+        -3.6365913798375472e-06,
+        0.008447054471518542,
+        0.25413853574443507
       ],
-      "max_skin_displacement": 0.40289949754032256
+      "max_skin_displacement": 0.40289949754032256,
+      "hood_pitch_degrees": -1.8408862340175698,
+      "hood_tip_displacement": 0.008443454169175756,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 47,
@@ -664,11 +856,15 @@
         0.21931804716587067
       ],
       "robe_hem": [
-        0.000227172115058705,
-        0.009490562451852334,
-        0.25459900095656113
+        1.197750198362219e-06,
+        0.01196020217360677,
+        0.2546572475819974
       ],
-      "max_skin_displacement": 0.4084426076379667
+      "max_skin_displacement": 0.40844260763796675,
+      "hood_pitch_degrees": -3.9719831412642885,
+      "hood_tip_displacement": 0.018215131422570183,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 48,
@@ -678,11 +874,15 @@
         0.2231096559100681
       ],
       "robe_hem": [
-        0.00018545038791843753,
-        0.007998245189318786,
-        0.25438035662109787
+        -2.0790352381654146e-05,
+        0.011956503061023919,
+        0.2544166969286429
       ],
-      "max_skin_displacement": 0.41534880112968964
+      "max_skin_displacement": 0.41534880112968964,
+      "hood_pitch_degrees": -4.5912708671230416,
+      "hood_tip_displacement": 0.021053707887529076,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 49,
@@ -692,11 +892,15 @@
         0.22616840402285257
       ],
       "robe_hem": [
-        0.0003295932542273108,
-        0.005752213903375574,
-        0.2545308051882563
+        -2.3035654275854293e-06,
+        0.009718704062539179,
+        0.2543879747390747
       ],
-      "max_skin_displacement": 0.42443434058651036
+      "max_skin_displacement": 0.42443434058651036,
+      "hood_pitch_degrees": -4.300591060499995,
+      "hood_tip_displacement": 0.0197214151049732,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 50,
@@ -706,11 +910,15 @@
         0.22900206512875027
       ],
       "robe_hem": [
-        0.00029333279736739633,
-        0.005014136433601379,
-        0.2546156354852625
+        8.02471493296105e-06,
+        0.00829906963013314,
+        0.254422170084876
       ],
-      "max_skin_displacement": 0.4345919262071922
+      "max_skin_displacement": 0.4345919262071922,
+      "hood_pitch_degrees": -3.562901685946618,
+      "hood_tip_displacement": 0.016339762632361754,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 51,
@@ -720,11 +928,15 @@
         0.231394006146325
       ],
       "robe_hem": [
-        9.529677953577374e-05,
-        0.005490917611766506,
-        0.25461074709892273
+        6.723862510183166e-06,
+        0.007299573034853549,
+        0.2544979855820939
       ],
-      "max_skin_displacement": 0.44242079014961755
+      "max_skin_displacement": 0.44242079014961755,
+      "hood_pitch_degrees": -2.6930123829388175,
+      "hood_tip_displacement": 0.012351231272295007,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 52,
@@ -734,11 +946,15 @@
         0.23268836736679077
       ],
       "robe_hem": [
-        7.310026990740585e-06,
-        0.0058848523610347024,
-        0.2545488492862598
+        1.4447604789401758e-06,
+        0.006947610426593471,
+        0.2545439689546018
       ],
-      "max_skin_displacement": 0.4470723303492848
+      "max_skin_displacement": 0.4470723303492848,
+      "hood_pitch_degrees": -1.8738718612162604,
+      "hood_tip_displacement": 0.008594733492648991,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 53,
@@ -748,11 +964,15 @@
         0.23278965718216366
       ],
       "robe_hem": [
-        -0.00013051956626146125,
-        0.006933622666307398,
-        0.25446076087049535
+        -7.203021645231324e-06,
+        0.0071511989509737165,
+        0.25450927502400167
       ],
-      "max_skin_displacement": 0.4494823979582003
+      "max_skin_displacement": 0.4494823979582003,
+      "hood_pitch_degrees": -1.1918495818542747,
+      "hood_tip_displacement": 0.005466703240460162,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 54,
@@ -762,11 +982,15 @@
         0.23202700250678593
       ],
       "robe_hem": [
-        -0.00016140878614277353,
-        0.007874467888393917,
-        0.2544371517928871
+        -2.18044614964153e-06,
+        0.007605234513411651,
+        0.25444882624858134
       ],
-      "max_skin_displacement": 0.45060076112372116
+      "max_skin_displacement": 0.45060076112372116,
+      "hood_pitch_degrees": -0.6723269502716148,
+      "hood_tip_displacement": 0.003083826309634729,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 55,
@@ -776,11 +1000,15 @@
         0.23082455495993295
       ],
       "robe_hem": [
-        -0.0001281897545866102,
-        0.0079667777628512,
-        0.2544551749487181
+        -1.9056414774584826e-06,
+        0.008432873197503993,
+        0.25442967221543594
       ],
-      "max_skin_displacement": 0.45106743584859676
+      "max_skin_displacement": 0.45106743584859676,
+      "hood_pitch_degrees": -0.30677325224746094,
+      "hood_tip_displacement": 0.0014071126014483998,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 56,
@@ -790,11 +1018,15 @@
         0.22948779828018612
       ],
       "robe_hem": [
-        -5.3640334954252467e-05,
-        0.007753050005113757,
-        0.25443334998311223
+        -3.609576676378335e-06,
+        0.008955005052927378,
+        0.25443643734261795
       ],
-      "max_skin_displacement": 0.45121459650391604
+      "max_skin_displacement": 0.45121459650391604,
+      "hood_pitch_degrees": -0.07060358591943036,
+      "hood_tip_displacement": 0.0003238460560344758,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 57,
@@ -804,11 +1036,15 @@
         0.22823740376366508
       ],
       "robe_hem": [
-        1.4571205365182077e-06,
-        0.007758503024642532,
-        0.254450872943208
+        4.394435361088678e-06,
+        0.008799104271708307,
+        0.25441527286091364
       ],
-      "max_skin_displacement": 0.451203535387996
+      "max_skin_displacement": 0.45120353538799596,
+      "hood_pitch_degrees": 0.06590240187537445,
+      "hood_tip_displacement": 0.0003022825657712406,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 58,
@@ -818,11 +1054,15 @@
         0.22722408837742275
       ],
       "robe_hem": [
-        2.1298012905242865e-05,
-        0.007490419052742623,
-        0.2544532224938676
+        6.779142430836195e-07,
+        0.008526344557066221,
+        0.2544148016620327
       ],
-      "max_skin_displacement": 0.45116858959888434
+      "max_skin_displacement": 0.4511685895988843,
+      "hood_pitch_degrees": 0.1313717155617245,
+      "hood_tip_displacement": 0.0006025785344680524,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 59,
@@ -832,11 +1072,15 @@
         0.2264416731066174
       ],
       "robe_hem": [
-        6.639290586463176e-05,
-        0.007054626941680908,
-        0.2544474497034743
+        5.999545747555031e-06,
+        0.008313709014170879,
+        0.2544363914309321
       ],
-      "max_skin_displacement": 0.45110209675807633
+      "max_skin_displacement": 0.45110209675807633,
+      "hood_pitch_degrees": 0.15020765973024852,
+      "hood_tip_displacement": 0.0006889755910244738,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 60,
@@ -846,11 +1090,15 @@
         0.2257915801472134
       ],
       "robe_hem": [
-        5.835924596524549e-05,
-        0.007247948968732679,
-        0.25445397721754537
+        1.0006708926945017e-06,
+        0.00815908087266458,
+        0.2544533586179888
       ],
-      "max_skin_displacement": 0.4510132449746021
+      "max_skin_displacement": 0.4510132449746021,
+      "hood_pitch_degrees": 0.14147535975396414,
+      "hood_tip_displacement": 0.0006489221184064774,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 61,
@@ -860,11 +1108,15 @@
         0.22532093856069776
       ],
       "robe_hem": [
-        -1.826913029543829e-05,
-        0.007800348707147547,
-        0.2544974281981185
+        -6.714140614054191e-07,
+        0.008070323112848643,
+        0.2544546159538063
       ],
-      "max_skin_displacement": 0.4510863313124854
+      "max_skin_displacement": 0.4510863313124854,
+      "hood_pitch_degrees": 0.11893968536214093,
+      "hood_tip_displacement": 0.0005455550597017157,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 62,
@@ -874,11 +1126,15 @@
         0.22501949138111538
       ],
       "robe_hem": [
-        -9.265916523995779e-05,
-        0.007181835335654182,
-        0.25446471491375483
+        -2.0388654873484583e-06,
+        0.008109195812328442,
+        0.254450037672713
       ],
-      "max_skin_displacement": 0.4512475769664594
+      "max_skin_displacement": 0.4512475769664594,
+      "hood_pitch_degrees": 0.09178258638505339,
+      "hood_tip_displacement": 0.0004209903353902341,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 63,
@@ -888,11 +1144,15 @@
         0.22488254639837477
       ],
       "robe_hem": [
-        -8.639159524456183e-05,
-        0.007081248470254846,
-        0.25444681902189514
+        6.328412238927568e-07,
+        0.008264534376763008,
+        0.2544433820892025
       ],
-      "max_skin_displacement": 0.4514707991690961
+      "max_skin_displacement": 0.4514707991690961,
+      "hood_pitch_degrees": 0.06556047528915339,
+      "hood_tip_displacement": 0.0003007142096637168,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 64,
@@ -902,11 +1162,15 @@
         0.22487826810942757
       ],
       "robe_hem": [
-        -2.561640625621343e-05,
-        0.007384002208709717,
-        0.2544513771662841
+        -1.6688255939427748e-06,
+        0.008372603236018,
+        0.2544390647797971
       ],
-      "max_skin_displacement": 0.45171360905828506
+      "max_skin_displacement": 0.451713609058285,
+      "hood_pitch_degrees": 0.043142636078481116,
+      "hood_tip_displacement": 0.00019788758478647044,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 65,
@@ -916,11 +1180,15 @@
         0.22498034603065914
       ],
       "robe_hem": [
-        2.1974354092742794e-06,
-        0.0076491881061244655,
-        0.25446357839816325
+        9.730143371622969e-07,
+        0.00841387381424775,
+        0.25443302296303416
       ],
-      "max_skin_displacement": 0.45199373915712626
+      "max_skin_displacement": 0.45199373915712626,
+      "hood_pitch_degrees": 0.025597552886276808,
+      "hood_tip_displacement": 0.00011741141606263707,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 66,
@@ -930,11 +1198,15 @@
         0.22515745129850176
       ],
       "robe_hem": [
-        4.71586397513936e-05,
-        0.007622781637552622,
-        0.25444328543302175
+        -2.9235363669883823e-07,
+        0.008408266144829828,
+        0.25443453321585785
       ],
-      "max_skin_displacement": 0.4523766342845903
+      "max_skin_displacement": 0.4523766342845903,
+      "hood_pitch_degrees": 0.01289434079706643,
+      "hood_tip_displacement": 5.914404506944582e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 67,
@@ -944,11 +1216,15 @@
         0.22536850306722853
       ],
       "robe_hem": [
-        7.868358438458558e-05,
-        0.007666977676185402,
-        0.2544328070975639
+        -3.296821500338705e-06,
+        0.008362159535691544,
+        0.25443597500388687
       ],
-      "max_skin_displacement": 0.4528197359780692
+      "max_skin_displacement": 0.4528197359780692,
+      "hood_pitch_degrees": 0.004391458893222597,
+      "hood_tip_displacement": 2.0142839969378098e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 68,
@@ -958,11 +1234,15 @@
         0.2255912290679084
       ],
       "robe_hem": [
-        7.381786792233765e-05,
-        0.007865353210552319,
-        0.25445567756085785
+        6.872289206414182e-06,
+        0.00831168084531217,
+        0.25444083922618144
       ],
-      "max_skin_displacement": 0.4532362289575533
+      "max_skin_displacement": 0.4532362289575533,
+      "hood_pitch_degrees": -0.0007512649973457478,
+      "hood_tip_displacement": 3.445918768138262e-06,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 69,
@@ -972,11 +1252,15 @@
         0.22579005195034874
       ],
       "robe_hem": [
-        -5.3507409673428e-05,
-        0.007554200855461326,
-        0.25444332570643036
+        2.9509992723556146e-06,
+        0.008268419149759653,
+        0.25444160764281815
       ],
-      "max_skin_displacement": 0.4536259080595043
+      "max_skin_displacement": 0.4536259080595043,
+      "hood_pitch_degrees": -0.0034250840211920153,
+      "hood_tip_displacement": 1.571025051233003e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 70,
@@ -986,11 +1270,15 @@
         0.2259476664993498
       ],
       "robe_hem": [
-        -8.595600590794945e-05,
-        0.00753167352160892,
-        0.25444332409549403
+        3.3796326214222653e-06,
+        0.008252013374019313,
+        0.2544411058361466
       ],
-      "max_skin_displacement": 0.453965087142533
+      "max_skin_displacement": 0.453965087142533,
+      "hood_pitch_degrees": -0.004438716720453087,
+      "hood_tip_displacement": 2.0359603207710672e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 71,
@@ -1000,11 +1288,15 @@
         0.22605717844433254
       ],
       "robe_hem": [
-        -2.400723600215782e-06,
-        0.007760498974774335,
-        0.2544544073375496
+        -7.983159562357016e-07,
+        0.0082802998053061,
+        0.25444160764281815
       ],
-      "max_skin_displacement": 0.4542308574000403
+      "max_skin_displacement": 0.4542308574000403,
+      "hood_pitch_degrees": -0.004427642225023134,
+      "hood_tip_displacement": 2.0308806469196365e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 72,
@@ -1014,11 +1306,15 @@
         0.22611022823386723
       ],
       "robe_hem": [
-        -3.380167482965909e-05,
-        0.007595542314890269,
-        0.25445111861100067
+        -8.738499375155968e-07,
+        0.008296745854455072,
+        0.25444068296535594
       ],
-      "max_skin_displacement": 0.454455459797897
+      "max_skin_displacement": 0.454455459797897,
+      "hood_pitch_degrees": -0.003879522057613513,
+      "hood_tip_displacement": 1.7794676864440554e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 73,
@@ -1028,11 +1324,15 @@
         0.22611779967943826
       ],
       "robe_hem": [
-        -6.438653430007901e-05,
-        0.007194032540192475,
-        0.25444443966891317
+        -1.120776928658145e-06,
+        0.00832100011206962,
+        0.25443894395957123
       ],
-      "max_skin_displacement": 0.454624133067217
+      "max_skin_displacement": 0.454624133067217,
+      "hood_pitch_degrees": -0.003090191152728774,
+      "hood_tip_displacement": 1.4174156558300365e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 74,
@@ -1042,11 +1342,15 @@
         0.22608334653907353
       ],
       "robe_hem": [
-        -0.00011668226579171755,
-        0.0071929918753134234,
-        0.254447070327965
+        -1.5185701819383532e-06,
+        0.008334899270856703,
+        0.2544388481088587
       ],
-      "max_skin_displacement": 0.4547405392321485
+      "max_skin_displacement": 0.4547405392321485,
+      "hood_pitch_degrees": -0.00226411127311295,
+      "hood_tip_displacement": 1.0385075248173625e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 75,
@@ -1056,11 +1360,15 @@
         0.226015148891343
       ],
       "robe_hem": [
-        -0.00018020959865876844,
-        0.007711155994518383,
-        0.2544656323420035
+        -3.1045983081642934e-07,
+        0.008327675832284463,
+        0.2544386411035383
       ],
-      "max_skin_displacement": 0.4548280905820088
+      "max_skin_displacement": 0.45482809058200874,
+      "hood_pitch_degrees": -0.0015326960619269825,
+      "hood_tip_displacement": 7.030203914998685e-06,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 76,
@@ -1070,11 +1378,15 @@
         0.21508431434631348
       ],
       "robe_hem": [
-        5.4813179697186966e-05,
-        0.0032114209355534732,
-        0.2553833682794829
+        2.639369018357389e-07,
+        0.003061078690193795,
+        0.2554267032726391
       ],
-      "max_skin_displacement": 0.4461362250249058
+      "max_skin_displacement": 0.4461362250249058,
+      "hood_pitch_degrees": 3.201152970871082,
+      "hood_tip_displacement": 0.014681208994026489,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 77,
@@ -1084,11 +1396,15 @@
         0.20878879063659245
       ],
       "robe_hem": [
-        -1.5698331825095355e-06,
-        0.00173477063307891,
-        0.255164954307917
+        5.685244989738724e-07,
+        0.0011330633550076872,
+        0.25528816435788126
       ],
-      "max_skin_displacement": 0.4381880071201732
+      "max_skin_displacement": 0.4381880071201732,
+      "hood_pitch_degrees": 6.701245289425514,
+      "hood_tip_displacement": 0.03071990236650651,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 78,
@@ -1098,11 +1414,15 @@
         0.2038402044110828
       ],
       "robe_hem": [
-        2.1329896569384163e-05,
-        -0.0011958270459561735,
-        0.2556382506280332
+        -4.964990504015839e-07,
+        -0.00154254404274193,
+        0.25577406383849477
       ],
-      "max_skin_displacement": 0.43108251259822356
+      "max_skin_displacement": 0.43108251259822356,
+      "hood_pitch_degrees": 7.595662280817047,
+      "hood_tip_displacement": 0.03481444349933522,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 79,
@@ -1112,11 +1432,15 @@
         0.2010747061835395
       ],
       "robe_hem": [
-        3.3323609583218256e-06,
-        0.0012629016025646313,
-        0.25522140393386017
+        1.681941518433411e-07,
+        0.0009387328818037704,
+        0.25529929995536804
       ],
-      "max_skin_displacement": 0.425735634535472
+      "max_skin_displacement": 0.425735634535472,
+      "hood_pitch_degrees": 6.909849064695443,
+      "hood_tip_displacement": 0.031675043675897095,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 80,
@@ -1126,11 +1450,15 @@
         0.19972835150029924
       ],
       "robe_hem": [
-        -1.965596547469849e-05,
-        0.002088251951578501,
-        0.25495287534352895
+        -1.2483039159707077e-07,
+        0.002243745971370388,
+        0.254929822844428
       ],
-      "max_skin_displacement": 0.42229313122812423
+      "max_skin_displacement": 0.42229313122812423,
+      "hood_pitch_degrees": 5.5067502580545415,
+      "hood_tip_displacement": 0.025248762307578623,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 81,
@@ -1140,11 +1468,15 @@
         0.19936717384391361
       ],
       "robe_hem": [
-        4.3789859282205234e-08,
-        0.0039871045061059904,
-        0.2547051866312285
+        -1.494188235962635e-07,
+        0.004394898543486724,
+        0.25465823266957255
       ],
-      "max_skin_displacement": 0.4202427073967872
+      "max_skin_displacement": 0.4202427073967872,
+      "hood_pitch_degrees": 3.9707524740500135,
+      "hood_tip_displacement": 0.018209489960841548,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 82,
@@ -1154,11 +1486,15 @@
         0.19955665535397
       ],
       "robe_hem": [
-        -3.711431909815056e-06,
-        0.0053638799770458325,
-        0.25455737999967626
+        -3.9323306220860497e-07,
+        0.005901201351268872,
+        0.25451837923075704
       ],
-      "max_skin_displacement": 0.4191765251832651
+      "max_skin_displacement": 0.4191765251832651,
+      "hood_pitch_degrees": 2.6081384140101456,
+      "hood_tip_displacement": 0.011962033637559738,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 83,
@@ -1168,11 +1504,15 @@
         0.19996917413340676
       ],
       "robe_hem": [
-        -1.0791659135704961e-05,
-        0.0064228112633163865,
-        0.254479995450458
+        -2.1288693772390075e-07,
+        0.007017001912400529,
+        0.2544444114775271
       ],
-      "max_skin_displacement": 0.4187738348481515
+      "max_skin_displacement": 0.4187738348481515,
+      "hood_pitch_degrees": 1.5338285973570147,
+      "hood_tip_displacement": 0.0070351885748902426,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 84,
@@ -1182,11 +1522,15 @@
         0.20036843253506553
       ],
       "robe_hem": [
-        -1.4920914558437338e-05,
-        0.006764117124918345,
-        0.2544222023036029
+        -4.101969635313081e-07,
+        0.007331885196067192,
+        0.2543902944874119
       ],
-      "max_skin_displacement": 0.4190174245385365
+      "max_skin_displacement": 0.4190174245385365,
+      "hood_pitch_degrees": 0.7581190874765077,
+      "hood_tip_displacement": 0.0034773318922670764,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 85,
@@ -1196,11 +1540,15 @@
         0.2006507913271586
       ],
       "robe_hem": [
-        -8.628312620252521e-06,
-        0.006607021834399249,
-        0.25443316311449615
+        -3.5041847276126054e-07,
+        0.007080815933846138,
+        0.25440263425981674
       ],
-      "max_skin_displacement": 0.4197724885722531
+      "max_skin_displacement": 0.419772488572253,
+      "hood_pitch_degrees": 0.24322168864877736,
+      "hood_tip_displacement": 0.0011156137387035585,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 86,
@@ -1210,11 +1558,15 @@
         0.20080064402686226
       ],
       "robe_hem": [
-        -5.076977182348806e-06,
-        0.006111219122603133,
-        0.2544840010436806
+        -3.257548090733213e-07,
+        0.0064386338800997344,
+        0.25445980961258347
       ],
-      "max_skin_displacement": 0.4208850089134503
+      "max_skin_displacement": 0.4208850089134503,
+      "hood_pitch_degrees": -0.06564611580536928,
+      "hood_tip_displacement": 0.00030110702739758106,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 87,
@@ -1224,11 +1576,15 @@
         0.20083832244078317
       ],
       "robe_hem": [
-        -1.1727637979060386e-06,
-        0.0053222791568653,
-        0.2545513244899544
+        -2.5379561054552217e-07,
+        0.005509953241090517,
+        0.25453569760193695
       ],
-      "max_skin_displacement": 0.42224677576778386
+      "max_skin_displacement": 0.42224677576778386,
+      "hood_pitch_degrees": -0.22428087496709434,
+      "hood_tip_displacement": 0.0010287357799088634,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 88,
@@ -1238,11 +1594,15 @@
         0.2008092916674084
       ],
       "robe_hem": [
-        1.0051962940574536e-06,
-        0.0044613271146207245,
-        0.25463260831059636
+        -9.059558250737379e-08,
+        0.004516930193514438,
+        0.25462753063923604
       ],
-      "max_skin_displacement": 0.4237994442427146
+      "max_skin_displacement": 0.4237994442427146,
+      "hood_pitch_degrees": -0.2817594020327808,
+      "hood_tip_displacement": 0.0012923789031557109,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 89,
@@ -1252,11 +1612,15 @@
         0.20078702436553109
       ],
       "robe_hem": [
-        1.2257488698516092e-07,
-        0.0036688334233052023,
-        0.2547298814799335
+        -9.575930583017956e-09,
+        0.0036164232202478357,
+        0.2547367625945323
       ],
-      "max_skin_displacement": 0.4255054863827046
+      "max_skin_displacement": 0.4255054863827046,
+      "hood_pitch_degrees": -0.27733610585835666,
+      "hood_tip_displacement": 0.0012720900916147694,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 90,
@@ -1266,11 +1630,15 @@
         0.20080705980459848
       ],
       "robe_hem": [
-        1.6617728343172111e-06,
-        0.0030433680560137772,
-        0.25481968795931015
+        4.861365491541084e-08,
+        0.002923606215296565,
+        0.25483773286278183
       ],
-      "max_skin_displacement": 0.42732396433297787
+      "max_skin_displacement": 0.42732396433297787,
+      "hood_pitch_degrees": -0.24002090267758314,
+      "hood_tip_displacement": 0.0011009323360413735,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 91,
@@ -1280,11 +1648,15 @@
         0.2009040200048023
       ],
       "robe_hem": [
-        2.8986977225498335e-06,
-        0.002640585641603212,
-        0.25488340854644775
+        5.984920581947928e-08,
+        0.0024998800174610035,
+        0.25490635230734543
       ],
-      "max_skin_displacement": 0.42916783717967477
+      "max_skin_displacement": 0.42916783717967477,
+      "hood_pitch_degrees": -0.18963352501751518,
+      "hood_tip_displacement": 0.0008698148149893068,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 92,
@@ -1294,11 +1666,15 @@
         0.20108477274576822
       ],
       "robe_hem": [
-        2.030092802571646e-06,
-        0.0024962376903843236,
-        0.2549069829889246
+        6.990959369359742e-08,
+        0.0023682471868154164,
+        0.2549281233065837
       ],
-      "max_skin_displacement": 0.43094217208966007
+      "max_skin_displacement": 0.43094217208966007,
+      "hood_pitch_degrees": -0.13852929182971419,
+      "hood_tip_displacement": 0.0006354090395177538,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 93,
@@ -1308,11 +1684,15 @@
         0.20133142835564083
       ],
       "robe_hem": [
-        9.533348229278754e-07,
-        0.0025641483229559823,
-        0.25489497587487503
+        6.602589245311399e-08,
+        0.002477093322857006,
+        0.2549092407162125
       ],
-      "max_skin_displacement": 0.4325727335869429
+      "max_skin_displacement": 0.4325727335869429,
+      "hood_pitch_degrees": -0.09347342195122997,
+      "hood_tip_displacement": 0.00042874589451837096,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 94,
@@ -1322,11 +1702,15 @@
         0.20163078606128693
       ],
       "robe_hem": [
-        2.0936083483074736e-07,
-        0.00278100129720327,
-        0.2548605646636035
+        4.245957121031398e-08,
+        0.00275398267282022,
+        0.25486484653240926
       ],
-      "max_skin_displacement": 0.4339916650105959
+      "max_skin_displacement": 0.4339916650105959,
+      "hood_pitch_degrees": -0.05735898712232604,
+      "hood_tip_displacement": 0.0002630954492662171,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 95,
@@ -1336,11 +1720,15 @@
         0.2019595503807068
       ],
       "robe_hem": [
-        -2.884513559660558e-07,
-        0.0030897807430576634,
-        0.25481460223326813
+        6.0671243164580195e-09,
+        0.0031165110098349083,
+        0.2548109003015467
       ],
-      "max_skin_displacement": 0.4351517517738233
+      "max_skin_displacement": 0.4351517517738233,
+      "hood_pitch_degrees": -0.030623015443845516,
+      "hood_tip_displacement": 0.00014046231725546853,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 96,
@@ -1350,11 +1738,15 @@
         0.2022793491681417
       ],
       "robe_hem": [
-        -9.23788769108108e-07,
-        0.0034010877480378024,
-        0.2547701581104382
+        -2.2957309806923986e-08,
+        0.003465678240801837,
+        0.2547613922003153
       ],
-      "max_skin_displacement": 0.43604874655027903
+      "max_skin_displacement": 0.43604874655027903,
+      "hood_pitch_degrees": -0.012320737748696275,
+      "hood_tip_displacement": 5.651303004161003e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 97,
@@ -1364,11 +1756,15 @@
         0.20255324575636122
       ],
       "robe_hem": [
-        -1.6105228255398558e-06,
-        0.0036489431922500197,
-        0.25473526039639033
+        -4.4774921716230043e-08,
+        0.0037348157650715598,
+        0.25472379938976186
       ],
-      "max_skin_displacement": 0.4366975152129058
+      "max_skin_displacement": 0.4366975152129058,
+      "hood_pitch_degrees": -0.0008798273785857395,
+      "hood_tip_displacement": 4.035611518310798e-06,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 98,
@@ -1378,11 +1774,15 @@
         0.20275709364149305
       ],
       "robe_hem": [
-        -1.908809111541445e-06,
-        0.0038161986582988016,
-        0.25471214184889923
+        -5.3830308042899954e-08,
+        0.003907361546078244,
+        0.25470018306294
       ],
-      "max_skin_displacement": 0.4371152905449925
+      "max_skin_displacement": 0.4371152905449925,
+      "hood_pitch_degrees": 0.005413147642096343,
+      "hood_tip_displacement": 2.4829144328266822e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 99,
@@ -1392,11 +1792,15 @@
         0.20288576516840193
       ],
       "robe_hem": [
-        -1.5154872057577006e-06,
-        0.0038960704932341703,
-        0.2547017819172627
+        -5.814808673004318e-08,
+        0.00397829751710634,
+        0.2546911932326652
       ],
-      "max_skin_displacement": 0.43731004299607046
+      "max_skin_displacement": 0.43731004299607046,
+      "hood_pitch_degrees": 0.008132145432141445,
+      "hood_tip_displacement": 3.730070300845163e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 100,
@@ -1406,11 +1810,15 @@
         0.20295030209753248
       ],
       "robe_hem": [
-        -9.764030191699685e-07,
-        0.003890507930033916,
-        0.2547026711541253
+        -5.151545592510145e-08,
+        0.003953914384584169,
+        0.2546945463966679
       ],
-      "max_skin_displacement": 0.43729527618911523
+      "max_skin_displacement": 0.43729527618911523,
+      "hood_pitch_degrees": 0.00857760699956862,
+      "hood_tip_displacement": 3.934395589132299e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 101,
@@ -1420,11 +1828,15 @@
         0.2029609034458796
       ],
       "robe_hem": [
-        -6.072265813295908e-07,
-        0.0038180383476051124,
-        0.2547119743115193
+        -3.930833072854281e-08,
+        0.0038578558612514186,
+        0.2547067903183602
       ],
-      "max_skin_displacement": 0.43709625130311647
+      "max_skin_displacement": 0.43709625130311647,
+      "hood_pitch_degrees": 0.007738460026099311,
+      "hood_tip_displacement": 3.549493815720201e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 102,
@@ -1434,11 +1846,15 @@
         0.20292530126041836
       ],
       "robe_hem": [
-        -2.677773146523258e-07,
-        0.0037051052660555454,
-        0.2547267619017008
+        -2.050607488017535e-08,
+        0.0037207619563953296,
+        0.2547246419094704
       ],
-      "max_skin_displacement": 0.4367361534157622
+      "max_skin_displacement": 0.4367361534157622,
+      "hood_pitch_degrees": 0.00631080425173566,
+      "hood_tip_displacement": 2.8946535349305942e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 103,
@@ -1448,11 +1864,15 @@
         0.20285147925217947
       ],
       "robe_hem": [
-        1.1617788960290294e-07,
-        0.0035772951873573097,
-        0.2547439932823181
+        -7.081064515526928e-09,
+        0.0035719517115000133,
+        0.25474467068105133
       ],
-      "max_skin_displacement": 0.43624135710210454
+      "max_skin_displacement": 0.43624135710210454,
+      "hood_pitch_degrees": 0.004744873055469808,
+      "hood_tip_displacement": 2.1763887799308788e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 104,
@@ -1462,11 +1882,15 @@
         0.20274993115001255
       ],
       "robe_hem": [
-        4.202545352197032e-07,
-        0.0034564959036337364,
-        0.2547607824609086
+        9.822943971740286e-09,
+        0.0034358855840322133,
+        0.25476364590026235
       ],
-      "max_skin_displacement": 0.43564886757871746
+      "max_skin_displacement": 0.43564886757871746,
+      "hood_pitch_degrees": 0.0033013623915445094,
+      "hood_tip_displacement": 1.514276142799202e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 105,
@@ -1476,11 +1900,15 @@
         0.20263145036167568
       ],
       "robe_hem": [
-        5.602955375336847e-07,
-        0.003360690297307195,
-        0.254774407760517
+        1.626556975595592e-08,
+        0.003331780433654785,
+        0.25477853336849726
       ],
-      "max_skin_displacement": 0.4349988432717834
+      "max_skin_displacement": 0.4349988432717834,
+      "hood_pitch_degrees": 0.002105730087065464,
+      "hood_tip_displacement": 9.658608950186403e-06,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 106,
@@ -1490,11 +1918,15 @@
         0.19989051752620274
       ],
       "robe_hem": [
-        5.87953135547306e-08,
-        0.0003376860876341124,
-        0.2558321815890235
+        -2.063982090344079e-09,
+        0.00031801172204919766,
+        0.25583642157348424
       ],
-      "max_skin_displacement": 0.42803616864080857
+      "max_skin_displacement": 0.42803616864080857,
+      "hood_pitch_degrees": 2.5630040150162112,
+      "hood_tip_displacement": 0.011755062883756629,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 107,
@@ -1504,11 +1936,15 @@
         0.20124108758237627
       ],
       "robe_hem": [
-        -3.0536187632544564e-08,
-        0.000362499340160473,
-        0.2557261666736087
+        3.0869604770287337e-09,
+        0.00034763200862987623,
+        0.25573188952497533
       ],
-      "max_skin_displacement": 0.4199494528996967
+      "max_skin_displacement": 0.4199494528996967,
+      "hood_pitch_degrees": 5.372113576284735,
+      "hood_tip_displacement": 0.0246319034675844,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 108,
@@ -1518,11 +1954,15 @@
         0.2036268280612098
       ],
       "robe_hem": [
-        2.959218548042102e-07,
-        -0.0003777839042044975,
-        0.25575214382764455
+        1.136156175267093e-07,
+        -0.00037261602040883655,
+        0.255750895351977
       ],
-      "max_skin_displacement": 0.41350529022923765
+      "max_skin_displacement": 0.41350529022923765,
+      "hood_pitch_degrees": 6.134473031428983,
+      "hood_tip_displacement": 0.028124297755355118,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 109,
@@ -1532,585 +1972,753 @@
         0.20687492191791534
       ],
       "robe_hem": [
-        1.144203021819546e-07,
-        0.0016069202809720427,
-        0.2552950736638662
+        3.1280747659390754e-07,
+        0.001615480796710865,
+        0.2552928634592005
       ],
-      "max_skin_displacement": 0.40825925474458463
+      "max_skin_displacement": 0.40825925474458463,
+      "hood_pitch_degrees": 5.661613685588485,
+      "hood_tip_displacement": 0.025958249965282374,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 110,
       "scarf_tip": [
-        -0.0865380068620046,
-        0.17694618966844347,
-        0.21076357199086082
+        -0.08693202336629231,
+        0.17763537830776638,
+        0.21062822805510628
       ],
       "robe_hem": [
-        9.886129425246288e-07,
-        0.002730577378659635,
-        0.25504673574421854
+        3.161757932945408e-08,
+        0.0027613849253267857,
+        0.2550427422330186
       ],
-      "max_skin_displacement": 0.403940901559836
+      "max_skin_displacement": 0.4041011094720503,
+      "hood_pitch_degrees": 4.603895085252285,
+      "hood_tip_displacement": 0.021111566328535367,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 111,
       "scarf_tip": [
-        -0.08709070376223987,
-        0.1612187557750278,
-        0.21489151981141832
+        -0.0896627807782756,
+        0.16575903362698025,
+        0.21288925409317017
       ],
       "robe_hem": [
-        -9.490815771002687e-07,
-        0.004327380979383314,
-        0.2548135076020215
+        -7.439402553688057e-07,
+        0.004317262688198605,
+        0.25481496308300944
       ],
-      "max_skin_displacement": 0.40087307216268736
+      "max_skin_displacement": 0.40175330283254956,
+      "hood_pitch_degrees": 3.403550593087528,
+      "hood_tip_displacement": 0.015609185249246843,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 112,
       "scarf_tip": [
-        -0.08711394626233313,
-        0.14891786045498318,
-        0.21882028546598223
+        -0.09151223550240199,
+        0.1589059697257148,
+        0.21416927708519828
       ],
       "robe_hem": [
-        2.971818951885546e-07,
-        0.004614888010798274,
-        0.2547854813369545
+        7.685813159241661e-07,
+        0.004619604832417256,
+        0.25478511404346776
       ],
-      "max_skin_displacement": 0.3990453573684846
+      "max_skin_displacement": 0.40072646687767066,
+      "hood_pitch_degrees": 2.306012128631464,
+      "hood_tip_displacement": 0.01057655312192812,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 113,
       "scarf_tip": [
-        -0.08665149948663181,
-        0.13986849122577244,
-        0.22211272517840067
+        -0.09236268202463786,
+        0.15472226010428536,
+        0.2151149312655131
       ],
       "robe_hem": [
-        1.3718383306203994e-07,
-        0.0041121196102451634,
-        0.254845436360385
+        -2.854629192247435e-07,
+        0.0041044966594592945,
+        0.2548463988948513
       ],
-      "max_skin_displacement": 0.3981040361769674
+      "max_skin_displacement": 0.39999762180958526,
+      "hood_pitch_degrees": 1.4160512728244736,
+      "hood_tip_displacement": 0.0064950097319144565,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 114,
       "scarf_tip": [
-        -0.08575774191154374,
-        0.1337733136283027,
-        0.22455539140436384
+        -0.0924569819536474,
+        0.15249363581339517,
+        0.2157216336992052
       ],
       "robe_hem": [
-        -1.515552755821576e-06,
-        0.0032278959815566603,
-        0.2549701969365816
+        4.122681595027963e-07,
+        0.003231609189832533,
+        0.2549696749932057
       ],
-      "max_skin_displacement": 0.3978671205522923
+      "max_skin_displacement": 0.39936905022905816,
+      "hood_pitch_degrees": 0.7552765583788988,
+      "hood_tip_displacement": 0.003464294001720068,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 115,
       "scarf_tip": [
-        -0.08449367930491765,
-        0.13025074534946018,
-        0.22610636221037972
+        -0.09138186193174785,
+        0.15160774522357517,
+        0.21621666683091056
       ],
       "robe_hem": [
-        1.6399649534587052e-06,
-        0.0021322933403221337,
-        0.2551701358846716
+        -1.2238033039810379e-06,
+        0.002128657456990835,
+        0.25517103478715225
       ],
-      "max_skin_displacement": 0.39819639105569526
+      "max_skin_displacement": 0.39887379769837567,
+      "hood_pitch_degrees": 0.3028741613089095,
+      "hood_tip_displacement": 0.0013892282288848461,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 116,
       "scarf_tip": [
-        -0.08295026876860195,
-        0.12888393137190077,
-        0.22678136494424608
+        -0.08938575867149565,
+        0.15214777655071682,
+        0.21657975183592904
       ],
       "robe_hem": [
-        -8.845809072620279e-08,
-        0.001379968346776189,
-        0.25533090330458974
+        7.200985999441253e-07,
+        0.001378924460024447,
+        0.25533125690511754
       ],
-      "max_skin_displacement": 0.3989961210022495
+      "max_skin_displacement": 0.39870525030878917,
+      "hood_pitch_degrees": 0.020257838229874436,
+      "hood_tip_displacement": 9.291909624705966e-05,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 117,
       "scarf_tip": [
-        -0.08138615099920167,
-        0.1294730007648468,
-        0.22679977284537423
+        -0.08737558623154958,
+        0.15439888503816393,
+        0.2165319605006112
       ],
       "robe_hem": [
-        -1.53078760094276e-07,
-        0.0011645636043033085,
-        0.2553784581455025
+        -1.995503996998171e-07,
+        0.0011695124007560112,
+        0.2553773804290875
       ],
-      "max_skin_displacement": 0.40010692054360913
+      "max_skin_displacement": 0.399056014257308,
+      "hood_pitch_degrees": -0.13501274133331828,
+      "hood_tip_displacement": 0.0006192792600579794,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 118,
       "scarf_tip": [
-        -0.08001715420848793,
-        0.1318266358640459,
-        0.22605908579296535
+        -0.085909905946917,
+        0.15793110926946005,
+        0.2159399257765876
       ],
       "robe_hem": [
-        6.285182169793533e-07,
-        0.0015243533495310191,
-        0.2552969351008132
+        1.1089366488384847e-06,
+        0.0015255889377078496,
+        0.2552967248736201
       ],
-      "max_skin_displacement": 0.4014377491613096
+      "max_skin_displacement": 0.39978393672264434,
+      "hood_pitch_degrees": -0.2019084835131061,
+      "hood_tip_displacement": 0.0009261177816644099,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 119,
       "scarf_tip": [
-        -0.0789001588192251,
-        0.1357013914320204,
-        0.22480586667855582
+        -0.08504519156283802,
+        0.1624409986866845,
+        0.21477460695637596
       ],
       "robe_hem": [
-        -4.290019187219268e-07,
-        0.002069391108847953,
-        0.25518032666799184
+        2.7157390672368207e-06,
+        0.002071066482647045,
+        0.255180010119
       ],
-      "max_skin_displacement": 0.4028247283902183
+      "max_skin_displacement": 0.40081526399387774,
+      "hood_pitch_degrees": -0.21263578539163994,
+      "hood_tip_displacement": 0.0009753219247057658,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 120,
       "scarf_tip": [
-        -0.07801181926495498,
-        0.14079277714093527,
-        0.2230310324165556
+        -0.08457340217298931,
+        0.16757099164856804,
+        0.2133160581191381
       ],
       "robe_hem": [
-        8.246181827466037e-09,
-        0.0025588459259754904,
-        0.2550893675636601
+        -3.848069809464505e-07,
+        0.002562246612600378,
+        0.25508893905459223
       ],
-      "max_skin_displacement": 0.4042288680668574
+      "max_skin_displacement": 0.40191448028769916,
+      "hood_pitch_degrees": -0.19166368753667626,
+      "hood_tip_displacement": 0.000879126796074282,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 121,
       "scarf_tip": [
-        -0.0770258183280627,
-        0.12564403149816725,
-        0.225930189092954
+        -0.08575919311907557,
+        0.15325376722547743,
+        0.21527037852340275
       ],
       "robe_hem": [
-        -6.578100946835302e-08,
-        9.698400626311431e-05,
-        0.25617124744363734
+        -5.238263371653817e-07,
+        9.807299923252415e-05,
+        0.25617211815473195
       ],
-      "max_skin_displacement": 0.4041780174923908
+      "max_skin_displacement": 0.3999833263902284,
+      "hood_pitch_degrees": 2.4056896222932256,
+      "hood_tip_displacement": 0.01103365940467688,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 122,
       "scarf_tip": [
-        -0.07642744067642424,
-        0.11272246970070733,
-        0.23465484215153587
+        -0.08926227026515537,
+        0.14530461033185324,
+        0.21984979013601938
       ],
       "robe_hem": [
-        -9.701796065618927e-06,
-        0.0005039492168942013,
-        0.2559826019647959
+        9.841348195230829e-07,
+        0.0004969150633425326,
+        0.25598730589892416
       ],
-      "max_skin_displacement": 0.4014218157223353
+      "max_skin_displacement": 0.3962455639020345,
+      "hood_pitch_degrees": 5.256218639081842,
+      "hood_tip_displacement": 0.02410088557293005,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 123,
       "scarf_tip": [
-        -0.0769887011912134,
-        0.10241638951831394,
-        0.23959601753287846
+        -0.09180772056182225,
+        0.14008106456862557,
+        0.2214149253235923
       ],
       "robe_hem": [
-        1.3552669254233872e-06,
-        -0.0005481879453401308,
-        0.25603387726319804
+        -3.12695817069038e-06,
+        -0.0005676359743685336,
+        0.25603846923725027
       ],
-      "max_skin_displacement": 0.4003415140894401
+      "max_skin_displacement": 0.39334524344735705,
+      "hood_pitch_degrees": 6.060237531461931,
+      "hood_tip_displacement": 0.027784274654936283,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 124,
       "scarf_tip": [
-        -0.07626975389818351,
-        0.09731914599736531,
-        0.2422118518087599
+        -0.09514832620819409,
+        0.13358344634373984,
+        0.22360147701369393
       ],
       "robe_hem": [
-        -7.590720309274951e-06,
-        0.0015656110402700063,
-        0.2555360810176746
+        -1.8811674389989758e-07,
+        0.001552763017448219,
+        0.2555411063336037
       ],
-      "max_skin_displacement": 0.39990429352220025
+      "max_skin_displacement": 0.38928647193645605,
+      "hood_pitch_degrees": 5.62325477985181,
+      "hood_tip_displacement": 0.025782517745439458,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 125,
       "scarf_tip": [
-        -0.07613442134526041,
-        0.09477704101138645,
-        0.2438482724957996
+        -0.09857775726252133,
+        0.1301681680811776,
+        0.22446703745259178
       ],
       "robe_hem": [
-        1.2593910788701898e-06,
-        0.0024796168546418885,
-        0.2552940104458783
+        -1.248244367112371e-06,
+        0.002457621129783424,
+        0.2552977292924314
       ],
-      "max_skin_displacement": 0.3989498075378043
+      "max_skin_displacement": 0.38427802554840274,
+      "hood_pitch_degrees": 4.591599699101262,
+      "hood_tip_displacement": 0.021055214970690548,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 126,
       "scarf_tip": [
-        -0.07635610964563158,
-        0.09262643257776897,
-        0.2448749542236328
+        -0.10086177993151876,
+        0.127170130610466,
+        0.22520579232109916
       ],
       "robe_hem": [
-        -1.8822355667833943e-06,
-        0.0034148701139398523,
-        0.25512676061810674
+        -6.298553401122902e-07,
+        0.0034187826755884532,
+        0.2551275008433574
       ],
-      "max_skin_displacement": 0.397629512187507
+      "max_skin_displacement": 0.37900190116919547,
+      "hood_pitch_degrees": 3.4073202336788615,
+      "hood_tip_displacement": 0.015626468284730584,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 127,
       "scarf_tip": [
-        -0.07622714713215828,
-        0.09116655422581567,
-        0.24556445247597164
+        -0.10183339648776585,
+        0.1250318702724245,
+        0.2260737501912647
       ],
       "robe_hem": [
-        3.637283105097201e-06,
-        0.0032080323309511753,
-        0.2551700706417496
+        -2.5325536896432183e-06,
+        0.003210987593676593,
+        0.2551683404961148
       ],
-      "max_skin_displacement": 0.39618136669689963
+      "max_skin_displacement": 0.3744990560655707,
+      "hood_pitch_degrees": 2.317953765079901,
+      "hood_tip_displacement": 0.010631316133945006,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 128,
       "scarf_tip": [
-        -0.07558221701118681,
-        0.09064068065749274,
-        0.2461385942167706
+        -0.10290874458021587,
+        0.12469928794436985,
+        0.22636756466494667
       ],
       "robe_hem": [
-        -1.068367448563033e-07,
-        0.0023057923929111377,
-        0.2553464488403217
+        8.413367570913554e-07,
+        0.002315700054168701,
+        0.2553444738323624
       ],
-      "max_skin_displacement": 0.39484032372402256
+      "max_skin_displacement": 0.37107878700793123,
+      "hood_pitch_degrees": 1.4308163190546015,
+      "hood_tip_displacement": 0.006562729144845452,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 129,
       "scarf_tip": [
-        -0.0749795695559846,
-        0.09133881247705883,
-        0.24613788723945618
+        -0.10431006592180994,
+        0.1256390396091673,
+        0.22588730520672268
       ],
       "robe_hem": [
-        2.3095396831981694e-06,
-        0.0016065866157815264,
-        0.25550251393704804
+        -8.993090493793323e-07,
+        0.0016083320653116381,
+        0.2555021466435613
       ],
-      "max_skin_displacement": 0.39389142837981667
+      "max_skin_displacement": 0.36877883882656637,
+      "hood_pitch_degrees": 0.76966029693403,
+      "hood_tip_displacement": 0.0035302681887134438,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 130,
       "scarf_tip": [
-        -0.0747864173932208,
-        0.09287673814429177,
-        0.2455323123269611
+        -0.10563131297628085,
+        0.12729261401626799,
+        0.22509651382764181
       ],
       "robe_hem": [
-        -1.6502683039918239e-07,
-        0.001172823881780779,
-        0.2556180535136042
+        1.3435764433755114e-06,
+        0.0011794510725382213,
+        0.25561577806601654
       ],
-      "max_skin_displacement": 0.3934271808996585
+      "max_skin_displacement": 0.3673773158709405,
+      "hood_pitch_degrees": 0.31521976265635854,
+      "hood_tip_displacement": 0.0014458550979695717,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 131,
       "scarf_tip": [
-        -0.07495524858434995,
-        0.09496822208166122,
-        0.24443989164299434
+        -0.10668128728866577,
+        0.1293138994110955,
+        0.22427991860442692
       ],
       "robe_hem": [
-        -1.590124015451324e-06,
-        0.0012368519563932677,
-        0.2556092851870769
+        -2.7485369517651976e-06,
+        0.001232714467757457,
+        0.2556098683460339
       ],
-      "max_skin_displacement": 0.3934179791169955
+      "max_skin_displacement": 0.3666668316322114,
+      "hood_pitch_degrees": 0.02995180471844518,
+      "hood_tip_displacement": 0.00013738359328532005,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 132,
       "scarf_tip": [
-        -0.0757717572980457,
-        0.09757306675116222,
-        0.24270957873927224
+        -0.10780504925383462,
+        0.13145797120200264,
+        0.22333708902200064
       ],
       "robe_hem": [
-        -2.2190941161023e-06,
-        0.0016807865452122045,
-        0.2554916594479535
+        2.1152383753262157e-07,
+        0.0016736557354798188,
+        0.25549225629986944
       ],
-      "max_skin_displacement": 0.39364734819708075
+      "max_skin_displacement": 0.3664527351817882,
+      "hood_pitch_degrees": -0.12796806626598142,
+      "hood_tip_displacement": 0.0005869666112181677,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 133,
       "scarf_tip": [
-        -0.07677376973960134,
-        0.10030950937006208,
-        0.24094832109080422
+        -0.10896847811010149,
+        0.13351261532968944,
+        0.22247064775890774
       ],
       "robe_hem": [
-        4.176465744102323e-06,
-        0.0022047234548104775,
-        0.2553772579979252
+        -7.086395332924046e-06,
+        0.00218603850619213,
+        0.25537918226138967
       ],
-      "max_skin_displacement": 0.39393322061810576
+      "max_skin_displacement": 0.3665366228846811,
+      "hood_pitch_degrees": -0.19718888425168615,
+      "hood_tip_displacement": 0.0009044698530763921,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 134,
       "scarf_tip": [
-        -0.07769514102902678,
-        0.10301795643236902,
-        0.23935340676042768
+        -0.11002719071176317,
+        0.13530934353669485,
+        0.22174941665596432
       ],
       "robe_hem": [
-        -4.2083619568124095e-06,
-        0.002366631870736947,
-        0.25533361773233154
+        5.6421265833558065e-06,
+        0.0023707181114602733,
+        0.25533309981629654
       ],
-      "max_skin_displacement": 0.3941919737956728
+      "max_skin_displacement": 0.36679959552472796,
+      "hood_pitch_degrees": -0.20976199301308263,
+      "hood_tip_displacement": 0.000962140373177971,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 135,
       "scarf_tip": [
-        -0.07857168859077825,
-        0.10553818982508448,
-        0.23795146577888066
+        -0.11086320338977708,
+        0.13689179718494415,
+        0.22114359007941353
       ],
       "robe_hem": [
-        1.8588416178072048e-06,
-        0.002253351909284656,
-        0.2553622988430229
+        -3.419924748438486e-07,
+        0.0022472074456714296,
+        0.2553632484899985
       ],
-      "max_skin_displacement": 0.39437600885833096
+      "max_skin_displacement": 0.36715567455796444,
+      "hood_pitch_degrees": -0.1901516470058309,
+      "hood_tip_displacement": 0.0008721913450268209,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 136,
       "scarf_tip": [
-        -0.08049402468734318,
-        0.14681045876608956,
-        0.23150360749827492
+        -0.11204914169179069,
+        0.17894265552361807,
+        0.21624794436825645
       ],
       "robe_hem": [
-        -3.181626839619098e-05,
-        0.007419695284821697,
-        0.25399593404821447
+        3.804100307464781e-05,
+        0.007385695705542693,
+        0.2539780397672911
       ],
-      "max_skin_displacement": 0.39519214444536177
+      "max_skin_displacement": 0.3723259133252652,
+      "hood_pitch_degrees": -5.2774608937199945,
+      "hood_tip_displacement": 0.02419821711570226,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 137,
       "scarf_tip": [
-        -0.08295097905728552,
-        0.18840682672129738,
-        0.2189821485016081
+        -0.1130173760983679,
+        0.22181214061048296,
+        0.20790013505352867
       ],
       "robe_hem": [
-        -7.270560795527795e-05,
-        0.01165415603365447,
-        0.2547070013510214
+        8.371420940297744e-05,
+        0.011884673498570919,
+        0.2546986405913894
       ],
-      "max_skin_displacement": 0.4016508977758773
+      "max_skin_displacement": 0.38256771631677855,
+      "hood_pitch_degrees": -10.744111622068694,
+      "hood_tip_displacement": 0.04920915364221417,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 138,
       "scarf_tip": [
-        -0.08577345518602265,
-        0.22986819512314266,
-        0.20830436050891876
+        -0.11189126926991674,
+        0.2640722410546409,
+        0.20408237808280522
       ],
       "robe_hem": [
-        -9.634894357421561e-05,
-        0.011702642574704982,
-        0.2543997917626355
+        7.493393727722955e-05,
+        0.011786906929636324,
+        0.2543933689594269
       ],
-      "max_skin_displacement": 0.41162174198183943
+      "max_skin_displacement": 0.3968991103907477,
+      "hood_pitch_degrees": -11.725547656445887,
+      "hood_tip_displacement": 0.053689193871255675,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 139,
       "scarf_tip": [
-        -0.08756453440421158,
-        0.26947469015916187,
-        0.20505797531869677
+        -0.10972580396466786,
+        0.3003908594449361,
+        0.20603744354512957
       ],
       "robe_hem": [
-        -5.1238711783888584e-05,
-        0.007994260009680246,
-        0.254584112682858
+        4.535511529743294e-05,
+        0.008158836274634342,
+        0.25458397414233236
       ],
-      "max_skin_displacement": 0.42190706492222535
+      "max_skin_displacement": 0.4119207941343489,
+      "hood_pitch_degrees": -10.005701945524903,
+      "hood_tip_displacement": 0.04583607798971885,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 140,
       "scarf_tip": [
-        -0.08773636093570127,
-        0.30465256339973873,
-        0.20573488043414223
+        -0.10727319990595181,
+        0.330268445942137,
+        0.20956029991308847
       ],
       "robe_hem": [
-        -1.4337055118458747e-05,
-        0.005133482426203586,
-        0.25456911728188797
+        1.3908732669094477e-05,
+        0.005218766201790926,
+        0.2545721683953259
       ],
-      "max_skin_displacement": 0.4322249366623441
+      "max_skin_displacement": 0.4254108847778427,
+      "hood_pitch_degrees": -7.3201645343732284,
+      "hood_tip_displacement": 0.03355346001876623,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 141,
       "scarf_tip": [
-        -0.08652552920911047,
-        0.3328126006656223,
-        0.20956869588957894
+        -0.10379140327374141,
+        0.3539346158504486,
+        0.2142183499203788
       ],
       "robe_hem": [
-        2.131377017748663e-06,
-        0.002820719876704184,
-        0.2548624792614499
+        3.0983293883666096e-07,
+        0.0028128198448669267,
+        0.25486335963816253
       ],
-      "max_skin_displacement": 0.4411767146191277
+      "max_skin_displacement": 0.43609499019250364,
+      "hood_pitch_degrees": -4.74370533173706,
+      "hood_tip_displacement": 0.021752317664358964,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 142,
       "scarf_tip": [
-        -0.08502118848264217,
-        0.3516787058777279,
-        0.214557988776101
+        -0.09982379049890572,
+        0.370263483789232,
+        0.21949188742372724
       ],
       "robe_hem": [
-        -1.2557778346318457e-06,
-        0.0018735305733374647,
-        0.2550210187564025
+        4.190514969933075e-06,
+        0.0018833809205003687,
+        0.2550198105541435
       ],
-      "max_skin_displacement": 0.4467390694821156
+      "max_skin_displacement": 0.44270552756484133,
+      "hood_pitch_degrees": -2.6957295834036827,
+      "hood_tip_displacement": 0.012363691141955789,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 143,
       "scarf_tip": [
-        -0.08415988905148374,
-        0.36269114745987785,
-        0.21841741601626077
+        -0.09633204496155183,
+        0.37866370876630145,
+        0.2231593148575889
       ],
       "robe_hem": [
-        -6.010045900758406e-06,
-        0.0014464751741773373,
-        0.2551059094635216
+        1.7612178207609513e-06,
+        0.0014555139869854258,
+        0.2551039344555623
       ],
-      "max_skin_displacement": 0.4495443694012394
+      "max_skin_displacement": 0.4461828349434878,
+      "hood_pitch_degrees": -1.2380351408374615,
+      "hood_tip_displacement": 0.0056785362673465204,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 144,
       "scarf_tip": [
-        -0.08426253445860413,
-        0.36741721961233353,
-        0.22025486661328209
+        -0.09402391500771046,
+        0.38068902161386275,
+        0.2241377118561003
       ],
       "robe_hem": [
-        3.72812915097834e-07,
-        0.0011764538247843047,
-        0.25515561409898707
+        -2.3825309899866872e-06,
+        0.0011734736177164155,
+        0.25515723872829127
       ],
-      "max_skin_displacement": 0.4507494162457571
+      "max_skin_displacement": 0.44766461788806844,
+      "hood_pitch_degrees": -0.2931111256739249,
+      "hood_tip_displacement": 0.001344447074320235,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 145,
       "scarf_tip": [
-        -0.08533357032057312,
-        0.3671969539589352,
-        0.22015777395831215
+        -0.09240588400926855,
+        0.37818696432643467,
+        0.22276853521664938
       ],
       "robe_hem": [
-        3.951121507762346e-06,
-        0.0019359361833414517,
-        0.2550017342374131
+        -2.7822614362554993e-06,
+        0.0019223472304843567,
+        0.2550037342148858
       ],
-      "max_skin_displacement": 0.4506316137861139
+      "max_skin_displacement": 0.44788822147757623,
+      "hood_pitch_degrees": 0.254446757742265,
+      "hood_tip_displacement": 0.0011671010104224446,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 146,
       "scarf_tip": [
-        -0.08691910261081325,
-        0.3633330331908332,
-        0.21853452755345237
+        -0.09111869997448391,
+        0.37229785985416836,
+        0.220392483803961
       ],
       "robe_hem": [
-        4.143164663194487e-06,
-        0.002989986282144044,
-        0.25483021301192205
+        -4.688371586166181e-06,
+        0.0029772516793093165,
+        0.2548323466971114
       ],
-      "max_skin_displacement": 0.4492963636159155
+      "max_skin_displacement": 0.4476908217188296,
+      "hood_pitch_degrees": 0.5182758837606919,
+      "hood_tip_displacement": 0.0023772310868508317,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 147,
       "scarf_tip": [
-        -0.08863432374265459,
-        0.35677461160553825,
-        0.21595973604255253
+        -0.09079249513645966,
+        0.3641299605369568,
+        0.2170040425327089
       ],
       "robe_hem": [
-        2.481218662315105e-06,
-        0.00380221673765698,
-        0.2547204421984183
+        -1.725514340324554e-06,
+        0.0038012513840520704,
+        0.2547207031701062
       ],
-      "max_skin_displacement": 0.4472331417825379
+      "max_skin_displacement": 0.4464267620216181,
+      "hood_pitch_degrees": 0.5955201370565698,
+      "hood_tip_displacement": 0.002731532531431174,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 148,
       "scarf_tip": [
-        -0.09032505171166526,
-        0.3483298851384057,
-        0.2129339940018124
+        -0.09105039967430963,
+        0.35465385847621494,
+        0.2135828716887368
       ],
       "robe_hem": [
-        1.9541386447255376e-06,
-        0.004458116669509862,
-        0.25463713665266297
+        -1.8140043002367256e-06,
+        0.00445883341032911,
+        0.2546368023833713
       ],
-      "max_skin_displacement": 0.4447422684207517
+      "max_skin_displacement": 0.44450915215129194,
+      "hood_pitch_degrees": 0.562184736564678,
+      "hood_tip_displacement": 0.002578630936630394,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 149,
       "scarf_tip": [
-        -0.09182334567109744,
-        0.3386114603943295,
-        0.20992881721920437
+        -0.09166180404524009,
+        0.34443097313245136,
+        0.21041558848487008
       ],
       "robe_hem": [
-        8.514007691775152e-07,
-        0.004875967883177706,
-        0.25458946099152435
+        -5.008856883373605e-07,
+        0.004878961229445161,
+        0.25458900429107045
       ],
-      "max_skin_displacement": 0.4418647578698794
+      "max_skin_displacement": 0.4421558722791945,
+      "hood_pitch_degrees": 0.4733090628232098,
+      "hood_tip_displacement": 0.0021709782180815177,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     },
     {
       "frame": 150,
       "scarf_tip": [
-        -0.09290103655722406,
-        0.32818060119946796,
-        0.20726492007573447
+        -0.09247024833328193,
+        0.33394403590096366,
+        0.2076442456907696
       ],
       "robe_hem": [
-        1.0710395132706697e-06,
-        0.004985184131844624,
-        0.25457711074803324
+        8.364854140283471e-08,
+        0.004993028536036208,
+        0.25457658638825287
       ],
-      "max_skin_displacement": 0.43886721892097513
+      "max_skin_displacement": 0.43942755228643593,
+      "hood_pitch_degrees": 0.3656449599992021,
+      "hood_tip_displacement": 0.0016771454766383892,
+      "scarf_robe_contacts": 0,
+      "max_scarf_skin_contact_correction": 0.0
     }
   ]
 }

@@ -5,6 +5,7 @@ import bpy, math, json, os
 import numpy as np
 from pathlib import Path
 from mathutils import Vector
+from mathutils.bvhtree import BVHTree
 R=Path(__file__).resolve().parents[1]
 OUT=R/'.cache/pixel-cloth'; OUT.mkdir(parents=True,exist_ok=True)
 bpy.ops.wm.open_mainfile(filepath=str(R/'outputs/tripo-pixel-shaped.blend'))
@@ -82,6 +83,9 @@ for i in range(nr-1):
     for j in range(nt-1):
         a=i*nt+j;faces.append((a,a+nt,a+nt+1,a+1))
 robe,robebase=cage('Robe hem simulation surface',verts,faces,list(range(nt*3)),12)
+# Scarf collides with the deformed robe, not just the smaller body ellipsoids.
+robe.modifiers.new('Robe garment collision','COLLISION')
+robe.collision.thickness_outer=.012
 def smooth(a,b,v):
     t=np.clip((v-a)/(b-a),0,1);return t*t*(3-2*t)
 x,y,z=p.T
@@ -105,6 +109,16 @@ rv=np.clip((angle-.14)/(2*math.pi-.28),0,1)
 su=np.clip((-x-.055)/.37,0,1)
 sv=np.clip(((z-(.57-.17*su))/(.018+.10*su)+1)/2,0,1)
 binds=[grid_binding(sw,su,sv,nu,nv),grid_binding(rw,ru,rv,nr,nt)]
+hoodweight=smooth(.645,.73,z)*smooth(-.025,.10,y)
+hoodtheta=0.;hoodvelocity=0.;previous_root_y=0.;previous_root_velocity=0.
+hoodpivot=np.array([0,0,.65])
+robe_faces=[]
+for poly in hero.data.polygons:
+    ids=list(poly.vertices);q=p[ids];c=q.mean(0)
+    normal=np.cross(q[1]-q[0],q[2]-q[0])
+    if .215<c[2]<.54 and teal[ids].mean()<.25 and np.dot(normal[:2],c[:2])>0 and .065<np.linalg.norm(c[:2])<.22:
+        robe_faces.append(ids)
+scarf_ids=np.flatnonzero(sw>.05)
 _,dup=np.unique(np.round(p,6),axis=0,return_inverse=True);cnt=np.bincount(dup)
 scene.render.resolution_x=scene.render.resolution_y=384;scene.cycles.samples=8
 scene.render.film_transparent=False
@@ -114,6 +128,7 @@ hero.shape_key_add(name='Rest Tripo shape');key=hero.shape_key_add(name='Baked c
 bpy.ops.wm.save_as_mainfile(filepath=str(R/'outputs/tripo-pixel-cloth-test.blend'),compress=True)
 positions=[];metrics=[];caches=[[],[]]
 reuse=np.load(R/'outputs/tripo-pixel-cloth-cache.npz') if os.environ.get('CLOTH_REUSE_CACHE') else None
+if reuse is not None:raise RuntimeError('Recompute cloth: garment collision changed; old caches are not compatible')
 if reuse is not None:
     for ob in [scarf,robe]:ob.modifiers['Physical cloth'].show_viewport=False
 for f in range(1,151):
@@ -125,11 +140,36 @@ for f in range(1,151):
         caches[k].append(now)
         ids,ix,w,weight=bind;delta[ids]+=((now-base)[ix]*w[:,:,None]).sum(1)*weight[:,None]
     avg=np.stack([np.bincount(dup,weights=delta[:,j])/cnt for j in range(3)],axis=1);delta=avg[dup]
+    # Damped torsional spring driven by fixture acceleration, not a sine animation.
+    root_y=float(root.location.y);velocity=(root_y-previous_root_y)*30
+    acceleration=(velocity-previous_root_velocity)*30
+    previous_root_y=root_y;previous_root_velocity=velocity
+    for _ in range(12):
+        hoodvelocity+=(5*acceleration-150*hoodtheta-18*hoodvelocity-2000*hoodtheta**3)/360
+        hoodtheta+=hoodvelocity/360
+    q=p-hoodpivot;rot=q.copy();cs=math.cos(hoodtheta);sn=math.sin(hoodtheta)
+    rot[:,1]=q[:,1]*cs-q[:,2]*sn;rot[:,2]=q[:,1]*sn+q[:,2]*cs
+    delta+=(rot-q)*hoodweight[:,None]
     coords=p+delta
+    # Skin offsets can penetrate even when the coarse cloth surface collides.
+    # Project the rendered scarf against the actual deformed outer robe surface.
+    tree=BVHTree.FromPolygons(coords.tolist(),robe_faces,all_triangles=True)
+    contact_count=0;max_correction=0.
+    for vid in scarf_ids:
+        if not .21<coords[vid,2]<.55:continue
+        hit,normal,face,distance=tree.find_nearest(Vector(coords[vid]))
+        if hit is None or distance>.10:continue
+        normal=np.array(normal);hit=np.array(hit)
+        if np.dot(normal[:2],hit[:2])<0:normal=-normal
+        gap=float(np.dot(coords[vid]-hit,normal))
+        if gap<.006:
+            correction=(.006-gap)*normal
+            coords[vid]+=correction;contact_count+=1
+            max_correction=max(max_correction,float(np.linalg.norm(correction)))
     assert np.isfinite(coords).all()
     key.data.foreach_set('co',coords.astype(np.float32).ravel())
     positions.append(coords.astype(np.float32))
-    metrics.append({'frame':f,'scarf_tip':caches[0][-1][-nv:].mean(0).tolist(),'robe_hem':caches[1][-1][-nt:].mean(0).tolist(),'max_skin_displacement':float(np.linalg.norm(delta,axis=1).max())})
+    metrics.append({'frame':f,'scarf_tip':caches[0][-1][-nv:].mean(0).tolist(),'robe_hem':caches[1][-1][-nt:].mean(0).tolist(),'max_skin_displacement':float(np.linalg.norm(coords-p,axis=1).max()),'hood_pitch_degrees':math.degrees(hoodtheta),'hood_tip_displacement':float(np.linalg.norm((rot-q)[np.argmax(y*(z>.7))])),'scarf_robe_contacts':contact_count,'max_scarf_skin_contact_correction':max_correction})
     if f>=31 and (not os.environ.get('CLOTH_SAMPLE_ONLY') or f in [31,75,90,125]):
         scene.render.filepath=str(OUT/f'{f-30:03d}.png');bpy.ops.render.render(write_still=True)
     print('CLOTH_FRAME',f,flush=True)
@@ -148,4 +188,4 @@ for ob in [scarf,robe]:
     ob.modifiers['Physical cloth'].show_render=False
 scene.frame_set(31)
 bpy.ops.wm.save_as_mainfile(filepath=str(R/'outputs/tripo-pixel-cloth-test.blend'),compress=True)
-(R/'docs/logs/tripo-pixel-cloth.json').write_text(json.dumps({'test':'T-pose world translation, start/stop/reverse; NOT running animation','physics':'Blender cloth, independent surfaces with pinned roots, body ellipsoid collisions','frames':150,'fps':30,'settle_frames':30,'cloth_quality':12,'self_collision':True,'render_skin':'Parametric bilinear binding, separate front slit banks; dark robe lining follows shell','removed_front_slit_bridge_triangles':removed,'simulation_cache_reused':reuse is not None,'scarf_attachment':'4 pinned rows, 0.03m posterior offset, broader root bend','production_ready':False,'metrics':metrics},indent=2))
+(R/'docs/logs/tripo-pixel-cloth.json').write_text(json.dumps({'test':'T-pose world translation, start/stop/reverse; NOT running animation','physics':'Blender cloth, independent surfaces with pinned roots, body ellipsoid collisions; deformed robe garment collider','hood_physics':'Acceleration-driven torsional spring, 12 substeps/frame, front aperture fixed; not full cloth simulation','hood_spring':{'acceleration_coupling':5,'stiffness':150,'damping':18,'cubic_stiffness':2000},'scarf_skin_contact':'6mm unilateral projection against rendered outer robe, supplements coarse cloth collisions','frames':150,'fps':30,'settle_frames':30,'cloth_quality':12,'self_collision':True,'render_skin':'Parametric bilinear binding, separate front slit banks; dark robe lining follows shell','removed_front_slit_bridge_triangles':removed,'simulation_cache_reused':reuse is not None,'scarf_attachment':'4 pinned rows, 0.03m posterior offset, broader root bend','production_ready':False,'metrics':metrics},indent=2))
