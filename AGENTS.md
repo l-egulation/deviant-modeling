@@ -1,5 +1,7 @@
 # 작업 지침
 
+- 최신 달리기/의상 입력과 한계는 `docs/PIXEL_RUN.md` 참조. `outputs/pixel-run-source.bvh`는 seed231/00의 새 Kimodo 원본이며, `pixel-run.blend`는 회전 이식+고정길이 접지IK, `pixel-run-cloth.blend`는 별도 의상 베이크다. 진단 자세 통과와 실제 달리기 최종 품질을 구분한다. 기존 3초 클립의 루프 연결은 미검증이다.
+
 ## 2026-10-23 우선 적용: 캐릭터 전용 골격
 
 - 현재 외형 원본은 `assets/hero-pixel-tripo.glb`, 승인된 형상 편집 입력은 `outputs/tripo-pixel-shaped.blend`. 아래 옛 원본/달리기 안내는 과거 기록이다.

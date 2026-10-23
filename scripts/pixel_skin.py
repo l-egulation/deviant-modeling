@@ -11,8 +11,8 @@ def separate_surface(source,colors):
  for ids in faces:
   x,y,z=p[ids].mean(0);c=colors[ids].mean(0)
   # Whole surface islands, not texture-dependent skin weights.
-  if z>.615:label='Hood'
-  elif (c[2]-c[0]>.09 and c[1]>.15) or (x<-.29 and y>.035) or (.06<x<.13 and y<-.125 and .47<z<.54):label='Scarf'
+  if (z<.64 and c[2]-c[0]>.09 and c[1]>.15) or (x<-.29 and y>.035) or (.06<x<.13 and y<-.125 and .47<z<.54):label='Scarf'
+  elif z>.575:label='Hood'
   elif z<.29:
    side='L' if x>.09 else 'R'
    # Leg cores; the robe shell in front/behind them remains on the torso.
@@ -42,7 +42,7 @@ def separate_surface(source,colors):
   for a,b in zip(dst.loop_indices,src.loop_indices):uv.data[a].uv=source.uv_layers.active.data[b].uv
  return m,np.array(original),np.array(regions),labels
 
-def skin_fields(p,regions,names,shoulder=(.055,.24,.25,.50)):
+def skin_fields(p,regions,names,shoulder=(.055,.24,.25,.50),fore_range=(.06,.36),knee_range=(.12,.27)):
  W=np.zeros((len(p),len(names)));x,y,z=p.T
  def add(n,w):W[:,names.index(n)]+=w
  # Robe remains torso-bound, including the hem and its lining.
@@ -57,12 +57,12 @@ def skin_fields(p,regions,names,shoulder=(.055,.24,.25,.50)):
   dist=sgn*(x-.075)
   amount=eligible*smooth(shoulder[0],shoulder[1],dist)*smooth(shoulder[2],shoulder[3],z)*(1-smooth(.54,.59,z))
   W*=1-amount[:,None]
-  dist=sgn*(x-.075);fore=smooth(.17,.26,dist)
+  dist=sgn*(x-.075);fore=smooth(fore_range[0],fore_range[1],dist)
   hand=smooth(.29,.34,dist) if side=='L' else smooth(.275,.33,dist)
   add('UpperArm.'+side,amount*(1-fore))
   add('Forearm.'+side,amount*fore*(1-hand));add('Hand.'+side,amount*fore*hand)
   ids=regions=='Leg.'+side;W[ids]=0
-  thigh=smooth(.17,.24,z);foot=1-smooth(.075,.135,z)
+  thigh=smooth(knee_range[0],knee_range[1],z);foot=1-smooth(.075,.135,z)
   add('Thigh.'+side,ids*thigh);add('Shin.'+side,ids*(1-thigh)*(1-foot));add('Foot.'+side,ids*(1-thigh)*foot)
  ids=regions=='Scarf';W[ids]=0;add('Neck',ids.astype(float))
  ids=regions=='Hood';W[ids]=0;add('Head',ids.astype(float))

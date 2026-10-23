@@ -1,0 +1,24 @@
+[
+  {
+    "candidate": "generated_00.npz",
+    "frames": 90,
+    "forward_distance_m": 10.656452178955078,
+    "mean_speed_m_s": 3.5920625322320485,
+    "hands_above_chest_fraction": 0.09444444444444444,
+    "hand_height_above_hips_mean_m": 0.055099502205848694,
+    "shoulder_front_back_difference_span_m": 0.010882377624511719,
+    "torso_forward_lean_mean_degrees": -0.7159347534179688,
+    "all_finite": true
+  },
+  {
+    "candidate": "generated_01.npz",
+    "frames": 90,
+    "forward_distance_m": 9.946369171142578,
+    "mean_speed_m_s": 3.3527087093739025,
+    "hands_above_chest_fraction": 0.25,
+    "hand_height_above_hips_mean_m": 0.11833037436008453,
+    "shoulder_front_back_difference_span_m": 0.013991951942443848,
+    "torso_forward_lean_mean_degrees": -2.375880718231201,
+    "all_finite": true
+  }
+]

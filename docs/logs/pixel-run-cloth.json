@@ -1,0 +1,560 @@
+{
+  "frames": 90,
+  "settle_steps": 60,
+  "substeps_per_frame": 8,
+  "constraint_iterations": 12,
+  "cloth_nodes": 541,
+  "removed_front_slit_bridges": 121,
+  "removed_internal_bottom_cap_faces": 740,
+  "gravity": 9.81,
+  "scarf_drag": 12,
+  "robe_drag": 4,
+  "body_collision": "moving bone capsules",
+  "garment_collision": "scarf nodes against simulated robe triangles",
+  "self_collision": false,
+  "continuous_collision": false,
+  "source": "outputs/pixel-run.blend",
+  "metrics": [
+    {
+      "frame": 1,
+      "hood_pitch_degrees": 0.0,
+      "scarf_max_displacement": 0.4516641062675529,
+      "robe_max_displacement": 0.07458643448677534
+    },
+    {
+      "frame": 2,
+      "hood_pitch_degrees": 1.3544364564728306,
+      "scarf_max_displacement": 0.44855178339798946,
+      "robe_max_displacement": 0.04811619676348294
+    },
+    {
+      "frame": 3,
+      "hood_pitch_degrees": 2.8165974812406964,
+      "scarf_max_displacement": 0.4459420308948269,
+      "robe_max_displacement": 0.06829215635240805
+    },
+    {
+      "frame": 4,
+      "hood_pitch_degrees": 3.1106099607879214,
+      "scarf_max_displacement": 0.4439965974316116,
+      "robe_max_displacement": 0.13721748032122147
+    },
+    {
+      "frame": 5,
+      "hood_pitch_degrees": 2.989011763776172,
+      "scarf_max_displacement": 0.43821340605382547,
+      "robe_max_displacement": 0.24024491062009462
+    },
+    {
+      "frame": 6,
+      "hood_pitch_degrees": 2.7828154634912208,
+      "scarf_max_displacement": 0.4283769241678166,
+      "robe_max_displacement": 0.13986306988300284
+    },
+    {
+      "frame": 7,
+      "hood_pitch_degrees": 2.398805009579395,
+      "scarf_max_displacement": 0.41731924043264773,
+      "robe_max_displacement": 0.09432833890621027
+    },
+    {
+      "frame": 8,
+      "hood_pitch_degrees": 1.9490734043876699,
+      "scarf_max_displacement": 0.4077915170271204,
+      "robe_max_displacement": 0.0902695786171194
+    },
+    {
+      "frame": 9,
+      "hood_pitch_degrees": 1.4467310231127528,
+      "scarf_max_displacement": 0.40100365554528855,
+      "robe_max_displacement": 0.06858959044368672
+    },
+    {
+      "frame": 10,
+      "hood_pitch_degrees": 0.856445898240762,
+      "scarf_max_displacement": 0.40163690633675125,
+      "robe_max_displacement": 0.09663722486508095
+    },
+    {
+      "frame": 11,
+      "hood_pitch_degrees": 0.3489254292366601,
+      "scarf_max_displacement": 0.4116056452312739,
+      "robe_max_displacement": 0.10806328684991233
+    },
+    {
+      "frame": 12,
+      "hood_pitch_degrees": 0.1708807482079447,
+      "scarf_max_displacement": 0.422494815741224,
+      "robe_max_displacement": 0.11938992643245724
+    },
+    {
+      "frame": 13,
+      "hood_pitch_degrees": 0.2983140764801201,
+      "scarf_max_displacement": 0.4425041216096908,
+      "robe_max_displacement": 0.1171944610643267
+    },
+    {
+      "frame": 14,
+      "hood_pitch_degrees": 0.39696415030891546,
+      "scarf_max_displacement": 0.46389135780996016,
+      "robe_max_displacement": 0.10614165760497997
+    },
+    {
+      "frame": 15,
+      "hood_pitch_degrees": 0.3940308909356418,
+      "scarf_max_displacement": 0.491853950066446,
+      "robe_max_displacement": 0.08361452683960369
+    },
+    {
+      "frame": 16,
+      "hood_pitch_degrees": 0.38349938122578603,
+      "scarf_max_displacement": 0.5271739382264934,
+      "robe_max_displacement": 0.09383995130712083
+    },
+    {
+      "frame": 17,
+      "hood_pitch_degrees": 0.32620806180920003,
+      "scarf_max_displacement": 0.5551753809954457,
+      "robe_max_displacement": 0.10951084967248956
+    },
+    {
+      "frame": 18,
+      "hood_pitch_degrees": 0.14926325552765848,
+      "scarf_max_displacement": 0.569591458837588,
+      "robe_max_displacement": 0.11420033275740776
+    },
+    {
+      "frame": 19,
+      "hood_pitch_degrees": -0.11370638784675514,
+      "scarf_max_displacement": 0.5734766728669488,
+      "robe_max_displacement": 0.1065407622176269
+    },
+    {
+      "frame": 20,
+      "hood_pitch_degrees": -0.36458481903392653,
+      "scarf_max_displacement": 0.5644571283271195,
+      "robe_max_displacement": 0.10451116506772061
+    },
+    {
+      "frame": 21,
+      "hood_pitch_degrees": -0.4106113830900522,
+      "scarf_max_displacement": 0.549827904146998,
+      "robe_max_displacement": 0.0988194510299357
+    },
+    {
+      "frame": 22,
+      "hood_pitch_degrees": -0.23206349860917472,
+      "scarf_max_displacement": 0.5349350237879732,
+      "robe_max_displacement": 0.09694343591190337
+    },
+    {
+      "frame": 23,
+      "hood_pitch_degrees": -0.045786474955815636,
+      "scarf_max_displacement": 0.515455691474658,
+      "robe_max_displacement": 0.0949909308173341
+    },
+    {
+      "frame": 24,
+      "hood_pitch_degrees": 0.13745499427091354,
+      "scarf_max_displacement": 0.48866562891113074,
+      "robe_max_displacement": 0.08678481176494034
+    },
+    {
+      "frame": 25,
+      "hood_pitch_degrees": 0.3451703794971661,
+      "scarf_max_displacement": 0.4517290506072021,
+      "robe_max_displacement": 0.12880969909081683
+    },
+    {
+      "frame": 26,
+      "hood_pitch_degrees": 0.4834532379343939,
+      "scarf_max_displacement": 0.41497845423312946,
+      "robe_max_displacement": 0.13228531688961478
+    },
+    {
+      "frame": 27,
+      "hood_pitch_degrees": 0.4363330305770089,
+      "scarf_max_displacement": 0.39201204925866423,
+      "robe_max_displacement": 0.11721905575999093
+    },
+    {
+      "frame": 28,
+      "hood_pitch_degrees": 0.24843497969889974,
+      "scarf_max_displacement": 0.3888493591484034,
+      "robe_max_displacement": 0.09824803624669497
+    },
+    {
+      "frame": 29,
+      "hood_pitch_degrees": 0.04116585655805431,
+      "scarf_max_displacement": 0.4038776963479842,
+      "robe_max_displacement": 0.07473246766875183
+    },
+    {
+      "frame": 30,
+      "hood_pitch_degrees": -0.16739830130972744,
+      "scarf_max_displacement": 0.43354463291548184,
+      "robe_max_displacement": 0.07374799991868519
+    },
+    {
+      "frame": 31,
+      "hood_pitch_degrees": -0.33297261725503907,
+      "scarf_max_displacement": 0.46336437515665974,
+      "robe_max_displacement": 0.03775724819420597
+    },
+    {
+      "frame": 32,
+      "hood_pitch_degrees": -0.4156282100172929,
+      "scarf_max_displacement": 0.48678888983756674,
+      "robe_max_displacement": 0.061609222558992496
+    },
+    {
+      "frame": 33,
+      "hood_pitch_degrees": -0.2764078437999909,
+      "scarf_max_displacement": 0.512653710210222,
+      "robe_max_displacement": 0.07869337467435888
+    },
+    {
+      "frame": 34,
+      "hood_pitch_degrees": -0.04518737007606881,
+      "scarf_max_displacement": 0.5449674438433744,
+      "robe_max_displacement": 0.0866115961873486
+    },
+    {
+      "frame": 35,
+      "hood_pitch_degrees": 0.20602504148350456,
+      "scarf_max_displacement": 0.5746175770670854,
+      "robe_max_displacement": 0.08435045183199884
+    },
+    {
+      "frame": 36,
+      "hood_pitch_degrees": 0.4017330909382379,
+      "scarf_max_displacement": 0.5963402247291387,
+      "robe_max_displacement": 0.08983954161263567
+    },
+    {
+      "frame": 37,
+      "hood_pitch_degrees": 0.4095472225551576,
+      "scarf_max_displacement": 0.6012418592523049,
+      "robe_max_displacement": 0.0906159193046254
+    },
+    {
+      "frame": 38,
+      "hood_pitch_degrees": 0.20714956057331596,
+      "scarf_max_displacement": 0.5911213718354308,
+      "robe_max_displacement": 0.08602981478480651
+    },
+    {
+      "frame": 39,
+      "hood_pitch_degrees": -0.07469723770201793,
+      "scarf_max_displacement": 0.5783873969327292,
+      "robe_max_displacement": 0.08068859919286943
+    },
+    {
+      "frame": 40,
+      "hood_pitch_degrees": -0.2563854230066524,
+      "scarf_max_displacement": 0.5673618039039657,
+      "robe_max_displacement": 0.07885356115485924
+    },
+    {
+      "frame": 41,
+      "hood_pitch_degrees": -0.22729974301595657,
+      "scarf_max_displacement": 0.5600677903369393,
+      "robe_max_displacement": 0.09766187783484732
+    },
+    {
+      "frame": 42,
+      "hood_pitch_degrees": -0.23238161898504286,
+      "scarf_max_displacement": 0.5520463347496957,
+      "robe_max_displacement": 0.10016744351867558
+    },
+    {
+      "frame": 43,
+      "hood_pitch_degrees": -0.30960635547516313,
+      "scarf_max_displacement": 0.5386800563677946,
+      "robe_max_displacement": 0.10149820447478043
+    },
+    {
+      "frame": 44,
+      "hood_pitch_degrees": -0.3446502114165077,
+      "scarf_max_displacement": 0.5192417618490291,
+      "robe_max_displacement": 0.11052976032783708
+    },
+    {
+      "frame": 45,
+      "hood_pitch_degrees": -0.2550142855596742,
+      "scarf_max_displacement": 0.5026437227992426,
+      "robe_max_displacement": 0.1184587979974998
+    },
+    {
+      "frame": 46,
+      "hood_pitch_degrees": 0.02427813693947012,
+      "scarf_max_displacement": 0.4884549030430038,
+      "robe_max_displacement": 0.10348985529241223
+    },
+    {
+      "frame": 47,
+      "hood_pitch_degrees": 0.37709680339222956,
+      "scarf_max_displacement": 0.47934795221667836,
+      "robe_max_displacement": 0.08208876917835677
+    },
+    {
+      "frame": 48,
+      "hood_pitch_degrees": 0.6236431215889506,
+      "scarf_max_displacement": 0.47694164619819474,
+      "robe_max_displacement": 0.062426572351796834
+    },
+    {
+      "frame": 49,
+      "hood_pitch_degrees": 0.6498995828615529,
+      "scarf_max_displacement": 0.47662925182100974,
+      "robe_max_displacement": 0.05953316683957959
+    },
+    {
+      "frame": 50,
+      "hood_pitch_degrees": 0.41044825024954,
+      "scarf_max_displacement": 0.4800515376233944,
+      "robe_max_displacement": 0.06351702849207232
+    },
+    {
+      "frame": 51,
+      "hood_pitch_degrees": 0.03163642935247201,
+      "scarf_max_displacement": 0.48909858572527626,
+      "robe_max_displacement": 0.05257708048113311
+    },
+    {
+      "frame": 52,
+      "hood_pitch_degrees": -0.3461008713179891,
+      "scarf_max_displacement": 0.4957300343401778,
+      "robe_max_displacement": 0.053209108632026186
+    },
+    {
+      "frame": 53,
+      "hood_pitch_degrees": -0.4932337366266237,
+      "scarf_max_displacement": 0.4956999544664858,
+      "robe_max_displacement": 0.062355887276256454
+    },
+    {
+      "frame": 54,
+      "hood_pitch_degrees": -0.35730015956347916,
+      "scarf_max_displacement": 0.5071315430260307,
+      "robe_max_displacement": 0.06917555479802051
+    },
+    {
+      "frame": 55,
+      "hood_pitch_degrees": -0.17079668338692167,
+      "scarf_max_displacement": 0.5316130738099512,
+      "robe_max_displacement": 0.08514127369035761
+    },
+    {
+      "frame": 56,
+      "hood_pitch_degrees": -0.006154960796612145,
+      "scarf_max_displacement": 0.563700176595002,
+      "robe_max_displacement": 0.07668977342908297
+    },
+    {
+      "frame": 57,
+      "hood_pitch_degrees": 0.1949744626907161,
+      "scarf_max_displacement": 0.5958128662803808,
+      "robe_max_displacement": 0.15523153974228995
+    },
+    {
+      "frame": 58,
+      "hood_pitch_degrees": 0.31481833330960185,
+      "scarf_max_displacement": 0.620488640763994,
+      "robe_max_displacement": 0.17982684967067858
+    },
+    {
+      "frame": 59,
+      "hood_pitch_degrees": 0.1857644362271415,
+      "scarf_max_displacement": 0.6269891976694502,
+      "robe_max_displacement": 0.16746449025412616
+    },
+    {
+      "frame": 60,
+      "hood_pitch_degrees": -0.10530572221485585,
+      "scarf_max_displacement": 0.6205026202185714,
+      "robe_max_displacement": 0.13456650156497743
+    },
+    {
+      "frame": 61,
+      "hood_pitch_degrees": -0.3082101878196337,
+      "scarf_max_displacement": 0.612783834468751,
+      "robe_max_displacement": 0.11376079464403337
+    },
+    {
+      "frame": 62,
+      "hood_pitch_degrees": -0.3200320319113972,
+      "scarf_max_displacement": 0.6035167680701087,
+      "robe_max_displacement": 0.1128237231877762
+    },
+    {
+      "frame": 63,
+      "hood_pitch_degrees": -0.26949772347961687,
+      "scarf_max_displacement": 0.5949092834308192,
+      "robe_max_displacement": 0.11282943817761262
+    },
+    {
+      "frame": 64,
+      "hood_pitch_degrees": -0.17303556051877927,
+      "scarf_max_displacement": 0.5805987813740722,
+      "robe_max_displacement": 0.11695071859736793
+    },
+    {
+      "frame": 65,
+      "hood_pitch_degrees": -0.08133769387669397,
+      "scarf_max_displacement": 0.5594054387454767,
+      "robe_max_displacement": 0.1274740715826297
+    },
+    {
+      "frame": 66,
+      "hood_pitch_degrees": 0.05926524285098413,
+      "scarf_max_displacement": 0.5374250890120669,
+      "robe_max_displacement": 0.1307057603766027
+    },
+    {
+      "frame": 67,
+      "hood_pitch_degrees": 0.20372737543678646,
+      "scarf_max_displacement": 0.5137382943600151,
+      "robe_max_displacement": 0.11287844714877494
+    },
+    {
+      "frame": 68,
+      "hood_pitch_degrees": 0.19655953723734437,
+      "scarf_max_displacement": 0.4953055047115569,
+      "robe_max_displacement": 0.086643779419307
+    },
+    {
+      "frame": 69,
+      "hood_pitch_degrees": 0.032685617396995104,
+      "scarf_max_displacement": 0.48550219651797694,
+      "robe_max_displacement": 0.06216267913300459
+    },
+    {
+      "frame": 70,
+      "hood_pitch_degrees": -0.18073099553360417,
+      "scarf_max_displacement": 0.48341165679238285,
+      "robe_max_displacement": 0.04543510706714202
+    },
+    {
+      "frame": 71,
+      "hood_pitch_degrees": -0.3019501279299411,
+      "scarf_max_displacement": 0.49027585378894023,
+      "robe_max_displacement": 0.03842709260660463
+    },
+    {
+      "frame": 72,
+      "hood_pitch_degrees": -0.32354275153059164,
+      "scarf_max_displacement": 0.5049485494300885,
+      "robe_max_displacement": 0.04914740227018327
+    },
+    {
+      "frame": 73,
+      "hood_pitch_degrees": -0.37643876904505313,
+      "scarf_max_displacement": 0.5158185587247911,
+      "robe_max_displacement": 0.053238611365298935
+    },
+    {
+      "frame": 74,
+      "hood_pitch_degrees": -0.41891407545021003,
+      "scarf_max_displacement": 0.5242099824772627,
+      "robe_max_displacement": 0.07204961062158917
+    },
+    {
+      "frame": 75,
+      "hood_pitch_degrees": -0.4757184506794355,
+      "scarf_max_displacement": 0.5419680685421142,
+      "robe_max_displacement": 0.08372875598687926
+    },
+    {
+      "frame": 76,
+      "hood_pitch_degrees": -0.5551022874917798,
+      "scarf_max_displacement": 0.5682126077665554,
+      "robe_max_displacement": 0.08198685540579592
+    },
+    {
+      "frame": 77,
+      "hood_pitch_degrees": -0.43361628137689695,
+      "scarf_max_displacement": 0.5967615942913214,
+      "robe_max_displacement": 0.0800435058223134
+    },
+    {
+      "frame": 78,
+      "hood_pitch_degrees": -0.14987107069388658,
+      "scarf_max_displacement": 0.6211046275708191,
+      "robe_max_displacement": 0.07685565879387139
+    },
+    {
+      "frame": 79,
+      "hood_pitch_degrees": 0.03310975287812781,
+      "scarf_max_displacement": 0.6382475655202362,
+      "robe_max_displacement": 0.13370528122724407
+    },
+    {
+      "frame": 80,
+      "hood_pitch_degrees": 0.03224867480203763,
+      "scarf_max_displacement": 0.6415168991944188,
+      "robe_max_displacement": 0.15191410690060328
+    },
+    {
+      "frame": 81,
+      "hood_pitch_degrees": -0.09998541533132493,
+      "scarf_max_displacement": 0.6351628096376323,
+      "robe_max_displacement": 0.13345128347186933
+    },
+    {
+      "frame": 82,
+      "hood_pitch_degrees": -0.20951514698362764,
+      "scarf_max_displacement": 0.6275913706401153,
+      "robe_max_displacement": 0.1107380738518617
+    },
+    {
+      "frame": 83,
+      "hood_pitch_degrees": -0.1635797754864262,
+      "scarf_max_displacement": 0.6190647264807849,
+      "robe_max_displacement": 0.10345572274192337
+    },
+    {
+      "frame": 84,
+      "hood_pitch_degrees": -0.2156433221266696,
+      "scarf_max_displacement": 0.6086174733570506,
+      "robe_max_displacement": 0.1016995165599008
+    },
+    {
+      "frame": 85,
+      "hood_pitch_degrees": -0.5215820952300434,
+      "scarf_max_displacement": 0.5976608173707794,
+      "robe_max_displacement": 0.10543722569660162
+    },
+    {
+      "frame": 86,
+      "hood_pitch_degrees": -0.656358507733664,
+      "scarf_max_displacement": 0.5827251038915886,
+      "robe_max_displacement": 0.10809146625905852
+    },
+    {
+      "frame": 87,
+      "hood_pitch_degrees": -0.5524902319138575,
+      "scarf_max_displacement": 0.5702066992433685,
+      "robe_max_displacement": 0.10903929521807793
+    },
+    {
+      "frame": 88,
+      "hood_pitch_degrees": -0.32602394691380054,
+      "scarf_max_displacement": 0.5581650187584929,
+      "robe_max_displacement": 0.10205097040258439
+    },
+    {
+      "frame": 89,
+      "hood_pitch_degrees": 0.03858685704967149,
+      "scarf_max_displacement": 0.5477832354551315,
+      "robe_max_displacement": 0.0852177486948841
+    },
+    {
+      "frame": 90,
+      "hood_pitch_degrees": 0.1458153016265716,
+      "scarf_max_displacement": 0.5367401821715332,
+      "robe_max_displacement": 0.07073245679918624
+    }
+  ],
+  "status": "BAKED; validation recorded separately in pixel-run-cloth-validation.json"
+}

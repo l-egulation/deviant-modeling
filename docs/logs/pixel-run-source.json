@@ -1,0 +1,11 @@
+{
+  "model": "Kimodo-SOMA-RP-v1.1",
+  "sample": 0,
+  "source_sha256": {
+    "outputs/pixel-run-source.bvh": "D06A7405282037964D0AC79ADD1426D829D0974BEB072D1043759DF36E3263ED",
+    "outputs/pixel-run-source.npz": "912E234E5BE82067097E8195ACDA33515FFCF176A1F434D6001A3A4C6E23C153"
+  },
+  "fps": 30,
+  "seed": 231,
+  "frames": 90
+}

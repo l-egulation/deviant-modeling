@@ -20,3 +20,5 @@ model-cache/
 # Reproducible high-density Blender import; source GLB is tracked.
 outputs/tripo-pixel.blend
 outputs/tripo-pixel-inspection.npz
+# Reproducible numerical copy of shape-key bake in pixel-run-cloth.blend.
+outputs/pixel-run-cloth-cache.npz
