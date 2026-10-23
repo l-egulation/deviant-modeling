@@ -1,7 +1,7 @@
 """Offline Blender cloth inertia test on independent cages driving Tripo skin.
 T-pose translation is a test fixture, not a Kimodo or running animation.
 """
-import bpy, math, json
+import bpy, math, json, os
 import numpy as np
 from pathlib import Path
 from mathutils import Vector
@@ -15,6 +15,23 @@ newmesh=bpy.data.meshes.new_from_object(hero.evaluated_get(deps))
 hero.shape_key_clear(); hero.data=newmesh
 p=np.array([v.co[:] for v in hero.data.vertices]); colors=np.load(R/'outputs/tripo-pixel-inspection.npz')['colors']
 assert len(colors)==len(p)
+# The generated mesh contains bridges across the apparent front slit.
+# Remove only triangles crossing its center line, keeping all vertex indices/UVs.
+source=hero.data;keep=[];removed=0
+for poly in source.polygons:
+    q=p[list(poly.vertices)]
+    bridge=(q[:,0].min()<0<q[:,0].max() and q[:,1].max()<-.06 and q[:,2].max()<.39 and q[:,2].min()>.215)
+    if bridge:removed+=1
+    else:keep.append(poly)
+clean=bpy.data.meshes.new('Tripo skin with open robe slit')
+clean.from_pydata(p.tolist(),[],[list(poly.vertices) for poly in keep]);clean.update()
+for mat in source.materials:clean.materials.append(mat)
+uv=clean.uv_layers.new(name=source.uv_layers.active.name)
+for dst,src in zip(clean.polygons,keep):
+    dst.use_smooth=src.use_smooth;dst.material_index=src.material_index
+    for a,b in zip(dst.loop_indices,src.loop_indices):uv.data[a].uv=source.uv_layers.active.data[b].uv
+hero.data=clean
+print('Removed front-slit bridge triangles',removed,flush=True)
 root=bpy.data.objects.new('Translation test fixture',None); scene.collection.objects.link(root)
 hero.parent=root
 for f,y in [(1,0),(30,0),(45,-.15),(75,-.9),(76,-.9),(105,-.9),(120,-.6),(135,0),(150,0)]:
@@ -43,16 +60,18 @@ def cage(name,verts,faces,pins,bend):
     mod.collision_settings.self_distance_min=.003
     mod.point_cache.frame_start=1;mod.point_cache.frame_end=150
     return ob,np.array(verts)
-verts=[];faces=[];nu=19;nv=9
+verts=[];oldverts=[];faces=[];nu=19;nv=9
 for i in range(nu):
     u=i/(nu-1)
     for j in range(nv):
         v=j/(nv-1)*2-1
-        verts.append((-.055-.37*u,.12+.075*math.sin(u*math.pi*.85)+.065*v*math.sin(u*math.pi),.57-.17*u+(.018+.10*u)*v))
+        oldverts.append((-.055-.37*u,.12+.075*math.sin(u*math.pi*.85)+.065*v*math.sin(u*math.pi),.57-.17*u+(.018+.10*u)*v))
+        verts.append((-.055-.37*u,.15+.13*math.sin(u*math.pi*.85)+.065*v*math.sin(u*math.pi),.57-.17*u+(.018+.10*u)*v))
 for i in range(nu-1):
     for j in range(nv-1):
         a=i*nv+j;faces.append((a,a+nv,a+nv+1,a+1))
-scarf,scarfbase=cage('Scarf simulation surface',verts,faces,list(range(nv*2)),.8)
+scarf,scarfrest=cage('Scarf simulation surface',verts,faces,list(range(nv*4)),3)
+scarfbase=np.array(oldverts)
 verts=[];faces=[];nr=9;nt=37
 for i in range(nr):
     u=i/(nr-1)
@@ -68,12 +87,24 @@ def smooth(a,b,v):
 x,y,z=p.T
 teal=smooth(.08,.19,colors[:,2]-colors[:,0])*smooth(.15,.30,colors[:,1])
 sw=teal*smooth(.055,.13,-x)*smooth(.0,.05,y)*smooth(.22,.29,z)*(1-smooth(.56,.61,z))
-rw=(1-teal)*smooth(.45,.65,colors[:,0])*(1-smooth(.40,.49,z))*smooth(.18,.21,z)
-def binding(base,weight):
-    ids=np.flatnonzero(weight>1e-6);dist=((p[ids,None,:]-base[None,:,:])**2).sum(2)
-    ix=np.argsort(dist,axis=1)[:,:4];w=1/np.maximum(np.take_along_axis(dist,ix,axis=1),1e-6);w/=w.sum(1)[:,None]
+ru=np.clip((.50-z)/.245,0,1)
+radius=np.sqrt((x/(.091+.075*ru))**2+(y/(.074+.041*ru))**2)
+# The dark lining must follow the ivory shell. Texture brightness is NOT a pin mask.
+robe_region=(radius>.60)&(radius<1.5)&(z>.215)&(z<.50)&(teal<.5)
+rw=robe_region.astype(float)*(1-smooth(.40,.49,z))
+def grid_binding(weight,u,v,rows,cols):
+    ids=np.flatnonzero(weight>1e-6)
+    a=np.clip(u[ids],0,1)*(rows-1);b=np.clip(v[ids],0,1)*(cols-1)
+    i=np.minimum(a.astype(int),rows-2);j=np.minimum(b.astype(int),cols-2)
+    a-=i;b-=j
+    ix=np.stack([i*cols+j,(i+1)*cols+j,(i+1)*cols+j+1,i*cols+j+1],axis=1)
+    w=np.stack([(1-a)*(1-b),a*(1-b),a*b,(1-a)*b],axis=1)
     return ids,ix,w,weight[ids]
-binds=[binding(scarfbase,sw),binding(robebase,rw)]
+angle=np.mod(np.arctan2(y/(.074+.041*ru),x/(.091+.075*ru))+math.pi/2,2*math.pi)
+rv=np.clip((angle-.14)/(2*math.pi-.28),0,1)
+su=np.clip((-x-.055)/.37,0,1)
+sv=np.clip(((z-(.57-.17*su))/(.018+.10*su)+1)/2,0,1)
+binds=[grid_binding(sw,su,sv,nu,nv),grid_binding(rw,ru,rv,nr,nt)]
 _,dup=np.unique(np.round(p,6),axis=0,return_inverse=True);cnt=np.bincount(dup)
 scene.render.resolution_x=scene.render.resolution_y=384;scene.cycles.samples=8
 scene.render.film_transparent=False
@@ -82,10 +113,16 @@ cam.location=center+Vector((2.7,-1.6,0));cam.rotation_euler=(center-cam.location
 hero.shape_key_add(name='Rest Tripo shape');key=hero.shape_key_add(name='Baked cloth');key.value=1
 bpy.ops.wm.save_as_mainfile(filepath=str(R/'outputs/tripo-pixel-cloth-test.blend'),compress=True)
 positions=[];metrics=[];caches=[[],[]]
+reuse=np.load(R/'outputs/tripo-pixel-cloth-cache.npz') if os.environ.get('CLOTH_REUSE_CACHE') else None
+if reuse is not None:
+    for ob in [scarf,robe]:ob.modifiers['Physical cloth'].show_viewport=False
 for f in range(1,151):
     scene.frame_set(f);deps=bpy.context.evaluated_depsgraph_get();delta=np.zeros_like(p)
     for k,(ob,base,bind) in enumerate(zip([scarf,robe],[scarfbase,robebase],binds)):
-        ev=ob.evaluated_get(deps);now=np.array([v.co[:] for v in ev.data.vertices]);caches[k].append(now)
+        if reuse is None:
+            ev=ob.evaluated_get(deps);now=np.array([v.co[:] for v in ev.data.vertices])
+        else:now=reuse[['scarf','robe'][k]][f-1]
+        caches[k].append(now)
         ids,ix,w,weight=bind;delta[ids]+=((now-base)[ix]*w[:,:,None]).sum(1)*weight[:,None]
     avg=np.stack([np.bincount(dup,weights=delta[:,j])/cnt for j in range(3)],axis=1);delta=avg[dup]
     coords=p+delta
@@ -93,9 +130,12 @@ for f in range(1,151):
     key.data.foreach_set('co',coords.astype(np.float32).ravel())
     positions.append(coords.astype(np.float32))
     metrics.append({'frame':f,'scarf_tip':caches[0][-1][-nv:].mean(0).tolist(),'robe_hem':caches[1][-1][-nt:].mean(0).tolist(),'max_skin_displacement':float(np.linalg.norm(delta,axis=1).max())})
-    if f>=31:
+    if f>=31 and (not os.environ.get('CLOTH_SAMPLE_ONLY') or f in [31,75,90,125]):
         scene.render.filepath=str(OUT/f'{f-30:03d}.png');bpy.ops.render.render(write_still=True)
     print('CLOTH_FRAME',f,flush=True)
+if os.environ.get('CLOTH_SAMPLE_ONLY'):
+    print('SAMPLE INSPECTION COMPLETE',flush=True)
+    raise SystemExit(0)
 np.savez_compressed(R/'outputs/tripo-pixel-cloth-cache.npz',scarf=np.array(caches[0]),robe=np.array(caches[1]))
 key.value=0
 for f,coords in enumerate(positions,1):
@@ -108,4 +148,4 @@ for ob in [scarf,robe]:
     ob.modifiers['Physical cloth'].show_render=False
 scene.frame_set(31)
 bpy.ops.wm.save_as_mainfile(filepath=str(R/'outputs/tripo-pixel-cloth-test.blend'),compress=True)
-(R/'docs/logs/tripo-pixel-cloth.json').write_text(json.dumps({'test':'T-pose world translation, start/stop/reverse; NOT running animation','physics':'Blender cloth, independent surfaces with pinned roots, body ellipsoid collisions','frames':150,'fps':30,'settle_frames':30,'cloth_quality':12,'self_collision':True,'render_skin':'4-neighbour inverse-distance cage displacement; topology preserved','production_ready':False,'metrics':metrics},indent=2))
+(R/'docs/logs/tripo-pixel-cloth.json').write_text(json.dumps({'test':'T-pose world translation, start/stop/reverse; NOT running animation','physics':'Blender cloth, independent surfaces with pinned roots, body ellipsoid collisions','frames':150,'fps':30,'settle_frames':30,'cloth_quality':12,'self_collision':True,'render_skin':'Parametric bilinear binding, separate front slit banks; dark robe lining follows shell','removed_front_slit_bridge_triangles':removed,'simulation_cache_reused':reuse is not None,'scarf_attachment':'4 pinned rows, 0.03m posterior offset, broader root bend','production_ready':False,'metrics':metrics},indent=2))

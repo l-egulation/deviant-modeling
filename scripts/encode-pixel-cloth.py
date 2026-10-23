@@ -24,3 +24,16 @@ sheet=Image.new('RGB',(384*4,384))
 for j,i in enumerate([0,40,60,95]):sheet.paste(frames[i],(j*384,0))
 sheet.save(R/'outputs/tripo-pixel-cloth-contact.png')
 print('Verified 120 decoded frames at 30 FPS / 4 seconds')
+before=R/'.cache/pixel-cloth-before'
+if before.exists():
+    with av.open(str(R/'outputs/tripo-pixel-cloth-comparison.mp4'),'w') as container:
+        stream=container.add_stream('libx264',rate=30);stream.width=768;stream.height=384;stream.pix_fmt='yuv420p'
+        for i,im in enumerate(frames):
+            pair=Image.new('RGB',(768,384));pair.paste(Image.open(before/f'{i+1:03d}.png').convert('RGB'),(0,0));pair.paste(im,(384,0))
+            d=ImageDraw.Draw(pair);d.rectangle((0,0,768,26),fill='#eeeeee');d.text((10,7),'BEFORE',fill='black');d.text((394,7),'AFTER | SAME MOTION AND CAMERA',fill='black')
+            if i==44:pair.save(R/'outputs/tripo-pixel-cloth-comparison.png')
+            f=av.VideoFrame.from_ndarray(np.array(pair),format='rgb24');f.pts=i;f.time_base=Fraction(1,30)
+            for packet in stream.encode(f):container.mux(packet)
+        for packet in stream.encode():container.mux(packet)
+    with av.open(str(R/'outputs/tripo-pixel-cloth-comparison.mp4')) as container:
+        assert sum(1 for _ in container.decode(video=0))==120
