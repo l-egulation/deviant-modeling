@@ -66,5 +66,31 @@ def skin_fields(p,regions,names,shoulder=(.055,.24,.25,.50),fore_range=(.06,.36)
   add('Thigh.'+side,ids*thigh);add('Shin.'+side,ids*(1-thigh)*(1-foot));add('Foot.'+side,ids*(1-thigh)*foot)
  ids=regions=='Scarf';W[ids]=0;add('Neck',ids.astype(float))
  ids=regions=='Hood';W[ids]=0;add('Head',ids.astype(float))
+ # The collar is a sewn attachment, unlike the free scarf tail. Duplicate
+ # surface vertices at this boundary must have identical deformation weights.
+ from mathutils.kdtree import KDTree
+ bins={}
+ for i,co in enumerate(p):bins.setdefault(tuple(np.round(co,6)),[]).append(i)
+ anchors=[];anchor_weights=[]
+ for ids in bins.values():
+  tags=set(regions[ids])
+  if 'Scarf' in tags and tags.intersection({'Robe','Arm.L','Arm.R'}):
+   co=p[ids[0]]
+   if co[2]>.48 and co[0]>-.005:
+    anchors.append(co)
+    anchor_weights.append(W[[i for i in ids if regions[i] in ['Robe','Arm.L','Arm.R']]].mean(0))
+ if anchors:
+  tree=KDTree(len(anchors))
+  for i,co in enumerate(anchors):tree.insert(co,i)
+  tree.balance()
+  for i in np.flatnonzero(regions=='Scarf'):
+   nearest=sorted(tree.find_n(p[i],min(8,len(anchors))),key=lambda item:item[2]);distance=nearest[0][2]
+   influence=1-float(smooth(.0,.06,distance))
+   if influence:
+    if distance<1e-6:target=anchor_weights[nearest[0][1]]
+    else:
+     factors=np.array([1/max(v[2],1e-6)**2 for v in nearest]);factors/=factors.sum()
+     target=sum(anchor_weights[v[1]]*w for v,w in zip(nearest,factors))
+    W[i]=W[i]*(1-influence)+target*influence
  W/=W.sum(1)[:,None]
  return W

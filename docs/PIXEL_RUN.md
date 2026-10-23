@@ -82,3 +82,14 @@ WSL Ubuntu-22.04, Blender 4.5.13, `/opt/deviant-kimodo/.venv` 사용.
 4. Kimodo 가상환경 Python으로 `package-pixel-run.py` 실행. `outputs/pixel-run-comparison.mp4`와 GIF가 원본 골격/적용본 비교다.
 
 인증 파일·가중치·캐시 프레임은 커밋하지 않는다. 원본 BVH/NPZ와 최종 blend, 검증 로그 및 비교 영상은 보존한다.
+# 2026-10-23 목도리/로브 목둘레 접합
+
+재질 Alpha=1이며 연결 없음. 투명 재질 문제가 아니라 의미 영역 분리 시 복제한 경계 정점이 서로 다른 뼈 가중치를 따라 벌어지는 문제였다. 기존 Mixamo 90프레임에서 목둘레 경계 208쌍 최대 간격 0.069845m.
+
+`pixel_skin.py`에서 목도리 부착 경계만 로브/소매의 가중치를 사용하고 주변 0.06m에 부드럽게 보간한다. 후드가 함께 만나는 경계에서는 후드 가중치를 섞지 않는다. 기존 메시 위치·UV·골격·애니메이션은 유지한다. 꼬리와 로브 자락의 독립 물리 설정은 그대로 재계산했다. 추가 덮개 메시 없이 기존 경계를 연결했다.
+
+재현 순서: `update-pixel-collar.py` → `COLLAR_TAG=after check-pixel-collar.py` → `simulate-pixel-run-cloth.py` → `COLLAR_TAG=cloth COLLAR_INPUT=outputs/pixel-run-cloth.blend check-pixel-collar.py` → `verify-pixel-run-cloth.py` → `preview-pixel-run.py` → `package-pixel-run.py`. Blender 스크립트는 `--python-exit-code 1`로 실행한다.
+
+검증: 물리 전후 각각 90프레임/208쌍 간격 0m. 기존 범위의 로브 외면/목도리 꼬리 삼각형 교차 0건. 부착부 전체 충돌·자기 충돌·연속 충돌·루프 연결 검증을 의미하지 않는다. 국소 최대 모서리 늘어짐은 몸 2.79410배, 물리 후 2.79414배(이전 물리 후 2.71655배)로 남는다. 첫 목 고정 시도는 어깨 늘어짐 5.57배를 유발해 폐기하고 부착부가 옷을 따르는 방법으로 교체했다.
+
+출력: `outputs/pixel-collar-comparison.png`(동일 프레임 확대), `outputs/pixel-run-comparison.mp4`(최신 전체 동작), `docs/logs/pixel-collar-{before,after,cloth}.json`(검증 기록).
