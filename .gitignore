@@ -22,3 +22,5 @@ outputs/tripo-pixel.blend
 outputs/tripo-pixel-inspection.npz
 # Reproducible numerical copy of shape-key bake in pixel-run-cloth.blend.
 outputs/pixel-run-cloth-cache.npz
+# Intermediate high-resolution flat-color captures; final sprites and originals tracked.
+outputs/pixel-run-sprites/render/
