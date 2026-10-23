@@ -1,0 +1,19 @@
+{
+  "source": "Tripo H3.1 reduced working mesh",
+  "hood_vertices_moved": 4549,
+  "scarf_vertices_moved": 4908,
+  "hood_tip_before": [
+    -0.21703393757343292,
+    0.051112763583660126,
+    0.767107367515564
+  ],
+  "hood_tip_after": [
+    -0.0057764356504320935,
+    0.2337809090869717,
+    0.767107367515564
+  ],
+  "cloth_simulation": false,
+  "robe_geometry_changed": false,
+  "ivory_robe_max_displacement": 0.0,
+  "topology_preserved": true
+}

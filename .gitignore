@@ -19,3 +19,4 @@ model-cache/
 *.zip
 # Reproducible high-density Blender import; source GLB is tracked.
 outputs/tripo-pixel.blend
+outputs/tripo-pixel-inspection.npz

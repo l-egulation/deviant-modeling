@@ -31,3 +31,16 @@ Tripo 웹 뷰어에서 정면/측면/후면 회전 확인. 후드 돌출 끝과 
 - 후드 끝 방향 교정, 의상 분리/재구성, 천 충돌체 및 물리, 리깅과 Kimodo 적용은 아직 미완료. 이번 파일은 그 작업을 위한 편집 시작점이다.
 
 원본 그대로 저장한 `outputs/tripo-pixel.blend`는 약180MB라 Git에 넣지 않는다. 원본 GLB와 검토 스크립트로 재현 가능. 구조 수치는 `docs/logs/tripo-pixel-structure.json`, 경량본 연결 검사는 `docs/logs/tripo-pixel-topology.json`에 기록한다.
+
+## 2026-10-23 후드/스카프 실제 형상 수정
+
+이전 단계는 경량화뿐이어서 사용자 외형 수정 요청을 충족하지 못했다. 이번에는 `outputs/tripo-pixel-working.blend`의 실제 Tripo 메시를 변형했다. 새 Tripo 생성이나 캐릭터 전체 교체가 아니다.
+
+- 결과: `outputs/tripo-pixel-shaped.blend`. `Tripo baseline` 기준과 `Hood tip toward back`, `Scarf broad fold and twist` 두 Shape Key. 두 키를 0으로 놓으면 경량 원형, 1이면 수정 형태다.
+- 후드: 얼굴 전면을 유지하면서 측후면 각도를 연속적으로 재배치. 기존 돌출 끝 좌표 약(-0.217,0.051,0.767)에서 (-0.006,0.234,0.767)로 변경. +Y가 뒤쪽이다. 정면 왼쪽 돌출이 줄고 측면 뒤쪽 끝이 보인다. 둥근 구체로 재생성하지 않았다.
+- 스카프: 원본의 넓고 갈라진 꼬리를 유지하면서 뒤쪽 깊이, 큰 접힘과 완만한 비틀림 추가. 색·위치 영역으로 변형 범위를 제한하고 중복 UV 정점의 변위를 일치시켰다. 목 고정부 자체를 새로 제작한 것은 아니다.
+- 기존 로브/팔다리/UV/삼각형 연결은 보존. 아이보리 로브 영역의 최대 변위 검사 및 유한 좌표 검사. 수치는 `docs/logs/tripo-pixel-shape.json`.
+- 같은 카메라/조명/배율로 앞·옆·후사선·뒤 전후 8장 렌더: `outputs/tripo-pixel-shape-{before,after}-{front,side,rear-oblique,back}.png`.
+- 재현: Blender로 `scripts/inspect-pixel-shape.py` 실행 후 `scripts/reshape-tripo-pixel.py`. 전자는 경량본의 좌표/텍스처색을 로컬 NPZ로 추출하며 후자가 형상을 수정한다. 다운로드 원본 GLB는 변경하지 않았다.
+
+정적인 형태 수정까지 완료. 천 시뮬레이션/충돌/의상 분리/리깅/최종 6색 도트 출력은 아직 미적용이다. 렌더에서 주요 형태를 확인했으나 모든 내부 자기관통을 자동 검증한 것은 아니다. 움직임 시험 이전에 옷자락용 표면 정리가 필요하다.
