@@ -1,0 +1,5 @@
+{"replay_checks": [{"frame": 31, "max_replay_error": 1.4901161193847656e-08}, {"frame": 75, "max_replay_error": 1.4901161193847656e-08}, {"frame": 76, "max_replay_error": 1.4901161193847656e-08}, {"frame": 90, "max_replay_error": 1.4901161193847656e-08}, {"frame": 120, "max_replay_error": 1.4901161193847656e-08}, {"frame": 150, "max_replay_error": 1.4901161193847656e-08}], "scarf_post_stop_travel_m": 0.23569658737951563, "robe_hem_post_stop_travel_m": 0.02031085316246123, "max_skin_displacement_m": 0.4661812867420876, "quality_pass": false, "remaining": "Scarf collapses behind body; rough robe slit deformation; full garment collision and running rig not verified"}
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:31:19)
+Read blend: "/mnt/c/Users/SSAFY/Desktop/3rd_PJT/deviant-modeling/outputs/tripo-pixel-cloth-test.blend"
+
+Blender quit
