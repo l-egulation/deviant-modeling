@@ -6,23 +6,51 @@ R=Path(__file__).resolve().parents[1];source=R/'outputs/pixel-run-sprites';O=R/'
 meta=json.loads((source/'capture.json').read_text());pal=np.array([[int(c[i:i+2],16) for i in (0,2,4)] for c in meta['palette']])
 dur=[round((i+1)*100/30)*10-round(i*100/30)*10 for i in range(22)]
 frames=[];boards=[];validation=[]
+def large_regions(mask,minimum=5):
+ seen=np.zeros_like(mask);out=np.zeros_like(mask)
+ for y,x in zip(*np.where(mask)):
+  if seen[y,x]:continue
+  stack=[(y,x)];seen[y,x]=True;component=[]
+  while stack:
+   yy,xx=stack.pop();component.append((yy,xx))
+   for dy,dx in [(0,1),(0,-1),(1,0),(-1,0)]:
+    ny,nx=yy+dy,xx+dx
+    if 0<=ny<64 and 0<=nx<64 and mask[ny,nx] and not seen[ny,nx]:seen[ny,nx]=True;stack.append((ny,nx))
+  if len(component)>=minimum:
+   for yy,xx in component:out[yy,xx]=True
+ return out
+def expanded(mask):
+ p=np.pad(mask,1);return np.logical_or.reduce([p[y:y+64,x:x+64] for y in range(3) for x in range(3)])
+inputs=[];masks=[]
+for i in range(22):
+ a=np.array(Image.open(source/f'coarse/{i:03d}.png').convert('RGBA').resize((64,64),Image.Resampling.NEAREST))
+ idx=((a[:,:,:3].astype(int)[:,:,None,:]-pal)**2).sum(3).argmin(2)
+ inputs.append((a,idx));masks.append(large_regions((idx==1)&(a[:,:,3]>0)))
+stable=[]
+for i,mask in enumerate(masks):
+ # Keep current shadows only, supported by adjacent frames within one pixel.
+ neighbors=[expanded(masks[j]) for j in [i-1,i+1] if 0<=j<22]
+ stable.append(large_regions(mask&np.logical_or.reduce(neighbors)))
 for i in range(22):
  # The prior coarse capture has exactly the approved, unmodified silhouette.
  old=Image.open(source/f'coarse/{i:03d}.png').convert('RGBA')
- small=old.resize((64,64),Image.Resampling.NEAREST);a=np.array(small)
- idx=((a[:,:,:3].astype(int)[:,:,None,:]-pal)**2).sum(3).argmin(2)
- # Remove volume shading, keeping original material boundaries and all eyes.
+ a,original_idx=inputs[i];a=a.copy();idx=original_idx.copy()
+ # Keep broad ivory shadows, discard isolated tiny shadow fragments.
  idx[idx==1]=0;idx[idx==4]=3
+ flat_idx=idx.copy();idx[stable[i]]=1
  a[:,:,:3]=pal[idx];a[a[:,:,3]==0,:3]=0
  im=Image.fromarray(a).resize((128,128),Image.Resampling.NEAREST)
  assert np.array_equal(np.array(im)[:,:,3],np.array(old)[:,:,3])
  assert im.getbbox()==old.getbbox()
  assert np.array_equal(np.array(im)[::2,::2],np.array(im)[1::2,1::2])
  im.save(O/f'frames/{i:03d}.png');frames.append(im)
- colors=set(map(tuple,np.array(im)[np.array(im)[:,:,3]>0,:3]));assert colors.issubset(set(map(tuple,pal[[0,2,3,5]])))
- validation.append({'frame':i,'bounds':im.getbbox(),'colors':len(colors),'alpha_matches_previous_capture':True})
+ colors=set(map(tuple,np.array(im)[np.array(im)[:,:,3]>0,:3]));assert colors.issubset(set(map(tuple,pal[[0,1,2,3,5]])))
+ assert stable[i].any()
+ validation.append({'frame':i,'bounds':im.getbbox(),'colors':len(colors),'alpha_matches_previous_capture':True,'original_shadow_pixels':int(((original_idx==1)&(a[:,:,3]>0)).sum()),'retained_shadow_pixels':int(stable[i].sum())})
+ flat=a.copy();flat[:,:,:3]=pal[flat_idx];flat[flat[:,:,3]==0,:3]=0
+ flat=Image.fromarray(flat).resize((128,128),Image.Resampling.NEAREST)
  board=Image.new('RGB',(768,420),'#454953')
- for j,(tile,title) in enumerate([(old,'PREVIOUS CAPTURE / COARSE'),(im,'SAME SHAPE / FLAT COLORS')]):
+ for j,(tile,title) in enumerate([(flat,'BEFORE / NO SHADOWS'),(im,'AFTER / BROAD SHADOWS')]):
   tile=tile.resize((384,384),Image.Resampling.NEAREST);board.paste(tile,(j*384,36),tile);ImageDraw.Draw(board).text((j*384+12,12),title,fill='white')
  boards.append(board)
 sheet=Image.new('RGBA',(768,512))
@@ -39,9 +67,9 @@ preview=[]
 for im in frames:
  tile=im.resize((384,384),Image.Resampling.NEAREST);bg=Image.new('RGB',(384,384),'#454953');bg.paste(tile,(0,0),tile);preview.append(bg)
 preview[0].save(O/'preview.gif',save_all=True,append_images=preview[1:],duration=dur,loop=0)
-meta.update({'source':'outputs/pixel-run-sprites/coarse','geometry_edit':False,'screen_study_used':False,'canvas':[128,128],'logical_grid':[64,64],'pixel_block_size':2,'colors_used':['FDEEDA','1B1616','025673','EBA516'],'simplification':'merge ivory and teal shadow/highlight shades; preserve alpha and material boundaries','validation':validation})
+meta.update({'source':'outputs/pixel-run-sprites/coarse','geometry_edit':False,'screen_study_used':False,'canvas':[128,128],'logical_grid':[64,64],'pixel_block_size':2,'colors_used':['FDEEDA','D2B396','1B1616','025673','EBA516'],'simplification':'retain ivory shadows with area >=5 logical pixels and adjacent-frame support within1px; teal flat; alpha and shape unchanged','temporal_scope':'adjacent frames only; loop seam not corrected','validation':validation})
 (O/'capture.json').write_text(json.dumps(meta,indent=2))
 with zipfile.ZipFile(R/'outputs/pixel-simple-run.zip','w',zipfile.ZIP_DEFLATED) as z:
  for path in O.rglob('*'):
   if path.is_file():z.write(path,path.relative_to(O))
-print('PASS: 22 frames; original coarse alpha and bounds unchanged; 128px, 2px blocks, 4 team colors')
+print('PASS: 22 frames; original coarse alpha and bounds unchanged; 128px, 2px blocks, 5 team colors')

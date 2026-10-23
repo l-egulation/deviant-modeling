@@ -73,11 +73,13 @@
   "pixel_block_size": 2,
   "colors_used": [
     "FDEEDA",
+    "D2B396",
     "1B1616",
     "025673",
     "EBA516"
   ],
-  "simplification": "merge ivory and teal shadow/highlight shades; preserve alpha and material boundaries",
+  "simplification": "retain ivory shadows with area >=5 logical pixels and adjacent-frame support within1px; teal flat; alpha and shape unchanged",
+  "temporal_scope": "adjacent frames only; loop seam not corrected",
   "validation": [
     {
       "frame": 0,
@@ -87,8 +89,10 @@
         94,
         112
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 75,
+      "retained_shadow_pixels": 52
     },
     {
       "frame": 1,
@@ -98,8 +102,10 @@
         94,
         112
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 68,
+      "retained_shadow_pixels": 52
     },
     {
       "frame": 2,
@@ -109,8 +115,10 @@
         94,
         110
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 83,
+      "retained_shadow_pixels": 51
     },
     {
       "frame": 3,
@@ -120,8 +128,10 @@
         92,
         110
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 79,
+      "retained_shadow_pixels": 57
     },
     {
       "frame": 4,
@@ -131,8 +141,10 @@
         92,
         110
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 78,
+      "retained_shadow_pixels": 57
     },
     {
       "frame": 5,
@@ -142,8 +154,10 @@
         92,
         110
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 70,
+      "retained_shadow_pixels": 52
     },
     {
       "frame": 6,
@@ -153,8 +167,10 @@
         92,
         110
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 68,
+      "retained_shadow_pixels": 49
     },
     {
       "frame": 7,
@@ -164,8 +180,10 @@
         90,
         112
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 61,
+      "retained_shadow_pixels": 38
     },
     {
       "frame": 8,
@@ -175,8 +193,10 @@
         90,
         112
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 64,
+      "retained_shadow_pixels": 43
     },
     {
       "frame": 9,
@@ -186,8 +206,10 @@
         90,
         112
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 68,
+      "retained_shadow_pixels": 54
     },
     {
       "frame": 10,
@@ -197,8 +219,10 @@
         90,
         112
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 71,
+      "retained_shadow_pixels": 62
     },
     {
       "frame": 11,
@@ -208,8 +232,10 @@
         92,
         112
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 86,
+      "retained_shadow_pixels": 66
     },
     {
       "frame": 12,
@@ -219,8 +245,10 @@
         92,
         112
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 85,
+      "retained_shadow_pixels": 69
     },
     {
       "frame": 13,
@@ -230,8 +258,10 @@
         92,
         110
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 84,
+      "retained_shadow_pixels": 75
     },
     {
       "frame": 14,
@@ -241,8 +271,10 @@
         94,
         108
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 96,
+      "retained_shadow_pixels": 88
     },
     {
       "frame": 15,
@@ -252,8 +284,10 @@
         94,
         108
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 94,
+      "retained_shadow_pixels": 84
     },
     {
       "frame": 16,
@@ -263,8 +297,10 @@
         96,
         108
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 85,
+      "retained_shadow_pixels": 71
     },
     {
       "frame": 17,
@@ -274,8 +310,10 @@
         96,
         110
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 86,
+      "retained_shadow_pixels": 75
     },
     {
       "frame": 18,
@@ -285,8 +323,10 @@
         98,
         112
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 78,
+      "retained_shadow_pixels": 67
     },
     {
       "frame": 19,
@@ -296,8 +336,10 @@
         98,
         112
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 85,
+      "retained_shadow_pixels": 67
     },
     {
       "frame": 20,
@@ -307,8 +349,10 @@
         96,
         112
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 74,
+      "retained_shadow_pixels": 61
     },
     {
       "frame": 21,
@@ -318,8 +362,10 @@
         96,
         112
       ],
-      "colors": 4,
-      "alpha_matches_previous_capture": true
+      "colors": 5,
+      "alpha_matches_previous_capture": true,
+      "original_shadow_pixels": 70,
+      "retained_shadow_pixels": 57
     }
   ]
 }
