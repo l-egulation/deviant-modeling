@@ -52,6 +52,19 @@ for i,im in enumerate(frames):
  bg=Image.new('RGB',(384,384),'#454953');bg.paste(ours,(0,0),ours);previews.append(bg)
 boards[0].save(O/'comparison.png');boards[0].save(O/'comparison.gif',save_all=True,append_images=boards[1:],duration=dur,loop=0)
 previews[0].save(O/'preview.gif',save_all=True,append_images=previews[1:],duration=dur,loop=0)
+if (O/'before-idle.gif').exists():
+ previous=Image.open(O/'before-idle.gif');old=[];old_times=[]
+ for j in range(previous.n_frames):
+  previous.seek(j);old.append(previous.convert('RGBA'));old_times.append(previous.info['duration'])
+ changes=[]
+ for i,im in enumerate(frames):
+  elapsed=i*1000/30;j=0
+  while j<len(old)-1 and elapsed>=old_times[j]:elapsed-=old_times[j];j+=1
+  board=Image.new('RGB',(768,420),'#454953')
+  for x,tile in [(0,old[j]),(384,im)]:
+   tile=tile.resize((384,384),Image.Resampling.NEAREST);board.paste(tile,(x,36),tile)
+  d=ImageDraw.Draw(board);d.text((12,12),'BEFORE',fill='white');d.text((396,12),'READY STANCE',fill='white');changes.append(board)
+ changes[0].save(O/'pose-comparison.png');changes[0].save(O/'pose-comparison.gif',save_all=True,append_images=changes[1:],duration=dur,loop=0)
 contact=Image.new('RGB',(768,540),'#454953')
 for j,i in enumerate(range(0,90,5)):
  x=j%6*128;y=j//6*180;contact.paste(frames[i],(x,y+25),frames[i]);ImageDraw.Draw(contact).text((x+4,y+5),str(i),fill='white')

@@ -17,8 +17,14 @@ for f in range(1,91):
  for name,angle in [('Spine',.7*breath),('Chest',1.2*breath),('Neck',-.8*breath)]:
   rig.pose.bones[name].rotation_quaternion=Matrix.Rotation(math.radians(angle),4,'X').to_quaternion()
  bpy.context.view_layer.update()
+ # Open the toes without changing ankle anchors or limb lengths.
  for side,sign in [('L',1),('R',-1)]:
-  for name,direction in [('UpperArm',(.18*sign,-.07-.015*breath,-1)),('Forearm',(.04*sign,-.33-.025*breath,-1)),('Hand',(.03*sign,-.3,-1))]:
+  pb=rig.pose.bones['Foot.'+side]
+  basis=rest[pb.name].to_quaternion()
+  pb.rotation_quaternion=basis.inverted()@Matrix.Rotation(math.radians(18*sign),4,'Z').to_quaternion()@basis
+  bpy.context.view_layer.update()
+ for side,sign in [('L',1),('R',-1)]:
+  for name,direction in [('UpperArm',(.48*sign,-.16-.025*breath,-1)),('Forearm',(.30*sign,-1,-.30-.07*breath)),('Hand',(.15*sign,-1,-.22))]:
    pb=rig.pose.bones[name+'.'+side];axis=rest[pb.name].to_3x3().col[1].normalized();q=axis.rotation_difference(Vector(direction).normalized())@rest[pb.name].to_quaternion()
    pb.matrix=Matrix.LocRotScale(pb.head.copy(),q,Vector((1,1,1)));bpy.context.view_layer.update()
  for pb in rig.pose.bones:
@@ -27,7 +33,7 @@ for f in range(1,91):
  foot_positions.append([list(rig.pose.bones['Foot.'+side].head) for side in ['L','R']])
 feet=np.array(foot_positions);drift=float(np.abs(feet-feet[0]).max());assert drift<1e-7 and max_length_error<1e-6
 cam=s.camera;cam.animation_data_clear();cam.data.type='ORTHO';cam.data.ortho_scale=1.36
-center=Vector((.075,0,.51));offset=Vector((math.cos(math.radians(30)),-math.sin(math.radians(30)),0))*3
+center=Vector((.075,0,.51));offset=Vector((math.cos(math.radians(60)),-math.sin(math.radians(60)),0))*3
 cam.location=center+offset;cam.rotation_euler=(-offset).to_track_quat('-Z','Y').to_euler()
 s.render.resolution_x=s.render.resolution_y=384;s.cycles.samples=8
 s.frame_set(1);bpy.ops.wm.save_as_mainfile(filepath=str(R/'outputs/pixel-idle.blend'),compress=True)
