@@ -1,0 +1,51 @@
+{
+  "source": "C:\\Users\\SSAFY\\Downloads\\sannabi_mari.gif",
+  "sha256": "a5c43e2ec62b989cef5bcaa5cd662ad4767259d9fb3b711076228ffa42a47a7b",
+  "canvas": [
+    126,
+    202
+  ],
+  "frames": 171,
+  "duration_ms": 6840,
+  "durations_ms": {
+    "40": 171
+  },
+  "unique_full_image_frames": 166,
+  "full_image_colors_minmax": [
+    117,
+    146
+  ],
+  "warning": "GIF encoding timing and full-frame colors do not establish original game animation FPS, unique character poses, character palette, lighting or production workflow",
+  "contact_frames": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90,
+    105,
+    120,
+    135,
+    150,
+    170
+  ],
+  "first_cycle_frames": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30
+  ]
+}
