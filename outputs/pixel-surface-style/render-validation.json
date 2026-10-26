@@ -1,0 +1,88 @@
+{
+  "pixel-idle": {
+    "input": "outputs/pixel-idle-cloth.blend",
+    "frames": [
+      1,
+      4,
+      7,
+      10,
+      13,
+      16,
+      19,
+      22,
+      25,
+      28,
+      31,
+      34,
+      37,
+      40,
+      43,
+      46,
+      49,
+      52,
+      55,
+      58,
+      61,
+      64,
+      67,
+      70,
+      73,
+      76,
+      79,
+      82,
+      85,
+      88
+    ],
+    "geometry_shape_key_sha256_before": "53cdbe53b4904c0b5c44b2b5535ec6ce5c14338ed0355e73e42957efe7a74649",
+    "geometry_shape_key_sha256_after": "53cdbe53b4904c0b5c44b2b5535ec6ce5c14338ed0355e73e42957efe7a74649",
+    "fixed_field_sha256": "dbf0b42a181e38f09353f84ed611f4851ad85a832ef6aad315fbbf8cc7d48466",
+    "fixed_field_range": [
+      -1.0012559315378573,
+      1.0012805161971288
+    ]
+  },
+  "pixel-run": {
+    "input": "outputs/pixel-run-cloth.blend",
+    "frames": [
+      45,
+      49,
+      55
+    ],
+    "geometry_shape_key_sha256_before": "94b9660d2fc1535a5c86eed3754f9b86e6192faf9aa783181457642f81d2d2a6",
+    "geometry_shape_key_sha256_after": "94b9660d2fc1535a5c86eed3754f9b86e6192faf9aa783181457642f81d2d2a6",
+    "fixed_field_sha256": "dbf0b42a181e38f09353f84ed611f4851ad85a832ef6aad315fbbf8cc7d48466",
+    "fixed_field_range": [
+      -1.0012559315378573,
+      1.0012805161971288
+    ]
+  },
+  "palette": [
+    "FDEEDA",
+    "D2B396",
+    "1B1616",
+    "025673",
+    "02648C",
+    "EBA516"
+  ],
+  "modes": [
+    "dynamic",
+    "fixed",
+    "hybrid"
+  ],
+  "idle_sampling_fps": 10,
+  "idle_duration_s": 3,
+  "camera_degrees_from_side": 60,
+  "ortho_scale": 1.96,
+  "ground_y": 104,
+  "canvas": [
+    128,
+    128
+  ],
+  "shadows": "30 iterations of adjacency-smoothed Basis normals stored on vertices; hybrid85%fixed15%live",
+  "limitations": [
+    "procedural shadow prototype, not hand-painted UV artwork",
+    "fixed shadow follows surface but can look painted at other angles",
+    "no geometry or motion edits, no AI images",
+    "sampling10fps does not establish 30fps stability"
+  ]
+}

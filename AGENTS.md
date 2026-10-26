@@ -1,5 +1,7 @@
 # 작업 지침
 
+- 2026-10-26 최신: pixel-style-master AI 시안은 원본 디자인/자세를 바꾼다는 사용자 지적. 향후 화풍 작업은 원본3D 형상·골격·모션을 보존하고 색칠/명암/출력 규칙을 수정한다. 새 표면고정 명암 비교는 docs/SURFACE_STYLE.md. AI 시안을 모델링/실루엣 기준으로 대체하지 않는다.
+
 - 2026-10-23 최신 미술 피드백: `pixel-screen-study` 후드 형상 보정은 머리가 눌려 보인다는 이유로 거절. 이 안을 기준 모델로 쓰지 않는다. 기존 `pixel-run-sprites` 캡처 형상을 유지하고 큰 픽셀/제한 팔레트로 단순화한다. 최신 시험 `pixel-simple-run`, 상세 docs/SIMPLE_PIXEL_RUN.md. 사용자 요청 없이 후드/머리 비율을 다시 낮추지 않는다.
 
 - 2026-10-23 최신 사용자 선택: Kimodo 재생성8개도 자세 기준 미통과하여 기본 달리기는 기존 `assets/mixamo-running.fbx`로 전환. 현재 `pixel-run.blend`/`pixel-run-cloth.blend`는 Mixamo 적용본이다. `pixel-run-source.bvh/.npz`는 이전 Kimodo 기록. FBX 표시축을 관절 방향으로 가정하지 말고 `pixel_mixamo_source.py`의 실제 관절 방향 변환을 사용한다. 새 Blender 뼈는 length를 먼저 설정한 다음 matrix를 설정한다. 자세/축 회귀 검사를 실행한다. 아래 Kimodo 안내는 이전 단계다.

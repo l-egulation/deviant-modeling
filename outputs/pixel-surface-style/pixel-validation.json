@@ -1,0 +1,45 @@
+{
+  "pixel-idle": {
+    "identical_alpha_all_modes": true,
+    "first_frame_height": 64,
+    "stats": {
+      "dynamic": {
+        "mean_screen_space_color_changes": 13.620689655172415,
+        "mean_single_sample_reversions": 1.9642857142857142,
+        "shadow_pixels_first": 89
+      },
+      "fixed": {
+        "mean_screen_space_color_changes": 11.689655172413794,
+        "mean_single_sample_reversions": 0.8571428571428571,
+        "shadow_pixels_first": 102
+      },
+      "hybrid": {
+        "mean_screen_space_color_changes": 12.0,
+        "mean_single_sample_reversions": 1.1785714285714286,
+        "shadow_pixels_first": 104
+      }
+    }
+  },
+  "pixel-run": {
+    "identical_alpha_all_modes": true,
+    "first_frame_height": 62,
+    "stats": {
+      "dynamic": {
+        "mean_screen_space_color_changes": 400.0,
+        "mean_single_sample_reversions": 239.0,
+        "shadow_pixels_first": 120
+      },
+      "fixed": {
+        "mean_screen_space_color_changes": 388.5,
+        "mean_single_sample_reversions": 236.0,
+        "shadow_pixels_first": 94
+      },
+      "hybrid": {
+        "mean_screen_space_color_changes": 389.5,
+        "mean_single_sample_reversions": 238.0,
+        "shadow_pixels_first": 95
+      }
+    }
+  },
+  "measurement_note": "Screen-space color changes include genuine motion and occlusion; not a motion-compensated flicker score. 10fps samples only. Loop seam not validated."
+}
