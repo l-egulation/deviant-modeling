@@ -1,0 +1,141 @@
+{
+  "angle60": {
+    "input": "outputs/pixel-readable-idle-cloth.blend",
+    "angle": 59.99999999999999,
+    "frames": [
+      1
+    ],
+    "geometry_shape_key_sha256_before": "1bd364043b80d078f550898b2207e6ddb5a8f8bb2aa9cdcffb65ca7c7d238211",
+    "geometry_shape_key_sha256_after": "1bd364043b80d078f550898b2207e6ddb5a8f8bb2aa9cdcffb65ca7c7d238211",
+    "fixed_field_sha256": "dbf0b42a181e38f09353f84ed611f4851ad85a832ef6aad315fbbf8cc7d48466",
+    "fixed_field_range": [
+      -1.0012559315378573,
+      1.0012805161971288
+    ],
+    "designed_field_sha256": "ad6f5a991c340ccce68d06b11d156b30b096a0bfbc2be274c789c3b84f8adff0",
+    "shadow_vertices_by_region": {
+      "Arm.L": 2339,
+      "Arm.R": 2461,
+      "Hood": 1518,
+      "Leg.L": 0,
+      "Leg.R": 0,
+      "Robe": 2275,
+      "Scarf": 10462
+    }
+  },
+  "angle75": {
+    "input": "outputs/pixel-readable-idle-cloth.blend",
+    "angle": 75.0,
+    "frames": [
+      1
+    ],
+    "geometry_shape_key_sha256_before": "1bd364043b80d078f550898b2207e6ddb5a8f8bb2aa9cdcffb65ca7c7d238211",
+    "geometry_shape_key_sha256_after": "1bd364043b80d078f550898b2207e6ddb5a8f8bb2aa9cdcffb65ca7c7d238211",
+    "fixed_field_sha256": "dbf0b42a181e38f09353f84ed611f4851ad85a832ef6aad315fbbf8cc7d48466",
+    "fixed_field_range": [
+      -1.0012559315378573,
+      1.0012805161971288
+    ],
+    "designed_field_sha256": "ad6f5a991c340ccce68d06b11d156b30b096a0bfbc2be274c789c3b84f8adff0",
+    "shadow_vertices_by_region": {
+      "Arm.L": 2339,
+      "Arm.R": 2461,
+      "Hood": 1518,
+      "Leg.L": 0,
+      "Leg.R": 0,
+      "Robe": 2275,
+      "Scarf": 10462
+    }
+  },
+  "angle90": {
+    "input": "outputs/pixel-readable-idle-cloth.blend",
+    "angle": 90.0,
+    "frames": [
+      1
+    ],
+    "geometry_shape_key_sha256_before": "1bd364043b80d078f550898b2207e6ddb5a8f8bb2aa9cdcffb65ca7c7d238211",
+    "geometry_shape_key_sha256_after": "1bd364043b80d078f550898b2207e6ddb5a8f8bb2aa9cdcffb65ca7c7d238211",
+    "fixed_field_sha256": "dbf0b42a181e38f09353f84ed611f4851ad85a832ef6aad315fbbf8cc7d48466",
+    "fixed_field_range": [
+      -1.0012559315378573,
+      1.0012805161971288
+    ],
+    "designed_field_sha256": "ad6f5a991c340ccce68d06b11d156b30b096a0bfbc2be274c789c3b84f8adff0",
+    "shadow_vertices_by_region": {
+      "Arm.L": 2339,
+      "Arm.R": 2461,
+      "Hood": 1518,
+      "Leg.L": 0,
+      "Leg.R": 0,
+      "Robe": 2275,
+      "Scarf": 10462
+    }
+  },
+  "palette": [
+    "FDEEDA",
+    "D2B396",
+    "1B1616",
+    "025673",
+    "02648C",
+    "EBA516"
+  ],
+  "modes": [
+    "designed"
+  ],
+  "idle_sampling_fps": 30,
+  "idle_duration_s": 3,
+  "camera_degrees_from_side": 60,
+  "ortho_scale": 1.96,
+  "ground_y": 104,
+  "canvas": [
+    128,
+    128
+  ],
+  "shadows": {
+    "hood": "side wedge: x > .14 + .12*(z-.65); preserve bright crown",
+    "robe": "one side panel: x > .115 + .12*(z-.30), with y > -.055",
+    "sleeve": "underside: z < .505 - .04*(abs(x-.075)-.10)",
+    "scarf": "dark teal tail; collar highlight only above z=.555",
+    "legs": "base color; dark and gold materials remain single-color",
+    "coordinates": "original Basis meters, semantic Region_ vertex groups",
+    "boundary_width_m": 0.025
+  },
+  "limitations": [
+    "designed parametric masks, not hand-painted UV texture",
+    "source geometry/motion preserved",
+    "loop seam not guaranteed"
+  ],
+  "configuration": {
+    "output": "outputs/pixel-readable-study",
+    "modes": [
+      "designed"
+    ],
+    "readable_shadows": true,
+    "clips": [
+      {
+        "tag": "angle60",
+        "frames": [
+          1
+        ],
+        "angle": 60,
+        "input": "outputs/pixel-readable-idle-cloth.blend"
+      },
+      {
+        "tag": "angle75",
+        "frames": [
+          1
+        ],
+        "angle": 75,
+        "input": "outputs/pixel-readable-idle-cloth.blend"
+      },
+      {
+        "tag": "angle90",
+        "frames": [
+          1
+        ],
+        "angle": 90,
+        "input": "outputs/pixel-readable-idle-cloth.blend"
+      }
+    ]
+  }
+}

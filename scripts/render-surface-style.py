@@ -11,10 +11,13 @@ from mathutils import Vector
 R=Path(__file__).resolve().parents[1];sys.path.insert(0,str(R/'scripts'))
 from pixel_shadow_design import authored_shadow, RULES
 designed=os.environ.get('DESIGNED_SHADOWS')=='1'
+config=json.loads(Path(os.environ['STYLE_CONFIG']).read_text()) if os.environ.get('STYLE_CONFIG') else {}
 O=R/('outputs/pixel-painted-style' if designed else 'outputs/pixel-surface-style')
+if config: O=R/config['output']
 O.mkdir(parents=True,exist_ok=True)
 palette=['FDEEDA','D2B396','1B1616','025673','02648C','EBA516']
 modes=['fixed','designed'] if designed else ['dynamic','fixed','hybrid'];report={}
+if config: modes=config.get('modes',modes)
 def digest(mesh):
  h=hashlib.sha256()
  for key in mesh.shape_keys.key_blocks:
@@ -23,8 +26,11 @@ def digest(mesh):
 def linear(v):return v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4
 
 clips=[('pixel-idle',list(range(1,91))),('pixel-run',list(range(45,67)))] if designed else [('pixel-idle',list(range(1,91,3))),('pixel-run',[45,49,55])]
+if config: clips=[(c['tag'],c['frames']) for c in config['clips']]
 for tag,frames in clips:
- bpy.ops.wm.open_mainfile(filepath=str(R/f'outputs/{tag}-cloth.blend'))
+ settings=next((c for c in config.get('clips',[]) if c['tag']==tag),{})
+ input_path=settings.get('input',f'outputs/{tag}-cloth.blend')
+ bpy.ops.wm.open_mainfile(filepath=str(R/input_path))
  s=bpy.context.scene;obj=bpy.data.objects['TripoPixel_Character'];rig=bpy.data.objects['TripoPixel_Rig'];mesh=obj.data
  before=digest(mesh)
  image=next(n.image for n in mesh.materials[0].node_tree.nodes if n.type=='TEX_IMAGE' and n.image)
@@ -47,10 +53,11 @@ for tag,frames in clips:
  attr=mesh.attributes.new('StyleRestLight','FLOAT','POINT');attr.data.foreach_set('value',field.astype(np.float32))
  fieldhash=hashlib.sha256(field.astype(np.float32).tobytes()).hexdigest()
  if designed:
-  paint,counts=authored_shadow(obj)
+  paint,counts=authored_shadow(obj,readable=config.get('readable_shadows',False))
   attr=mesh.attributes.new('StyleDesignedLight','FLOAT','POINT');attr.data.foreach_set('value',paint)
  camera=s.camera;camera.animation_data_clear();camera.data.type='ORTHO';camera.data.ortho_scale=1.96
- offset=Vector((.5,-math.sqrt(3)/2,0))*3;camera.rotation_euler=(-offset).to_track_quat('-Z','Y').to_euler()
+ angle=math.radians(settings.get('angle',60))
+ offset=Vector((math.cos(angle),-math.sin(angle),0))*3;camera.rotation_euler=(-offset).to_track_quat('-Z','Y').to_euler()
  s.render.engine='CYCLES';s.cycles.samples=4;s.cycles.use_denoising=False;s.cycles.seed=0;s.cycles.use_animated_seed=False
  s.render.resolution_x=s.render.resolution_y=384;s.render.resolution_percentage=100
  s.render.film_transparent=True;s.render.image_settings.file_format='PNG';s.render.image_settings.color_mode='RGBA'
@@ -79,10 +86,15 @@ for tag,frames in clips:
    s.render.filepath=str(directory/f'{f:03d}.png');bpy.ops.render.render(write_still=True)
   print('COMPLETE',tag,mode,flush=True)
  after=digest(mesh);assert before==after
- report[tag]={'input':f'outputs/{tag}-cloth.blend','frames':frames,'geometry_shape_key_sha256_before':before,'geometry_shape_key_sha256_after':after,'fixed_field_sha256':fieldhash,'fixed_field_range':[float(field.min()),float(field.max())]}
+ report[tag]={'input':input_path,'angle':math.degrees(angle),'frames':frames,'geometry_shape_key_sha256_before':before,'geometry_shape_key_sha256_after':after,'fixed_field_sha256':fieldhash,'fixed_field_range':[float(field.min()),float(field.max())]}
  if designed:report[tag].update({'designed_field_sha256':hashlib.sha256(paint.tobytes()).hexdigest(),'shadow_vertices_by_region':counts})
 report.update({'palette':palette,'modes':modes,'idle_sampling_fps':10,'idle_duration_s':3,'camera_degrees_from_side':60,'ortho_scale':1.96,'ground_y':104,'canvas':[128,128],'shadows':'30 iterations of adjacency-smoothed Basis normals stored on vertices; hybrid85%fixed15%live','limitations':['procedural shadow prototype, not hand-painted UV artwork','fixed shadow follows surface but can look painted at other angles','no geometry or motion edits, no AI images','sampling10fps does not establish 30fps stability']})
 if designed:
  report.update({'idle_sampling_fps':30,'shadows':RULES,'limitations':['designed parametric masks, not hand-painted UV texture','source geometry/motion preserved','loop seam not guaranteed']})
- assert report['pixel-idle']['designed_field_sha256']==report['pixel-run']['designed_field_sha256']
+ if not config: assert report['pixel-idle']['designed_field_sha256']==report['pixel-run']['designed_field_sha256']
+if config:
+ report['configuration']=config
+ report['camera_degrees_from_side']='per-clip angle'
+ report['shadows']=dict(RULES,hood='side wedge x > .23 + .12*(z-.65)' if config.get('readable_shadows') else RULES['hood'])
+ report['limitations']=['geometry preserved during rendering; idle pose and cloth may differ from prior study','no AI images or per-frame cleanup','loop seam not guaranteed']
 (O/'render-validation.json').write_text(json.dumps(report,indent=2))

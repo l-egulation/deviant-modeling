@@ -1,0 +1,1 @@
+{"output":"outputs/pixel-readable-study","modes":["designed"],"readable_shadows":true,"clips":[{"tag":"angle60","frames":[1],"angle":60,"input":"outputs/pixel-readable-idle-cloth.blend"},{"tag":"angle75","frames":[1],"angle":75,"input":"outputs/pixel-readable-idle-cloth.blend"},{"tag":"angle90","frames":[1],"angle":90,"input":"outputs/pixel-readable-idle-cloth.blend"}]}

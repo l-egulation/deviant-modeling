@@ -1,0 +1,20 @@
+{
+  "before": {
+    "mean_changed_pixels": 4.955056179775281,
+    "max_changed_pixels": 12
+  },
+  "after": {
+    "mean_changed_pixels": 1.3370786516853932,
+    "max_changed_pixels": 6
+  },
+  "note": "Screen-space differences include motion, camera, silhouette, occlusion and shading. Not an isolated flicker or quality metric.",
+  "cloth": {
+    "scope": "90 frames; noncoplanar rendered outer robe/scarf-tail intersections; excludes attachments, self-collision and continuous collision",
+    "robe_triangles": 8805,
+    "scarf_triangles": 5911,
+    "frames_with_intersections": 0,
+    "max_pairs": 0,
+    "max_edge_stretch": 1.7930851723050583
+  },
+  "collar_max_gap_m": 0.0
+}

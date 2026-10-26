@@ -11,12 +11,13 @@ RULES = {
  'boundary_width_m': .025,
 }
 
-def authored_shadow(obj):
+def authored_shadow(obj,readable=False):
  p=np.array([v.co[:] for v in obj.data.vertices]);x,y,z=p.T
  names={g.index:g.name[7:] for g in obj.vertex_groups if g.name.startswith('Region_')}
  labels=np.array([next(names[g.group] for g in v.groups if g.group in names) for v in obj.data.vertices])
  distance=np.full(len(p),-.1)  # Positive means painted shadow.
  hood=labels=='Hood';distance[hood]=np.minimum(x[hood]-(.14+.12*(z[hood]-.65)),.90-z[hood])
+ if readable: distance[hood]=np.minimum(x[hood]-(.23+.12*(z[hood]-.65)),.90-z[hood])
  robe=labels=='Robe';distance[robe]=np.minimum(x[robe]-(.115+.12*(z[robe]-.30)),y[robe]+.055)
  arms=np.char.startswith(labels,'Arm.');distance[arms]=(.505-.04*(abs(x[arms]-.075)-.10))-z[arms]
  scarf=labels=='Scarf';distance[scarf]=np.maximum(.555-z[scarf],-.005-x[scarf])
