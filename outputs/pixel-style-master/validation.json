@@ -1,0 +1,52 @@
+{
+  "source": "built-in image_gen; not deterministic 3D style transfer",
+  "status": "static candidate; visual approval and multi-pose consistency pending",
+  "canvas": [
+    128,
+    128
+  ],
+  "character_height_px": 64,
+  "character_bbox": [
+    42,
+    40,
+    86,
+    104
+  ],
+  "origin": [
+    42,
+    40
+  ],
+  "ground_y_exclusive": 104,
+  "palette": [
+    "FDEEDA",
+    "D2B396",
+    "1B1616",
+    "025673",
+    "02648C",
+    "EBA516"
+  ],
+  "opaque_color_count": 6,
+  "alpha_values": [
+    0,
+    255
+  ],
+  "generated_size": [
+    1254,
+    1254
+  ],
+  "generated_alpha_bbox": [
+    314,
+    313,
+    888,
+    1141
+  ],
+  "generated_opaque_color_count": 13093,
+  "normalization": "one static crop, nearest resample, nearest fixed palette, binary alpha",
+  "geometry_modified": false,
+  "animation_created": false,
+  "limits": [
+    "AI changed pose/silhouette; not a pose-faithful transfer",
+    "No temporal consistency established by a static master",
+    "No per-frame AI regeneration or independent crop scaling approved as pipeline"
+  ]
+}
