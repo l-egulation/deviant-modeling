@@ -23,4 +23,4 @@ report={'pairs':len(pairs),'max_gap_m':max(errors),'per_frame_gap_m':errors,'mat
 tag=os.environ.get('COLLAR_TAG','before')
 (R/f'docs/logs/pixel-collar-{tag}.json').write_text(json.dumps(report,indent=2))
 print(json.dumps(report))
-if tag in ['after','cloth']:assert max(errors)<1e-5
+if tag in ['after','cloth','idle']:assert max(errors)<1e-5

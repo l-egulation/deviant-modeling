@@ -1,15 +1,17 @@
 """Capture approved run with immutable six-color materials and a shared pivot."""
-import bpy,math,json,colorsys
+import bpy,math,json,colorsys,os
 import numpy as np
 from pathlib import Path
 from mathutils import Vector
-R=Path(__file__).resolve().parents[1];O=R/'outputs/pixel-run-sprites'
+R=Path(__file__).resolve().parents[1];tag=os.environ.get('MOTION_TAG','pixel-run');O=R/f'outputs/{tag}-sprites'
+capture_frames=list(range(1,91)) if tag=='pixel-idle' else list(range(45,67))
 for name in ['original','render']:(O/name).mkdir(parents=True,exist_ok=True)
-bpy.ops.wm.open_mainfile(filepath=str(R/'outputs/pixel-run-cloth.blend'))
+bpy.ops.wm.open_mainfile(filepath=str(R/f'outputs/{tag}-cloth.blend'))
 s=bpy.context.scene;obj=bpy.data.objects['TripoPixel_Character'];rig=bpy.data.objects['TripoPixel_Rig'];cam=s.camera
 cam.animation_data_clear();cam.data.type='ORTHO';cam.data.ortho_scale=1.36
 # Keep a fixed 30-degree front-side view, matching the accepted run preview.
-offset=Vector((math.cos(math.radians(30)),-math.sin(math.radians(30)),0))*3
+angle=60 if tag=='pixel-idle' else 30
+offset=Vector((math.cos(math.radians(angle)),-math.sin(math.radians(angle)),0))*3
 cam.rotation_euler=(-offset).to_track_quat('-Z','Y').to_euler()
 s.render.fps=30;s.render.film_transparent=True
 s.render.image_settings.file_format='PNG';s.render.image_settings.color_mode='RGBA'
@@ -20,7 +22,7 @@ def frame(f):
 def render(folder,index,size):
  s.render.resolution_x=s.render.resolution_y=size
  s.render.filepath=str(O/f'{folder}/{index:03d}.png');bpy.ops.render.render(write_still=True)
-for i,f in enumerate(range(45,67)):
+for i,f in enumerate(capture_frames):
  frame(f);render('original',i,384)
 img=next(n.image for n in obj.data.materials[0].node_tree.nodes if n.type=='TEX_IMAGE' and n.image)
 w,h=img.size;pix=np.array(img.pixels[:],dtype=np.float32).reshape(h,w,4);uv=obj.data.uv_layers.active.data
@@ -46,7 +48,7 @@ for poly in obj.data.polygons:
 obj.data.materials.clear()
 for m in materials:obj.data.materials.append(m)
 for p,label in zip(obj.data.polygons,labels):p.material_index=label
-for i,f in enumerate(range(45,67)):
+for i,f in enumerate(capture_frames):
  frame(f);render('render',i,384)
 # Same phase on the next cycle: quantify cloth drift separately from body timing.
 keys=obj.data.shape_keys.key_blocks
@@ -54,5 +56,7 @@ def local(f):
  s.frame_set(f);return np.array([v.co[:] for v in keys[f'Run cloth {f:03d}'].data])-np.array(rig.location)
 drift=np.linalg.norm(local(67)-local(45),axis=1)
 meta={'source':'outputs/pixel-run-cloth.blend','motion':'Mixamo Running With Intention on fitted rig + independent cloth','source_frames':list(range(45,67)),'fps':30,'frame_count':22,'duration_seconds':22/30,'canvas':[128,128],'palette':palette,'camera':'orthographic 30 degrees from side; fixed height; root XY tracking','ground_pivot':[64,112],'per_frame_crop':False,'texture':'UV-sampled region classification only; texture discarded from output shading','same_phase_cloth_drift_m':{'max':float(drift.max()),'p95':float(np.quantile(drift,.95))},'loop_seam_verified':False}
+if tag=='pixel-idle':
+ meta.update({'source':f'outputs/{tag}-cloth.blend','motion':'authored breathing idle on original fitted rig; newly simulated cloth; not generated or mocap','source_frames':capture_frames,'frame_count':90,'duration_seconds':3,'same_phase_cloth_drift_m':None,'camera':'orthographic 60 degrees from side (30 from front); fixed height and scale'})
 (O/'capture.json').write_text(json.dumps(meta,indent=2))
 print(json.dumps(meta),flush=True)

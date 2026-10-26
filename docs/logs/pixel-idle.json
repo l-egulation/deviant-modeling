@@ -1,0 +1,9 @@
+{
+  "motion": "authored breathing idle, not Kimodo or Mixamo",
+  "frames": 90,
+  "fps": 30,
+  "feet_max_drift_m": 0.0,
+  "bone_length_error_m": 8.793695666087231e-08,
+  "geometry_changed": false,
+  "weapon_added": false
+}

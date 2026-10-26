@@ -1,11 +1,12 @@
 """Independent world-space robe/scarf cloth and acceleration-driven hood on Kimodo run."""
-import bpy,bmesh,numpy as np,json,math,sys
+import bpy,bmesh,numpy as np,json,math,sys,os
 from pathlib import Path
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 R=Path(__file__).resolve().parents[1];sys.path.insert(0,str(R/'scripts'))
 from pixel_cloth_solver import Cloth,grid_binding
-bpy.ops.wm.open_mainfile(filepath=str(R/'outputs/pixel-run.blend'))
+tag=os.environ.get('MOTION_TAG','pixel-run')
+bpy.ops.wm.open_mainfile(filepath=str(R/f'outputs/{tag}.blend'))
 s=bpy.context.scene;rig=bpy.data.objects['TripoPixel_Rig'];h=bpy.data.objects['TripoPixel_Character']
 p=np.array([v.co[:] for v in h.data.vertices]);labels=np.array([next(h.vertex_groups[g.group].name[7:] for g in v.groups if h.vertex_groups[g.group].name.startswith('Region_')) for v in h.data.vertices])
 def group_weights(n):
@@ -102,9 +103,10 @@ for f,q in enumerate(positions,1):
  key=h.shape_key_add(name=f'Run cloth {f:03d}');key.data.foreach_set('co',q.ravel())
  for at,value in [(f-1,0),(f,1),(f+1,0)]:key.value=value;key.keyframe_insert('value',frame=at)
 h['physics']='Independent world-space distance-constraint robe/scarf with gravity, drag, capsule and robe contacts; hood spring'
-s.frame_set(1);bpy.ops.wm.save_as_mainfile(filepath=str(R/'outputs/pixel-run-cloth.blend'),compress=True)
-np.savez_compressed(R/'outputs/pixel-run-cloth-cache.npz',positions=np.array(positions))
+s.frame_set(1);bpy.ops.wm.save_as_mainfile(filepath=str(R/f'outputs/{tag}-cloth.blend'),compress=True)
+np.savez_compressed(R/f'outputs/{tag}-cloth-cache.npz',positions=np.array(positions))
 report={'frames':90,'settle_steps':60,'substeps_per_frame':8,'constraint_iterations':12,'cloth_nodes':len(robe)+len(scarf),'removed_front_slit_bridges':len(bridges),'removed_internal_bottom_cap_faces':len(caps),'gravity':9.81,'scarf_drag':12,'robe_drag':4,'body_collision':'moving bone capsules','garment_collision':'scarf nodes against simulated robe triangles','self_collision':False,'continuous_collision':False,'source':'outputs/pixel-run.blend','metrics':metrics,'status':'BAKED; validation recorded separately in pixel-run-cloth-validation.json'}
-(R/'docs/logs/pixel-run-cloth.json').write_text(json.dumps(report,indent=2));print('CLOTH BAKE COMPLETE',flush=True)
+report['source']=f'outputs/{tag}.blend'
+(R/f'docs/logs/{tag}-cloth.json').write_text(json.dumps(report,indent=2));print('CLOTH BAKE COMPLETE',flush=True)
 for f in [10,25,40,55]:
- s.frame_set(f);s.render.filepath=str(R/f'outputs/pixel-run-cloth-pose-{f}.png');bpy.ops.render.render(write_still=True)
+ s.frame_set(f);s.render.filepath=str(R/f'outputs/{tag}-cloth-pose-{f}.png');bpy.ops.render.render(write_still=True)

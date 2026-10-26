@@ -27,3 +27,7 @@ outputs/pixel-run-sprites/render/
 # Reproducible high-resolution camera-shape study renders.
 outputs/pixel-screen-study/before/
 outputs/pixel-screen-study/after/
+# Reproducible idle captures/cache; final sprites and editable scenes are tracked.
+outputs/pixel-idle-cloth-cache.npz
+outputs/pixel-idle-sprites/original/
+outputs/pixel-idle-sprites/render/
