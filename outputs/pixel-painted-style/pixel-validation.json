@@ -1,0 +1,35 @@
+{
+  "pixel-idle": {
+    "identical_alpha_all_modes": true,
+    "first_frame_height": 64,
+    "stats": {
+      "fixed": {
+        "mean_screen_space_color_changes": 4.595505617977528,
+        "mean_single_sample_reversions": 0.29545454545454547,
+        "shadow_pixels_first": 102
+      },
+      "designed": {
+        "mean_screen_space_color_changes": 3.9213483146067416,
+        "mean_single_sample_reversions": 0.2727272727272727,
+        "shadow_pixels_first": 303
+      }
+    }
+  },
+  "pixel-run": {
+    "identical_alpha_all_modes": true,
+    "first_frame_height": 62,
+    "stats": {
+      "fixed": {
+        "mean_screen_space_color_changes": 162.0,
+        "mean_single_sample_reversions": 21.0,
+        "shadow_pixels_first": 94
+      },
+      "designed": {
+        "mean_screen_space_color_changes": 158.04761904761904,
+        "mean_single_sample_reversions": 18.75,
+        "shadow_pixels_first": 306
+      }
+    }
+  },
+  "measurement_note": "30fps source samples, GIF timing rounded to centiseconds. Screen-space changes include motion/occlusion, not a motion-compensated flicker score. Loop seam not validated."
+}

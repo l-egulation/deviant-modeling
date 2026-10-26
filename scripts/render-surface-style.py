@@ -3,15 +3,18 @@
 Store a smoothed rest-surface lighting field as a POINT attribute. The field is
 attached to vertex identities, so cloth/skin deformation cannot repaint it.
 """
-import bpy, math, json, hashlib
+import bpy, math, json, hashlib, os, sys
 import numpy as np
 from pathlib import Path
 from mathutils import Vector
 
-R=Path(__file__).resolve().parents[1];O=R/'outputs/pixel-surface-style'
+R=Path(__file__).resolve().parents[1];sys.path.insert(0,str(R/'scripts'))
+from pixel_shadow_design import authored_shadow, RULES
+designed=os.environ.get('DESIGNED_SHADOWS')=='1'
+O=R/('outputs/pixel-painted-style' if designed else 'outputs/pixel-surface-style')
 O.mkdir(parents=True,exist_ok=True)
 palette=['FDEEDA','D2B396','1B1616','025673','02648C','EBA516']
-modes=['dynamic','fixed','hybrid'];report={}
+modes=['fixed','designed'] if designed else ['dynamic','fixed','hybrid'];report={}
 def digest(mesh):
  h=hashlib.sha256()
  for key in mesh.shape_keys.key_blocks:
@@ -19,7 +22,8 @@ def digest(mesh):
  return h.hexdigest()
 def linear(v):return v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4
 
-for tag,frames in [('pixel-idle',list(range(1,91,3))),('pixel-run',[45,49,55])]:
+clips=[('pixel-idle',list(range(1,91))),('pixel-run',list(range(45,67)))] if designed else [('pixel-idle',list(range(1,91,3))),('pixel-run',[45,49,55])]
+for tag,frames in clips:
  bpy.ops.wm.open_mainfile(filepath=str(R/f'outputs/{tag}-cloth.blend'))
  s=bpy.context.scene;obj=bpy.data.objects['TripoPixel_Character'];rig=bpy.data.objects['TripoPixel_Rig'];mesh=obj.data
  before=digest(mesh)
@@ -42,6 +46,9 @@ for tag,frames in [('pixel-idle',list(range(1,91,3))),('pixel-run',[45,49,55])]:
  field=normals@np.array([.35,-.55,.76])
  attr=mesh.attributes.new('StyleRestLight','FLOAT','POINT');attr.data.foreach_set('value',field.astype(np.float32))
  fieldhash=hashlib.sha256(field.astype(np.float32).tobytes()).hexdigest()
+ if designed:
+  paint,counts=authored_shadow(obj)
+  attr=mesh.attributes.new('StyleDesignedLight','FLOAT','POINT');attr.data.foreach_set('value',paint)
  camera=s.camera;camera.animation_data_clear();camera.data.type='ORTHO';camera.data.ortho_scale=1.96
  offset=Vector((.5,-math.sqrt(3)/2,0))*3;camera.rotation_euler=(-offset).to_track_quat('-Z','Y').to_euler()
  s.render.engine='CYCLES';s.cycles.samples=4;s.cycles.use_denoising=False;s.cycles.seed=0;s.cycles.use_animated_seed=False
@@ -57,9 +64,9 @@ for tag,frames in [('pixel-idle',list(range(1,91,3))),('pixel-run',[45,49,55])]:
    for e,index,pos in zip(ramp.color_ramp.elements,[shadow,base],[0,.18]):
     e.position=pos;e.color=tuple(linear(int(palette[index][i:i+2],16)/255) for i in (0,2,4))+(1,)
    geo=n.new('ShaderNodeNewGeometry');dot=n.new('ShaderNodeVectorMath');dot.operation='DOT_PRODUCT';dot.inputs[1].default_value=(.35,-.55,.76);links.new(geo.outputs['Normal'],dot.inputs[0])
-   rest=n.new('ShaderNodeAttribute');rest.attribute_name='StyleRestLight'
+   rest=n.new('ShaderNodeAttribute');rest.attribute_name='StyleDesignedLight' if mode=='designed' else 'StyleRestLight'
    if mode=='dynamic':links.new(dot.outputs['Value'],ramp.inputs[0])
-   elif mode=='fixed':links.new(rest.outputs['Fac'],ramp.inputs[0])
+   elif mode in ['fixed','designed']:links.new(rest.outputs['Fac'],ramp.inputs[0])
    else:
     fixed=n.new('ShaderNodeMath');fixed.operation='MULTIPLY';fixed.inputs[1].default_value=.85;links.new(rest.outputs['Fac'],fixed.inputs[0])
     live=n.new('ShaderNodeMath');live.operation='MULTIPLY';live.inputs[1].default_value=.15;links.new(dot.outputs['Value'],live.inputs[0])
@@ -73,5 +80,9 @@ for tag,frames in [('pixel-idle',list(range(1,91,3))),('pixel-run',[45,49,55])]:
   print('COMPLETE',tag,mode,flush=True)
  after=digest(mesh);assert before==after
  report[tag]={'input':f'outputs/{tag}-cloth.blend','frames':frames,'geometry_shape_key_sha256_before':before,'geometry_shape_key_sha256_after':after,'fixed_field_sha256':fieldhash,'fixed_field_range':[float(field.min()),float(field.max())]}
+ if designed:report[tag].update({'designed_field_sha256':hashlib.sha256(paint.tobytes()).hexdigest(),'shadow_vertices_by_region':counts})
 report.update({'palette':palette,'modes':modes,'idle_sampling_fps':10,'idle_duration_s':3,'camera_degrees_from_side':60,'ortho_scale':1.96,'ground_y':104,'canvas':[128,128],'shadows':'30 iterations of adjacency-smoothed Basis normals stored on vertices; hybrid85%fixed15%live','limitations':['procedural shadow prototype, not hand-painted UV artwork','fixed shadow follows surface but can look painted at other angles','no geometry or motion edits, no AI images','sampling10fps does not establish 30fps stability']})
+if designed:
+ report.update({'idle_sampling_fps':30,'shadows':RULES,'limitations':['designed parametric masks, not hand-painted UV texture','source geometry/motion preserved','loop seam not guaranteed']})
+ assert report['pixel-idle']['designed_field_sha256']==report['pixel-run']['designed_field_sha256']
 (O/'render-validation.json').write_text(json.dumps(report,indent=2))

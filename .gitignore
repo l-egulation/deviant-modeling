@@ -32,3 +32,4 @@ outputs/pixel-idle-cloth-cache.npz
 outputs/pixel-idle-sprites/original/
 outputs/pixel-idle-sprites/render/
 outputs/pixel-surface-style/raw/
+outputs/pixel-painted-style/raw/
