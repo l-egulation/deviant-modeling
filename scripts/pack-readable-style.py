@@ -1,6 +1,6 @@
 """Fixed-grid pixel previews for pose/camera readability review."""
 from pathlib import Path
-import json
+import json,os
 import numpy as np
 from PIL import Image,ImageDraw,ImageOps
 R=Path(__file__).resolve().parents[1]
@@ -19,6 +19,8 @@ O=R/'outputs/pixel-readable-study'
 imgs=[pixel(O/f'raw/angle{a}/designed/001.png') for a in [60,75,90]]
 board(imgs,['60 DEGREES','75 DEGREES','90 DEGREES']).save(O/'camera-comparison.png')
 O=R/'outputs/pixel-readable-style'
+repaired=os.environ.get('REPAIRED_STYLE')=='1'
+if repaired: O=R/'outputs/pixel-repaired-style'
 if (O/'render-validation.json').exists():
  meta=json.loads((O/'render-validation.json').read_text());report={}
  meta['camera_degrees_from_side']='per-clip angle'
@@ -29,8 +31,8 @@ if (O/'render-validation.json').exists():
   frames=[];boards=[];dest=O/tag;dest.mkdir(parents=True,exist_ok=True)
   for f in meta[tag]['frames']:
    im=pixel(O/f'raw/{tag}/designed/{f:03d}.png');im.save(dest/f'{f:03d}.png');frames.append(im)
-   before=Image.open(R/f'outputs/pixel-painted-style/{old}/designed/{f:03d}.png').convert('RGBA')
-   boards.append(board([before,im],['BEFORE','READABLE POSE / SHADOWS']))
+   before=Image.open(R/(f'outputs/pixel-part-style/{tag}/{f:03d}.png' if repaired else f'outputs/pixel-painted-style/{old}/designed/{f:03d}.png')).convert('RGBA')
+   boards.append(board([before,im],['BEFORE','LOCAL GEOMETRY / CLEAN MATERIALS' if repaired else 'READABLE POSE / SHADOWS']))
    box=im.getbbox();assert min(box[:2])>0 and max(box[2:])<128
   timing=[10*(round((j+1)*100/30)-round(j*100/30)) for j in range(len(frames))]
   indexed=[]

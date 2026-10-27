@@ -1,0 +1,18 @@
+{
+  "output": "outputs/pixel-repaired-style",
+  "modes": [
+    "designed"
+  ],
+  "readable_shadows": true,
+  "clips": [
+    {
+      "tag": "idle",
+      "frames": [
+        1
+      ],
+      "angle": 75,
+      "input": "outputs/pixel-repaired-idle-cloth.blend"
+    }
+  ],
+  "clean_parts": true
+}

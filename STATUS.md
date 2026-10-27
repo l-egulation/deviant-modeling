@@ -1,5 +1,7 @@
 # 현재 상태
 
+> 2026-10-27 부분 모델 수정: 소매 단면 최대16% 축소·허리 최대12mm 정리, 전체 최대 정점 변위21.28mm/후드0. 로브·장갑·발목 띠 재질 경계를 명시하여 텍스처 추정 조각 감소. `outputs/pixel-repaired-style/idle-comparison.gif`, `run-comparison.gif`. 기존 형상/모션 파일 보존, 두 새 모델 의상 재계산. 각90프레임 검사범위 관통0; 늘어짐 대기1.793/달리기2.794배(기존과 거의 동일,미해결). docs/LOCAL_PART_REPAIR.md 참조. 사용자 미술 승인 전 후보.
+
 > 2026-10-27 부위별 출력 시험: 기존 readable-style의 모델/모션/카메라 유지.18개 부위 지도→작은 눈/장식 보존→소매/장갑/후드 경계 그림자, 눈은 얼굴 내부 세로 블록으로 정리. `outputs/pixel-part-style/idle-comparison.gif`, `run-comparison.gif`.112프레임 알파/6색 및 렌더 형상 해시 검사 통과. 옷·몸통의 큰 겹침은 남으며 화풍 완성/시간 안정성/루프 통과는 아님. docs/PART_STYLE.md 참조.
 
 > 2026-10-26 부위 구분 개선: 팔을 낮추고 벌린 새 대기, 호흡 진폭 축소, 카메라75도, 후드 명암 축소. 기본 형상/골격 길이 유지, 새 대기 의상 재계산. `outputs/pixel-readable-style/idle-comparison.gif` 및 `run-comparison.gif`. 대기90프레임 목둘레 틈0m, 검사범위 옷 교차0, 최대 모서리 늘어짐1.793배. 달리기 원본은 그대로. 더 정면에 가까워 방향감 절충/천 루프/미술 최종승인은 남음. docs/READABLE_STYLE.md 참조.

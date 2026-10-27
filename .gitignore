@@ -37,3 +37,6 @@ outputs/pixel-readable-study/raw/
 outputs/pixel-readable-style/raw/
 outputs/pixel-readable-idle-cloth-cache.npz
 outputs/pixel-part-style/raw/
+outputs/pixel-repaired-style/raw/
+outputs/pixel-repaired-idle-cloth-cache.npz
+outputs/pixel-repaired-run-cloth-cache.npz

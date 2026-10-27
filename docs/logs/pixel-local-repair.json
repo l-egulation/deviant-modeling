@@ -1,0 +1,14 @@
+{
+  "pixel-repaired-idle": {
+    "moved_vertices": 10565,
+    "max_displacement_m": 0.021275127017569954,
+    "hood_max_displacement_m": 0.0,
+    "bone_lengths_changed": false
+  },
+  "pixel-repaired-run": {
+    "moved_vertices": 10565,
+    "max_displacement_m": 0.021275127017569954,
+    "hood_max_displacement_m": 0.0,
+    "bone_lengths_changed": false
+  }
+}

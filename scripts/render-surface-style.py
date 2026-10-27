@@ -40,6 +40,9 @@ for tag,frames in clips:
   rgb=np.median([pixels[int(uv[i].uv.y*h)%h,int(uv[i].uv.x*w)%w,:3] for i in p.loop_indices],axis=0)
   r,g,b=rgb;val=max(rgb);sat=(val-min(rgb))/max(val,1e-8)
   labels.append(2 if b>r*1.12 and g>r*1.1 else (1 if val<.20 else (3 if r>g*1.22 and g>b*1.35 and sat>.5 else 0)))
+ if config.get('clean_parts'):
+  from pixel_local_repair import clean_materials
+  labels=clean_materials(obj,labels)
  # Normals from the undeformed Basis, identical artistic reference across clips.
  # Mesh normals correspond to Basis coordinates, not animated evaluated mesh.
  normals=np.array([v.normal[:] for v in mesh.vertices],dtype=np.float64)
