@@ -1,5 +1,7 @@
 # 현재 상태
 
+> 2026-10-27 부위별 출력 시험: 기존 readable-style의 모델/모션/카메라 유지.18개 부위 지도→작은 눈/장식 보존→소매/장갑/후드 경계 그림자, 눈은 얼굴 내부 세로 블록으로 정리. `outputs/pixel-part-style/idle-comparison.gif`, `run-comparison.gif`.112프레임 알파/6색 및 렌더 형상 해시 검사 통과. 옷·몸통의 큰 겹침은 남으며 화풍 완성/시간 안정성/루프 통과는 아님. docs/PART_STYLE.md 참조.
+
 > 2026-10-26 부위 구분 개선: 팔을 낮추고 벌린 새 대기, 호흡 진폭 축소, 카메라75도, 후드 명암 축소. 기본 형상/골격 길이 유지, 새 대기 의상 재계산. `outputs/pixel-readable-style/idle-comparison.gif` 및 `run-comparison.gif`. 대기90프레임 목둘레 틈0m, 검사범위 옷 교차0, 최대 모서리 늘어짐1.793배. 달리기 원본은 그대로. 더 정면에 가까워 방향감 절충/천 루프/미술 최종승인은 남음. docs/READABLE_STYLE.md 참조.
 
 > 2026-10-26 부위별 명암 구현: 원본 모델/모션/천 베이크 보존, 후드 옆면·소매 아래·로브 옆판의 고정 명암 영역 지정. `outputs/pixel-painted-style/comparison.gif`와 `run-comparison.gif`에서 이전/새 방식 비교. 대기90+달리기22자세30fps,128캔버스·중립높이64px·6색. 형상 해시/양쪽 알파 동일 검사. 실제 손그림 UV가 아닌 정점 속성 기반 색칠이며 화풍 승인·윤곽 흔들림·천 루프는 미해결. docs/PAINTED_STYLE.md 참조. 포즈/타이밍 수정은 다음 단계.
